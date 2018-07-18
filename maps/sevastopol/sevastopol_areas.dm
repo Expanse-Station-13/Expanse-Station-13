@@ -1,30 +1,38 @@
 /area/hallway/fourthdeck/lift
-	name = "\improper Fourth Deck Lift"
-	icon_state = "d4lift"
+	name = "\improper First Deck Lift"
+	icon_state = "deck1_lift"
 
-/area/maintenance/fourthdeck/reactor
+/area/engineering/firstdeck/reactor
 	name = "\improper Reactor Compartment"
-	icon_state = "engine"
+	icon_state = "reactor"
 
-/area/maintenance/fourthdeck/reactorcontrol
+/area/engineering/firstdeck/reactorcontrol
 	name = "\improper Reactor Control Station"
-	icon_state = "engineering"
+	icon_state = "reactor_control"
 
-/area/maintenance/fourthdeck/reactorstorage
-	name = "\improper Reactor Storage Compartment"
+/area/engineering/firstdeck/engineeringstorage
+	name = "\improper Engineering Compartment"
 	icon_state = "engineering_storage"
 
-/area/maintenance/fourthdeck/atmospherics
+/area/engineering/firstdeck/atmospherics
 	name = "\improper Atmospherics Compartment"
 	icon_state = "atmos"
 
-/area/maintenance/fourthdeck/machineshop
+/area/engineering/firstdeck/machineshop
 	name = "\improper Machine Shop"
 	icon_state = "machineshop"
 
-/area/turbolift/fourthdeck
-	name = "lift (fourth deck)"
-	lift_floor_label = "Deck 4"
+/area/engineering/firstdeck/engineeringmain
+	name = "\improper General Engineering Compartment"
+	icon_state = "engineering"
+
+/area/maintenance/firstdeckmaintenance
+	name = "\improper Engineering Deck Maintenance"
+	icon_state = "deck1_maintenance"
+
+/area/turbolift/firstdeck
+	name = "lift (first deck)"
+	lift_floor_label = "Deck 1"
 	lift_floor_name = "Engineering Deck"
 	lift_announce_str = "Arriving at Engineering Deck."
 	base_turf = /turf/simulated/floor
