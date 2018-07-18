@@ -1,0 +1,45 @@
+"a" = (/turf/space,/area/space)
+"b" = (/obj/machinery/light_switch{pixel_x = 25},/turf/space,/area/space)
+"c" = (/turf/simulated/wall,/area/space)
+"d" = (/obj/machinery/door/airlock/multi_tile/civilian,/turf/space,/area/space)
+"e" = (/turf/simulated/floor/tiled/steel_grid,/area/space)
+"f" = (/obj/effect/landmark/test/safe_turf,/turf/simulated/floor/tiled/steel_grid,/area/space)
+"g" = (/obj/effect/landmark/start,/turf/simulated/floor/tiled/steel_grid,/area/space)
+"h" = (/obj/effect/landmark{name = "tdome1"},/turf/simulated/floor/tiled/steel_grid,/area/space)
+"i" = (/obj/effect/landmark{name = "JoinLate"},/turf/simulated/floor/tiled/steel_grid,/area/space)
+"j" = (/obj/effect/landmark/test/space_turf,/turf/space,/area/space)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaacdacccdacaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaceeeeeeecaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaceeeeeeecaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaceeeeeeecaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaacefeeegecaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaceeeeeeecaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaachhheiiicaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaachhheiiicaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaachhheiiicaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaacccccccccaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaajaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}
