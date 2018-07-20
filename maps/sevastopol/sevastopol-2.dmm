@@ -1,105 +1,125 @@
-"a" = (/obj/effect/landmark/map_data{height = 2; name = "Map Data"},/turf/space,/area/space)
-"b" = (/turf/space,/area/space)
-"c" = (/turf/simulated/wall/r_wall,/area/space)
-"d" = (/turf/simulated/floor/tiled/dark,/area/space)
-"e" = (/turf/simulated/floor/tiled/techmaint,/area/space)
-"f" = (/turf/simulated/wall/r_wall/hull,/area/space)
-"g" = (/turf/simulated/floor/plating,/area/space)
-"h" = (/obj/machinery/airlock_sensor/airlock_exterior,/turf/simulated/wall/r_wall/hull,/area/space)
-"i" = (/obj/machinery/door/airlock/external,/turf/simulated/floor/plating,/area/space)
-"j" = (/obj/machinery/airlock_sensor/airlock_interior,/turf/simulated/wall/r_wall/hull,/area/space)
-"k" = (/turf/simulated/floor/tiled/techfloor,/area/space)
-"l" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/maintenance,/turf/simulated/floor/tiled/techmaint,/area/space)
-"m" = (/obj/structure/catwalk,/turf/simulated/floor/plating,/area/space)
-"n" = (/obj/effect/catwalk_plated/dark,/turf/space,/area/space)
-"o" = (/obj/machinery/alarm,/turf/simulated/wall/r_wall,/area/space)
-"p" = (/obj/machinery/firealarm,/turf/simulated/wall/r_wall,/area/space)
-"q" = (/obj/effect/floor_decal/unn/l1,/turf/simulated/floor/tiled/dark,/area/space)
-"r" = (/obj/effect/floor_decal/unn/l2,/turf/simulated/floor/tiled/dark,/area/space)
-"s" = (/obj/effect/floor_decal/unn/l3,/turf/simulated/floor/tiled/dark,/area/space)
-"t" = (/obj/effect/floor_decal/unn/l4,/turf/simulated/floor/tiled/dark,/area/space)
-"u" = (/obj/effect/floor_decal/unn/l5,/turf/simulated/floor/tiled/dark,/area/space)
-"v" = (/obj/effect/floor_decal/unn/l6,/turf/simulated/floor/tiled/dark,/area/space)
-"w" = (/obj/effect/floor_decal/unn/l7,/turf/simulated/floor/tiled/dark,/area/space)
-"x" = (/obj/effect/floor_decal/unn/l8,/turf/simulated/floor/tiled/dark,/area/space)
-"y" = (/obj/effect/floor_decal/unn/l9,/turf/simulated/floor/tiled/dark,/area/space)
-"z" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/multi_tile/maintenance,/obj/machinery/door/firedoor/multi_tile,/turf/simulated/floor/tiled/techfloor/grid,/area/space)
-"A" = (/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/techfloor/grid,/area/space)
-"B" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/hallway/seconddeck/lift)
-"C" = (/turf/simulated/floor/tiled/techfloor,/area/hallway/seconddeck/lift)
-"D" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/space)
-"E" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/space)
-"F" = (/obj/machinery/light{icon_state = "tube_map"; dir = 1},/turf/simulated/floor/tiled/techmaint,/area/space)
-"G" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techmaint,/area/space)
-"H" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/simulated/floor/tiled/techmaint,/area/space)
-"I" = (/obj/machinery/light,/turf/simulated/floor/tiled/techmaint,/area/space)
-"J" = (/obj/effect/wallframe_spawn/reinforced,/turf/simulated/wall/r_wall,/area/space)
-"K" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/hallway/seconddeck/lift)
-"L" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/maintenance,/turf/simulated/floor/tiled/techfloor/grid,/area/space)
-"M" = (/obj/machinery/power/apc{dir = 8; name = "Deck 2 Lift APC"; pixel_x = -12},/turf/simulated/floor/tiled/techfloor,/area/hallway/seconddeck/lift)
-"N" = (/obj/structure/ladder/updown,/turf/simulated/floor/tiled/techfloor,/area/hallway/seconddeck/lift)
-"O" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/multi_tile/maintenance,/obj/machinery/door/firedoor/multi_tile,/turf/simulated/floor/tiled/dark,/area/space)
-"P" = (/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/dark,/area/space)
-"Q" = (/obj/structure/sign/directions/supply{icon_state = "direction_supply"; dir = 8},/turf/simulated/wall/r_wall,/area/space)
-"R" = (/obj/structure/sign/directions/engineering,/obj/structure/sign/directions/bridge{dir = 1; icon_state = "direction_bridge"; pixel_y = 8},/turf/simulated/floor/tiled/techfloor,/area/hallway/seconddeck/lift)
-"S" = (/obj/structure/sign/bluecross_1,/turf/simulated/wall/r_wall,/area/space)
-"T" = (/obj/structure/sign/deck/second,/turf/simulated/wall/r_wall,/area/space)
-"U" = (/obj/structure/sign/warning/docking_area,/turf/simulated/wall/r_wall,/area/space)
-"V" = (/obj/structure/sign/warning/airlock,/turf/simulated/wall/r_wall,/area/space)
-"W" = (/obj/item/modular_computer/console/preset/supply,/turf/simulated/floor/tiled/techfloor,/area/space)
-"X" = (/obj/machinery/power/apc{dir = 8; name = "Supply Compartment APC"; pixel_x = -12},/turf/simulated/floor/tiled/techfloor,/area/space)
-"Y" = (/obj/structure/table/standard,/turf/simulated/floor/tiled/techfloor,/area/space)
-"Z" = (/obj/item/modular_computer/console/preset/dock,/turf/simulated/floor/tiled/techfloor,/area/space)
+"aa" = (/obj/effect/landmark/map_data{height = 2; name = "Map Data"},/turf/space,/area/space)
+"ab" = (/turf/space,/area/space)
+"ac" = (/turf/simulated/wall/r_wall,/area/space)
+"ad" = (/turf/simulated/wall/r_wall,/area/medical/seconddeck/infirmary)
+"ae" = (/turf/simulated/wall/r_wall,/area/supply/seconddeck/cargobay)
+"af" = (/turf/simulated/wall/r_wall/hull,/area/space)
+"ag" = (/turf/simulated/floor/plating,/area/space)
+"ah" = (/obj/machinery/airlock_sensor/airlock_exterior,/turf/simulated/wall/r_wall/hull,/area/space)
+"ai" = (/obj/machinery/door/airlock/external,/turf/simulated/floor/plating,/area/space)
+"aj" = (/obj/machinery/airlock_sensor/airlock_interior,/turf/simulated/wall/r_wall/hull,/area/space)
+"ak" = (/turf/simulated/floor/tiled/techfloor,/area/space)
+"al" = (/obj/structure/sign/warning/airlock,/turf/simulated/wall/r_wall,/area/supply/seconddeck/cargobay)
+"am" = (/obj/structure/catwalk,/turf/simulated/floor/plating,/area/space)
+"an" = (/obj/effect/catwalk_plated/dark,/turf/space,/area/space)
+"ao" = (/obj/machinery/door/airlock/external,/turf/simulated/floor/plating,/area/supply/seconddeck/cargobay)
+"ap" = (/obj/structure/sign/warning/docking_area,/turf/simulated/wall/r_wall,/area/supply/seconddeck/cargobay)
+"aq" = (/obj/structure/sign/bluecross_1,/turf/simulated/wall/r_wall,/area/medical/seconddeck/infirmary)
+"ar" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/multi_tile/maintenance,/obj/machinery/door/firedoor/multi_tile,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"as" = (/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"at" = (/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"au" = (/obj/effect/floor_decal/unn/l1,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"av" = (/obj/effect/floor_decal/unn/l2,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"aw" = (/obj/effect/floor_decal/unn/l3,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"ax" = (/obj/effect/floor_decal/unn/twobytwo/l1,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"ay" = (/obj/effect/floor_decal/unn/twobytwo/l2,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"az" = (/turf/simulated/floor/tiled/techmaint,/area/supply/seconddeck/cargobay)
+"aA" = (/obj/machinery/light{icon_state = "tube_map"; dir = 1},/turf/simulated/floor/tiled/techmaint,/area/supply/seconddeck/cargobay)
+"aB" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/hallway/seconddeck/lift)
+"aC" = (/turf/simulated/floor/tiled/techfloor,/area/hallway/seconddeck/lift)
+"aD" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/space)
+"aE" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/space)
+"aF" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techmaint,/area/supply/seconddeck/cargobay)
+"aG" = (/obj/structure/catwalk,/turf/simulated/floor/plating,/area/supply/seconddeck/cargobay)
+"aH" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/simulated/floor/tiled/techmaint,/area/supply/seconddeck/cargobay)
+"aI" = (/obj/machinery/light,/turf/simulated/floor/tiled/techmaint,/area/supply/seconddeck/cargobay)
+"aJ" = (/turf/simulated/wall/r_wall,/area/supply/seconddeck/supplyoffice)
+"aK" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/hallway/seconddeck/lift)
+"aL" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/maintenance,/turf/simulated/floor/tiled/techfloor/grid,/area/space)
+"aM" = (/obj/machinery/power/apc{dir = 8; name = "Deck 2 Lift APC"; pixel_x = -12},/turf/simulated/floor/tiled/techfloor,/area/hallway/seconddeck/lift)
+"aN" = (/obj/structure/ladder/updown,/turf/simulated/floor/tiled/techfloor,/area/hallway/seconddeck/lift)
+"aO" = (/obj/effect/floor_decal/unn/l4,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"aP" = (/obj/effect/floor_decal/unn/l5,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"aQ" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/maintenance,/turf/simulated/floor/tiled/techmaint,/area/supply/seconddeck/supplyoffice)
+"aR" = (/obj/structure/sign/directions/engineering,/obj/structure/sign/directions/bridge{dir = 1; icon_state = "direction_bridge"; pixel_y = 8},/turf/simulated/floor/tiled/techfloor,/area/hallway/seconddeck/lift)
+"aS" = (/obj/effect/floor_decal/unn/l6,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"aT" = (/obj/structure/sign/deck/second,/turf/simulated/wall/r_wall,/area/space)
+"aU" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/multi_tile/maintenance,/obj/machinery/door/firedoor/multi_tile,/turf/simulated/floor/tiled/techfloor/grid,/area/supply/seconddeck/cargobay)
+"aV" = (/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/techfloor/grid,/area/supply/seconddeck/cargobay)
+"aW" = (/obj/machinery/light{icon_state = "tube_map"; dir = 1},/turf/simulated/floor/tiled/techmaint,/area/supply/seconddeck/supplyoffice)
+"aX" = (/turf/simulated/floor/tiled/techmaint,/area/supply/seconddeck/supplyoffice)
+"aY" = (/obj/machinery/light,/turf/simulated/floor/tiled/techmaint,/area/supply/seconddeck/supplyoffice)
+"aZ" = (/obj/machinery/alarm,/turf/simulated/wall/r_wall,/area/hallway/seconddeck/lift)
+"ba" = (/obj/effect/floor_decal/unn/twobytwo/l3,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"bb" = (/obj/effect/floor_decal/unn/twobytwo/l4,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"bc" = (/obj/effect/floor_decal/unn/l7,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"bd" = (/obj/effect/floor_decal/unn/l8,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"be" = (/obj/effect/floor_decal/unn/l9,/turf/simulated/floor/tiled/dark,/area/medical/seconddeck/infirmary)
+"bf" = (/turf/simulated/wall/r_wall,/area/hallway/seconddeck/lift)
+"bg" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/multi_tile/maintenance,/obj/machinery/door/firedoor/multi_tile,/turf/simulated/floor/tiled/techfloor/grid,/area/hallway/seconddeck/lift)
+"bh" = (/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/techfloor/grid,/area/hallway/seconddeck/lift)
+"bi" = (/obj/machinery/firealarm,/turf/simulated/wall/r_wall,/area/hallway/seconddeck/lift)
+"bj" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/supply/seconddeck/supplyoffice)
+"bk" = (/obj/item/modular_computer/console/preset/supply,/turf/simulated/floor/tiled/techfloor,/area/supply/seconddeck/supplyoffice)
+"bl" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/supply/seconddeck/supplyoffice)
+"bm" = (/obj/machinery/power/apc{dir = 8; name = "Supply Compartment APC"; pixel_x = -12},/turf/simulated/floor/tiled/techfloor,/area/supply/seconddeck/supplyoffice)
+"bn" = (/turf/simulated/floor/tiled/techfloor,/area/supply/seconddeck/supplyoffice)
+"bo" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/maintenance,/turf/simulated/floor/tiled/techfloor/grid,/area/supply/seconddeck/supplyoffice)
+"bp" = (/obj/structure/sign/directions/supply{icon_state = "direction_supply"; dir = 8},/turf/simulated/wall/r_wall,/area/supply/seconddeck/supplyoffice)
+"bq" = (/obj/item/modular_computer/console/preset/dock,/turf/simulated/floor/tiled/techfloor,/area/supply/seconddeck/supplyoffice)
+"br" = (/obj/structure/table/standard,/turf/simulated/floor/tiled/techfloor,/area/supply/seconddeck/supplyoffice)
+"bs" = (/obj/effect/wallframe_spawn/reinforced,/turf/simulated/wall/r_wall,/area/supply/seconddeck/supplyoffice)
+"bt" = (/turf/simulated/floor/tiled/techfloor,/area/supply/seconddeck/cargobay)
 
 (1,1,1) = {"
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbnmmmmmhifmmhifmmmmmnbbbbbbbbbb
-bbbbbbbbbbmffffffgjfffgjfffffmbbbbbbbbbb
-bbbbbbbbbbffgggcViUccUiVcgggffbbbbbbbbbb
-bbbbbbbbbbfggggceeFeeFeecggggfbbbbbbbbbb
-bbbbbbbbbbfggggcGmmmmmmHcggggfbbbbbbbbbb
-bbbbbbbbbbfggggcemmmmmmecggggfbbbbbbbbbb
-bbbbbbbbbbfggggcemmmmmmecggggfbbbbbbbbbb
-bbbbbbbbbbfggggcemmmmmmecggggfbbbbbbbbbb
-bbbbbbbbbbfggggcemmmmmmecggggfbbbbbbbbbb
-bbbbbbbbbbfggggcGmmmmmmHcggggfbbbbbbbbbb
-bbbbbbbbbbfggggceeIeeIeecggggfbbbbbbbbbb
-bbbbbbbffffgggcclcczAccccggggffffbbbbbbb
-bbbbbbbfggggggcFeckkkkcgggggggggfbbbbbbb
-bbbbbbbfggggggceIckkkkcgggggggggfbbbbbbb
-bbbbbbbfggccccclcoczAcpcccccccggfbbbbbbb
-bbbbbbbfggcDWEcecBCCCCKcDkkkEcggfbbbbbbb
-bbbbbbbfggcXkkcLQMCCCCCckkkkkcggfbbbbbbb
-bbbbbbbfggckkkkkLCCCCCCLkkkkkcggfbbbbbbb
-bbbbbbbfggcZkkkkcCCCCCCckkkkkcggfbbbbbbb
-bbbbbbbfggckkkYkJCCCCCCTkkkkkcggfbbbbbbb
-bbbbbbbfggcDkkYEcBNCRNKcDkkkEcggfbbbbbbb
-bbbbbbbffgcccccccScOPcScccccccgffbbbbbbb
-bbbbbbbbfggcddddddddddddddddcggfbbbbbbbb
-bbbbbbbbffgcddddddqrsdddddddcgffbbbbbbbb
-bbbbbbbbbfgcddddddtuvdddddddcgfbbbbbbbbb
-bbbbbbbbbfgcddddddwxydddddddcgfbbbbbbbbb
-bbbbbbbbbfgcddddddddddddddddcgfbbbbbbbbb
-bbbbbbbbbfgcddddddddddddddddcgfbbbbbbbbb
-bbbbbbbbbfgcddddddddddddddddcgfbbbbbbbbb
-bbbbbbbbbfgcddddddddddddddddcgfbbbbbbbbb
-bbbbbbbbbfgcccccdddddddddccccgfbbbbbbbbb
-bbbbbbbbbfgggggcccccccccccggggfbbbbbbbbb
-bbbbbbbbbfffggggggggggggggggfffbbbbbbbbb
-bbbbbbbbbbbffffffffffffffffffbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+abababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
+aaababababababababababababababababababababababababababababababababababababababab
+ababababababababababanamamamamamahaiafamamahaiafamamamamamanabababababababababab
+ababababababababababamafafafafafafagajafafafagajafafafafafamabababababababababab
+ababababababababababafafagagagaealaoapaeaeapaoalaeagagagafafabababababababababab
+ababababababababababafagagagagaeazazaAazazaAazazaeagagagagafabababababababababab
+ababababababababababafagagagagaeaFaGaGaGaGaGaGaHaeagagagagafabababababababababab
+ababababababababababafagagagagaeazaGaGaGaGaGaGazaeagagagagafabababababababababab
+ababababababababababafagagagagaeazaGaGaGaGaGaGazaeagagagagafabababababababababab
+ababababababababababafagagagagaeazaGaGaGaGaGaGazaeagagagagafabababababababababab
+ababababababababababafagagagagaeazaGaGaGaGaGaGazaeagagagagafabababababababababab
+ababababababababababafagagagagaeaFaGaGaGaGaGaGaHaeagagagagafabababababababababab
+ababababababababababafagagagagaeazazaIazazaIazazaeagagagagafabababababababababab
+abababababababafafafafagagagaJaJaQaJaeaUaVaeaeaeaeagagagagafafafafababababababab
+abababababababafagagagagagagaJaWaXaJbtbtbtbtaeagagagagagagagagagafababababababab
+abababababababafagagagagagagaJaXaYaJbtbtbtbtaeagagagagagagagagagafababababababab
+abababababababafagagaJaJaJaJaJaQaJaZbfbgbhbfbiacacacacacacacagagafababababababab
+abababababababafagagaJbjbkblaJaXaJaBaCaCaCaCaKacaDakakakaEacagagafababababababab
+abababababababafagagaJbmbnbnaJbobpaMaCaCaCaCaCacakakakakakacagagafababababababab
+abababababababafagagaJbnbnbnbnbnboaCaCaCaCaCaCaLakakakakakacagagafababababababab
+abababababababafagagaJbqbnbnbnbnaJaCaCaCaCaCaCacakakakakakacagagafababababababab
+abababababababafagagaJbnbnbnbrbnbsaCaCaCaCaCaCaTakakakakakacagagafababababababab
+abababababababafagagaJbjbnbnbrblaJaBaNaCaRaNaKacaDakakakaEacagagafababababababab
+abababababababafafagacadadadadadadaqadarasadaqadadadadadadacagafafababababababab
+ababababababababafagagadatatatatatatatatatatatatatatatatadagagafabababababababab
+ababababababababafafagadatatatatatatauavawataxayatatatatadagafafabababababababab
+abababababababababafagadatatatatatataOaPaSatbabbatatatatadagafababababababababab
+abababababababababafagadatatatatatatbcbdbeatatatatatatatadagafababababababababab
+abababababababababafagadatatatatatatatatatatatatatatatatadagafababababababababab
+abababababababababafagadatatatatatatatatatatatatatatatatadagafababababababababab
+abababababababababafagadatatatatatatatatatatatatatatatatadagafababababababababab
+abababababababababafagadatatatatatatatatatatatatatatatatadagafababababababababab
+abababababababababafagadadadadadatatatatatatatatatadadadadagafababababababababab
+abababababababababafagagagagagadadadadadadadadadadadagagagagafababababababababab
+abababababababababafafafagagagagagagagagagagagagagagagagafafafababababababababab
+abababababababababababafafafafafafafafafafafafafafafafafafababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababab
 "}

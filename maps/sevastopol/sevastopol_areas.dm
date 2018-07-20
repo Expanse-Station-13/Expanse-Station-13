@@ -44,3 +44,15 @@
 /area/hallway/seconddeck/lift
 	name = "\improper Second Deck Lift"
 	icon_state = "deck2_lift"
+
+/area/medical/seconddeck/infirmary/
+	name = "\improper Infirmary"
+	icon_state = "infirmary"
+
+/area/supply/seconddeck/cargobay/
+	name = "\improper Cargo Bay"
+	icon_state = "cargobay"
+
+/area/supply/seconddeck/supplyoffice/
+	name = "\improper Supply Office"
+	icon_state = "supplyoffice"
