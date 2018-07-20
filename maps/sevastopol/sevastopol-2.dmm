@@ -12,6 +12,17 @@
 "l" = (/obj/machinery/door/airlock/multi_tile/medical,/turf/simulated/floor/tiled/dark,/area/space)
 "m" = (/obj/structure/catwalk,/turf/simulated/floor/plating,/area/space)
 "n" = (/obj/effect/catwalk_plated/dark,/turf/space,/area/space)
+"o" = (/obj/machinery/alarm,/turf/simulated/wall/r_wall,/area/space)
+"p" = (/obj/machinery/firealarm,/turf/simulated/wall/r_wall,/area/space)
+"q" = (/obj/effect/floor_decal/unn/l1,/turf/simulated/floor/tiled/dark,/area/space)
+"r" = (/obj/effect/floor_decal/unn/l2,/turf/simulated/floor/tiled/dark,/area/space)
+"s" = (/obj/effect/floor_decal/unn/l3,/turf/simulated/floor/tiled/dark,/area/space)
+"t" = (/obj/effect/floor_decal/unn/l4,/turf/simulated/floor/tiled/dark,/area/space)
+"u" = (/obj/effect/floor_decal/unn/l5,/turf/simulated/floor/tiled/dark,/area/space)
+"v" = (/obj/effect/floor_decal/unn/l6,/turf/simulated/floor/tiled/dark,/area/space)
+"w" = (/obj/effect/floor_decal/unn/l7,/turf/simulated/floor/tiled/dark,/area/space)
+"x" = (/obj/effect/floor_decal/unn/l8,/turf/simulated/floor/tiled/dark,/area/space)
+"y" = (/obj/effect/floor_decal/unn/l9,/turf/simulated/floor/tiled/dark,/area/space)
 
 (1,1,1) = {"
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
@@ -39,7 +50,7 @@ bbbbbbbbbbfggggcggggggggcggggfbbbbbbbbbb
 bbbbbbbffffggggcccckdccccggggffffbbbbbbb
 bbbbbbbfgggggggggcddddcgggggggggfbbbbbbb
 bbbbbbbfgggggggggcddddcgggggggggfbbbbbbb
-bbbbbbbfggcccccccccddcccccccccggfbbbbbbb
+bbbbbbbfggcccccccocddcpcccccccggfbbbbbbb
 bbbbbbbfggcdddcdcddddddcdddddcggfbbbbbbb
 bbbbbbbfggcdddcccddddddcdddddcggfbbbbbbb
 bbbbbbbfggcdddddcddddddcdddddcggfbbbbbbb
@@ -48,9 +59,9 @@ bbbbbbbfggcdddcccddddddcdddddcggfbbbbbbb
 bbbbbbbfggcdddcdcdeddedcdddddcggfbbbbbbb
 bbbbbbbffgcccccccccldcccccccccgffbbbbbbb
 bbbbbbbbfggcddddddddddddddddcggfbbbbbbbb
-bbbbbbbbffgcddddddddddddddddcgffbbbbbbbb
-bbbbbbbbbfgcddddddddddddddddcgfbbbbbbbbb
-bbbbbbbbbfgcddddddddddddddddcgfbbbbbbbbb
+bbbbbbbbffgcddddddqrsdddddddcgffbbbbbbbb
+bbbbbbbbbfgcddddddtuvdddddddcgfbbbbbbbbb
+bbbbbbbbbfgcddddddwxydddddddcgfbbbbbbbbb
 bbbbbbbbbfgcddddddddddddddddcgfbbbbbbbbb
 bbbbbbbbbfgcddddddddddddddddcgfbbbbbbbbb
 bbbbbbbbbfgcddddddddddddddddcgfbbbbbbbbb
