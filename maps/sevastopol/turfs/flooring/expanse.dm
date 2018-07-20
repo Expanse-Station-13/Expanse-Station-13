@@ -1,3 +1,5 @@
+//3x3 UN Logo
+
 /obj/effect/floor_decal/unn/
 	icon = 'maps/sevastopol/icons/unn.dmi'
 
@@ -36,3 +38,21 @@
 /obj/effect/floor_decal/unn/l9
 	name = "L9"
 	icon_state = "unlogo9"
+
+//2x2 UN Logo
+
+/obj/effect/floor_decal/unn/twobytwo/l1
+	name = "L1"
+	icon_state = "4xunlogo1"
+
+/obj/effect/floor_decal/unn/twobytwo/l2
+	name = "L2"
+	icon_state = "4xunlogo2"
+
+/obj/effect/floor_decal/unn/twobytwo/l3
+	name = "L3"
+	icon_state = "4xunlogo3"
+
+/obj/effect/floor_decal/unn/twobytwo/l4
+	name = "L4"
+	icon_state = "4xunlogo4"

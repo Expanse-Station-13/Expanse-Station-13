@@ -1,4 +1,6 @@
-/area/hallway/fourthdeck/lift
+//Deck 1 (Engineering)
+
+/area/hallway/firstdeck/lift
 	name = "\improper First Deck Lift"
 	icon_state = "deck1_lift"
 
@@ -36,3 +38,9 @@
 	lift_floor_name = "Engineering Deck"
 	lift_announce_str = "Arriving at Engineering Deck."
 	base_turf = /turf/simulated/floor
+
+//Deck 2 (Cargo & Security)
+
+/area/hallway/seconddeck/lift
+	name = "\improper Second Deck Lift"
+	icon_state = "deck2_lift"
