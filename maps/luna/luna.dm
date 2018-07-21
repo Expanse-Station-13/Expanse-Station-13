@@ -2,6 +2,7 @@
 	#include "luna_areas.dm"
 	#include "luna_shuttles.dm"
 	#include "luna_unit_testing.dm"
+	#include "luna_jobs.dm"
 
 	#include "luna-1.dmm"
 	#include "luna-2.dmm"

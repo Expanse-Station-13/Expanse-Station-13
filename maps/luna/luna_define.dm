@@ -1,6 +1,6 @@
 /datum/map/luna
 	name = "Luna"
-	full_name = "The Moon"
+	full_name = "Lovell City, Luna"
 	path = "luna"
 
 	lobby_icon = 'maps/luna/luna_lobby.dmi'
