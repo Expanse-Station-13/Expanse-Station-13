@@ -248,45 +248,52 @@
 "eN" = (/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (WEST)"; icon_state = "spline_plain"; dir = 8},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (WEST)"; icon_state = "black"; dir = 8},/area/office2)
 "eO" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (EAST)"; icon_state = "spline_plain"; dir = 4},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/office2)
 "eP" = (/obj/machinery/requests_console,/turf/unsimulated/wall{tag = "icon-0"; icon_state = "0"},/area/office2)
-"eQ" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
-"eR" = (/obj/structure/table/woodentable_reinforced,/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
-"eS" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
-"eT" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/unsimulated/floor{tag = "icon-white"; icon_state = "white"},/area/medical)
-"eU" = (/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (EAST)"; icon_state = "spline_plain"; dir = 4},/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/unsimulated/floor{tag = "icon-white"; icon_state = "white"},/area/medical)
-"eV" = (/turf/unsimulated/wall/fakeglass,/area/office2)
-"eW" = (/obj/machinery/alarm{dir = 8; pixel_x = 10},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (EAST)"; icon_state = "spline_plain"; dir = 4},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/office2)
-"eX" = (/obj/structure/closet/walllocker/emerglocker/west,/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (WEST)"; icon_state = "spline_plain"; dir = 8},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (WEST)"; icon_state = "black"; dir = 8},/area/civilian)
-"eY" = (/obj/effect/landmark/test/safe_turf,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
-"eZ" = (/obj/effect/landmark/start,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
-"fa" = (/obj/structure/closet/walllocker/emerglocker/east,/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (EAST)"; icon_state = "spline_plain"; dir = 4},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/civilian)
-"fb" = (/obj/structure/bed/chair/office{tag = "icon-officechair_preview (NORTH)"; icon_state = "officechair_preview"; dir = 1},/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
-"fc" = (/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor{tag = "icon-white"; icon_state = "white"},/area/medical)
-"fd" = (/obj/machinery/door/airlock/medical{dir = 8; icon_state = "closed"; id_tag = "med1"; req_access = list(5); tag = "icon-closed (WEST)"},/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor{tag = "icon-white"; icon_state = "white"},/area/medical)
-"fe" = (/obj/machinery/door/airlock/medical{dir = 8; icon_state = "closed"; id_tag = "med1"; req_access = list(5); tag = "icon-closed (WEST)"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-rockvault (NORTHWEST)"; icon_state = "rockvault"; dir = 9},/area/medical)
-"ff" = (/obj/machinery/photocopier,/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (SOUTHWEST)"; icon_state = "spline_plain"; dir = 10},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHWEST)"; icon_state = "black"; dir = 10},/area/office2)
-"fg" = (/obj/structure/closet/crate/bin,/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/office2)
-"fh" = (/obj/structure/table/steel,/obj/item/weapon/folder,/obj/machinery/light,/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/office2)
-"fi" = (/obj/structure/table/steel,/obj/machinery/photocopier/faxmachine,/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/office2)
-"fj" = (/obj/structure/filingcabinet/filingcabinet{tag = "icon-chestdrawer"; icon_state = "chestdrawer"},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (SOUTHEAST)"; icon_state = "spline_plain"; dir = 6},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHEAST)"; icon_state = "black"; dir = 6},/area/office2)
-"fk" = (/obj/machinery/door/airlock/medical,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-rockvault (NORTHWEST)"; icon_state = "rockvault"; dir = 9},/area/space)
-"fl" = (/turf/unsimulated/floor/rescue_base{tag = "icon-asteroidplating"; icon_state = "asteroidplating"},/turf/unsimulated/mineral{tag = "icon-rock_side"; icon_state = "rock_side"},/turf/unsimulated/mineral{tag = "icon-rock_side (WEST)"; icon_state = "rock_side"; dir = 8},/area/space)
-"fm" = (/turf/unsimulated/floor/rescue_base{tag = "icon-asteroidplating"; icon_state = "asteroidplating"},/turf/unsimulated/mineral{tag = "icon-rock_side"; icon_state = "rock_side"},/turf/unsimulated/mineral{tag = "icon-rock_side (EAST)"; icon_state = "rock_side"; dir = 4},/area/space)
-"fn" = (/obj/effect/landmark{name = "tdome1"},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (WEST)"; icon_state = "spline_plain"; dir = 8},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (WEST)"; icon_state = "black"; dir = 8},/area/civilian)
-"fo" = (/obj/effect/landmark{name = "tdome1"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
-"fp" = (/obj/effect/landmark{name = "JoinLate"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
-"fq" = (/obj/effect/landmark{name = "JoinLate"},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (EAST)"; icon_state = "spline_plain"; dir = 4},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/civilian)
-"fr" = (/obj/structure/bed/chair/armchair/black,/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
-"fs" = (/obj/structure/bed/psych,/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
-"ft" = (/obj/effect/landmark{name = "tdome1"},/obj/machinery/light{icon_state = "tube_map"; dir = 8},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (WEST)"; icon_state = "spline_plain"; dir = 8},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (WEST)"; icon_state = "black"; dir = 8},/area/civilian)
-"fu" = (/obj/effect/landmark{name = "JoinLate"},/obj/machinery/light{icon_state = "tube_map"; dir = 4},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (EAST)"; icon_state = "spline_plain"; dir = 4},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/civilian)
-"fv" = (/obj/effect/landmark{name = "tdome1"},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (SOUTHWEST)"; icon_state = "spline_plain"; dir = 10},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHWEST)"; icon_state = "black"; dir = 10},/area/civilian)
-"fw" = (/obj/effect/landmark{name = "tdome1"},/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian)
-"fx" = (/obj/machinery/camera/autoname{tag = "icon-camera (NORTH)"; icon_state = "camera"; dir = 1},/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian)
-"fy" = (/obj/effect/landmark{name = "JoinLate"},/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian)
-"fz" = (/obj/effect/landmark{name = "JoinLate"},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (SOUTHEAST)"; icon_state = "spline_plain"; dir = 6},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHEAST)"; icon_state = "black"; dir = 6},/area/civilian)
-"fA" = (/obj/structure/bed/chair/office/dark{tag = "icon-officechair_preview (NORTH)"; icon_state = "officechair_preview"; dir = 1},/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
-"fB" = (/obj/effect/landmark/test/space_turf,/turf/space,/area/space)
-"fC" = (/turf/space,/area/medical/psychiatry)
+"eQ" = (/obj/effect/floor_decal/unn/l1,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"eR" = (/obj/effect/floor_decal/unn/l2,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"eS" = (/obj/effect/floor_decal/unn/l3,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"eT" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
+"eU" = (/obj/structure/table/woodentable_reinforced,/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
+"eV" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
+"eW" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/unsimulated/floor{tag = "icon-white"; icon_state = "white"},/area/medical)
+"eX" = (/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (EAST)"; icon_state = "spline_plain"; dir = 4},/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/unsimulated/floor{tag = "icon-white"; icon_state = "white"},/area/medical)
+"eY" = (/turf/unsimulated/wall/fakeglass,/area/office2)
+"eZ" = (/obj/machinery/alarm{dir = 8; pixel_x = 10},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (EAST)"; icon_state = "spline_plain"; dir = 4},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/office2)
+"fa" = (/obj/structure/closet/walllocker/emerglocker/west,/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (WEST)"; icon_state = "spline_plain"; dir = 8},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (WEST)"; icon_state = "black"; dir = 8},/area/civilian)
+"fb" = (/obj/effect/landmark/test/safe_turf,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"fc" = (/obj/effect/floor_decal/unn/l4,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"fd" = (/obj/effect/floor_decal/unn/l5,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"fe" = (/obj/effect/floor_decal/unn/l6,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"ff" = (/obj/effect/landmark/start,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"fg" = (/obj/structure/closet/walllocker/emerglocker/east,/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (EAST)"; icon_state = "spline_plain"; dir = 4},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/civilian)
+"fh" = (/obj/structure/bed/chair/office{tag = "icon-officechair_preview (NORTH)"; icon_state = "officechair_preview"; dir = 1},/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
+"fi" = (/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor{tag = "icon-white"; icon_state = "white"},/area/medical)
+"fj" = (/obj/machinery/door/airlock/medical{dir = 8; icon_state = "closed"; id_tag = "med1"; req_access = list(5); tag = "icon-closed (WEST)"},/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor{tag = "icon-white"; icon_state = "white"},/area/medical)
+"fk" = (/obj/machinery/door/airlock/medical{dir = 8; icon_state = "closed"; id_tag = "med1"; req_access = list(5); tag = "icon-closed (WEST)"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-rockvault (NORTHWEST)"; icon_state = "rockvault"; dir = 9},/area/medical)
+"fl" = (/obj/machinery/photocopier,/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (SOUTHWEST)"; icon_state = "spline_plain"; dir = 10},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHWEST)"; icon_state = "black"; dir = 10},/area/office2)
+"fm" = (/obj/structure/closet/crate/bin,/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/office2)
+"fn" = (/obj/structure/table/steel,/obj/item/weapon/folder,/obj/machinery/light,/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/office2)
+"fo" = (/obj/structure/table/steel,/obj/machinery/photocopier/faxmachine,/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/office2)
+"fp" = (/obj/structure/filingcabinet/filingcabinet{tag = "icon-chestdrawer"; icon_state = "chestdrawer"},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (SOUTHEAST)"; icon_state = "spline_plain"; dir = 6},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHEAST)"; icon_state = "black"; dir = 6},/area/office2)
+"fq" = (/obj/effect/floor_decal/unn/l7,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"fr" = (/obj/effect/floor_decal/unn/l8,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"fs" = (/obj/effect/floor_decal/unn/l9,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"ft" = (/obj/machinery/door/airlock/medical,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-rockvault (NORTHWEST)"; icon_state = "rockvault"; dir = 9},/area/space)
+"fu" = (/turf/unsimulated/floor/rescue_base{tag = "icon-asteroidplating"; icon_state = "asteroidplating"},/turf/unsimulated/mineral{tag = "icon-rock_side"; icon_state = "rock_side"},/turf/unsimulated/mineral{tag = "icon-rock_side (WEST)"; icon_state = "rock_side"; dir = 8},/area/space)
+"fv" = (/turf/unsimulated/floor/rescue_base{tag = "icon-asteroidplating"; icon_state = "asteroidplating"},/turf/unsimulated/mineral{tag = "icon-rock_side"; icon_state = "rock_side"},/turf/unsimulated/mineral{tag = "icon-rock_side (EAST)"; icon_state = "rock_side"; dir = 4},/area/space)
+"fw" = (/obj/effect/landmark{name = "tdome1"},/obj/machinery/light{icon_state = "tube_map"; dir = 8},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (WEST)"; icon_state = "spline_plain"; dir = 8},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (WEST)"; icon_state = "black"; dir = 8},/area/civilian)
+"fx" = (/obj/effect/landmark{name = "tdome1"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"fy" = (/obj/effect/landmark{name = "JoinLate"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"fz" = (/obj/effect/landmark{name = "JoinLate"},/obj/machinery/light{icon_state = "tube_map"; dir = 4},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (EAST)"; icon_state = "spline_plain"; dir = 4},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/civilian)
+"fA" = (/obj/structure/bed/chair/armchair/black,/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
+"fB" = (/obj/structure/bed/psych,/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
+"fC" = (/obj/effect/landmark{name = "tdome1"},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (SOUTHWEST)"; icon_state = "spline_plain"; dir = 10},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHWEST)"; icon_state = "black"; dir = 10},/area/civilian)
+"fD" = (/obj/effect/landmark{name = "tdome1"},/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian)
+"fE" = (/obj/machinery/camera/autoname{tag = "icon-camera (NORTH)"; icon_state = "camera"; dir = 1},/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian)
+"fF" = (/obj/effect/landmark{name = "JoinLate"},/obj/effect/floor_decal/spline/plain/black,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian)
+"fG" = (/obj/effect/landmark{name = "JoinLate"},/obj/effect/floor_decal/spline/plain/black{tag = "icon-spline_plain (SOUTHEAST)"; icon_state = "spline_plain"; dir = 6},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHEAST)"; icon_state = "black"; dir = 6},/area/civilian)
+"fH" = (/obj/structure/bed/chair/office/dark{tag = "icon-officechair_preview (NORTH)"; icon_state = "officechair_preview"; dir = 1},/turf/unsimulated/floor/rescue_base{tag = "icon-wood"; icon_state = "wood"},/area/medical/psychiatry)
+"fI" = (/obj/effect/landmark/test/space_turf,/turf/space,/area/space)
+"fJ" = (/turf/space,/area/medical/psychiatry)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -349,14 +356,14 @@ aaaaaAcfaxaxaxaBdMdNdOdPdPdPdPdQdPdPdPdPdPdQdPdPdOdOdPdQdPdOdOdPdPdQdPdPdPdPdPdQ
 aaaaaAaAcfaxaxaBdhdhdSdTdUdVdhdhdhdhdhdhdhdhdhdhdWdXdhdYdhdWdZeadhebebebecebebebedeeefedeeegegegegaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaAaAaAbaaxaBdTeheiejekelemdTaaaaaaaaaaaaaadheneoepeqereoesdhaaebeteteueuevebewexeyexexezeAeBegaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaAaAaAbaaxaBeCdveDeDeEeFeGdTaaaaaaaaaaaaaadheHdAdAdAdAdAeIdhaaebeueueueueuebeJeyeyeyeyeKeyeLegaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaAaAaNbOaxaBeMeNeDeDeDeOePdTaaaaaaaaaaaaaadhdvdAdAdAdAdAdCdhaaebeQeReReReSebeJeyeyeyeTegeyeUegaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaAaAbaaxaxaBeVeNeDeDeDeWdTaaaaaaaaaaaaaaaadheXeYdAdAdAeZfadhaaebeueufbeueuebewfcfcfcfcfdfcfcfeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaAdDaxaZaxaBdTfffgfhfifjdTaaaaaaaaaaaaaaaadhdvdAdAdAdAdAdCdhaaebecebebebfkebegegegegegegegegegaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaAflfmaAbaaBdTdTdTdTdTdTdTaaaaaaaaaaaaaaaadhfnfofodAfpfpfqdhaaebeufrfsebeuebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaAaAaAaAaZaBaBaBaBaBaBaBaBaaaaaaaaaaaaaaaadhftfofodAfpfpfudhaaebeueueuebeuebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaAaAaAaAaAbaaxaxaxaxaxaxaxaaaaaaaaaaaaaaaadhfvfwfwfxfyfyfzdhaaebeReReSebeuebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaxaxaxaxaxaxaxaxaxaxaxaxaxaaaaaaaaaaaaaaaadhdhdhdhdhdhdhdhdhaaebfAeueuebeuebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaxaxaxaxaxaxaxaxaxaxaxaxaxaaaaaaaaaaaaaaaaaaaaaaaafBaaaaaaaaaaebebebebebfCfCaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaAaAaNbOaxaBeMeNeDeDeDeOePdTaaaaaaaaaaaaaadhdvdAeQeReSdAdCdhaaebeTeUeUeUeVebeJeyeyeyeWegeyeXegaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaAaAbaaxaxaBeYeNeDeDeDeZdTaaaaaaaaaaaaaaaadhfafbfcfdfefffgdhaaebeueufheueuebewfififififjfififkaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaAdDaxaZaxaBdTflfmfnfofpdTaaaaaaaaaaaaaaaadhdvdAfqfrfsdAdCdhaaebecebebebftebegegegegegegegegegaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaAfufvaAbaaBdTdTdTdTdTdTdTaaaaaaaaaaaaaaaadhfwfxfxdAfyfyfzdhaaebeufAfBebeuebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaAaAaAaAaZaBaBaBaBaBaBaBaBaaaaaaaaaaaaaaaadhfCfDfDfEfFfFfGdhaaebeueueuebeuebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaAaAaAaAaAbaaxaxaxaxaxaxaxaaaaaaaaaaaaaaaadhdhdhdhdhdhdhdhdhaaebeUeUeVebeuebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaxaxaxaxaxaxaxaxaxaxaxaxaxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaebfHeueuebeuebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaxaxaxaxaxaxaxaxaxaxaxaxaxaaaaaaaaaaaaaaaaaaaaaaaafIaaaaaaaaaaebebebebebfJfJaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}
