@@ -379,7 +379,6 @@
 			AnnounceArrival(character, job, spawnpoint.msg)
 		else
 			AnnounceCyborg(character, job, spawnpoint.msg)
-		matchmaker.do_matchmaking()
 	log_and_message_admins("has joined the round as [character.mind.assigned_role].", character)
 
 	if(character.cannot_stand())
@@ -451,10 +450,6 @@
 			spawning = 0 //abort
 			return null
 		new_character = new(spawn_turf, chosen_species.name)
-		if(chosen_species.has_organ[BP_POSIBRAIN] && client && client.prefs.is_shackled)
-			var/obj/item/organ/internal/posibrain/B = new_character.internal_organs_by_name[BP_POSIBRAIN]
-			if(B)	B.shackle(client.prefs.get_lawset())
-
 	if(!new_character)
 		new_character = new(spawn_turf)
 
@@ -475,20 +470,6 @@
 		client.prefs.copy_to(new_character)
 
 	sound_to(src, sound(null, repeat = 0, wait = 0, volume = 85, channel = GLOB.lobby_sound_channel))// MAD JAMS cant last forever yo
-
-	if(mind)
-		mind.active = 0					//we wish to transfer the key manually
-		mind.original = new_character
-		if(client.prefs.memory)
-			mind.store_memory(client.prefs.memory)
-		if(client.prefs.relations.len)
-			for(var/T in client.prefs.relations)
-				var/TT = matchmaker.relation_types[T]
-				var/datum/relation/R = new TT
-				R.holder = mind
-				R.info = client.prefs.relations_info[T]
-			mind.gen_relations_info = client.prefs.relations_info["general"]
-		mind.transfer_to(new_character)					//won't transfer key since the mind is not active
 
 	new_character.SetName(real_name)
 	new_character.dna.ready_dna(new_character)

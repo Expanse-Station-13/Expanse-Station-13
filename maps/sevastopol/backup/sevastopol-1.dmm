@@ -1,0 +1,463 @@
+"aa" = (/turf/space,/area/space)
+"ab" = (/turf/simulated/wall/r_wall,/area/engineering/firstdeck/engineeringmain)
+"ac" = (/turf/simulated/wall/r_wall,/area/engineering/firstdeck/atmospherics)
+"ad" = (/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"ae" = (/turf/simulated/floor/reinforced/airmix,/area/engineering/firstdeck/atmospherics)
+"af" = (/obj/machinery/air_sensor{frequency = 1441; id_tag = "waste_sensor"},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"ag" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 2; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1441; icon_state = "map_vent"; id_tag = "airmix_out"; initialize_directions = 1; internal_pressure_bound = 4000; internal_pressure_bound_default = 4000; name = "Airmix Tank Vent"; pressure_checks = 2; pressure_checks_default = 2; pump_direction = 0},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"ah" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 4; frequency = 1441; id = "waste_in"},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"ai" = (/obj/machinery/atmospherics/pipe/simple/hidden/green{dir = 4},/obj/effect/wallframe_spawn/reinforced_phoron,/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+<<<<<<< HEAD
+"aj" = (/obj/machinery/atmospherics/pipe/simple/hidden/green{icon_state = "intact"; dir = 10},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"ak" = (/obj/machinery/atmospherics/pipe/simple/hidden/cyan{icon_state = "intact"; dir = 6},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+=======
+"aj" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/green{icon_state = "intact"; dir = 10},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"ak" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/cyan{icon_state = "intact"; dir = 6},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+>>>>>>> fc86b42d1510fed85db8967a609593253b59485d
+"al" = (/turf/simulated/wall/r_wall,/area/hallway/fourthdeck/lift)
+"am" = (/obj/machinery/atmospherics/pipe/simple/hidden/cyan{icon_state = "intact"; dir = 8},/obj/effect/wallframe_spawn/reinforced_phoron,/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"an" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 8; frequency = 1441; id = "airmix_in"},/turf/simulated/floor/reinforced/airmix,/area/engineering/firstdeck/atmospherics)
+"ao" = (/obj/machinery/firealarm,/turf/simulated/wall/r_wall,/area/hallway/fourthdeck/lift)
+"ap" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 2; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1441; icon_state = "map_vent"; id_tag = "airmix_out"; initialize_directions = 1; internal_pressure_bound = 4000; internal_pressure_bound_default = 4000; name = "Airmix Tank Vent"; pressure_checks = 2; pressure_checks_default = 2; pump_direction = 0},/turf/simulated/floor/reinforced/airmix,/area/engineering/firstdeck/atmospherics)
+"aq" = (/obj/machinery/air_sensor{frequency = 1441; id_tag = "airmix_sensor"},/turf/simulated/floor/reinforced/airmix,/area/engineering/firstdeck/atmospherics)
+"ar" = (/obj/effect/wallframe_spawn/reinforced_phoron,/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"as" = (/obj/structure/sign/warning/compressed_gas,/turf/simulated/wall/r_wall,/area/engineering/firstdeck/atmospherics)
+<<<<<<< HEAD
+"at" = (/obj/machinery/atmospherics/pipe/simple/hidden/green,/obj/structure/catwalk,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"au" = (/obj/machinery/atmospherics/pipe/simple/hidden/cyan,/obj/structure/catwalk,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+=======
+"at" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/green{icon_state = "intact"; dir = 1},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"au" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/cyan,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+>>>>>>> fc86b42d1510fed85db8967a609593253b59485d
+"av" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/effect/wallframe_spawn/reinforced_phoron,/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"aw" = (/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"ax" = (/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"ay" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"az" = (/obj/item/device/radio/intercom,/turf/simulated/wall/r_wall,/area/engineering/firstdeck/atmospherics)
+<<<<<<< HEAD
+"aA" = (/obj/machinery/door/firedoor/multi_tile,/obj/machinery/door/airlock/multi_tile/atmos,/obj/machinery/atmospherics/pipe/simple/hidden/green,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"aB" = (/turf/simulated/floor/reinforced/nitrogen,/area/engineering/firstdeck/atmospherics)
+"aC" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 4; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1441; icon_state = "map_vent"; id_tag = "n2_out"; initialize_directions = 1; internal_pressure_bound = 4000; internal_pressure_bound_default = 4000; name = "N2 Tank Vent"; pressure_checks = 2; pressure_checks_default = 2; pump_direction = 4},/turf/simulated/floor/reinforced/nitrogen,/area/engineering/firstdeck/atmospherics)
+"aD" = (/obj/effect/wallframe_spawn/reinforced_phoron,/obj/machinery/atmospherics/pipe/simple/hidden/cyan{icon_state = "intact"; dir = 8},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"aE" = (/obj/machinery/atmospherics/pipe/simple/hidden/cyan{icon_state = "intact"; dir = 8},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"aF" = (/obj/machinery/atmospherics/pipe/simple/hidden/cyan{icon_state = "intact"; dir = 8},/obj/effect/wallframe_spawn/reinforced_phoron,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"aG" = (/obj/machinery/atmospherics/pipe/manifold/visible/cyan{dir = 1; icon_state = "map"; pixel_x = 4},/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aH" = (/obj/machinery/atmospherics/pipe/simple/visible/cyan{dir = 4; icon_state = "intact"; pixel_x = 4},/obj/machinery/atmospherics/pipe/simple/visible/green{icon_state = "intact"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aI" = (/obj/machinery/atmospherics/trinary/mixer/t_mixer{dir = 1; pixel_x = 4},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aJ" = (/obj/machinery/atmospherics/pipe/manifold/visible/cyan{dir = 1; icon_state = "map"; pixel_x = 4},/obj/machinery/light{icon_state = "tube_map"; dir = 4},/obj/structure/closet/emcloset,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aK" = (/obj/machinery/atmospherics/pipe/simple/hidden/cyan{icon_state = "intact"; dir = 4},/obj/effect/wallframe_spawn/reinforced_phoron,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"aL" = (/obj/machinery/atmospherics/pipe/simple/hidden/cyan{icon_state = "intact"; dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"aM" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 8; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1441; icon_state = "map_vent"; id_tag = "o2_out"; initialize_directions = 1; internal_pressure_bound = 4000; internal_pressure_bound_default = 4000; name = "O2 Tank Vent"; pressure_checks = 2; pressure_checks_default = 2; pump_direction = 0},/turf/simulated/floor/reinforced/oxygen,/area/engineering/firstdeck/atmospherics)
+"aN" = (/turf/simulated/floor/reinforced/oxygen,/area/engineering/firstdeck/atmospherics)
+"aO" = (/obj/machinery/air_sensor{frequency = 1441; id_tag = "n2_sensor"},/turf/simulated/floor/reinforced/nitrogen,/area/engineering/firstdeck/atmospherics)
+"aP" = (/obj/structure/sign/warning/compressed_gas{icon_state = "hikpa"; dir = 4},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/atmospherics)
+"aQ" = (/obj/machinery/atmospherics/portables_connector{dir = 1; icon_state = "map_connector"; pixel_x = 4},/obj/machinery/power/apc/high{dir = 8; name = "Atmospherics APC"; pixel_x = -12},/obj/structure/cable{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aR" = (/obj/machinery/atmospherics/pipe/simple/visible/green{icon_state = "intact"; dir = 1},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aS" = (/obj/machinery/atmospherics/portables_connector{dir = 1; icon_state = "map_connector"; pixel_x = 4},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aT" = (/obj/structure/sign/warning/compressed_gas{icon_state = "hikpa"; dir = 8},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/atmospherics)
+"aU" = (/obj/machinery/air_sensor{frequency = 1441; id_tag = "o2_sensor"},/turf/simulated/floor/reinforced/oxygen,/area/engineering/firstdeck/atmospherics)
+"aV" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 4; frequency = 1441; id = "n2_in"},/turf/simulated/floor/reinforced/nitrogen,/area/engineering/firstdeck/atmospherics)
+"aW" = (/obj/effect/wallframe_spawn/reinforced_phoron,/obj/machinery/atmospherics/pipe/simple/hidden/green{dir = 4},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"aX" = (/obj/machinery/atmospherics/pipe/simple/hidden/green{dir = 4},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"aY" = (/obj/effect/landmark/map_data{name = "Map Data"},/turf/space,/area/space)
+"aZ" = (/obj/effect/wallframe_spawn/reinforced_phoron,/obj/machinery/atmospherics/pipe/simple/hidden/green{dir = 4},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"ba" = (/obj/machinery/atmospherics/binary/pump/high_power/on/distribution{icon_state = "map_on"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bb" = (/obj/machinery/atmospherics/omni/filter,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bc" = (/obj/machinery/atmospherics/binary/pump/high_power/on/distribution{icon_state = "map_on"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bd" = (/obj/machinery/atmospherics/pipe/simple/visible/green{icon_state = "intact"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"be" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/machinery/atmospherics/pipe/simple/hidden/green{dir = 4},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"bf" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 8; frequency = 1441; id = "o2_in"},/turf/simulated/floor/reinforced/oxygen,/area/engineering/firstdeck/atmospherics)
+"bg" = (/obj/machinery/computer/general_air_control/large_tank_control{dir = 4; input_tag = "n2_in"; name = "Nitrogen Tank Control Console"; output_tag = "n2_out"; sensors = list("n2_sensor" = "Tank")},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bh" = (/obj/machinery/atmospherics/binary/pump/high_power/on/distribution{icon_state = "map_on"; dir = 1},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+=======
+"aA" = (/obj/machinery/door/firedoor/multi_tile,/obj/machinery/door/airlock/multi_tile/atmos,/obj/machinery/atmospherics/pipe/simple/visible/green{icon_state = "intact"; dir = 1},/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"aB" = (/turf/simulated/floor/reinforced/nitrogen,/area/engineering/firstdeck/atmospherics)
+"aC" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 4; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1441; icon_state = "map_vent"; id_tag = "n2_out"; initialize_directions = 1; internal_pressure_bound = 4000; internal_pressure_bound_default = 4000; name = "N2 Tank Vent"; pressure_checks = 2; pressure_checks_default = 2; pump_direction = 4},/turf/simulated/floor/reinforced/nitrogen,/area/engineering/firstdeck/atmospherics)
+"aD" = (/obj/machinery/atmospherics/trinary/mixer/t_mixer{dir = 1; pixel_x = 0},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aE" = (/obj/effect/wallframe_spawn/reinforced_phoron,/obj/machinery/atmospherics/pipe/simple/visible/cyan{dir = 4; icon_state = "intact"; pixel_x = 0},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"aF" = (/obj/machinery/atmospherics/pipe/simple/visible/cyan{dir = 4; icon_state = "intact"; pixel_x = 0},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"aG" = (/obj/machinery/atmospherics/pipe/manifold/visible/cyan{dir = 1; icon_state = "map"; pixel_x = 4},/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aH" = (/obj/effect/wallframe_spawn/reinforced_phoron,/obj/machinery/atmospherics/pipe/simple/visible/cyan{dir = 4; icon_state = "intact"; pixel_x = 0},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"aI" = (/obj/machinery/atmospherics/pipe/manifold/visible/cyan{dir = 1; icon_state = "map"; pixel_x = 0},/obj/machinery/light{icon_state = "tube_map"; dir = 4},/obj/structure/closet/emcloset,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aJ" = (/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/machinery/atmospherics/binary/pump/high_power{icon_state = "map_off"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aK" = (/obj/machinery/atmospherics/pipe/simple/visible/cyan{dir = 4; icon_state = "intact"; pixel_x = 0},/obj/machinery/atmospherics/pipe/simple/visible/green{icon_state = "intact"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aL" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/machinery/atmospherics/pipe/simple/visible/cyan{dir = 4; icon_state = "intact"; pixel_x = 0},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"aM" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 8; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1441; icon_state = "map_vent"; id_tag = "o2_out"; initialize_directions = 1; internal_pressure_bound = 4000; internal_pressure_bound_default = 4000; name = "O2 Tank Vent"; pressure_checks = 2; pressure_checks_default = 2; pump_direction = 0},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"aN" = (/obj/machinery/air_sensor{frequency = 1441; id_tag = "o2_sensor"},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"aO" = (/obj/machinery/air_sensor{frequency = 1441; id_tag = "n2_sensor"},/turf/simulated/floor/reinforced/nitrogen,/area/engineering/firstdeck/atmospherics)
+"aP" = (/obj/structure/sign/warning/compressed_gas{icon_state = "hikpa"; dir = 4},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/atmospherics)
+"aQ" = (/obj/machinery/atmospherics/portables_connector{dir = 1; icon_state = "map_connector"; pixel_x = 4},/obj/machinery/power/apc/high{dir = 8; name = "Atmospherics APC"; pixel_x = -12},/obj/structure/cable{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aR" = (/obj/machinery/atmospherics/binary/pump/high_power{icon_state = "map_off"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aS" = (/obj/machinery/atmospherics/portables_connector{dir = 1; icon_state = "map_connector"; pixel_x = 4},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"aT" = (/obj/structure/sign/warning/compressed_gas{icon_state = "hikpa"; dir = 8},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/atmospherics)
+"aU" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 8; frequency = 1441; id = "o2_in"},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"aV" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 4; frequency = 1441; id = "n2_in"},/turf/simulated/floor/reinforced/nitrogen,/area/engineering/firstdeck/atmospherics)
+"aW" = (/obj/effect/wallframe_spawn/reinforced_phoron,/obj/machinery/atmospherics/pipe/simple/hidden/green{dir = 4},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"aX" = (/obj/effect/wallframe_spawn/reinforced_phoron,/obj/machinery/atmospherics/pipe/simple/visible/green{icon_state = "intact"; dir = 8},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/atmospherics)
+"aY" = (/obj/effect/landmark/map_data{name = "Map Data"},/turf/space,/area/space)
+"aZ" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/cyan,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"ba" = (/obj/machinery/atmospherics/binary/pump/high_power/on/distribution{icon_state = "map_on"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bb" = (/obj/machinery/atmospherics/omni/filter,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bc" = (/obj/machinery/door/firedoor/multi_tile,/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,/obj/machinery/door/airlock/multi_tile/atmos,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"bd" = (/obj/machinery/atmospherics/pipe/simple/visible/green{icon_state = "intact"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"be" = (/obj/machinery/atmospherics/pipe/simple/visible/green{icon_state = "intact"; dir = 8},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"bf" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/machinery/atmospherics/pipe/manifold/hidden/supply{icon_state = "map-supply"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"bg" = (/obj/machinery/computer/general_air_control/large_tank_control{dir = 4; input_tag = "n2_in"; name = "Nitrogen Tank Control Console"; output_tag = "n2_out"; sensors = list("n2_sensor" = "Tank")},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bh" = (/obj/machinery/atmospherics/binary/pump/high_power{icon_state = "map_off"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+>>>>>>> fc86b42d1510fed85db8967a609593253b59485d
+"bi" = (/obj/machinery/atmospherics/pipe/simple/visible/yellow{icon_state = "intact"; dir = 6},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bj" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow{icon_state = "intact"; dir = 4},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/atmospherics)
+"bk" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow{icon_state = "intact"; dir = 9},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"bl" = (/obj/machinery/computer/general_air_control/large_tank_control{dir = 4; input_tag = "waste_in"; name = "Waste Tank Control Console"; output_tag = null; sensors = list("waste_sensor" = "Tank")},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bm" = (/obj/machinery/atmospherics/pipe/simple/visible/universal,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bn" = (/obj/machinery/atmospherics/pipe/simple/visible/universal,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bo" = (/obj/machinery/computer/general_air_control/large_tank_control{dir = 8; input_tag = "o2_in"; name = "Oxygen Tank Control Console"; output_tag = "o2_out"; sensors = list("o2_sensor" = "Tank")},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bp" = (/turf/simulated/wall/r_wall,/area/engineering/firstdeck/machineshop)
+"bq" = (/obj/machinery/computer/general_air_control/large_tank_control{dir = 4; input_tag = "airmix_in"; name = "Airmix Tank Control Console"; output_tag = "airmix_out"; sensors = list("airmix_sensor" = "Tank")},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"br" = (/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,/obj/structure/catwalk,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+<<<<<<< HEAD
+"bs" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"bt" = (/obj/machinery/atmospherics/pipe/manifold/visible/supply{icon_state = "map-supply"; dir = 8},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"bu" = (/obj/machinery/atmospherics/portables_connector{dir = 8; icon_state = "map_connector"; pixel_y = -4},/obj/machinery/firealarm{bound_x = 0; dir = 4; pixel_x = 10},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bv" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/machineshop)
+"bw" = (/obj/structure/closet/emcloset,/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"bx" = (/obj/machinery/alarm{pixel_y = 4},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"by" = (/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"bz" = (/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/machineshop)
+"bA" = (/obj/machinery/atmospherics/unary/vent_pump/on,/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/machineshop)
+"bB" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/machineshop)
+"bC" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/supply,/turf/simulated/floor/plating,/area/hallway/fourthdeck/lift)
+"bD" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 4; icon_state = "map_scrubber_on"; pixel_y = 3},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bE" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"bF" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/manifold/visible/scrubbers{icon_state = "map-scrubbers"; dir = 4},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"bG" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/obj/machinery/atmospherics/unary/vent_pump/on{icon_state = "map_vent_out"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bH" = (/obj/machinery/power/apc{dir = 8; pixel_x = -12},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"bI" = (/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bJ" = (/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"bK" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"bL" = (/obj/machinery/power/apc{dir = 4; pixel_x = 12},/obj/structure/cable{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/machineshop)
+"bM" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"bN" = (/obj/machinery/firealarm{bound_x = 0; dir = 4; pixel_x = 10},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"bO" = (/obj/machinery/door/airlock/engineering,/obj/machinery/door/firedoor,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/dark,/area/engineering/firstdeck/engineeringmain)
+"bP" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/effect/floor_decal/industrial/warning,/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bQ" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{icon_state = "map-supply"; dir = 1},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{icon_state = "map-scrubbers"; dir = 1},/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 8},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bR" = (/obj/machinery/door/firedoor/multi_tile,/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,/obj/machinery/door/airlock/multi_tile/atmos,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"bS" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/supply,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"bT" = (/turf/simulated/floor/plating,/area/maintenance/firstdeckmaintenance)
+"bU" = (/obj/item/weapon/storage/toolbox/mechanical,/obj/structure/railing{icon_state = "railing0"; dir = 1; anchored = 1},/turf/simulated/floor/tiled/dark,/area/turbolift/firstdeck)
+"bV" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bW" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 10},/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 10},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"bX" = (/obj/machinery/alarm{pixel_y = 4},/obj/machinery/light{icon_state = "tube_map"; dir = 8},/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"bY" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/hallway/fourthdeck/lift)
+"bZ" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"ca" = (/obj/structure/cable,/obj/machinery/power/smes/buildable{charge = 5e+006},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"cb" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 10},/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/obj/machinery/power/terminal{icon_state = "term"; dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"cc" = (/obj/machinery/firealarm{dir = 8; pixel_x = -11},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/machineshop)
+"cd" = (/obj/structure/railing{icon_state = "railing0"; dir = 1; anchored = 1},/turf/simulated/floor/tiled/dark,/area/turbolift/firstdeck)
+"ce" = (/obj/structure/closet/secure_closet/engineering_electrical,/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"cf" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 1},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+=======
+"bs" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/obj/structure/table/standard,/obj/item/weapon/storage/toolbox/mechanical,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"bt" = (/obj/machinery/atmospherics/pipe/manifold/visible/supply{icon_state = "map-supply"; dir = 8},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"bu" = (/obj/machinery/atmospherics/portables_connector{dir = 8; icon_state = "map_connector"; pixel_y = -4},/obj/machinery/firealarm{bound_x = 0; dir = 4; pixel_x = 10},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bv" = (/obj/structure/table/standard,/obj/item/stack/material/steel/fifty,/obj/item/stack/material/glass/fifty,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"bw" = (/obj/structure/table/standard,/obj/item/weapon/storage/toolbox/electrical,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"bx" = (/obj/machinery/atmospherics/unary/vent_pump/on,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"by" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/obj/machinery/vending/engivend,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"bz" = (/obj/machinery/alarm{pixel_y = -10},/turf/simulated/wall/r_wall,/area/hallway/fourthdeck/lift)
+"bA" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bB" = (/obj/structure/filingcabinet/filingcabinet,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bC" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/supply,/turf/simulated/floor/plating,/area/hallway/fourthdeck/lift)
+"bD" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 4; icon_state = "map_scrubber_on"; pixel_y = 3},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bE" = (/obj/structure/closet/secure_closet/engineering_personal{anchored = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bF" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/manifold/visible/scrubbers{icon_state = "map-scrubbers"; dir = 4},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"bG" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/obj/machinery/atmospherics/unary/vent_pump/on{icon_state = "map_vent_out"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"bH" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/obj/structure/closet/secure_closet/engineering_personal{anchored = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bI" = (/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bJ" = (/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"bK" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"bL" = (/obj/machinery/firealarm{dir = 8; pixel_x = -11},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"bM" = (/obj/machinery/power/apc{dir = 4; pixel_x = 12},/obj/structure/cable{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"bN" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable{d2 = 2; icon_state = "0-2"},/obj/structure/bed/chair/office/dark,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bO" = (/obj/structure/closet/walllocker/emerglocker/east,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bP" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/effect/floor_decal/industrial/warning,/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bQ" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{icon_state = "map-supply"; dir = 1},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{icon_state = "map-scrubbers"; dir = 1},/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 8},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bR" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/supply,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"bS" = (/obj/machinery/door/airlock/hatch,/obj/machinery/door/firedoor,/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"bT" = (/turf/simulated/floor/plating,/area/maintenance/firstdeckmaintenance)
+"bU" = (/obj/item/weapon/storage/toolbox/mechanical,/obj/structure/railing{icon_state = "railing0"; dir = 1; anchored = 1},/turf/simulated/floor/tiled/dark,/area/turbolift/firstdeck)
+"bV" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bW" = (/obj/structure/table/steel,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"bX" = (/obj/structure/closet/secure_closet/engineering_electrical{anchored = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"bY" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/hallway/fourthdeck/lift)
+"bZ" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"ca" = (/obj/structure/cable,/obj/machinery/power/smes/buildable{charge = 5e+006},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"cb" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"cc" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/table/steel,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"cd" = (/obj/structure/railing{icon_state = "railing0"; dir = 1; anchored = 1},/turf/simulated/floor/tiled/dark,/area/turbolift/firstdeck)
+"ce" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cf" = (/obj/machinery/firealarm{bound_x = 0; dir = 4; pixel_x = 10},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+>>>>>>> fc86b42d1510fed85db8967a609593253b59485d
+"cg" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/engineeringmain)
+"ch" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 8},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/obj/effect/floor_decal/industrial/warning/corner,/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"ci" = (/obj/effect/landmark/start,/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/effect/floor_decal/industrial/warning,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cj" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 4},/obj/effect/floor_decal/industrial/warning,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+<<<<<<< HEAD
+"ck" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cl" = (/obj/machinery/door/airlock/hatch,/obj/machinery/door/firedoor,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled/dark,/area/engineering/firstdeck/engineeringmain)
+"cm" = (/obj/structure/sign/warning/radioactive{icon_state = "radiation"; dir = 1},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/engineeringmain)
+"cn" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 1},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"co" = (/obj/machinery/access_button/airlock_interior,/turf/simulated/floor/plating,/area/engineering/firstdeck/engineeringmain)
+"cp" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/plating,/area/engineering/firstdeck/engineeringmain)
+"cq" = (/obj/structure/closet/secure_closet/engineering_personal,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/machineshop)
+"cr" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"cs" = (/obj/structure/closet/walllocker/emerglocker/west,/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 4},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"ct" = (/obj/item/device/radio/intercom{dir = 8; icon_state = "intercom"; pixel_x = 12},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cu" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 8},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{icon_state = "map-scrubbers"; dir = 1},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"cv" = (/obj/machinery/door/airlock/engineering,/obj/machinery/door/firedoor,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"cw" = (/obj/machinery/alarm{dir = 4; pixel_x = -11},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/machineshop)
+"cx" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/machineshop)
+"cy" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{icon_state = "map_scrubber_on"; dir = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/machineshop)
+"cz" = (/turf/simulated/wall/r_wall,/area/engineering/firstdeck/engineeringstorage)
+"cA" = (/obj/machinery/door/airlock/engineering,/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringstorage)
+"cB" = (/turf/simulated/wall/r_wall,/area/engineering/firstdeck/reactor)
+"cC" = (/obj/machinery/alarm{dir = 1},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/reactor)
+"cD" = (/obj/machinery/power/apc/high{name = "Reactor APC"},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/reactor)
+"cE" = (/obj/machinery/firealarm,/turf/simulated/wall/r_wall,/area/engineering/firstdeck/reactor)
+"cF" = (/obj/machinery/door/airlock/hatch,/obj/machinery/door/firedoor,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/dark,/area/engineering/firstdeck/reactor)
+"cG" = (/turf/simulated/wall/r_wall,/area/engineering/firstdeck/reactorcontrol)
+"cH" = (/obj/machinery/power/apc{dir = 8; name = "Deck 1 Lift APC"; pixel_x = -12},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 4},/obj/structure/cable,/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cI" = (/obj/item/weapon/book/manual/rust_engine,/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cJ" = (/obj/machinery/door/airlock/engineering,/obj/machinery/door/firedoor,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 1},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/dark,/area/engineering/firstdeck/reactorcontrol)
+"cK" = (/obj/machinery/firealarm{pixel_y = 4},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringstorage)
+"cL" = (/obj/effect/landmark/test/space_turf,/turf/space,/area/space)
+"cM" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/obj/structure/ladder/up,/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cN" = (/obj/effect/landmark{name = "JoinLate"},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cO" = (/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringstorage)
+=======
+"ck" = (/obj/item/device/radio/intercom{dir = 8; icon_state = "intercom"; pixel_x = 12},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 8},/obj/machinery/atmospherics/unary/vent_pump/on{icon_state = "map_vent_out"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cl" = (/obj/machinery/door/airlock/engineering,/obj/machinery/door/firedoor,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/machineshop)
+"cm" = (/obj/machinery/door/airlock/engineering,/obj/machinery/door/firedoor,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"cn" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 1},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"co" = (/obj/machinery/access_button/airlock_interior,/turf/simulated/floor/plating,/area/engineering/firstdeck/engineeringmain)
+"cp" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/plating,/area/engineering/firstdeck/engineeringmain)
+"cq" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 10},/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 10},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/structure/cable{d1 = 0; d2 = 8; icon_state = "0-8"},/obj/machinery/power/apc{dir = 4; pixel_x = 12},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"cr" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"cs" = (/obj/structure/closet/walllocker/emerglocker/west,/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 4},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"ct" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/machinery/atmospherics/pipe/manifold/hidden/supply{icon_state = "map-supply"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"cu" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 8},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{icon_state = "map-scrubbers"; dir = 1},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"cv" = (/obj/structure/closet/secure_closet/engineering_welding{anchored = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"cw" = (/obj/machinery/alarm{pixel_y = -10},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/machineshop)
+"cx" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"cy" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 10},/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/obj/machinery/power/terminal{icon_state = "term"; dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"cz" = (/turf/simulated/wall/r_wall,/area/engineering/firstdeck/engineeringstorage)
+"cA" = (/obj/machinery/door/airlock/engineering,/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringstorage)
+"cB" = (/turf/simulated/wall/r_wall,/area/engineering/firstdeck/reactor)
+"cC" = (/obj/machinery/atmospherics/unary/vent_pump/on{icon_state = "map_vent_out"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"cD" = (/obj/machinery/power/apc/high{name = "Reactor APC"},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/reactor)
+"cE" = (/obj/machinery/firealarm,/turf/simulated/wall/r_wall,/area/engineering/firstdeck/reactor)
+"cF" = (/obj/machinery/vending/tool,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"cG" = (/turf/simulated/wall/r_wall,/area/engineering/firstdeck/reactorcontrol)
+"cH" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 4},/obj/structure/cable,/obj/machinery/power/apc{dir = 8; name = "Deck 1 Lift APC"; pixel_x = -12},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cI" = (/obj/item/weapon/book/manual/rust_engine,/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cJ" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{icon_state = "map_scrubber_on"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"cK" = (/obj/machinery/door/airlock/hatch,/obj/machinery/door/firedoor,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/engineeringmain)
+"cL" = (/obj/effect/landmark/test/space_turf,/turf/space,/area/space)
+"cM" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/obj/structure/ladder/up,/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cN" = (/obj/effect/landmark{name = "JoinLate"},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cO" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+>>>>>>> fc86b42d1510fed85db8967a609593253b59485d
+"cP" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/obj/structure/cable/green{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"cQ" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"cR" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 6},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"cS" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cT" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/obj/structure/ladder/up,/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/hallway/fourthdeck/lift)
+"cU" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"cV" = (/obj/structure/cable/green{d1 = 1; d2 = 8; icon_state = "1-8"},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 9},/obj/structure/cable/green{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"cW" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/obj/structure/cable/green{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"cX" = (/turf/simulated/wall/r_wall/hull,/area/space)
+"cY" = (/obj/structure/railing{anchored = 1},/turf/simulated/floor/tiled/dark,/area/turbolift/firstdeck)
+<<<<<<< HEAD
+"cZ" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 5},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/reactorcontrol)
+=======
+"cZ" = (/obj/structure/closet/walllocker/emerglocker/south,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+>>>>>>> fc86b42d1510fed85db8967a609593253b59485d
+"da" = (/obj/machinery/firealarm{pixel_y = 4},/obj/machinery/atmospherics/unary/vent_scrubber/on{icon_state = "map_scrubber_on"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactorcontrol)
+"db" = (/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringstorage)
+"dc" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/unary/vent_pump/on{icon_state = "map_vent_out"; dir = 4},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dd" = (/obj/machinery/light/small,/obj/structure/closet/radiation,/turf/simulated/floor/plating,/area/engineering/firstdeck/engineeringmain)
+"de" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"df" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 9},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dg" = (/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dh" = (/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"di" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dj" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+<<<<<<< HEAD
+"dk" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 1},/obj/machinery/power/apc{dir = 8; name = "Reactor Control Station APC"; pixel_x = -12},/obj/structure/cable,/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/reactorcontrol)
+"dl" = (/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactorcontrol)
+"dm" = (/obj/structure/sign/warning/radioactive,/turf/simulated/wall/r_wall,/area/engineering/firstdeck/reactor)
+"dn" = (/obj/machinery/door/airlock/hatch,/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"do" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{icon_state = "map_scrubber_on"; dir = 1},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dp" = (/obj/machinery/computer/gyrotron_control{dir = 4; id_tag = "reactor_gyro"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/reactorcontrol)
+"dq" = (/obj/effect/floor_decal/industrial/warning/corner,/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dr" = (/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"ds" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 8},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dt" = (/obj/machinery/computer/fusion_core_control{dir = 4; id_tag = "reactor_core"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/reactorcontrol)
+=======
+"dk" = (/obj/machinery/pipedispenser,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"dl" = (/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactorcontrol)
+"dm" = (/obj/structure/sign/warning/radioactive,/turf/simulated/wall/r_wall,/area/engineering/firstdeck/reactor)
+"dn" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/binary/pump/high_power{icon_state = "map_off"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/atmospherics)
+"do" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{icon_state = "map_scrubber_on"; dir = 1},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dp" = (/obj/machinery/pipedispenser/disposal,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"dq" = (/obj/effect/floor_decal/industrial/warning/corner,/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dr" = (/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"ds" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 8},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dt" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+>>>>>>> fc86b42d1510fed85db8967a609593253b59485d
+"du" = (/obj/effect/floor_decal/industrial/warning,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dv" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 4},/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 8},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dw" = (/obj/machinery/fusion_fuel_injector/mapped{dir = 4; icon_state = "injector0"; id_tag = "reactor_inject"},/turf/simulated/floor/tiled/dark,/area/engineering/firstdeck/reactor)
+"dx" = (/obj/effect/wallframe_spawn/reinforced_phoron,/obj/machinery/door/blast/regular/open{dir = 4; icon_state = "pdoor0"; id = "reactor_inject_l"},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"dy" = (/obj/effect/floor_decal/industrial/warning/corner,/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"dz" = (/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"dA" = (/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 8},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"dB" = (/obj/effect/wallframe_spawn/reinforced_phoron,/obj/machinery/door/blast/regular/open{dir = 8; icon_state = "pdoor0"; id = "reactor_inject_r"},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"dC" = (/obj/machinery/fusion_fuel_injector/mapped{dir = 8; icon_state = "injector0"; id_tag = "reactor_inject"},/turf/simulated/floor/tiled/dark,/area/engineering/firstdeck/reactor)
+"dD" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 8},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+<<<<<<< HEAD
+"dE" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/reactorcontrol)
+=======
+"dE" = (/obj/machinery/door/airlock/hatch,/obj/machinery/door/firedoor,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/reactor)
+>>>>>>> fc86b42d1510fed85db8967a609593253b59485d
+"dF" = (/obj/machinery/button/remote/blast_door{desc = "The control switch for the left fuel injection port blast doors."; dir = 8; icon_state = "blastctrl"; id = "reactor_inject_l"; name = "left injection port door control"; pixel_x = 25; pixel_y = 10},/obj/machinery/button/remote/blast_door{desc = "The control switch for the gyrotron blast doors."; dir = 8; icon_state = "blastctrl"; id = "reactor_gyro"; name = "gyrotron door control"; pixel_x = 25; pixel_y = 0},/obj/machinery/button/remote/blast_door{desc = "The control switch for the right fuel injection port blast doors."; dir = 8; icon_state = "blastctrl"; id = "reactor_inject_r"; name = "right injection port door control"; pixel_x = 25; pixel_y = -10},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactorcontrol)
+"dG" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/closet/crate/radiation,/obj/item/stack/material/tritium{amount = 10},/obj/item/stack/material/tritium{amount = 10},/obj/item/weapon/fuel_assembly/deuterium,/obj/item/weapon/fuel_assembly/deuterium,/obj/item/weapon/fuel_assembly/deuterium,/obj/item/weapon/fuel_assembly/tritium,/obj/item/weapon/fuel_assembly/tritium,/obj/item/weapon/fuel_assembly/tritium,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactor)
+"dH" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 4},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 8},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dI" = (/obj/machinery/door/blast/regular/open{dir = 4; icon_state = "pdoor0"; id = "reactor_inject_l"},/obj/effect/wallframe_spawn/reinforced_phoron,/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"dJ" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 4},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"dK" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/obj/structure/cable/yellow{d1 = 0; d2 = 2; icon_state = "0-2"},/obj/machinery/power/fusion_core/mapped{id_tag = "reactor_core"},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"dL" = (/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 1},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 8},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+<<<<<<< HEAD
+"dM" = (/obj/machinery/computer/fusion_fuel_control{dir = 4; id_tag = "reactor_inject"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/reactorcontrol)
+=======
+"dM" = (/obj/machinery/door/airlock/engineering,/obj/machinery/door/firedoor,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 1},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/reactorcontrol)
+>>>>>>> fc86b42d1510fed85db8967a609593253b59485d
+"dN" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringmain)
+"dO" = (/obj/structure/closet/walllocker/emerglocker/east,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactorcontrol)
+"dP" = (/obj/structure/cable/green,/obj/machinery/power/smes/buildable{charge = 5e+006},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactor)
+"dQ" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 8},/obj/structure/cable/yellow{d1 = 0; d2 = 2; icon_state = "0-2"},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 4},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dR" = (/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 4},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"dS" = (/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"dT" = (/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"dU" = (/obj/machinery/power/port_gen/pacman/mrs,/obj/machinery/light{icon_state = "tube_map"; dir = 8},/obj/structure/cable/yellow{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactor)
+"dV" = (/obj/structure/cable/yellow{d1 = 1; d2 = 8; icon_state = "1-8"},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 8},/obj/structure/cable/yellow{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 4},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dW" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"dX" = (/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"dY" = (/obj/structure/cable/yellow{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"dZ" = (/obj/structure/cable/green{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"ea" = (/obj/structure/cable/green{d1 = 1; d2 = 8; icon_state = "1-8"},/obj/machinery/light{icon_state = "tube_map"; dir = 4},/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 1},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+<<<<<<< HEAD
+"eb" = (/obj/machinery/atmospherics/unary/vent_pump/on{icon_state = "map_vent_out"; dir = 1},/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techfloor/grid,/area/engineering/firstdeck/reactorcontrol)
+=======
+"eb" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{icon_state = "intact-scrubbers"; dir = 5},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactorcontrol)
+>>>>>>> fc86b42d1510fed85db8967a609593253b59485d
+"ec" = (/obj/machinery/alarm{dir = 8; pixel_x = 10},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactorcontrol)
+"ed" = (/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 1},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"ee" = (/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/wallframe_spawn/reinforced_phoron,/obj/machinery/door/blast/regular/open{icon_state = "pdoor0"; id = "reactor_gyro"},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"ef" = (/obj/effect/wallframe_spawn/reinforced_phoron,/obj/machinery/door/blast/regular/open{icon_state = "pdoor0"; id = "reactor_gyro"},/turf/simulated/floor/reinforced/airless,/area/engineering/firstdeck/reactor)
+"eg" = (/obj/structure/cable/yellow{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"eh" = (/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"ei" = (/obj/structure/cable/yellow{d2 = 8; icon_state = "0-8"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"ej" = (/obj/structure/cable/yellow,/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 4},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+<<<<<<< HEAD
+"ek" = (/obj/machinery/power/emitter/gyrotron/anchored{dir = 1; icon_state = "emitter-off"; id = "reactor_gyro"},/obj/structure/cable/green{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/tiled/dark,/area/engineering/firstdeck/reactor)
+"el" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 8},/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"em" = (/obj/structure/cable/green{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+=======
+"ek" = (/obj/machinery/power/emitter/gyrotron/anchored{dir = 1; icon_state = "emitter-off"; id = null; id_tag = "reactor_gyro"},/obj/structure/cable/green{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/tiled/dark,/area/engineering/firstdeck/reactor)
+"el" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 8},/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"em" = (/obj/structure/cable/green{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/plating,/area/engineering/firstdeck/reactor)
+"en" = (/obj/effect/wallframe_spawn/reinforced_phoron,/obj/machinery/atmospherics/pipe/simple/visible/green{icon_state = "intact"; dir = 8},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"eo" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/machinery/atmospherics/pipe/simple/visible/green{icon_state = "intact"; dir = 8},/turf/simulated/floor/plating,/area/engineering/firstdeck/atmospherics)
+"ep" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 1},/obj/machinery/power/apc{dir = 8; name = "Reactor Control Station APC"; pixel_x = -12},/obj/structure/cable,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactorcontrol)
+"eq" = (/obj/machinery/computer/gyrotron_control{dir = 4; id_tag = "reactor_gyro"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactorcontrol)
+"er" = (/obj/machinery/computer/fusion_core_control{dir = 4; id_tag = "reactor_core"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactorcontrol)
+"es" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactorcontrol)
+"et" = (/obj/machinery/computer/fusion_fuel_control{dir = 4; id_tag = "reactor_inject"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{icon_state = "intact-supply"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactorcontrol)
+"eu" = (/obj/structure/sign/warning/radioactive{icon_state = "radiation"; dir = 1},/obj/machinery/alarm{icon_state = "alarm0"; dir = 1},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/engineeringmain)
+"ev" = (/obj/machinery/alarm{pixel_y = -10},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/reactor)
+"ew" = (/obj/machinery/nuclearbomb,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/machineshop)
+"ex" = (/obj/machinery/firealarm{pixel_y = 4},/obj/structure/closet/walllocker/emerglocker/west,/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/engineeringstorage)
+"ey" = (/obj/machinery/atmospherics/unary/vent_pump/on{icon_state = "map_vent_out"; dir = 1},/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/engineering/firstdeck/reactorcontrol)
+"eB" = (/obj/structure/extinguisher_cabinet,/turf/simulated/wall/r_wall,/area/engineering/firstdeck/engineeringmain)
+"eC" = (/obj/structure/extinguisher_cabinet{icon_state = "extinguisher_closed"; dir = 8},/turf/simulated/wall/r_wall,/area/engineering/firstdeck/machineshop)
+>>>>>>> fc86b42d1510fed85db8967a609593253b59485d
+
+(1,1,1) = {"
+aYcLaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaacXcXcXcXcXcXcXcXcXcXcXcXcXcXcXcXcXcXaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacXcXbTbTbTbTbTbTbTbTbTbTbTbTbTbTbTbTcXcXaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacXbTbTbTacacacacacbTbTacacacacacbTbTbTcXaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacXbTbTbTacadadadacacacacaeaeaeacbTbTbTcXaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacXbTbTbTacafagahaiajakamanapaqacbTbTbTcXaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacXbTbTbTacacarasacatauacasavacacbTbTbTcXaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacXbTbTbTbTacawawaxatauaxawayacbTbTbTbTcXaaaaaaaaaaaaaaaaaaaa
+<<<<<<< HEAD
+aaaaaaaaaaaaaaaaaaaacXbTacacacacawacazaAauacacayacacacacbTcXaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacXbTacaBaCaDaEaFaGaHaIaJaKaLaDaMaNacbTcXaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacXbTacaBaOaPawacaQaRaxaSacayaTaUaNacbTcXaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacXbTacaBaVaWaXaZbabbbcbdaZbeaWbfaNacbTcXaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXcXcXcXbTacacacacawacbgbhbibabjbkacacacacbTcXcXcXcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbTbTacawawawacblbmbnboacawawawacbTbTbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpbpbpbpbpbpbpbqbrbtbuacababababababbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpbvbzbzbAbBbpbDbFbtbGacbsbwbxbybEabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpbzbJbJbKbLbpalbRbSaoabbHbIbIbIbyabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpccbJbJbKcqbpbXbYbCbZabbMbIbIbIbNabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpbzbJbJcrcucvchcicjckbObPbQbVbVbWabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpcwbJbJbJcxalcsbUcdctalcacbbycecfabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpbzbJbJbJcyalcHcYcYcIalcgclcmabcnabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpbvbzbzbzbBalcMcNcScTalcocpddabdNabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXcXbTczczcAczcBcBcCcBcDcBcBcEcBcBcFcBcGcJcGcGbTcXcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczcKcOczcPcQcRcUcUcUcUcUcUcUcVcWcGcZdacGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbcOczdcdedfdgdgdgdgdgdhdgdidjcGdkdlcGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbcOczdjdgdgdmcBcBcBcBdndmdodjcGdpdlcGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbcOczdjdqdhcBdrdrdrdrdrcBdhdscGdtdlcGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbcOczdudvdwdxdrdydzdAdrdBdCdDcGdEdFcGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbcOczdGdHdwdIdrdJdKdLdrdBdCdDcGdMdOcGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbcOczdPdQdwdxdrdRdSdTdrdBdCdDcGdEdlcGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbcOczdUdVdWcBdrdXdYdrdrcBdZeacGebeccGbTcXaaaaaaaaaaaaaaaa
+=======
+aaaaaaaaaaaaaaaaaaaacXbTacacacacawacazaAaZacacayacacacacbTcXaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacXbTacaBaCaEaFaHaGaKaDaIaHaLaEaMadacbTcXaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacXbTacaBaOaPawacaQaJaxaSacayaTaNadacbTcXaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacXbTacaBaVaXbeenaRbbbhbdeneoaWaUadacbTcXaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXcXcXcXbTacacacacawacbgdnbibabjbkacacacacbTcXcXcXcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbTbTacawawawacblbmbnboacawawawacbTbTbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpbpbpcwbpbpbpbqbrbtbuaceBabababababbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpbsbvbwbxbybpbDbFbtbGacbAbBbEbEbHabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpbLbJbJbKbMbpbzbcbRaoabbNbIbIbIbOabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpbXbJbJbKcbeCcebYbCbZabccbWbIbIcfabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpbXbJbJcrcuclchcicjbfcmbPbQctbVcqabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpcvbJewbJcxalcsbUcdckalcacycCcFcnabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpcvbJbJbJcJalcHcYcYcIalcgcKeuabcnabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXbTbTbTbpcOcZdkdpdtalcMcNcScTalcocpddabdNabbTbTbTcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaacXcXbTczczcAczcBcBevcBcDcBcBcEcBcBdEcBcGdMcGcGbTcXcXaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczexdbczcPcQcRcUcUcUcUcUcUcUcVcWcGebdacGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbdbczdcdedfdgdgdgdgdgdhdgdidjcGepdlcGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbdbczdjdgdgdmcBcBcBcBbSdmdodjcGeqdlcGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbdbczdjdqdhcBdrdrdrdrdrcBdhdscGerdlcGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbdbczdudvdwdxdrdydzdAdrdBdCdDcGesdFcGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbdbczdGdHdwdIdrdJdKdLdrdBdCdDcGetdOcGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbdbczdPdQdwdxdrdRdSdTdrdBdCdDcGesdlcGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTczdbdbczdUdVdWcBdrdXdYdrdrcBdZeacGeyeccGbTcXaaaaaaaaaaaaaaaa
+>>>>>>> fc86b42d1510fed85db8967a609593253b59485d
+aaaaaaaaaaaaaaaacXbTczczczczcBeddgdmcBeeefefcBdmdjcBcGcGcGcGbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXbTbTbTbTbTcBegeheheiejekelcQcQemcBbTbTbTbTbTcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaacXcXcXcXbTbTcBcBcBcBcBcBcBcBcBcBcBcBbTbTcXcXcXcXaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaacXbTbTbTbTbTbTbTbTbTbTbTbTbTbTbTbTcXaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaacXcXcXcXcXcXcXcXcXcXcXcXcXcXcXcXcXcXaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

@@ -1,0 +1,155 @@
+"aa" = (/turf/space,/area/space)
+"ab" = (/turf/unsimulated/floor/rescue_base{tag = "icon-asteroidplating"; icon_state = "asteroidplating"},/area/space)
+"ac" = (/turf/unsimulated/wall{tag = "icon-0"; icon_state = "0"},/area/space)
+"ad" = (/obj/machinery/power/apc{cell_type = /obj/item/weapon/cell/infinite},/turf/unsimulated/wall{tag = "icon-0"; icon_state = "0"},/area/civilian/office)
+"ae" = (/obj/machinery/door/airlock/glass/maintenance,/turf/unsimulated/wall{tag = "icon-0"; icon_state = "0"},/area/space)
+"af" = (/turf/unsimulated/floor/rescue_base,/area/space)
+"ag" = (/obj/structure/closet/secure_closet/bar,/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/space)
+"ah" = (/obj/structure/table/steel_reinforced,/obj/machinery/chemical_dispenser/bar_alc/full,/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/space)
+"ai" = (/obj/structure/table/steel_reinforced,/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/space)
+"aj" = (/obj/machinery/vending/dinnerware,/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/space)
+"ak" = (/obj/machinery/vending/boozeomat,/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/space)
+"al" = (/obj/structure/closet/crate/bin,/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/space)
+"am" = (/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/space)
+"an" = (/turf/unsimulated/wall{tag = "icon-0"; icon_state = "0"},/area/civilian/office)
+"ao" = (/obj/machinery/light,/turf/unsimulated/wall{tag = "icon-0"; icon_state = "0"},/area/civilian/office)
+"ap" = (/obj/machinery/photocopier,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTHWEST)"; icon_state = "black"; dir = 9},/area/civilian/office)
+"aq" = (/obj/structure/closet/crate/bin,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTH)"; icon_state = "black"; dir = 1},/area/civilian/office)
+"ar" = (/obj/structure/table/steel,/obj/item/weapon/folder,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTH)"; icon_state = "black"; dir = 1},/area/civilian/office)
+"as" = (/obj/structure/table/steel,/obj/machinery/photocopier/faxmachine,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTH)"; icon_state = "black"; dir = 1},/area/civilian/office)
+"at" = (/obj/structure/filingcabinet/filingcabinet{tag = "icon-chestdrawer"; icon_state = "chestdrawer"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTHEAST)"; icon_state = "black"; dir = 5},/area/civilian/office)
+"au" = (/obj/machinery/door/window/southleft,/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/space)
+"av" = (/turf/unsimulated/wall/fakeglass{tag = "icon-fakewindows (NORTH)"; icon_state = "fakewindows"; dir = 1},/area/civilian/office)
+"aw" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (WEST)"; icon_state = "black"; dir = 8},/area/civilian/office)
+"ax" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian/office)
+"ay" = (/turf/unsimulated/floor{tag = "icon-steel"; icon_state = "steel"},/area/civilian/office)
+"az" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/civilian/office)
+"aA" = (/obj/item/weapon/stool/bar,/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/space)
+"aB" = (/turf/unsimulated/wall/fakeglass{tag = "icon-fakewindows2"; icon_state = "fakewindows2"},/area/civilian/office)
+"aC" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/civilian/office)
+"aD" = (/turf/unsimulated/floor/rescue_base{tag = "icon-asteroidplating"; icon_state = "asteroidplating"},/turf/unsimulated/mineral{tag = "icon-rock_side"; icon_state = "rock_side"},/area/space)
+"aE" = (/turf/unsimulated/wall/fakeglass,/area/civilian/office)
+"aF" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"aG" = (/obj/structure/table/steel,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian/office)
+"aH" = (/turf/unsimulated/floor{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/civilian/office)
+"aI" = (/obj/structure/table/steel,/obj/item/weapon/paper_bin,/obj/item/weapon/pen,/turf/unsimulated/floor{tag = "icon-steel"; icon_state = "steel"},/area/civilian)
+"aJ" = (/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/civilian/bar)
+"aK" = (/obj/structure/bed/chair/comfy/black,/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/space)
+"aL" = (/turf/unsimulated/mineral{tag = "icon-rock"; icon_state = "rock"},/area/space)
+"aM" = (/turf/unsimulated/floor/rescue_base{tag = "icon-asteroidplating"; icon_state = "asteroidplating"},/turf/unsimulated/mineral{tag = "icon-rock_side (WEST)"; icon_state = "rock_side"; dir = 8},/area/space)
+"aN" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHWEST)"; icon_state = "black"; dir = 10},/area/civilian/office)
+"aO" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian/office)
+"aP" = (/obj/structure/bed/chair/office/dark{tag = "icon-officechair_preview (EAST)"; icon_state = "officechair_preview"; dir = 4},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian)
+"aQ" = (/obj/structure/table/steel,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian)
+"aR" = (/obj/structure/bed/chair/office/dark{tag = "icon-officechair_preview (WEST)"; icon_state = "officechair_preview"; dir = 8},/turf/unsimulated/floor{tag = "icon-black (SOUTHEAST)"; icon_state = "black"; dir = 6},/area/civilian/office)
+"aS" = (/obj/item/modular_computer/console/preset/command{tag = "icon-console (WEST)"; icon_state = "console"; dir = 8},/turf/unsimulated/floor{tag = "icon-steel"; icon_state = "steel"},/area/civilian)
+"aT" = (/obj/structure/bed/chair/comfy/black{tag = "icon-comfychair_preview (EAST)"; icon_state = "comfychair_preview"; dir = 4},/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/civilian/bar)
+"aU" = (/obj/structure/table/steel,/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/space)
+"aV" = (/obj/structure/bed/chair/comfy/black{tag = "icon-comfychair_preview (WEST)"; icon_state = "comfychair_preview"; dir = 8},/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/space)
+"aW" = (/obj/structure/bed/chair/comfy/black{tag = "icon-comfychair_preview (EAST)"; icon_state = "comfychair_preview"; dir = 4},/turf/unsimulated/floor/rescue_base{tag = "icon-vault (NORTHEAST)"; icon_state = "vault"; dir = 5},/area/space)
+"aX" = (/turf/unsimulated/floor/rescue_base{tag = "icon-asteroidplating"; icon_state = "asteroidplating"},/turf/unsimulated/mineral{tag = "icon-rock_side (NORTH)"; icon_state = "rock_side"; dir = 1},/turf/unsimulated/mineral{tag = "icon-rock_side (WEST)"; icon_state = "rock_side"; dir = 8},/area/space)
+"aY" = (/obj/machinery/door/airlock/glass/civilian,/turf/unsimulated/floor{tag = "icon-rockvault"; icon_state = "rockvault"},/area/civilian/office)
+"aZ" = (/obj/machinery/light_switch,/turf/unsimulated/wall{tag = "icon-0"; icon_state = "0"},/area/civilian)
+"ba" = (/turf/unsimulated/wall/fakeglass{tag = "icon-fakewindows (WEST)"; icon_state = "fakewindows"; dir = 8},/area/civilian/office)
+"bb" = (/turf/unsimulated/wall/fakeglass{tag = "icon-fakewindows (EAST)"; icon_state = "fakewindows"; dir = 4},/area/civilian)
+"bc" = (/obj/structure/sign/double/barsign{tag = "icon-The Harmbaton"; icon_state = "The Harmbaton"},/turf/unsimulated/wall{tag = "icon-0"; icon_state = "0"},/area/civilian)
+"bd" = (/turf/unsimulated/wall{tag = "icon-0"; icon_state = "0"},/area/civilian)
+"be" = (/obj/machinery/door/airlock/multi_tile/civilian,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-rockvault (NORTHWEST)"; icon_state = "rockvault"; dir = 9},/area/civilian)
+"bf" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-rockvault (NORTHWEST)"; icon_state = "rockvault"; dir = 9},/area/civilian)
+"bg" = (/obj/machinery/light,/turf/unsimulated/wall{tag = "icon-0"; icon_state = "0"},/area/civilian)
+"bh" = (/obj/machinery/power/apc{cell_type = /obj/item/weapon/cell/infinite},/turf/unsimulated/wall{tag = "icon-0"; icon_state = "0"},/area/civilian)
+"bi" = (/obj/structure/flora/pottedplant/stoutbush,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTHWEST)"; icon_state = "black"; dir = 9},/area/civilian)
+"bj" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTH)"; icon_state = "black"; dir = 1},/area/civilian)
+"bk" = (/obj/structure/closet/walllocker/emerglocker/north,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTH)"; icon_state = "black"; dir = 1},/area/civilian)
+"bl" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTHEAST)"; icon_state = "black"; dir = 5},/area/civilian)
+"bm" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (WEST)"; icon_state = "black"; dir = 8},/area/civilian)
+"bn" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/civilian)
+"bo" = (/turf/unsimulated/floor/rescue_base{tag = "icon-asteroidplating"; icon_state = "asteroidplating"},/turf/unsimulated/mineral{tag = "icon-rock_side (NORTH)"; icon_state = "rock_side"; dir = 1},/area/space)
+"bp" = (/obj/machinery/light,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHWEST)"; icon_state = "black"; dir = 10},/area/civilian)
+"bq" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian)
+"br" = (/obj/machinery/light,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian)
+"bs" = (/obj/machinery/light,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHEAST)"; icon_state = "black"; dir = 6},/area/civilian)
+"bt" = (/obj/machinery/light_switch,/turf/unsimulated/wall{tag = "icon-0"; icon_state = "0"},/area/civilian/office)
+"bu" = (/turf/unsimulated/wall/fakeglass{tag = "icon-fakewindows (EAST)"; icon_state = "fakewindows"; dir = 4},/area/civilian/office)
+"bv" = (/obj/structure/sign/deck/first,/obj/machinery/light,/turf/unsimulated/wall{tag = "icon-0"; icon_state = "0"},/area/civilian)
+"bw" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTHWEST)"; icon_state = "black"; dir = 9},/area/civilian/office)
+"bx" = (/obj/structure/bed/chair/office/dark{tag = "icon-officechair_preview (EAST)"; icon_state = "officechair_preview"; dir = 4},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTH)"; icon_state = "black"; dir = 1},/area/civilian/office)
+"by" = (/obj/structure/table/steel,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTH)"; icon_state = "black"; dir = 1},/area/civilian/office)
+"bz" = (/obj/structure/bed/chair/office/dark{tag = "icon-officechair_preview (WEST)"; icon_state = "officechair_preview"; dir = 8},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTHEAST)"; icon_state = "black"; dir = 5},/area/civilian/office)
+"bA" = (/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTHWEST)"; icon_state = "black"; dir = 9},/area/civilian)
+"bB" = (/obj/structure/flora/pottedplant/minitree,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (NORTH)"; icon_state = "black"; dir = 1},/area/civilian)
+"bC" = (/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (WEST)"; icon_state = "black"; dir = 8},/area/civilian)
+"bD" = (/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/civilian)
+"bE" = (/obj/structure/closet/walllocker/emerglocker/west,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (WEST)"; icon_state = "black"; dir = 8},/area/civilian)
+"bF" = (/obj/effect/landmark/test/safe_turf,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"bG" = (/obj/effect/landmark/start,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"bH" = (/obj/structure/closet/walllocker/emerglocker/east,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/civilian)
+"bI" = (/obj/machinery/photocopier,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHWEST)"; icon_state = "black"; dir = 10},/area/civilian/office)
+"bJ" = (/obj/structure/closet/crate/bin,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian/office)
+"bK" = (/obj/structure/table/steel,/obj/item/weapon/folder,/obj/machinery/light,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian/office)
+"bL" = (/obj/structure/table/steel,/obj/machinery/photocopier/faxmachine,/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian/office)
+"bM" = (/obj/structure/filingcabinet/filingcabinet{tag = "icon-chestdrawer"; icon_state = "chestdrawer"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHEAST)"; icon_state = "black"; dir = 6},/area/civilian/office)
+"bN" = (/obj/effect/landmark{name = "tdome1"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (WEST)"; icon_state = "black"; dir = 8},/area/civilian)
+"bO" = (/obj/effect/landmark{name = "tdome1"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"bP" = (/obj/effect/landmark{name = "JoinLate"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-steel"; icon_state = "steel"; dir = 2},/area/civilian)
+"bQ" = (/obj/effect/landmark{name = "JoinLate"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/civilian)
+"bR" = (/obj/effect/landmark{name = "tdome1"},/obj/machinery/light{icon_state = "tube_map"; dir = 8},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (WEST)"; icon_state = "black"; dir = 8},/area/civilian)
+"bS" = (/obj/effect/landmark{name = "JoinLate"},/obj/machinery/light{icon_state = "tube_map"; dir = 4},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (EAST)"; icon_state = "black"; dir = 4},/area/civilian)
+"bT" = (/obj/effect/landmark{name = "tdome1"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHWEST)"; icon_state = "black"; dir = 10},/area/civilian)
+"bU" = (/obj/effect/landmark{name = "tdome1"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian)
+"bV" = (/obj/effect/landmark{name = "JoinLate"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black"; icon_state = "black"; dir = 2},/area/civilian)
+"bW" = (/obj/effect/landmark{name = "JoinLate"},/turf/unsimulated/floor/shuttle_ceiling{tag = "icon-black (SOUTHEAST)"; icon_state = "black"; dir = 6},/area/civilian)
+"bX" = (/obj/effect/landmark/test/space_turf,/turf/space,/area/space)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaababababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaababababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaababababababababababababacacacacacacacacadaeacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababafafafafafafafacacagahaiajakalamamacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababafanananaoanadanacamamamamamamamamacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababafanapaqarasatanacaiaiaiaiaiaiaiauacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababafavawaxayaxazanacaAaAaAaAaAaAaAamacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababafaBawaxaxaxaCananamamamamamamamamacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaDaDabababafaEawaFaxaGaHaIanaJaKamamamamaKamacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaLaLaMababafanaNaOaPaQaRaSanaTaUaVamamaWaUaVacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaLaXabababafanaoaYaZbabbanaobcbdbdbebfbgbdbdbdbdbdbhbdbdbdbdbdbgbdbdbdbdbdbgbdbdbdbdbdbgbdaaaaaa
+aaaaaLaMabababafavbibjbjbjbjbkbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjbjblbdaaaaaa
+aaaaaLaMabababafaBbmaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFaFbnbdaaaaaa
+aaaaboababababafaEbpbqbqbqbqbqbrbqbqbqbqbqbrbqbqbqbqbqbrbqbqbqbqbqbrbqbqbqbqbqbrbqbqbqbqbqbsbdaaaaaa
+aaaaabababababafananaYbtbabuananbdbdbdbdbdbdbdbdbebfbdbvbhbebfbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdaaaaaa
+aaaaabababababafanbwbjbxbybzaSanaaaaaaaaaaaaaabdbAbjbBbjbBbjblbdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababafavbmaxaxaGbnaIanaaaaaaaaaaaaaabdbCaFaFaFaFaFbDbdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababafaBbmaxaxaxaCananaaaaaaaaaaaaaabdbmaFaFaFaFaFbnbdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababafaEbmaxaxaxbnanaaaaaaaaaaaaaaaabdbEbFaFaFaFbGbHbdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababafanbIbJbKbLbManaaaaaaaaaaaaaaaabdbmaFaFaFaFaFbnbdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababafanananananadanaaaaaaaaaaaaaaaabdbNbObOaFbPbPbQbdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababafafafafafafafafaaaaaaaaaaaaaaaabdbRbObOaFbPbPbSbdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababababababababababaaaaaaaaaaaaaaaabdbTbUbUbqbVbVbWbdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababababababababababaaaaaaaaaaaaaaaabdbdbdbdbdbdbdbdbdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababababababababababaaaaaaaaaaaaaaaaaaaaaaaabXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}
