@@ -18,11 +18,6 @@ var/const/CHARACTER_PREFERENCE_INPUT_TITLE = "Character Preference"
 	sort_order = 3
 	category_item_type = /datum/category_item/player_setup_item/antagonism
 
-/datum/category_group/player_setup_category/relations_preferences
-	name = "Matchmaking"
-	sort_order = 4
-	category_item_type = /datum/category_item/player_setup_item/relations
-
 /datum/category_group/player_setup_category/loadout_preferences
 	name = "Loadout"
 	sort_order = 5
