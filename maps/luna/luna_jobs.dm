@@ -1,25 +1,8 @@
+/datum/map/luna
 	allowed_jobs = list(/datum/job/officer,
 						/datum/job/doctor,
 						/datum/job/psychiatrist,
-						/datum/job/bartender,
-						/datum/job/guard,
-						/datum/job/stowaway)
-
-
-/datum/job/guard
-	title = "Security Guard"
-	department = "Security"
-	department_flag = SCI
-
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the Research Director and NanoTrasen Personnel"
-	selection_color = "#633d63"
-	economic_modifier = 6
-	minimal_player_age = 3
-	ideal_character_age = 25
-	min_skill = list(	SKILL_COMBAT  = SKILL_BASIC,
-						SKILL_WEAPONS = SKILL_BASIC)
+						/datum/job/bartender)
 
 
 /datum/job/doctor
@@ -61,20 +44,3 @@
 	min_skill = list(	SKILL_COOKING   = SKILL_BASIC,
 						SKILL_BOTANY    = SKILL_BASIC,
 						SKILL_CHEMISTRY = SKILL_BASIC)
-
-/datum/job/stowaway
-	title = "Stowaway"
-	department = "Civilian"
-	department_flag = CIV
-
-	total_positions = 1
-	spawn_positions = 1
-	availablity_chance = 20
-	supervisors = "yourself"
-	selection_color = "#515151"
-	ideal_character_age = 30
-	minimal_player_age = 7
-	create_record = 0
-	account_allowed = 0
-	latejoin_at_spawnpoints = 1
-	announced = FALSE
