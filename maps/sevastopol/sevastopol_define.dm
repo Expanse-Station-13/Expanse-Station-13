@@ -32,7 +32,7 @@
 		)
 
 	religion_choices = list(
-		"Jew",
+		"Judaism",
 		"Hindu",
 		"Buddhist",
 		"Muslim",
