@@ -41,6 +41,7 @@
 		"Deist",
 		"Atheist",
 		"Thelema",
+		"Mormon",
 		"Spiritualist"
 		)
 
