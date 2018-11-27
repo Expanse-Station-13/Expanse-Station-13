@@ -828,6 +828,10 @@ var/list/floor_decals = list()
 	name = "orange outline"
 	color = COLOR_DARK_ORANGE
 
+/obj/effect/floor_decal/industrial/outline/green
+	name = "green outline"
+	color = COLOR_GREEN_GRAY
+
 /obj/effect/floor_decal/industrial/loading
 	name = "loading area"
 	icon_state = "loadingarea"
@@ -992,6 +996,10 @@ var/list/floor_decals = list()
 	alpha = 230
 	icon = 'icons/turf/flooring/corp_floor.dmi'
 	icon_state = "bottomleft"
+
+/obj/effect/floor_decal/unn
+	icon = 'maps/sevastopol/icons/unn.dmi'
+	icon_state = "4xunlogo3"
 
 //Techfloor
 

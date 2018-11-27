@@ -528,6 +528,26 @@
 /area/shuttle/merchant/home
 	name = "\improper Merchant Vessel"
 	icon_state = "shuttlegrn"
+//Transport
+
+/datum/shuttle/autodock/ferry/centcom
+	name = "Centcom"
+	location = 1
+	warmup_time = 10
+	shuttle_area = /area/shuttle/transport1/centcom
+	dock_target = "centcom_shuttle"
+	waypoint_offsite = "nav_ferry_start"
+	waypoint_station = "nav_ferry_out"
+
+/obj/effect/shuttle_landmark/ferry/start
+	name = "Centcom"
+	landmark_tag = "nav_ferry_start"
+	docking_controller = "centcom_shuttle_bay"
+
+/obj/effect/shuttle_landmark/ferry/out
+	name = "Docking Bay"
+	landmark_tag = "nav_ferry_out"
+	docking_controller = "centcom_shuttle_dock_airlock"
 
 //Merc
 

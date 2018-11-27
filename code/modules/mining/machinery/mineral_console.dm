@@ -18,7 +18,7 @@
 	if((. = ..()))
 		return
 	if(href_list["scan_for_machine"])
-		for(var/c in GLOB.alldirs)
+		for(var/c in (GLOB.alldirs + 0))
 			var/turf/T = get_step(loc, c)
 			if(T)
 				var/obj/machinery/mineral/M = locate(/obj/machinery/mineral) in T
