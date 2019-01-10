@@ -576,13 +576,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/tech)
-"bu" = (
-/obj/machinery/blackbox_recorder,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/bluegrid,
-/area/tcommsat/chamber)
 "bv" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -5898,7 +5891,7 @@ cs
 ct
 ba
 uU
-bu
+aF
 IK
 IK
 IK

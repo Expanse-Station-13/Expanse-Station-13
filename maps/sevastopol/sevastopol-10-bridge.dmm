@@ -464,6 +464,10 @@
 	icon_state = "computer";
 	dir = 1
 	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
 "bf" = (
@@ -474,6 +478,7 @@
 	icon_state = "console";
 	dir = 1
 	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
 "bg" = (
@@ -483,6 +488,10 @@
 /obj/item/modular_computer/console/preset/command{
 	icon_state = "console";
 	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
@@ -643,6 +652,12 @@
 /obj/structure/catwalk,
 /turf/simulated/open,
 /area/bridge)
+"kT" = (
+/obj/machinery/light/navigation/delay3{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/space)
 "mD" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/light/spot{
@@ -650,6 +665,10 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/bridge)
+"ol" = (
+/obj/machinery/light/navigation,
+/turf/simulated/floor/reinforced/airless,
+/area/space)
 "os" = (
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "warning";
@@ -660,6 +679,10 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/bridge)
+"pO" = (
+/obj/machinery/light/navigation/delay2,
+/turf/simulated/floor/reinforced/airless,
+/area/space)
 "zS" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/blue,
@@ -681,6 +704,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
+"EH" = (
+/obj/machinery/light/navigation/delay5,
+/turf/simulated/floor/reinforced/airless,
+/area/space)
 "Oc" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/structure/cable/blue,
@@ -691,9 +718,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
+"QY" = (
+/obj/machinery/light/navigation/delay3,
+/turf/simulated/floor/reinforced/airless,
+/area/space)
 "Rv" = (
 /obj/effect/shuttle_landmark/sevastopol/deck10,
 /turf/space,
+/area/space)
+"TN" = (
+/obj/machinery/light/navigation/delay4{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced/airless,
 /area/space)
 
 (1,1,1) = {"
@@ -4927,11 +4964,11 @@ aa
 aa
 aa
 aa
+ol
 ad
 ad
 ad
-ad
-ad
+pO
 aa
 aa
 aa
@@ -5548,7 +5585,7 @@ bs
 ab
 ab
 ad
-ad
+kT
 aa
 aa
 aa
@@ -6058,7 +6095,7 @@ bv
 ab
 ad
 ad
-ad
+TN
 aa
 aa
 aa
@@ -6661,11 +6698,11 @@ aa
 aa
 aa
 aa
-ad
+QY
 aJ
 ba
 bk
-ad
+EH
 af
 af
 aa

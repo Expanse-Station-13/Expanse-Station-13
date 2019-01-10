@@ -15,6 +15,10 @@
 	#include "sevastopol_telecomms.dm"
 	//#include "sevastopol_unit_testing.dm"
 
+	#include "items/unn-head.dm"
+	#include "items/unn-under.dm"
+	#include "items/mcrn-under.dm"
+
 	#include "sevastopol-01-engine.dmm"
 	#include "sevastopol-02-reactor.dmm"
 	#include "sevastopol-03-engineering.dmm"
