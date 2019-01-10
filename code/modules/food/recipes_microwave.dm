@@ -667,6 +667,14 @@ I said no!
 	reagents = list(/datum/reagent/water = 10, /datum/reagent/nutriment/rice = 10)
 	result = /obj/item/weapon/reagent_containers/food/snacks/boiledrice
 
+/datum/recipe/katsucurry
+	fruit = list("apple" = 1, "carrot" = 1, "potato" = 1)
+	reagents = list(/datum/reagent/water = 10, /datum/reagent/nutriment/rice = 10, /datum/reagent/nutriment/flour = 5)
+	items = list(
+		/obj/item/weapon/reagent_containers/food/snacks/meat/chicken
+	)
+	result = /obj/item/weapon/reagent_containers/food/snacks/katsucurry
+
 /datum/recipe/ricepudding
 	reagents = list(/datum/reagent/drink/milk = 5, /datum/reagent/nutriment/rice = 10)
 	result = /obj/item/weapon/reagent_containers/food/snacks/ricepudding
@@ -1019,3 +1027,10 @@ I said no!
 /datum/recipe/cake/chocolatebar
 	reagents = list(/datum/reagent/drink/milk/chocolate = 10, /datum/reagent/nutriment/coco = 5, /datum/reagent/sugar = 5)
 	result = /obj/item/weapon/reagent_containers/food/snacks/chocolatebar
+
+/datum/recipe/boiledspiderleg
+	reagents = list(/datum/reagent/water = 10)
+	items = list(
+		/obj/item/weapon/reagent_containers/food/snacks/spider
+	)
+	result = /obj/item/weapon/reagent_containers/food/snacks/spider/cooked

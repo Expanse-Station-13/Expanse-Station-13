@@ -46,6 +46,11 @@
 	icon_state = "dark"
 	initial_flooring = /decl/flooring/tiling/dark
 
+/turf/simulated/floor/holofloor/tiled/stone
+	name = "stone floor"
+	icon_state = "stone"
+	initial_flooring = /decl/flooring/tiling/stone
+
 /turf/simulated/floor/holofloor/lino
 	name = "lino"
 	icon = 'icons/turf/flooring/linoleum.dmi'
@@ -367,7 +372,6 @@
 	var/eventstarted = 0
 
 	anchored = 1.0
-	use_power = 1
 	idle_power_usage = 2
 	active_power_usage = 6
 	power_channel = ENVIRON
@@ -441,6 +445,12 @@
 	icon_gib = null
 	meat_amount = 0
 	meat_type = null
+
+/mob/living/simple_animal/hostile/carp/holodeck/carp_randomify()
+	return
+
+/mob/living/simple_animal/hostile/carp/holodeck/on_update_icon()
+	return
 
 /mob/living/simple_animal/hostile/carp/holodeck/New()
 	..()

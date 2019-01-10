@@ -16,7 +16,7 @@
 		T.update_icon()
 
 //Creates a new turf
-/turf/proc/ChangeTurf(var/turf/N, var/tell_universe=1, var/force_lighting_update = 0)
+/turf/proc/ChangeTurf(var/turf/N, var/tell_universe = TRUE, var/force_lighting_update = FALSE, var/keep_air = FALSE)
 	if (!N)
 		return
 
@@ -26,7 +26,8 @@
 		if(istype(below) && !istype(below,/turf/space))
 			N = /turf/simulated/open
 
-	var/obj/fire/old_fire = fire
+	var/old_air = air
+	var/old_fire = fire
 	var/old_opacity = opacity
 	var/old_dynamic_lighting = dynamic_lighting
 	var/old_affecting_lights = affecting_lights
@@ -47,9 +48,20 @@
 		var/turf/simulated/S = src
 		if(S.zone) S.zone.rebuild()
 
+	// Closest we can do as far as giving sane alerts to listeners. In particular, this calls Exited and moved events in a self-consistent way.
+	var/list/old_contents = list()
+	for(var/atom/movable/A in src)
+		old_contents += A
+		A.forceMove(null)
+
 	var/turf/simulated/W = new N( locate(src.x, src.y, src.z) )
+	for(var/atom/movable/A in old_contents)
+		A.forceMove(W)
 
 	W.opaque_counter = opaque_counter
+
+	if (keep_air)
+		W.air = old_air
 
 	if(ispath(N, /turf/simulated))
 		if(old_fire)

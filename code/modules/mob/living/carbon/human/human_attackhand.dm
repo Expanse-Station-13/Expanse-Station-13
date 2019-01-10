@@ -47,10 +47,13 @@
 			var/obj/item/organ/external/affecting = get_organ(ran_zone(H.zone_sel.selecting))
 			var/armor_block = run_armor_check(affecting, "melee")
 
-			if(HULK in H.mutations)
+			if(MUTATION_HULK in H.mutations)
 				damage += 5
 
 			playsound(loc, "punch", 25, 1, -1)
+
+			update_personal_goal(/datum/goal/achievement/fistfight, TRUE)
+			H.update_personal_goal(/datum/goal/achievement/fistfight, TRUE)
 
 			visible_message("<span class='danger'>[H] has punched \the [src]!</span>")
 
@@ -228,7 +231,7 @@
 			real_damage += attack.get_unarmed_damage(H)
 			real_damage *= damage_multiplier
 			rand_damage *= damage_multiplier
-			if(HULK in H.mutations)
+			if(MUTATION_HULK in H.mutations)
 				real_damage *= 2 // Hulks do twice the damage
 				rand_damage *= 2
 			real_damage = max(1, real_damage)

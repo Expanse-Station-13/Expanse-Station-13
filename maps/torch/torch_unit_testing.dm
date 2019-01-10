@@ -10,6 +10,7 @@
 		/area/engineering/drone_fabrication = NO_SCRUBBER|NO_VENT,
 		/area/engineering/engine_smes = NO_SCRUBBER|NO_VENT,
 		/area/engineering/fuelbay = NO_SCRUBBER,
+		/area/engineering/wastetank = NO_SCRUBBER,
 		/area/hallway/primary/seconddeck/center = NO_SCRUBBER|NO_VENT,
 		/area/holodeck = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/maintenance = NO_SCRUBBER|NO_VENT,
@@ -20,7 +21,7 @@
 		/area/maintenance/firstdeck/foreport = NO_SCRUBBER,
 		/area/maintenance/firstdeck/forestarboard = NO_SCRUBBER,
 		/area/maintenance/incinerator = NO_SCRUBBER,
-		/area/maintenance/seconddeck/aftport = NO_SCRUBBER,
+		/area/maintenance/seconddeck/aftport = NO_SCRUBBER|NO_VENT,
 		/area/maintenance/seconddeck/forestarboard = NO_SCRUBBER,
 		/area/maintenance/seconddeck/hallway = NO_SCRUBBER|NO_VENT,
 		/area/maintenance/thirddeck/aftstarboard = NO_SCRUBBER|NO_VENT,
@@ -57,7 +58,6 @@
 		/area/vacant/prototype/engine = 0,
 		/area/vacant/cargo = NO_SCRUBBER|NO_VENT,
 		/area/vacant/infirmary = NO_SCRUBBER|NO_VENT,
-		/area/vacant/missile = NO_SCRUBBER|NO_VENT,
 		/area/vacant/monitoring = NO_SCRUBBER|NO_VENT,
 		/area/vacant/office = 0,
 		/area/vacant/mess        = NO_SCRUBBER|NO_VENT|NO_APC,
@@ -66,6 +66,8 @@
 		/area/exoplanet/grass    = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/exoplanet/snow     = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/exoplanet/garbage  = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/shrouded = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/chlorine = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/smugglers/base = NO_SCRUBBER,
 		/area/smugglers/dorms = NO_SCRUBBER|NO_VENT,
 		/area/smugglers/office = NO_SCRUBBER|NO_VENT,
@@ -79,7 +81,8 @@
 		/area/map_template/hydrobase/station = NO_SCRUBBER,
 		/area/map_template/marooned = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/shuttle/petrov/maint = NO_SCRUBBER,
-		/area/vacant/bar = NO_SCRUBBER|NO_VENT|NO_APC
+		/area/vacant/bar = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/map_template/colony/mineralprocessing = NO_SCRUBBER|NO_VENT
 	)
 
 	area_coherency_test_exempt_areas = list(
@@ -94,8 +97,10 @@
 		/area/exoplanet/grass,
 		/area/exoplanet/snow,
 		/area/exoplanet/garbage,
+		/area/exoplanet/shrouded,
+		/area/exoplanet/chlorine,
 		/area/icarus/vessel,
-		/area/icarus/open,
+		/area/icarus/open
 	)
 
 	area_coherency_test_subarea_count = list()

@@ -24,7 +24,6 @@
 	icon_state = "seeds"
 	density = 1
 	anchored = 1
-	use_power = 1
 	idle_power_usage = 100
 
 	var/list/datum/seed_pile/piles = list()
@@ -151,7 +150,7 @@
 		/obj/item/seeds/wheatseed = 30,
 		/obj/item/seeds/whitebeetseed = 30,
 		/obj/item/seeds/algaeseed = 30,
-		/obj/item/seeds/random = 10
+		/obj/item/seeds/random = 2
 	)
 
 /obj/machinery/seed_storage/attack_hand(mob/user as mob)

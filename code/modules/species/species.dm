@@ -213,7 +213,7 @@
 	// The basic skin colours this species uses
 	var/list/base_skin_colours
 
-	var/list/genders = list(MALE, FEMALE)
+	var/list/genders = list(MALE, FEMALE, PLURAL)
 
 	// Bump vars
 	var/bump_flag = HUMAN	// What are we considered to be when bumped?
@@ -393,6 +393,10 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 	H.visible_message("<span class='notice'>[H] hugs [target] to make [t_him] feel better!</span>", \
 					"<span class='notice'>You hug [target] to make [t_him] feel better!</span>")
 
+	if(H != target)
+		H.update_personal_goal(/datum/goal/achievement/givehug, TRUE)
+		target.update_personal_goal(/datum/goal/achievement/gethug, TRUE)
+
 /datum/species/proc/add_base_auras(var/mob/living/carbon/human/H)
 	if(base_auras)
 		for(var/type in base_auras)
@@ -569,7 +573,9 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 
 // Impliments different trails for species depending on if they're wearing shoes.
 /datum/species/proc/get_move_trail(var/mob/living/carbon/human/H)
-	if( H.shoes || ( H.wear_suit && (H.wear_suit.body_parts_covered & FEET) ) )
+	if(H.lying)
+		return /obj/effect/decal/cleanable/blood/tracks/body
+	if(H.shoes || (H.wear_suit && (H.wear_suit.body_parts_covered & FEET)))
 		var/obj/item/clothing/shoes = (H.wear_suit && (H.wear_suit.body_parts_covered & FEET)) ? H.wear_suit : H.shoes // suits take priority over shoes
 		return shoes.move_trail
 	else

@@ -63,7 +63,6 @@
 	callHook("death", list(src, gibbed))
 
 	if(SSticker.mode)
-		sql_report_death(src)
 		SSticker.mode.check_win()
 
 	if(wearing_rig)
@@ -77,7 +76,7 @@
 	handle_hud_list()
 
 /mob/living/carbon/human/proc/ChangeToHusk()
-	if(HUSK in mutations)	return
+	if(MUTATION_HUSK in mutations)	return
 
 	if(f_style)
 		f_style = "Shaved"		//we only change the icon_state of the hair datum, so it doesn't mess up their UI/UE
@@ -85,7 +84,7 @@
 		h_style = "Bald"
 	update_hair(0)
 
-	mutations.Add(HUSK)
+	mutations.Add(MUTATION_HUSK)
 	for(var/obj/item/organ/external/E in organs)
 		E.status |= ORGAN_DISFIGURED
 	update_body(1)
@@ -93,11 +92,11 @@
 
 /mob/living/carbon/human/proc/Drain()
 	ChangeToHusk()
-	mutations |= HUSK
+	mutations |= MUTATION_HUSK
 	return
 
 /mob/living/carbon/human/proc/ChangeToSkeleton()
-	if(SKELETON in src.mutations)	return
+	if(MUTATION_SKELETON in src.mutations)	return
 
 	if(f_style)
 		f_style = "Shaved"
@@ -105,7 +104,7 @@
 		h_style = "Bald"
 	update_hair(0)
 
-	mutations.Add(SKELETON)
+	mutations.Add(MUTATION_SKELETON)
 	for(var/obj/item/organ/external/E in organs)
 		E.status |= ORGAN_DISFIGURED
 	update_body(1)

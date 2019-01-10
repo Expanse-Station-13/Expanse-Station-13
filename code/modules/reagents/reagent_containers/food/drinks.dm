@@ -64,6 +64,9 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/self_feed_message(var/mob/user)
 	to_chat(user, "<span class='notice'>You swallow a gulp from \the [src].</span>")
+	if(user.has_personal_goal(/datum/goal/achievement/specific_object/drink))
+		for(var/datum/reagent/R in reagents.reagent_list)
+			user.update_personal_goal(/datum/goal/achievement/specific_object/drink, R.type)
 
 /obj/item/weapon/reagent_containers/food/drinks/feed_sound(var/mob/user)
 	playsound(user.loc, 'sound/items/drink.ogg', rand(10, 50), 1)
@@ -373,10 +376,10 @@
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 
 /obj/item/weapon/reagent_containers/food/drinks/coffeecup/STC
-	name = "TCC coffee cup"
-	desc = "A coffee cup adorned with the flag of the Terran Colonial Confederation, for when you need some espionage charges to go with your morning coffee."
+	name = "ICCG coffee cup"
+	desc = "A coffee cup adorned with the flag of the Gilgamesh Colonial Confederation, for when you need some espionage charges to go with your morning coffee."
 	icon_state = "coffeecup_STC"
-	base_name = "TCC cup"
+	base_name = "ICCG cup"
 
 /obj/item/weapon/reagent_containers/food/drinks/coffeecup/pawn
 	name = "pawn coffee cup"

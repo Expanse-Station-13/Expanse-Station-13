@@ -26,8 +26,8 @@
 /obj/item/weapon/reagent_containers/food/snacks/proc/On_Consume(var/mob/M)
 	if(!reagents.total_volume)
 		M.visible_message("<span class='notice'>[M] finishes eating \the [src].</span>","<span class='notice'>You finish eating \the [src].</span>")
-
 		M.drop_item()
+		M.update_personal_goal(/datum/goal/achievement/specific_object/food, type)
 		if(trash)
 			if(ispath(trash,/obj/item))
 				var/obj/item/TrashItem = new trash(get_turf(M))
@@ -453,6 +453,25 @@
 	.=..()
 	reagents.add_reagent(/datum/reagent/nutriment/protein, 12)
 	reagents.add_reagent(/datum/reagent/hyperzine, 5)
+
+/obj/item/weapon/reagent_containers/food/snacks/spider
+	name = "giant spider leg"
+	desc = "An economical replacement for crab. In space! Would probably be a lot nicer cooked."
+	icon_state = "spiderleg"
+	filling_color = "#d5f5dc"
+	center_of_mass = "x=16;y=10"
+	bitesize = 3
+
+/obj/item/weapon/reagent_containers/food/snacks/spider/Initialize()
+	.=..()
+	name = "giant spider leg" //since most mobs use a generic meat type and append the name of the mob onto it ('parrot meat')
+	reagents.add_reagent(/datum/reagent/nutriment/protein, 9)
+
+/obj/item/weapon/reagent_containers/food/snacks/spider/cooked
+	name = "boiled spider meat"
+	desc = "An economical replacement for crab. In space!"
+	icon_state = "spiderleg_c"
+	bitesize = 5
 
 /obj/item/weapon/reagent_containers/food/snacks/xenomeat
 	name = "meat"
@@ -1659,6 +1678,17 @@
 	filling_color = "#fffbdb"
 	center_of_mass = "x=17;y=11"
 	nutriment_desc = list("rice" = 2)
+	nutriment_amt = 6
+	bitesize = 2
+
+/obj/item/weapon/reagent_containers/food/snacks/katsucurry
+	name = "katsu curry"
+	desc = "An oriental curry dish made from apples, potatoes, and carrots. Served with rice and breaded chicken."
+	icon_state = "katsu"
+	trash = /obj/item/trash/snack_bowl
+	filling_color = "#faa005"
+	center_of_mass = "x=17;y=11"
+	nutriment_desc = list("rice" = 2, "apple" = 2, "potato" = 2, "carrot" = 2, "bread" = 2, )
 	nutriment_amt = 6
 	bitesize = 2
 

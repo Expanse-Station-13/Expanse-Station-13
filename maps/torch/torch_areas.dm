@@ -506,6 +506,11 @@
 	base_turf = /turf/simulated/floor/plating
 */
 
+/area/turbolift/cargo_lift
+	name = "\improper Cargo Lift"
+	icon_state = "shuttle3"
+	base_turf = /turf/simulated/open
+
 // Ninja areas
 /area/ninja_dojo
 	name = "\improper Ninja Base"
@@ -659,6 +664,10 @@
 	name = "\improper Emergency Armory - Tactical"
 	icon_state = "Tactical"
 
+/area/command/bsa
+	name = "\improper Bluespace Artillery"
+	icon_state = "firingrange"
+
 /area/crew_quarters/heads
 	icon_state = "head_quarters"
 
@@ -755,10 +764,6 @@
 /area/vacant/cargo
 	name = "\improper Requisitions Office"
 	icon_state = "quart"
-
-/area/vacant/missile
-	name = "\improper Third Deck Port Missile Pod"
-	icon_state = "firingrange"
 
 /area/vacant/brig
 	name = "\improper Permanent Brig"
@@ -1101,6 +1106,10 @@
 	name = "\improper Fuel Bay"
 	icon_state = "engineering"
 
+/area/engineering/wastetank
+	name = "\improper Waste Tank"
+	icon_state = "engineering"
+
 // Command
 
 /area/bridge
@@ -1282,6 +1291,14 @@
 /area/holodeck/source_volleyball
 	name = "\improper Holodeck - Volleyball"
 	sound_env = PLAIN
+
+/area/holodeck/source_temple
+	name = "\improper Holodeck - Temple"
+	sound_env = SMALL_ENCLOSED
+
+/area/holodeck/source_plaza
+	name = "\improper Holodeck - Plaza"
+	sound_env = SMALL_ENCLOSED
 
 // Engineering
 

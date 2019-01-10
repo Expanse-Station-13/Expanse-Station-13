@@ -24,8 +24,6 @@
 
 	available_cultural_info = list(
 		TAG_CULTURE = list(
-			CULTURE_HUMAN,
-			CULTURE_HUMAN_VATGROWN,
 			CULTURE_HUMAN_MARTIAN,
 			CULTURE_HUMAN_MARSTUN,
 			CULTURE_HUMAN_LUNAPOOR,
@@ -154,7 +152,7 @@
 	override_limb_types = list(BP_HEAD = /obj/item/organ/external/head/skrell)
 
 	descriptors = list(
-		/datum/mob_descriptor/height = 1.2,
+		/datum/mob_descriptor/height = 1,
 		/datum/mob_descriptor/build = 0,
 		/datum/mob_descriptor/headtail_length = 0
 	)
@@ -176,6 +174,7 @@
 			FACTION_NANOTRASEN,
 			FACTION_PCRC,
 			FACTION_HEPHAESTUS,
+			FACTION_DAIS,
 			FACTION_OTHER
 		),
 		TAG_RELIGION = list(

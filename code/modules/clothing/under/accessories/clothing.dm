@@ -24,6 +24,11 @@
 	desc = "A fashionable tunic that Hephaestus Industries provides to their lab workers."
 	icon_state = "tunic_heph"
 
+/obj/item/clothing/accessory/tunic/zeng
+	name = "\improper Zeng-Hu tunic"
+	desc = "A fashionable tunic that Zeng-Hu provides to their lab workers."
+	icon_state = "tunic_heph"
+
 /obj/item/clothing/accessory/tunic/exec
 	name = "executive tunic"
 	icon_state = "tunicblack"
@@ -37,6 +42,11 @@
 	name = "\improper Hephaestus Industries executive tunic"
 	desc = "A fashionable tunic that Hephaestus Industries provides to their lab workers."
 	icon_state = "tunicblack_heph"
+
+/obj/item/clothing/accessory/tunic/exec/zeng
+	name = "\improper Zeng-Hu executive tunic"
+	desc = "A fashionable tunic that Zeng-Hu provides to their lab workers."
+	icon_state = "tunicblack_zeng"
 
 /obj/item/clothing/accessory/dashiki
 	name = "black dashiki"
@@ -130,10 +140,10 @@
 /obj/item/clothing/accessory/toggleable/proc/do_toggle(user)
 	if(icon_state == icon_closed)
 		icon_state = "[icon_closed]_open"
-		to_chat(usr, "You unbutton [src].")
+		to_chat(user, "You unbutton [src].")
 	else
 		icon_state = icon_closed
-		to_chat(usr, "You button up [src].")
+		to_chat(user, "You button up [src].")
 
 	update_clothing_icon()	//so our overlays update
 
@@ -186,6 +196,11 @@
 	desc = "A jacket that Hephaestus Industries has their executives wear."
 	icon_state = "jacket_heph"
 
+/obj/item/clothing/accessory/toggleable/corpjacket/zeng
+	name = "\improper Zeng-Hu suit jacket"
+	desc = "A jacket that Zeng-Hu has their executives wear."
+	icon_state = "jacket_zeng"
+
 /obj/item/clothing/accessory/toggleable/hawaii
 	name = "flower-pattern shirt"
 	desc = "You probably need some welder googles to look at this."
@@ -232,10 +247,10 @@
 /obj/item/clothing/accessory/toggleable/flannel/do_toggle(user)
 	if(buttoned == 0)
 		buttoned = 1
-		to_chat(usr, "You button your [src].")
+		to_chat(user, "You button your [src].")
 	else
 		buttoned = 0
-		to_chat(usr, "You unbutton [src].")
+		to_chat(user, "You unbutton [src].")
 	update_icon()
 
 /obj/item/clothing/accessory/toggleable/flannel/verb/roll_up_sleeves()

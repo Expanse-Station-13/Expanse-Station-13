@@ -32,7 +32,7 @@
 	if(!user.IsAdvancedToolUser())
 		return
 
-	if ((CLUMSY in user.mutations) && prob(50))
+	if ((MUTATION_CLUMSY in user.mutations) && prob(50))
 		to_chat(user, "<span class='warning'>Uh ... how do those things work?!</span>")
 		place_handcuffs(user, user)
 		return
@@ -93,7 +93,7 @@
 		return 0
 
 	admin_attack_log(user, H, "Attempted to handcuff the victim", "Was target of an attempted handcuff", "attempted to handcuff")
-	feedback_add_details("handcuffs","H")
+	SSstatistics.add_field_details("handcuffs","H")
 
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	user.do_attack_animation(H)

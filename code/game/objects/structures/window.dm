@@ -54,7 +54,7 @@
 /obj/structure/window/CanFluidPass(var/coming_from)
 	return (!is_full_window() && coming_from != dir)
 
-/obj/structure/window/proc/take_damage(var/damage = 0,  var/sound_effect = 1)
+/obj/structure/window/take_damage(damage = 0,  var/sound_effect = 1)
 	var/initialhealth = health
 
 	if(silicate)
@@ -68,11 +68,11 @@
 		if(sound_effect)
 			playsound(loc, 'sound/effects/Glasshit.ogg', 100, 1)
 		if(health < maxhealth / 4 && initialhealth >= maxhealth / 4)
-			visible_message("[src] looks like it's about to shatter!" )
+			visible_message("<span class='notice'>\The [src] looks like it's about to shatter!</span>")
 		else if(health < maxhealth / 2 && initialhealth >= maxhealth / 2)
-			visible_message("[src] looks seriously damaged!" )
+			visible_message("\The [src] looks seriously damaged!" )
 		else if(health < maxhealth * 3/4 && initialhealth >= maxhealth * 3/4)
-			visible_message("Cracks begin to appear in [src]!" )
+			visible_message("Cracks begin to appear in \the [src]!" )
 	return
 
 /obj/structure/window/proc/apply_silicate(var/amount)
@@ -96,7 +96,7 @@
 /obj/structure/window/proc/shatter(var/display_message = 1)
 	playsound(src, "shatter", 70, 1)
 	if(display_message)
-		visible_message("[src] shatters!")
+		visible_message("<span class='notice'>\The [src] shatters!</span>")
 
 	cast_new(shardtype, is_fulltile() ? 4 : 1, loc)
 	if(reinf) cast_new(/obj/item/stack/rods, is_fulltile() ? 4 : 1, loc)
@@ -174,7 +174,7 @@
 
 /obj/structure/window/attack_hand(mob/user as mob)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-	if(HULK in user.mutations)
+	if(MUTATION_HULK in user.mutations)
 		user.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!"))
 		user.visible_message("<span class='danger'>[user] smashes through [src]!</span>")
 		user.do_attack_animation(src)
@@ -276,6 +276,27 @@
 			playsound(loc, 'sound/effects/Glasshit.ogg', 75, 1)
 		..()
 	return
+
+/obj/structure/window/grab_attack(var/obj/item/grab/G)
+	if (G.assailant.a_intent != I_HURT)
+		return TRUE
+	if (!G.force_danger())
+		to_chat(G.assailant, "<span class='danger'>You need a better grip to do that!</span>")
+		return TRUE
+	var/def_zone = ran_zone(BP_HEAD, 20)
+	var/blocked = G.affecting.run_armor_check(def_zone, "melee")
+	if(G.damage_stage() < 2)
+		G.affecting.visible_message("<span class='danger'>[G.assailant] bashes [G.affecting] against \the [src]!</span>")
+		if (prob(50))
+			G.affecting.Weaken(1)
+		G.affecting.apply_damage(10, BRUTE, def_zone, blocked, used_weapon = src)
+		hit(25)
+	else
+		G.affecting.visible_message("<span class='danger'>[G.assailant] crushes [G.affecting] against \the [src]!</span>")
+		G.affecting.Weaken(5)
+		G.affecting.apply_damage(20, BRUTE, def_zone, blocked, used_weapon = src)
+		hit(50)
+	return TRUE
 
 /obj/structure/window/proc/hit(var/damage, var/sound_effect = 1)
 	if(reinf) damage *= 0.5
@@ -634,10 +655,10 @@
 		qdel(src)
 
 /obj/machinery/button/windowtint/proc/toggle_tint()
-	use_power(5)
+	use_power_oneoff(5)
 
 	active = !active
-	update_icon()
+	queue_icon_update()
 
 	for(var/obj/structure/window/reinforced/polarized/W in range(src,range))
 		if (W.id == src.id || !W.id)
