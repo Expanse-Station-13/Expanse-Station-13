@@ -500,7 +500,7 @@
 	pump_direction = 0;
 	use_power = 1
 	},
-/turf/simulated/floor/reinforced/carbon_dioxide,
+/turf/simulated/floor/reinforced/airmix,
 /area/engineering/fuelbay)
 "br" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -529,7 +529,7 @@
 	pixel_y = 1;
 	use_power = 1
 	},
-/turf/simulated/floor/reinforced/carbon_dioxide,
+/turf/simulated/floor/reinforced/airmix,
 /area/engineering/fuelbay)
 "bu" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -565,7 +565,7 @@
 	frequency = 1441;
 	id_tag = "blue"
 	},
-/turf/simulated/floor/reinforced/carbon_dioxide,
+/turf/simulated/floor/reinforced/airmix,
 /area/engineering/fuelbay)
 "bA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
