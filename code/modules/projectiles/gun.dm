@@ -40,7 +40,7 @@
 	item_state = "gun"
 	obj_flags =  OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
-	matter = list(DEFAULT_WALL_MATERIAL = 2000)
+	matter = list(MATERIAL_STEEL = 2000)
 	w_class = ITEM_SIZE_NORMAL
 	throwforce = 5
 	throw_speed = 4
@@ -49,6 +49,7 @@
 	origin_tech = list(TECH_COMBAT = 1)
 	attack_verb = list("struck", "hit", "bashed")
 	zoomdevicename = "scope"
+	waterproof = FALSE
 
 	var/burst = 1
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
@@ -82,11 +83,11 @@
 	var/tmp/told_cant_shoot = 0 //So that it doesn't spam them with the fact they cannot hit them.
 	var/tmp/lock_time = -100
 	var/tmp/last_safety_check = -INFINITY
-	var/safety_state = 0
+	var/safety_state = 1
 	var/has_safety = TRUE
 
-/obj/item/weapon/gun/New()
-	..()
+/obj/item/weapon/gun/Initialize()
+	. = ..()
 	for(var/i in 1 to firemodes.len)
 		firemodes[i] = new /datum/firemode(src, firemodes[i])
 
@@ -98,7 +99,7 @@
 		update_icon() // In case item_state is set somewhere else.
 	..()
 
-/obj/item/weapon/gun/update_icon()
+/obj/item/weapon/gun/on_update_icon()
 	var/mob/living/M = loc
 	overlays.Cut()
 	if(istype(M))
@@ -127,10 +128,10 @@
 		if(prob(30))
 			toggle_safety()
 			return 1
-	if(HULK in M.mutations)
+	if(MUTATION_HULK in M.mutations)
 		to_chat(M, "<span class='danger'>Your fingers are much too large for the trigger guard!</span>")
 		return 0
-	if((CLUMSY in M.mutations) && prob(40)) //Clumsy handling
+	if((MUTATION_CLUMSY in M.mutations) && prob(40)) //Clumsy handling
 		var/obj/P = consume_next_projectile()
 		if(P)
 			if(process_projectile(P, user, user, pick(BP_L_FOOT, BP_R_FOOT)))
@@ -185,7 +186,7 @@
 
 	add_fingerprint(user)
 
-	if(!special_check(user))
+	if((!waterproof && submerged()) || !special_check(user))
 		return
 
 	if(safety())
@@ -314,14 +315,15 @@
 		return //default behaviour only applies to true projectiles
 
 	//default point blank multiplier
-	var/max_mult = 1.3
+	var/max_mult = 1
 
 	//determine multiplier due to the target being grabbed
-	if(ishuman(target))
-		var/mob/living/carbon/human/H = target
-		for(var/obj/item/grab/G in H.grabbed_by)
-			if(G.point_blank_mult() > max_mult)
-				max_mult = G.point_blank_mult()
+	if(isliving(target))
+		var/mob/living/L = target
+		if(L.incapacitated())
+			max_mult = 1.2
+		for(var/obj/item/grab/G in L.grabbed_by)
+			max_mult = max(max_mult, G.point_blank_mult())
 	P.damage *= max_mult
 
 /obj/item/weapon/gun/proc/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
@@ -526,3 +528,13 @@
 /obj/item/weapon/gun/attack_hand()
 	..()
 	update_icon()
+
+/obj/item/weapon/gun/on_disarm_attempt(mob/target, mob/attacker)
+	var/list/turfs = list()
+	for(var/turf/T in view())
+		turfs += T
+	if(turfs.len)
+		var/turf/shoot_to = pick(turfs)
+		target.visible_message("<span class='danger'>\The [src] goes off during the struggle!</span>")
+		afterattack(shoot_to,target)
+		return 1

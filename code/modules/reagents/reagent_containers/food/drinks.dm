@@ -64,6 +64,9 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/self_feed_message(var/mob/user)
 	to_chat(user, "<span class='notice'>You swallow a gulp from \the [src].</span>")
+	if(user.has_personal_goal(/datum/goal/achievement/specific_object/drink))
+		for(var/datum/reagent/R in reagents.reagent_list)
+			user.update_personal_goal(/datum/goal/achievement/specific_object/drink, R.type)
 
 /obj/item/weapon/reagent_containers/food/drinks/feed_sound(var/mob/user)
 	playsound(user.loc, 'sound/items/drink.ogg', rand(10, 50), 1)
@@ -88,7 +91,7 @@
 		if(percent <= k)
 			return k
 
-/obj/item/weapon/reagent_containers/food/drinks/update_icon()
+/obj/item/weapon/reagent_containers/food/drinks/on_update_icon()
 	overlays.Cut()
 	if(reagents.reagent_list.len > 0)
 		if(base_name)
@@ -232,19 +235,10 @@
 			icon_state = "water_cup_e"
 
 
-//////////////////////////drinkingglass and shaker//
+//////////////////////////pitchers, pots, flasks and cups //
 //Note by Darem: This code handles the mixing of drinks. New drinks go in three places: In Chemistry-Reagents.dm (for the drink
 //	itself), in Chemistry-Recipes.dm (for the reaction that changes the components into the drink), and here (for the drinking glass
 //	icon states.
-
-/obj/item/weapon/reagent_containers/food/drinks/shaker
-	name = "shaker"
-	desc = "A metal shaker to mix drinks in."
-	icon_state = "shaker"
-	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = "5;10;15;25;30;60" //Professional bartender should be able to transfer as much as needed
-	volume = 120
-	center_of_mass = "x=17;y=10"
 
 /obj/item/weapon/reagent_containers/food/drinks/teapot
 	name = "teapot"
@@ -256,8 +250,8 @@
 	center_of_mass = "x=17;y=7"
 
 /obj/item/weapon/reagent_containers/food/drinks/pitcher
-	name = "pitcher"
-	desc = "Everyone's best friend in the morning."
+	name = "insulated pitcher"
+	desc = "A stainless steel insulated pitcher. Everyone's best friend in the morning."
 	icon_state = "pitcher"
 	volume = 120
 	amount_per_transfer_from_this = 10
@@ -333,16 +327,22 @@
 	base_name = "heart cup"
 
 /obj/item/weapon/reagent_containers/food/drinks/coffeecup/SCG
-	name = "SCG coffee cup"
+	name = "\improper SCG coffee cup"
 	desc = "A blue coffee cup emblazoned with the crest of the Sol Central Government."
 	icon_state = "coffeecup_SCG"
-	base_name = "SCG cup"
+	base_name = "\improper SCG cup"
 
 /obj/item/weapon/reagent_containers/food/drinks/coffeecup/NT
-	name = "NT coffee cup"
-	desc = "A red NanoTrasen coffee cup. 90% Guaranteed to not be laced with mind-control drugs."
+	name = "\improper NT coffee cup"
+	desc = "A red NanoTrasen coffee cup. 90% guaranteed to not be laced with mind-control drugs."
 	icon_state = "coffeecup_NT"
 	base_name = "NT cup"
+
+/obj/item/weapon/reagent_containers/food/drinks/coffeecup/corp
+	name = "\improper Expeditionary Corps Organisation coffee cup"
+	desc = "A tasteful coffee cup in Expeditionary Corps Organisation corporate colours."
+	icon_state = "coffeecup_corp"
+	base_name = "EXO cup"
 
 /obj/item/weapon/reagent_containers/food/drinks/coffeecup/one
 	name = "#1 coffee cup"
@@ -376,10 +376,10 @@
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 
 /obj/item/weapon/reagent_containers/food/drinks/coffeecup/STC
-	name = "TCC coffee cup"
-	desc = "A coffee cup adorned with the flag of the Terran Colonial Confederation, for when you need some espionage charges to go with your morning coffee."
+	name = "ICCG coffee cup"
+	desc = "A coffee cup adorned with the flag of the Gilgamesh Colonial Confederation, for when you need some espionage charges to go with your morning coffee."
 	icon_state = "coffeecup_STC"
-	base_name = "TCC cup"
+	base_name = "ICCG cup"
 
 /obj/item/weapon/reagent_containers/food/drinks/coffeecup/pawn
 	name = "pawn coffee cup"
@@ -408,3 +408,9 @@
 	filling_states = "50;70;90;100"
 	base_name = "tall cup"
 	base_icon = "coffeecup_tall"
+
+/obj/item/weapon/reagent_containers/food/drinks/coffeecup/dais
+	name = "\improper DAIS coffee cup"
+	desc = "A coffee cup imprinted with the stylish logo of Deimos Advanced Information Systems."
+	icon_state = "coffeecup_dais"
+	base_name = "DAIS cup"

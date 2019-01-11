@@ -71,10 +71,14 @@
 		\[grid\] - \[/grid\] : Table without visible borders, for layouts.
 		\[row\] - New table row.
 		\[cell\] - New table cell.
-		\[logo\] - Inserts NT logo image.
+		\[logo\] - Inserts EXO logo image.
+		\[ntlogo\] - Inserts the NT logo image.
 		\[bluelogo\] - Inserts blue NT logo image.
 		\[solcrest\] - Inserts SCG crest image.
-		\[terraseal\] - Inserts TCC seal"}
+		\[eclogo\] - Inserts the Expeditionary Corps logo.
+		\[daislogo\] - Inserts the Deimos Advanced Information Systems logo.
+		\[xynlogo\] - Inserts the Xyngergy logo.
+		\[iccgseal\] - Inserts ICCG seal"}
 
 		to_chat(usr, help)
 		return 1
@@ -204,7 +208,7 @@
 		data["filedata"] = pencode2html(PRG.loaded_data)
 		data["filename"] = "UNNAMED"
 
-	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		ui = new(user, src, ui_key, "word_processor.tmpl", "Word Processor", 575, 700, state = state)
 		ui.auto_update_layout = 1

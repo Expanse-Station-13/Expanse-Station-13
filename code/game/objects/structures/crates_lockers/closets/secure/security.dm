@@ -9,7 +9,7 @@
 
 /obj/structure/closet/secure_closet/captains/WillContain()
 	return list(
-		new/datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/captain, /obj/item/weapon/storage/backpack/satchel_cap)),
+		new/datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/captain, /obj/item/weapon/storage/backpack/satchel/cap)),
 		new/datum/atom_creator/simple(/obj/item/weapon/storage/backpack/dufflebag/captain, 50),
 		/obj/item/clothing/suit/captunic,
 		/obj/item/clothing/suit/captunic/capjacket,
@@ -85,7 +85,7 @@
 
 /obj/structure/closet/secure_closet/hos/WillContain()
 	return list(
-		new/datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
+		new/datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec)),
 		/obj/item/clothing/head/HoS,
 		/obj/item/clothing/head/helmet/nt,
 		/obj/item/clothing/suit/armor/vest/nt,
@@ -100,11 +100,11 @@
 		/obj/item/taperoll/police,
 		/obj/item/weapon/shield/riot,
 		/obj/item/weapon/storage/box/flashbangs,
-		/obj/item/weapon/storage/belt/security,
+		/obj/item/weapon/storage/belt/holster/security,
 		/obj/item/device/flash,
 		/obj/item/weapon/melee/baton/loaded,
 		/obj/item/weapon/gun/energy/gun,
-		/obj/item/clothing/accessory/holster/waist,
+		/obj/item/clothing/accessory/storage/holster/waist,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/clothing/head/beret/sec/corporate/hos,
 		/obj/item/device/holowarrant
@@ -121,7 +121,7 @@
 
 /obj/structure/closet/secure_closet/warden/WillContain()
 	return list(
-		new/datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
+		new/datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec)),
 		new/datum/atom_creator/simple(/obj/item/weapon/storage/backpack/dufflebag/sec, 50),
 		/obj/item/clothing/head/helmet/nt,
 		/obj/item/clothing/suit/armor/vest/nt,
@@ -135,7 +135,7 @@
 		/obj/item/taperoll/police,
 		/obj/item/weapon/storage/box/flashbangs,
 		/obj/item/weapon/storage/box/teargas,
-		/obj/item/weapon/storage/belt/security,
+		/obj/item/weapon/storage/belt/holster/security,
 		/obj/item/weapon/reagent_containers/spray/pepper,
 		/obj/item/weapon/melee/baton/loaded,
 		/obj/item/weapon/gun/energy/gun,
@@ -155,12 +155,12 @@
 
 /obj/structure/closet/secure_closet/security/WillContain()
 	return list(
-		new/datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
+		new/datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec)),
 		new/datum/atom_creator/simple(/obj/item/weapon/storage/backpack/dufflebag/sec, 50),
 		/obj/item/clothing/suit/armor/vest/nt,
 		/obj/item/clothing/head/helmet,
 		/obj/item/device/radio/headset/headset_sec,
-		/obj/item/weapon/storage/belt/security,
+		/obj/item/weapon/storage/belt/holster/security,
 		/obj/item/device/flash,
 		/obj/item/weapon/reagent_containers/spray/pepper,
 		/obj/item/weapon/grenade/chem_grenade/teargas,
@@ -225,7 +225,7 @@
 		/obj/item/ammo_magazine/c45m/flash,
 		/obj/item/taperoll/police,
 		/obj/item/weapon/gun/projectile/colt/detective,
-		/obj/item/clothing/accessory/holster/armpit,
+		/obj/item/clothing/accessory/storage/holster/armpit,
 		/obj/item/weapon/reagent_containers/food/drinks/flask/detflask,
 		/obj/item/weapon/storage/briefcase/crimekit,
 		/obj/item/device/holowarrant

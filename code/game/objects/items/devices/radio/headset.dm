@@ -4,7 +4,7 @@
 	var/radio_desc = ""
 	icon_state = "headset"
 	item_state = "headset"
-	matter = list(DEFAULT_WALL_MATERIAL = 75)
+	matter = list(MATERIAL_STEEL = 75)
 	subspace_transmission = 1
 	canhear_range = 0 // can't hear headsets from very far away
 
@@ -268,7 +268,7 @@
 	desc = "Headset used by dwarves. It has an inbuilt subspace antenna for better reception."
 	icon_state = "mine_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/headset_sci
+	ks1type = /obj/item/device/encryptionkey/headset_mining
 
 /obj/item/device/radio/headset/headset_mining/alt
 	name = "mining bowman radio headset"

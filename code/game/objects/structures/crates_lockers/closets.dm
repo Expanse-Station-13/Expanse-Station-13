@@ -274,7 +274,8 @@
 			var/obj/item/weapon/storage/laundry_basket/LB = W
 			var/turf/T = get_turf(src)
 			for(var/obj/item/I in LB.contents)
-				LB.remove_from_storage(I, T)
+				LB.remove_from_storage(I, T, 1)
+			LB.finish_bulk_removal()
 			user.visible_message("<span class='notice'>[user] empties \the [LB] into \the [src].</span>", \
 								 "<span class='notice'>You empty \the [LB] into \the [src].</span>", \
 								 "<span class='notice'>You hear rustling of clothes.</span>")
@@ -386,7 +387,7 @@
 	else
 		to_chat(usr, "<span class='warning'>This mob type can't use this verb.</span>")
 
-/obj/structure/closet/update_icon()//Putting the welded stuff in update_icon() so it's easy to overwrite for special cases (Fridges, cabinets, and whatnot)
+/obj/structure/closet/on_update_icon()//Putting the welded stuff in update_icon() so it's easy to overwrite for special cases (Fridges, cabinets, and whatnot)
 	overlays.Cut()
 
 	if(!opened)
@@ -402,14 +403,11 @@
 	else
 		icon_state = icon_opened
 
-/obj/structure/closet/attack_generic(var/mob/user, var/damage, var/attack_message = "destroys", var/wallbreaker)
-	if(!damage || !wallbreaker)
-		return
-	attack_animation(user)
-	visible_message("<span class='danger'>[user] [attack_message] the [src]!</span>")
-	dump_contents()
-	spawn(1) qdel(src)
-	return 1
+/obj/structure/closet/take_damage(damage)
+	health -= damage
+	if(health <= 0)
+		dump_contents()
+		qdel(src)
 
 /obj/structure/closet/proc/req_breakout()
 	if(opened)
@@ -492,6 +490,9 @@
 		return FALSE
 
 	add_fingerprint(user)
+
+	if(!id_card)
+		id_card = user.GetIdCard()
 
 	if(!user.IsAdvancedToolUser())
 		to_chat(user, FEEDBACK_YOU_LACK_DEXTERITY)

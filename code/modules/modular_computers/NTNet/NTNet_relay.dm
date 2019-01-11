@@ -2,7 +2,7 @@
 /obj/machinery/ntnet_relay
 	name = "NTNet Quantum Relay"
 	desc = "A very complex router and transmitter capable of connecting electronic devices together. Looks fragile."
-	use_power = 2
+	use_power = POWER_USE_ACTIVE
 	active_power_usage = 20000 //20kW, apropriate for machine that keeps massive cross-Zlevel wireless network operational.
 	idle_power_usage = 100
 	icon_state = "bus"
@@ -29,7 +29,7 @@
 		return 0
 	return 1
 
-/obj/machinery/ntnet_relay/update_icon()
+/obj/machinery/ntnet_relay/on_update_icon()
 	if(operable())
 		icon_state = "bus"
 	else
@@ -37,9 +37,9 @@
 
 /obj/machinery/ntnet_relay/Process()
 	if(operable())
-		use_power = 2
+		update_use_power(POWER_USE_ACTIVE)
 	else
-		use_power = 1
+		update_use_power(POWER_USE_IDLE)
 
 	if(dos_overload)
 		dos_overload = max(0, dos_overload - dos_dissipate)
@@ -63,7 +63,7 @@
 	data["dos_overload"] = dos_overload
 	data["dos_crashed"] = dos_failure
 
-	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		ui = new(user, src, ui_key, "ntnet_relay.tmpl", "NTNet Quantum Relay", 500, 300, state = state)
 		ui.set_initial_data(data)

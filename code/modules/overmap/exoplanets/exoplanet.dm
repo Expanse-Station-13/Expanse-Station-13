@@ -22,8 +22,12 @@
 
 	var/features_budget = 2
 	//pre-defined list of features templates to pick from
-	var/list/possible_features = list(/datum/map_template/ruin/exoplanet/monolith,
-									  /datum/map_template/ruin/exoplanet/hydrobase)
+	var/list/possible_features = list(
+									/datum/map_template/ruin/exoplanet/monolith,
+									/datum/map_template/ruin/exoplanet/hydrobase,
+									/datum/map_template/ruin/exoplanet/crashed_pod,
+									/datum/map_template/ruin/exoplanet/hut,
+									/datum/map_template/ruin/exoplanet/playablecolony)
 
 /obj/effect/overmap/sector/exoplanet/New(nloc, max_x, max_y)
 	if(!GLOB.using_map.use_overmap)
@@ -68,8 +72,8 @@
 
 //Not that it should ever get deleted but just in case
 /obj/effect/overmap/sector/exoplanet/Destroy()
-		. = ..()
-		STOP_PROCESSING(SSobj, src)
+	. = ..()
+	STOP_PROCESSING(SSobj, src)
 
 /obj/effect/overmap/sector/exoplanet/Process()
 	if(animals.len < 0.5*max_animal_count && !repopulating)
@@ -144,6 +148,13 @@
 	for(var/g in atmosphere.gas)
 		if(gas_data.flags[g] & XGM_GAS_CONTAMINANT)
 			S.set_trait(TRAIT_TOXINS_TOLERANCE, rand(10,15))
+	if(prob(50))
+		var/chem_type = SSchemistry.get_random_chem(TRUE, atmosphere.temperature)
+		if(chem_type)
+			var/nutriment = S.chems[/datum/reagent/nutriment]
+			S.chems.Cut()
+			S.chems[/datum/reagent/nutriment] = nutriment
+			S.chems[chem_type] = list(rand(1,10),rand(10,20))
 
 /obj/effect/overmap/sector/exoplanet/proc/adapt_animal(var/mob/living/simple_animal/A)
 	if(species[A.type])
@@ -206,7 +217,7 @@
 
 		num--
 		places += T
-		new new_type(T) 
+		new new_type(T)
 
 /obj/effect/overmap/sector/exoplanet/proc/generate_atmosphere()
 	atmosphere = new
@@ -219,6 +230,7 @@
 			newgases -= "phoron"
 		if(prob(50)) //alium gas should be slightly less common than mundane shit
 			newgases -= "aliether"
+		newgases -= "watervapor"
 
 		var/sanity = prob(99.9)
 
@@ -337,7 +349,7 @@
 		T.set_density(1)
 		T.set_opacity(1)
 		if(istype(T, /turf/simulated))
-			var/turf/simulated/S = T 
+			var/turf/simulated/S = T
 			S.blocks_air = 1
 	if(T.x <= TRANSITIONEDGE || T.x >= (limit_x - TRANSITIONEDGE + 1) || T.y <= TRANSITIONEDGE || T.y >= (limit_y - TRANSITIONEDGE + 1))
 		new/obj/effect/fogofwar(T)
@@ -378,8 +390,9 @@
 	for(var/i = 1 to flora_diversity)
 		var/datum/seed/S = new()
 		S.randomize()
-		S.set_trait(TRAIT_PRODUCT_ICON,"alien[rand(1,5)]")
-		S.set_trait(TRAIT_PLANT_ICON,"alien[rand(1,4)]")
+		var/planticon = "alien[rand(1,4)]"
+		S.set_trait(TRAIT_PRODUCT_ICON,planticon)
+		S.set_trait(TRAIT_PLANT_ICON,planticon)
 		var/color = pick(plantcolors)
 		if(color == "RANDOM")
 			color = get_random_colour(0,75,190)
@@ -421,6 +434,9 @@
 	has_resources = 1
 	var/diggable = 1
 	var/mudpit = 0	//if pits should not take turf's color
+
+/turf/simulated/floor/exoplanet/can_engrave()
+	return FALSE
 
 /turf/simulated/floor/exoplanet/Entered(atom/movable/A)
 	..()
@@ -468,6 +484,15 @@
 	icon_state = "seashallow"
 	movement_delay = 2
 	mudpit = 1
+	var/reagent_type = /datum/reagent/water
+
+/turf/simulated/floor/exoplanet/water/shallow/attackby(obj/item/O, var/mob/living/user)
+	var/obj/item/weapon/reagent_containers/RG = O
+	if (reagent_type && istype(RG) && RG.is_open_container() && RG.reagents)
+		RG.reagents.add_reagent(reagent_type, min(RG.volume - RG.reagents.total_volume, RG.amount_per_transfer_from_this))
+		user.visible_message("<span class='notice'>[user] fills \the [RG] from \the [src].</span>","<span class='notice'>You fill \the [RG] from \the [src].</span>")
+	else
+		return ..()
 
 /turf/simulated/floor/exoplanet/water/update_dirt()
 	return	// Water doesn't become dirty
@@ -481,3 +506,30 @@
 	anchored = 1
 	mouse_opacity = 0
 	simulated = 0
+
+/turf/simulated/floor/exoplanet/Initialize()
+	. = ..()
+	update_icon(1)
+
+/turf/simulated/floor/exoplanet/on_update_icon(var/update_neighbors)
+	overlays.Cut()
+	for(var/direction in GLOB.cardinal)
+		var/turf/turf_to_check = get_step(src,direction)
+		if(!istype(turf_to_check, type))
+			var/image/rock_side = image(icon, "edge[pick(0,1,2)]", dir = turn(direction, 180))
+			rock_side.plating_decal_layerise()
+			switch(direction)
+				if(NORTH)
+					rock_side.pixel_y += world.icon_size
+				if(SOUTH)
+					rock_side.pixel_y -= world.icon_size
+				if(EAST)
+					rock_side.pixel_x += world.icon_size
+				if(WEST)
+					rock_side.pixel_x -= world.icon_size
+			overlays += rock_side
+		else if(update_neighbors)
+			turf_to_check.update_icon()
+
+/turf/simulated/floor/exoplanet/water/on_update_icon()
+	return

@@ -11,7 +11,7 @@
 *******/
 /obj/item/device/camera_film
 	name = "film cartridge"
-	icon = 'icons/obj/items.dmi'
+	icon = 'icons/obj/photography.dmi'
 	desc = "A camera film cartridge. Insert it into a camera to reload it."
 	icon_state = "film"
 	item_state = "electropack"
@@ -25,7 +25,7 @@ var/global/photo_count = 0
 
 /obj/item/weapon/photo
 	name = "photo"
-	icon = 'icons/obj/items.dmi'
+	icon = 'icons/obj/photography.dmi'
 	icon_state = "photo"
 	item_state = "paper"
 	randpixel = 10
@@ -42,7 +42,7 @@ var/global/photo_count = 0
 /obj/item/weapon/photo/attack_self(mob/user as mob)
 	user.examinate(src)
 
-/obj/item/weapon/photo/update_icon()
+/obj/item/weapon/photo/on_update_icon()
 	overlays.Cut()
 	var/scale = 8/(photo_size*32)
 	var/image/small_img = image(img.icon)
@@ -101,7 +101,7 @@ var/global/photo_count = 0
 **************/
 /obj/item/weapon/storage/photo_album
 	name = "Photo album"
-	icon = 'icons/obj/items.dmi'
+	icon = 'icons/obj/photography.dmi'
 	icon_state = "album"
 	item_state = "briefcase"
 	w_class = ITEM_SIZE_NORMAL //same as book
@@ -137,21 +137,21 @@ var/global/photo_count = 0
 *********/
 /obj/item/device/camera
 	name = "camera"
-	icon = 'icons/obj/items.dmi'
+	icon = 'icons/obj/photography.dmi'
 	desc = "A polaroid camera."
 	icon_state = "camera"
 	item_state = "electropack"
 	w_class = ITEM_SIZE_SMALL
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
-	matter = list(DEFAULT_WALL_MATERIAL = 2000)
+	matter = list(MATERIAL_STEEL = 2000)
 	var/pictures_max = 10
 	var/pictures_left = 10
 	var/on = 1
 	var/icon_on = "camera"
 	var/icon_off = "camera_off"
 	var/size = 3
-/obj/item/device/camera/update_icon()
+/obj/item/device/camera/on_update_icon()
 	var/datum/extension/base_icon_state/bis = get_extension(src, /datum/extension/base_icon_state)
 	if(on)
 		icon_state = "[bis.base_icon_state]"
@@ -221,9 +221,6 @@ var/global/photo_count = 0
 
 	on = 0
 	update_icon()
-	spawn(64)
-		on = 1
-		update_icon()
 
 /obj/item/device/camera/examine(mob/user)
 	if(!..(user))
@@ -271,20 +268,19 @@ var/global/photo_count = 0
 	return p
 
 /obj/item/device/camera/proc/printpicture(mob/user, obj/item/weapon/photo/p)
-	p.loc = user.loc
-	if(!user.get_inactive_hand())
-		user.put_in_inactive_hand(p)
+	if(!user.put_in_inactive_hand(p))
+		p.dropInto(loc)
 
 /obj/item/weapon/photo/proc/copy(var/copy_id = 0)
 	var/obj/item/weapon/photo/p = new/obj/item/weapon/photo()
 
-	p.SetName(name)
-	p.icon = icon(icon, icon_state)
-	p.tiny = icon(tiny)
+	p.SetName(name) // Do this first, manually, to make sure listeners are alerted properly.
+	p.appearance = appearance
+
+	p.tiny = new
+	p.tiny.appearance = tiny.appearance
 	p.img = icon(img)
-	p.desc = desc
-	p.pixel_x = pixel_x
-	p.pixel_y = pixel_y
+
 	p.photo_size = photo_size
 	p.scribble = scribble
 

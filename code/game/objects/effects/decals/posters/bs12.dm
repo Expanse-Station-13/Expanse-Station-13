@@ -112,7 +112,7 @@
 /decl/poster/bay_23
 	icon_state="bsposter23"
 	name = "Safety first: because electricity doesn't wait!"
-	desc = "A safety poster starring a clueless looking redhead with frazzled hair. \"Every year, hundreds of NT employees expose themselves to electric shock. Play it safe. Avoid suspicious doors after electrical storms, and always wear protection when doing electric maintenance.\""
+	desc = "A safety poster starring a clueless looking redhead with frazzled hair. \"Every year, hundreds of employees expose themselves to electric shock. Play it safe. Avoid suspicious doors after electrical storms, and always wear protection when doing electric maintenance.\""
 
 /decl/poster/bay_24
 	icon_state="bsposter24"
@@ -217,7 +217,7 @@
 /decl/poster/bay_44
 	icon_state="bsposter44"
 	name = "Time for a drink?"
-	desc = "This poster depicts a friendly-looking Tajara holding a tray of drinks."
+	desc = "This poster depicts a friendly-looking alien holding a tray of drinks."
 
 /decl/poster/bay_45
 	icon_state="bsposter45"
@@ -292,4 +292,4 @@
 /decl/poster/bay_59
 	icon_state="bsposter59"
 	name = "poster - Miss Science 2558"
-	desc = "A large piece of space-resistant printed paper. This pin-up poster depicts a woman wearing a NanoTrasen labcoat, a bikini, and a sheepish grin. She's shyly posing atop some highly specialized research equipment."
+	desc = "A large piece of space-resistant printed paper. This pin-up poster depicts a woman wearing a corporate labcoat, a bikini, and a sheepish grin. She's shyly posing atop some highly specialized research equipment."

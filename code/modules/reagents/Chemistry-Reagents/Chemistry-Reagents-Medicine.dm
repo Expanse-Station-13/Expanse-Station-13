@@ -180,6 +180,9 @@
 	metabolism = REM * 0.5
 	scannable = 1
 	flags = IGNORE_MOB_SIZE
+	heating_products = list(/datum/reagent/cryoxadone, /datum/reagent/sodium)
+	heating_point = 50 CELCIUS
+	heating_message = "turns back to sludge."
 
 /datum/reagent/clonexadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.add_chemical_effect(CE_CRYO, 1)
@@ -385,7 +388,7 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		for(var/obj/item/organ/internal/I in H.internal_organs)
-			if(I.robotic >= ORGAN_ROBOT)
+			if(BP_IS_ROBOTIC(I))
 				continue
 			if(I.organ_tag == BP_BRAIN)
 				H.confused++
@@ -710,7 +713,7 @@
 	if(M.chem_doses[type] > 3 && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		for(var/obj/item/organ/external/E in H.organs)
-			E.disfigured = 1 //currently only matters for the head, but might as well disfigure them all.
+			E.status |= ORGAN_DISFIGURED //currently only matters for the head, but might as well disfigure them all.
 	if(M.chem_doses[type] > 10)
 		M.make_dizzy(5)
 		M.make_jittery(5)

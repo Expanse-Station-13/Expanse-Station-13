@@ -110,7 +110,7 @@
 	return 0
 
 /mob/living/carbon/slime/proc/handle_AI()  // the master AI process
-	if(stat == DEAD || client || Victim)
+	if(QDELETED(src) || stat == DEAD || client || Victim)
 		AIproc = 0
 		return // If we're dead or have a client, we don't need AI, if we're feeding, we continue feeding
 
@@ -121,7 +121,7 @@
 	AIproc = 1
 	var/addedDelay = 0
 
-	if(amount_grown >= 10 && !Target)
+	if(amount_grown >= SLIME_EVOLUTION_THRESHOLD && !Target)
 		if(is_adult)
 			Reproduce()
 		else

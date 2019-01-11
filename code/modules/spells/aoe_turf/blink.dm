@@ -13,13 +13,10 @@
 	level_max = list(Sp_TOTAL = 4, Sp_SPEED = 4, Sp_POWER = 4)
 	cooldown_min = 5 //4 deciseconds reduction per rank
 	hud_state = "wiz_blink"
+	cast_sound = 'sound/magic/blink.ogg'
 
 /spell/aoe_turf/blink/cast(var/list/targets, mob/user)
 	if(!targets.len)
-		return
-
-	if(user.incapacitated(INCAPACITATION_STUNNED | INCAPACITATION_FORCELYING | INCAPACITATION_KNOCKOUT))
-		to_chat(user, "<span class='warning'>You can't cast this spell while incapacitated!</span>")
 		return
 
 	var/turf/T = pick(targets)

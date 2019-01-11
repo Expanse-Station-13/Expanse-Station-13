@@ -129,7 +129,7 @@
 		return
 
 	if(!is_adult)
-		if(amount_grown >= 10)
+		if(amount_grown >= SLIME_EVOLUTION_THRESHOLD)
 			is_adult = 1
 			maxHealth = 200
 			amount_grown = 0
@@ -149,7 +149,7 @@
 		return
 
 	if(is_adult)
-		if(amount_grown >= 10)
+		if(amount_grown >= SLIME_EVOLUTION_THRESHOLD)
 			if(stat)
 				to_chat(src, "<span class='notice'>I must be conscious to do this...</span>")
 				return
@@ -165,7 +165,7 @@
 					step_away(M, src)
 				M.Friends = Friends.Copy()
 				babies += M
-				feedback_add_details("slime_babies_born","slimebirth_[replacetext(M.colour," ","_")]")
+				SSstatistics.add_field_details("slime_babies_born","slimebirth_[replacetext(M.colour," ","_")]")
 
 			var/mob/living/carbon/slime/new_slime = babies[1]
 			new_slime.universal_speak = universal_speak

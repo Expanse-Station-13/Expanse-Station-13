@@ -7,7 +7,6 @@
 	icon = 'icons/obj/virology.dmi'
 	icon_state = "analyser"
 
-	use_power = 1			//1 = idle, 2 = active
 	idle_power_usage = 20
 	active_power_usage = 300
 
@@ -150,7 +149,7 @@
 	data["rad_shield_on"] = rad_shield
 
 	// update the ui if it exists, returns null if no ui is passed/found
-	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		// the ui does not exist, so we'll create a new() one
 		// for a list of parameters and their descriptions see the code docs in \code\modules\nano\nanoui.dm
@@ -268,7 +267,7 @@
 		var/obj/item/weapon/paper/P = new(src)
 		P.SetName("[src] report #[++report_num]: [scanned_item.name]")
 		P.stamped = list(/obj/item/weapon/stamp)
-		P.overlays = list("paper_stamped")
+		P.queue_icon_update()
 
 		//work out data
 		var/data = " - Mundane object: [scanned_item.desc ? scanned_item.desc : "No information on record."]<br>"
@@ -318,9 +317,9 @@
 		P.info = "<b>[src] analysis report #[report_num]</b><br>"
 		P.info += "<b>Scanned item:</b> [scanned_item.name]<br><br>" + data
 		last_scan_data = P.info
-		P.loc = src.loc
+		P.dropInto(loc)
 
-		scanned_item.loc = src.loc
+		scanned_item.dropInto(loc)
 		scanned_item = null
 
 /obj/machinery/radiocarbon_spectrometer/OnTopic(user, href_list)
@@ -357,6 +356,6 @@
 
 	else if(href_list["ejectItem"])
 		if(scanned_item)
-			scanned_item.loc = src.loc
+			scanned_item.dropInto(loc)
 			scanned_item = null
 		. = TOPIC_REFRESH

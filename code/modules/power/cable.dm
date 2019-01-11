@@ -125,7 +125,7 @@ By design, d1 is the smallest direction and d2 is the highest
 /obj/structure/cable/hides_under_flooring()
 	return 1
 
-/obj/structure/cable/update_icon()
+/obj/structure/cable/on_update_icon()
 	icon_state = "[d1]-[d2]"
 	alpha = invisibility ? 127 : 255
 
@@ -484,7 +484,7 @@ obj/structure/cable/proc/cableColor(var/colorC)
 	w_class = ITEM_SIZE_NORMAL
 	throw_speed = 2
 	throw_range = 5
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 20)
+	matter = list(MATERIAL_STEEL = 50, MATERIAL_GLASS = 20)
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
 	item_state = "coil"
@@ -524,8 +524,12 @@ obj/structure/cable/proc/cableColor(var/colorC)
 		var/obj/item/organ/external/S = H.organs_by_name[user.zone_sel.selecting]
 
 		if (!S) return
-		if(S.robotic < ORGAN_ROBOT || user.a_intent != I_HELP)
+		if(!BP_IS_ROBOTIC(S) || user.a_intent != I_HELP)
 			return ..()
+
+		if(BP_IS_BRITTLE(S))
+			to_chat(user, "<span class='warning'>\The [H]'s [S.name] is hard and brittle - \the [src] cannot repair it.</span>")
+			return 1
 
 		var/use_amt = min(src.amount, ceil(S.burn_dam/3), 5)
 		if(can_use(use_amt))
@@ -535,7 +539,7 @@ obj/structure/cable/proc/cableColor(var/colorC)
 	return ..()
 
 
-/obj/item/stack/cable_coil/update_icon()
+/obj/item/stack/cable_coil/on_update_icon()
 	if (!color)
 		color = GLOB.possible_cable_colours[pick(GLOB.possible_cable_colours)]
 	if(amount == 1)
@@ -615,7 +619,7 @@ obj/structure/cable/proc/cableColor(var/colorC)
 /obj/item/stack/cable_coil/transfer_to(obj/item/stack/cable_coil/S)
 	if(!istype(S))
 		return
-	if(!can_merge(S))
+	if(!(can_merge(S) || S.can_merge(src)))
 		return
 
 	..()

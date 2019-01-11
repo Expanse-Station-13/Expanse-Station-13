@@ -21,11 +21,11 @@
 		to_chat(M, "<span class='danger'>You've been silenced!</span>")
 		return
 
-	if (!(istype(user, /mob/living/carbon/human) || ticker) && ticker.mode.name != "monkey")
+	if (!user.IsAdvancedToolUser())
 		to_chat(user, "<span class='danger'>You don't have the dexterity to do this!</span>")
 		return
 
-	if ((CLUMSY in user.mutations) && prob(50))
+	if ((MUTATION_CLUMSY in user.mutations) && prob(50))
 		to_chat(user, "<span class='danger'>The rod slips out of your hand and hits your head.</span>")
 		user.take_organ_damage(10)
 		user.Paralyse(20)
@@ -212,7 +212,7 @@
 		else
 			health -= rand(1,3)
 
-	else if (HULK in user.mutations)
+	else if (MUTATION_HULK in user.mutations)
 		health = 0
 	else
 		health -= rand(5,8)

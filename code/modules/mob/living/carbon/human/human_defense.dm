@@ -31,7 +31,7 @@ meteor_act
 		var/obj/item/weapon/material/shard/shrapnel/SP = new()
 		SP.SetName((P.name != "shrapnel")? "[P.name] shrapnel" : "shrapnel")
 		SP.desc = "[SP.desc] It looks like it was fired from [P.shot_from]."
-		SP.loc = organ
+		SP.forceMove(organ)
 		organ.embed(SP)
 
 	var/blocked = ..(P, def_zone)
@@ -145,6 +145,8 @@ meteor_act
 
 	var/accuracy_penalty = user.melee_accuracy_mods()
 	accuracy_penalty += 10*get_skill_difference(SKILL_COMBAT, user)
+	accuracy_penalty += 10*(I.w_class - ITEM_SIZE_NORMAL)
+	accuracy_penalty -= I.melee_accuracy_bonus
 
 	var/hit_zone = get_zone_with_miss_chance(target_zone, src, accuracy_penalty)
 
@@ -289,14 +291,14 @@ meteor_act
 
 /mob/living/carbon/human/emag_act(var/remaining_charges, mob/user, var/emag_source)
 	var/obj/item/organ/external/affecting = get_organ(user.zone_sel.selecting)
-	if(!affecting || !(affecting.robotic >= ORGAN_ROBOT))
+	if(!affecting || !BP_IS_ROBOTIC(affecting))
 		to_chat(user, "<span class='warning'>That limb isn't robotic.</span>")
 		return -1
-	if(affecting.sabotaged)
+	if(affecting.status & ORGAN_SABOTAGED)
 		to_chat(user, "<span class='warning'>[src]'s [affecting.name] is already sabotaged!</span>")
 		return -1
 	to_chat(user, "<span class='notice'>You sneakily slide [emag_source] into the dataport on [src]'s [affecting.name] and short out the safeties.</span>")
-	affecting.sabotaged = 1
+	affecting.status |= ORGAN_SABOTAGED
 	return 1
 
 //this proc handles being hit by a thrown atom
@@ -315,10 +317,11 @@ meteor_act
 		var/dtype = O.damtype
 		var/throw_damage = O.throwforce*(speed/THROWFORCE_SPEED_DIVISOR)
 
-		var/zone
+		var/zone = BP_CHEST
 		if (istype(O.thrower, /mob/living))
 			var/mob/living/L = O.thrower
-			zone = check_zone(L.zone_sel.selecting)
+			if(L.zone_sel)
+				zone = check_zone(L.zone_sel.selecting)
 		else
 			zone = ran_zone(BP_CHEST,75)	//Hits a random part of the body, geared towards the chest
 
@@ -364,7 +367,7 @@ meteor_act
 		if(dtype == BRUTE && istype(O,/obj/item))
 			var/obj/item/I = O
 			if (!is_robot_module(I))
-				var/sharp = is_sharp(I)
+				var/sharp = I.can_embed()
 				var/damage = throw_damage //the effective damage used for embedding purposes, no actual damage is dealt here
 				if (armor)
 					damage *= blocked_mult(armor)
@@ -397,7 +400,7 @@ meteor_act
 				var/turf/T = near_wall(dir,2)
 
 				if(T)
-					src.loc = T
+					src.forceMove(T)
 					visible_message("<span class='warning'>[src] is pinned to the wall by [O]!</span>","<span class='warning'>You are pinned to the wall by [O]!</span>")
 					src.anchored = 1
 					src.pinned += O

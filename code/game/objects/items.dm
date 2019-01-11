@@ -21,6 +21,7 @@
 	var/lock_picking_level = 0 //used to determine whether something can pick a lock, and how well.
 	var/force = 0
 	var/attack_cooldown = DEFAULT_WEAPON_COOLDOWN
+	var/melee_accuracy_bonus = 0
 
 	var/heat_protection = 0 //flags which determine which body parts are protected from heat. Use the HEAD, UPPER_TORSO, LOWER_TORSO, etc. flags. See setup.dm
 	var/cold_protection = 0 //flags which determine which body parts are protected from cold. Use the HEAD, UPPER_TORSO, LOWER_TORSO, etc. flags. See setup.dm
@@ -71,7 +72,7 @@
 	/* Species-specific sprites, concept stolen from Paradise//vg/.
 	ex:
 	sprite_sheets = list(
-		SPECIES_TAJARA = 'icons/cat/are/bad'
+		SPECIES_UNATHI = 'icons/lizard/are/bad'
 		)
 	If index term exists and icon_override is not set, this sprite sheet will be used.
 	*/
@@ -88,14 +89,13 @@
 		pixel_y = rand(-randpixel, randpixel)
 
 /obj/item/Destroy()
-	qdel(hidden_uplink)
-	hidden_uplink = null
+	QDEL_NULL(hidden_uplink)
 	if(ismob(loc))
 		var/mob/m = loc
 		m.drop_from_inventory(src)
-		m.update_inv_r_hand()
-		m.update_inv_l_hand()
-		src.loc = null
+	var/obj/item/weapon/storage/storage = loc
+	if(istype(storage))
+		storage.on_item_deletion()
 	return ..()
 
 /obj/item/device
@@ -142,20 +142,6 @@
 			if (prob(5))
 				qdel(src)
 
-/obj/item/verb/move_to_top()
-	set name = "Move To Top"
-	set category = "Object"
-	set src in oview(1)
-
-	if(!istype(src.loc, /turf) || usr.stat || usr.restrained() )
-		return
-
-	var/turf/T = src.loc
-
-	src.loc = null
-
-	src.loc = T
-
 /obj/item/examine(mob/user, var/distance = -1)
 	var/size
 	switch(src.w_class)
@@ -188,7 +174,7 @@
 		if(LAZYLEN(matter))
 			desc_comp += "<span class='notice'>Extractable materials:</span><BR>"
 			for(var/mat in matter)
-				desc_comp += "[get_material_by_name(mat)]<BR>"
+				desc_comp += "[SSmaterials.get_material_by_name(mat)]<BR>"
 		else
 			desc_comp += "<span class='danger'>No extractable materials detected.</span><BR>"
 		desc_comp += "*--------*"
@@ -486,15 +472,36 @@ var/list/global/slot_flags_enumeration = list(
 //For non-projectile attacks this usually means the attack is blocked.
 //Otherwise should return 0 to indicate that the attack is not affected in any way.
 /obj/item/proc/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
-	if(get_parry_chance())
-		if(default_parry_check(user, attacker, damage_source) && prob(get_parry_chance()))
+	var/parry_chance = get_parry_chance(user)
+	if(attacker)	
+		parry_chance = max(0, parry_chance - 10 * attacker.get_skill_difference(SKILL_COMBAT, user))
+	if(parry_chance)
+		if(default_parry_check(user, attacker, damage_source) && prob(parry_chance))
 			user.visible_message("<span class='danger'>\The [user] parries [attack_text] with \the [src]!</span>")
 			playsound(user.loc, 'sound/weapons/punchmiss.ogg', 50, 1)
+			on_parry()
 			return 1
 	return 0
 
-/obj/item/proc/get_parry_chance()
-	return base_parry_chance
+/obj/item/proc/on_parry()
+	return
+
+/obj/item/proc/get_parry_chance(mob/user)
+	. = base_parry_chance
+	if(user)
+		if(base_parry_chance || user.skill_check(SKILL_COMBAT, SKILL_ADEPT))
+			. += 10 * (user.get_skill_value(SKILL_COMBAT) - SKILL_BASIC)
+
+/obj/item/proc/on_disarm_attempt(mob/target, mob/living/attacker)
+	if(force < 1)
+		return 0
+	if(!istype(attacker))
+		return 0
+	attacker.apply_damage(force, damtype, attacker.hand ? BP_L_HAND : BP_R_HAND, used_weapon = src)
+	attacker.visible_message("<span class='danger'>[attacker] hurts \his hand on [src]!</span>")
+	playsound(target, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
+	playsound(target, hitsound, 50, 1, -1)
+	return 1
 
 /obj/item/proc/get_loc_turf()
 	var/atom/L = loc
@@ -522,14 +529,6 @@ var/list/global/slot_flags_enumeration = list(
 	user.do_attack_animation(M)
 
 	src.add_fingerprint(user)
-	//if((CLUMSY in user.mutations) && prob(50))
-	//	M = user
-		/*
-		to_chat(M, "<span class='warning'>You stab yourself in the eye.</span>")
-		M.sdisabilities |= BLIND
-		M.weakened += 4
-		M.adjustBruteLoss(10)
-		*/
 
 	if(istype(H))
 
@@ -549,7 +548,7 @@ var/list/global/slot_flags_enumeration = list(
 		eyes.damage += rand(3,4)
 		if(eyes.damage >= eyes.min_bruised_damage)
 			if(M.stat != 2)
-				if(eyes.robotic < ORGAN_ROBOT) //robot eyes bleeding might be a bit silly
+				if(!BP_IS_ROBOTIC(eyes)) //robot eyes bleeding might be a bit silly
 					to_chat(M, "<span class='danger'>Your eyes start to bleed profusely!</span>")
 			if(prob(50))
 				if(M.stat != 2)
@@ -576,6 +575,7 @@ var/list/global/slot_flags_enumeration = list(
 	if(istype(src, /obj/item/clothing/gloves))
 		var/obj/item/clothing/gloves/G = src
 		G.transfer_blood = 0
+	trace_DNA = null
 
 /obj/item/reveal_blood()
 	if(was_bloodied && !fluorescent)
@@ -607,18 +607,20 @@ var/list/global/slot_flags_enumeration = list(
 		blood_DNA[M.dna.unique_enzymes] = M.dna.b_type
 	return 1 //we applied blood to the item
 
-/obj/item/proc/generate_blood_overlay()
-	if(blood_overlay)
-		return
+GLOBAL_LIST_EMPTY(blood_overlay_cache)
 
+/obj/item/proc/generate_blood_overlay(force = FALSE)
+	if(blood_overlay && !force)
+		return
+	if(GLOB.blood_overlay_cache["[icon]" + icon_state])
+		blood_overlay = GLOB.blood_overlay_cache["[icon]" + icon_state]
+		return
 	var/icon/I = new /icon(icon, icon_state)
 	I.Blend(new /icon('icons/effects/blood.dmi', rgb(255,255,255)),ICON_ADD) //fills the icon_state with white (except where it's transparent)
 	I.Blend(new /icon('icons/effects/blood.dmi', "itemblood"),ICON_MULTIPLY) //adds blood and the remaining white areas become transparant
-
-	//not sure if this is worth it. It attaches the blood_overlay to every item of the same type if they don't have one already made.
-	for(var/obj/item/A in world)
-		if(A.type == type && !A.blood_overlay)
-			A.blood_overlay = image(I)
+	blood_overlay = image(I)
+	blood_overlay.appearance_flags |= NO_CLIENT_COLOR
+	GLOB.blood_overlay_cache["[icon]" + icon_state] = blood_overlay
 
 /obj/item/proc/showoff(mob/user)
 	for (var/mob/M in view(user))
@@ -740,12 +742,6 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		mob_state = icon_state
 	return mob_state
 
-/obj/item/proc/dir_shift(var/icon/given_icon, var/dir_given, var/x = 0, var/y = 0)
-	var/icon/I = new(given_icon, dir = dir_given)
-	I.Shift(EAST, x)
-	I.Shift(NORTH, y)
-	given_icon.Insert(I, dir = dir_given)
-	return given_icon
 
 /obj/item/proc/get_mob_overlay(mob/user_mob, slot)
 	var/bodytype = "Default"
@@ -776,25 +772,9 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	else
 		mob_icon = default_onmob_icons[slot]
 
-	var/image/ret_overlay = overlay_image(mob_icon,mob_state,color,RESET_COLOR)
-	if(user_human && user_human.species && user_human.species.equip_adjust.len && !spritesheet)
-		var/list/equip_adjusts = user_human.species.equip_adjust
-		if(equip_adjusts[slot])
-			var/image_key = "[user_human.species] [mob_icon] [mob_state] [color]"
-			ret_overlay = user_human.species.equip_overlays[image_key]
-			if(!ret_overlay)
-				var/icon/final_I = new(mob_icon, icon_state = mob_state)
-				var/list/shifts = equip_adjusts[slot]
-				if(shifts && shifts.len)
-					var/shift_facing
-					for(shift_facing in shifts)
-						var/list/facing_list = shifts[shift_facing]
-						final_I = dir_shift(final_I, text2dir(shift_facing), facing_list["x"], facing_list["y"])
-				ret_overlay = overlay_image(final_I, color, flags = RESET_COLOR)
-
-				user_human.species.equip_overlays[image_key] = ret_overlay
-
-	return ret_overlay
+	if(user_human)
+		return user_human.species.get_offset_overlay_image(spritesheet, mob_icon, mob_state, color, slot)
+	return overlay_image(mob_icon, mob_state, color, RESET_COLOR)
 
 /obj/item/proc/get_examine_line()
 	if(blood_DNA)

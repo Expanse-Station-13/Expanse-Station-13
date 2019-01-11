@@ -8,6 +8,7 @@
 	desc = "A conveyor belt."
 	layer = BELOW_OBJ_LAYER	// so they appear under stuff
 	anchored = 1
+
 	var/operating = 0	// 1 if running forward, -1 if backwards, 0 if off
 	var/operable = 1	// true if can operate (no broken segments in this belt run)
 	var/forwards		// this is the default (forward) direction, set by the map dir
@@ -47,7 +48,7 @@
 	else operating = 0
 	update_icon()
 
-/obj/machinery/conveyor/update_icon()
+/obj/machinery/conveyor/on_update_icon()
 	if(stat & BROKEN)
 		icon_state = "conveyor-broken"
 		operating = 0
@@ -65,7 +66,7 @@
 		return
 	if(!operating)
 		return
-	use_power(100)
+	use_power_oneoff(100)
 
 	affecting = loc.contents - src		// moved items will be all in loc
 	spawn(1)	// slight delay to prevent infinite propagation due to map order	//TODO: please no spawn() in process(). It's a very bad idea
@@ -111,18 +112,16 @@
 
 // make the conveyor broken
 // also propagate inoperability to any connected conveyor with the same ID
-/obj/machinery/conveyor/proc/broken()
-	stat |= BROKEN
-	update_icon()
+/obj/machinery/conveyor/set_broken(new_state)
+	. = ..()
+	if(. && new_state)
+		var/obj/machinery/conveyor/C = locate() in get_step(src, dir)
+		if(C)
+			C.set_operable(dir, id, 0)
 
-	var/obj/machinery/conveyor/C = locate() in get_step(src, dir)
-	if(C)
-		C.set_operable(dir, id, 0)
-
-	C = locate() in get_step(src, turn(dir,180))
-	if(C)
-		C.set_operable(turn(dir,180), id, 0)
-
+		C = locate() in get_step(src, turn(dir,180))
+		if(C)
+			C.set_operable(turn(dir,180), id, 0)
 
 //set the operable var if ID matches, propagating in the given direction
 
@@ -137,15 +136,7 @@
 	if(C)
 		C.set_operable(stepdir, id, op)
 
-/*
-/obj/machinery/conveyor/verb/destroy()
-	set src in view()
-	src.broken()
-*/
-
 // the conveyor control switch
-//
-//
 
 /obj/machinery/conveyor_switch
 
@@ -178,7 +169,7 @@
 
 // update the icon depending on the position
 
-/obj/machinery/conveyor_switch/update_icon()
+/obj/machinery/conveyor_switch/on_update_icon()
 	if(position<0)
 		icon_state = "switch-rev"
 	else if(position>0)

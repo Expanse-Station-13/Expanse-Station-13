@@ -38,7 +38,6 @@
 	land_type = /turf/simulated/floor/exoplanet/desert
 	planetary_area = /area/exoplanet/garbage
 	plantcolors = list("#efdd6f","#7b4a12","#e49135","#ba6222","#5c755e","#120309")
-
 	flora_prob = 1
 	large_flora_prob = 0
 	flora_diversity = 2
@@ -48,7 +47,7 @@
 
 /datum/random_map/noise/exoplanet/garbage/New(var/seed, var/tx, var/ty, var/tz, var/tlx, var/tly, var/do_not_apply, var/do_not_announce, var/never_be_priority = 0)
 	if(prob(60))
-		fallout = rand(20, 100)
+		fallout = rand(20, 75)
 	..()
 
 /datum/random_map/noise/exoplanet/garbage/get_additional_spawns(var/value, var/turf/T)
@@ -90,3 +89,6 @@
 	desc = "Stone-like artificial material."
 	icon = 'icons/turf/flooring/misc.dmi'
 	icon_state = "concrete"
+
+/turf/simulated/floor/exoplanet/concrete/on_update_icon()
+	return

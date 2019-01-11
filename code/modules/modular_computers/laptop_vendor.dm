@@ -2,7 +2,7 @@
 
 /obj/machinery/lapvend
 	name = "computer vendor"
-	desc = "A vending machine with a built-in microfabricator, capable of dispensing various NT-branded computers."
+	desc = "A vending machine with a built-in microfabricator, capable of dispensing various computers."
 	icon = 'icons/obj/vending.dmi'
 	icon_state = "robotics"
 	layer = BELOW_OBJ_LAYER
@@ -252,7 +252,7 @@
 	if(state == 1 || state == 2)
 		data["totalprice"] = total_price
 
-	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		ui = new(user, src, ui_key, "computer_fabricator.tmpl", "Personal Computer Vendor", 500, 400)
 		ui.set_initial_data(data)

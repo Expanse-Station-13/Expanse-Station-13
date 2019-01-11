@@ -9,7 +9,6 @@
 
 	anchored = 1
 	density = 1
-	use_power = 1
 	idle_power_usage = 40
 	active_power_usage = 300
 
@@ -31,7 +30,7 @@
 		return
 	return ..()
 
-/obj/machinery/organ_printer/update_icon()
+/obj/machinery/organ_printer/on_update_icon()
 	overlays.Cut()
 	if(panel_open)
 		overlays += "bioprinter_panel_open"
@@ -77,13 +76,13 @@
 
 	stored_matter -= products[choice][2]
 
-	use_power = 2
+	update_use_power(POWER_USE_ACTIVE)
 	printing = 1
 	update_icon()
 
 	sleep(print_delay)
 
-	use_power = 1
+	update_use_power(POWER_USE_IDLE)
 	printing = 0
 	update_icon()
 
@@ -128,7 +127,7 @@
 		)
 
 	var/matter_amount_per_sheet = 10
-	var/matter_type = DEFAULT_WALL_MATERIAL
+	var/matter_type = MATERIAL_STEEL
 
 /obj/machinery/organ_printer/robot/mapped/Initialize()
 	. = ..()

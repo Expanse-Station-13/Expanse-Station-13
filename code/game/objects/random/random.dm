@@ -223,7 +223,8 @@
 				/obj/item/clothing/under/syndicate = 2,
 				/obj/item/weapon/reagent_containers/syringe = 3,
 				/obj/item/weapon/reagent_containers/syringe/steroid = 2,
-				/obj/item/weapon/reagent_containers/syringe/drugs = 1)
+				/obj/item/weapon/reagent_containers/syringe/drugs = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/egg/lizard = 3)
 
 /obj/random/drinkbottle
 	name = "random drink"
@@ -276,6 +277,7 @@
 				/obj/item/weapon/gun/projectile/automatic/sts35 = 2,
 				/obj/item/weapon/gun/projectile/automatic/z8 = 2,
 				/obj/item/weapon/gun/projectile/beretta = 4,
+				/obj/item/weapon/gun/projectile/sigsauer = 3,
 				/obj/item/weapon/gun/projectile/colt = 4,
 				/obj/item/weapon/gun/projectile/sec = 4,
 				/obj/item/weapon/gun/projectile/sec/wood = 3,
@@ -300,6 +302,7 @@
 	return list(/obj/item/weapon/gun/projectile/sec = 3,
 				/obj/item/weapon/gun/energy/gun = 2,
 				/obj/item/weapon/gun/projectile/beretta = 2,
+				/obj/item/weapon/gun/projectile/sigsauer = 1,
 				/obj/item/weapon/gun/projectile/colt = 2,
 				/obj/item/weapon/gun/projectile/pistol = 2,
 				/obj/item/weapon/gun/energy/retro = 1,
@@ -459,13 +462,13 @@ obj/random/closet/spawn_choices()
 	icon_state = "coin"
 
 /obj/random/coin/spawn_choices()
-	return list(/obj/item/weapon/coin/gold = 3,
-				/obj/item/weapon/coin/silver = 4,
-				/obj/item/weapon/coin/diamond = 2,
-				/obj/item/weapon/coin/iron = 4,
-				/obj/item/weapon/coin/uranium = 3,
-				/obj/item/weapon/coin/platinum = 1,
-				/obj/item/weapon/coin/phoron = 1)
+	return list(/obj/item/weapon/material/coin/gold = 3,
+				/obj/item/weapon/material/coin/silver = 4,
+				/obj/item/weapon/material/coin/diamond = 2,
+				/obj/item/weapon/material/coin/iron = 4,
+				/obj/item/weapon/material/coin/uranium = 3,
+				/obj/item/weapon/material/coin/platinum = 1,
+				/obj/item/weapon/material/coin/phoron = 1)
 
 /obj/random/toy
 	name = "random toy"
@@ -571,7 +574,6 @@ obj/random/obstruction/spawn_choices()
 	return list(/obj/structure/barricade,
 				/obj/structure/girder,
 				/obj/structure/girder/displaced,
-				/obj/structure/girder/reinforced,
 				/obj/structure/grille,
 				/obj/structure/grille/broken,
 				/obj/structure/foamedmetal,
@@ -642,7 +644,7 @@ obj/random/obstruction/spawn_choices()
 /obj/random/masks
 	name = "random mask"
 	desc = "This is a random face mask."
-	icon = 'icons/obj/clothing/masks.dmi'
+	icon = 'icons/obj/clothing/obj_mask.dmi'
 	icon_state = "gas_mask"
 
 /obj/random/masks/spawn_choices()
@@ -716,13 +718,13 @@ obj/random/obstruction/spawn_choices()
 				/obj/item/weapon/storage/belt/utility/full = 2,
 				/obj/item/weapon/storage/belt/medical/emt = 2,
 				/obj/item/weapon/storage/belt/medical = 2,
-				/obj/item/weapon/storage/belt/security = 2,
-				/obj/item/weapon/storage/belt/security/tactical = 1)
+				/obj/item/weapon/storage/belt/holster/security = 2,
+				/obj/item/weapon/storage/belt/holster/security/tactical = 1)
 
 /obj/random/shoes
 	name = "random footwear"
 	desc = "This is a random pair of shoes."
-	icon = 'icons/obj/clothing/shoes.dmi'
+	icon = 'icons/obj/clothing/obj_feet.dmi'
 	icon_state = "boots"
 
 /obj/random/shoes/spawn_choices()
@@ -750,7 +752,7 @@ obj/random/obstruction/spawn_choices()
 /obj/random/gloves
 	name = "random gloves"
 	desc = "This is a random pair of gloves."
-	icon = 'icons/obj/clothing/gloves.dmi'
+	icon = 'icons/obj/clothing/obj_hands.dmi'
 	icon_state = "rainbow"
 
 /obj/random/gloves/spawn_choices()
@@ -770,7 +772,7 @@ obj/random/obstruction/spawn_choices()
 /obj/random/glasses
 	name = "random eyewear"
 	desc = "This is a random pair of glasses."
-	icon = 'icons/obj/clothing/glasses.dmi'
+	icon = 'icons/obj/clothing/obj_eyes.dmi'
 	icon_state = "leforge"
 
 /obj/random/glasses/spawn_choices()
@@ -793,7 +795,7 @@ obj/random/obstruction/spawn_choices()
 /obj/random/hat
 	name = "random headgear"
 	desc = "This is a random hat of some kind."
-	icon = 'icons/obj/clothing/hats.dmi'
+	icon = 'icons/obj/clothing/obj_head.dmi'
 	icon_state = "tophat"
 
 /obj/random/hat/spawn_choices()
@@ -811,7 +813,7 @@ obj/random/obstruction/spawn_choices()
 /obj/random/suit
 	name = "random suit"
 	desc = "This is a random piece of outerwear."
-	icon = 'icons/obj/clothing/suits.dmi'
+	icon = 'icons/obj/clothing/obj_suit.dmi'
 	icon_state = "fire"
 
 /obj/random/suit/spawn_choices()
@@ -834,7 +836,7 @@ obj/random/obstruction/spawn_choices()
 /obj/random/clothing
 	name = "random clothes"
 	desc = "This is a random piece of clothing."
-	icon = 'icons/obj/clothing/uniforms.dmi'
+	icon = 'icons/obj/clothing/obj_under.dmi'
 	icon_state = "grey"
 
 /obj/random/clothing/spawn_choices()
@@ -853,7 +855,7 @@ obj/random/obstruction/spawn_choices()
 /obj/random/accessory
 	name = "random accessory"
 	desc = "This is a random utility accessory."
-	icon = 'icons/obj/clothing/ties.dmi'
+	icon = 'icons/obj/clothing/obj_accessories.dmi'
 	icon_state = "horribletie"
 
 /obj/random/accessory/spawn_choices()
@@ -863,10 +865,10 @@ obj/random/obstruction/spawn_choices()
 				/obj/item/clothing/accessory/storage/brown_vest = 2,
 				/obj/item/clothing/accessory/storage/white_vest = 2,
 				/obj/item/clothing/accessory/storage/bandolier = 1,
-				/obj/item/clothing/accessory/holster/thigh = 1,
-				/obj/item/clothing/accessory/holster/hip = 1,
-				/obj/item/clothing/accessory/holster/waist = 1,
-				/obj/item/clothing/accessory/holster/armpit = 1,
+				/obj/item/clothing/accessory/storage/holster/thigh = 1,
+				/obj/item/clothing/accessory/storage/holster/hip = 1,
+				/obj/item/clothing/accessory/storage/holster/waist = 1,
+				/obj/item/clothing/accessory/storage/holster/armpit = 1,
 				/obj/item/clothing/accessory/kneepads = 3,
 				/obj/item/clothing/accessory/stethoscope = 2)
 
@@ -883,6 +885,16 @@ obj/random/obstruction/spawn_choices()
 				/obj/item/weapon/spacecash/bundle/c50 = 2,
 				/obj/item/weapon/spacecash/bundle/c100 = 2,
 				/obj/item/weapon/spacecash/bundle/c1000 = 1)
+
+/obj/random/documents // top secret documents for SCG eyes only
+	name = "random secret documents"
+	icon = 'icons/obj/bureaucracy.dmi'
+	icon_state = "docs_generic"
+
+/obj/random/documents/spawn_choices()
+	return list (/obj/item/documents/scg/verified = 10,
+	/obj/item/documents/scg/red = 10,
+	/obj/item/documents/scg/blue = 10)
 
 /obj/random/maintenance //Clutter and loot for maintenance and away missions
 	name = "random maintenance item"
@@ -993,7 +1005,7 @@ something, make sure it's not in one of the other lists.*/
 /obj/random/voidhelmet
 	name = "Random Voidsuit Helmet"
 	desc = "This is a random voidsuit helmet."
-	icon = 'icons/obj/clothing/hats.dmi'
+	icon = 'icons/obj/clothing/obj_head.dmi'
 	icon_state = "void"
 
 /obj/random/voidhelmet/spawn_choices()
@@ -1014,7 +1026,7 @@ something, make sure it's not in one of the other lists.*/
 /obj/random/voidsuit
 	name = "Random Voidsuit"
 	desc = "This is a random voidsuit."
-	icon = 'icons/obj/clothing/suits.dmi'
+	icon = 'icons/obj/clothing/obj_suit.dmi'
 	icon_state = "void"
 
 /obj/random/voidsuit/spawn_choices()
@@ -1140,7 +1152,7 @@ var/list/random_useful_
 	if(prob(95)) // Misc. junk
 		if(!random_junk_)
 			random_junk_ = subtypesof(/obj/item/trash)
-			random_junk_ += typesof(/obj/item/weapon/cigbutt)
+			random_junk_ += typesof(/obj/item/trash/cigbutt)
 			random_junk_ += /obj/effect/decal/cleanable/spiderling_remains
 			random_junk_ += /obj/item/remains/mouse
 			random_junk_ += /obj/item/remains/robot
@@ -1164,3 +1176,121 @@ var/list/random_useful_
 	// 1% chance that we reach here
 	var/lunches = lunchables_lunches()
 	return lunches[pick(lunches)]
+
+//Random MRE stuff
+
+/obj/random/mre
+	name = "random MRE"
+	desc = "This is a random single MRE."
+	icon = 'icons/obj/food.dmi'
+	icon_state = "mre"
+
+/obj/random/mre/spawn_choices()
+	return list(/obj/item/weapon/storage/mre,
+				/obj/item/weapon/storage/mre/menu2,
+				/obj/item/weapon/storage/mre/menu3,
+				/obj/item/weapon/storage/mre/menu4,
+				/obj/item/weapon/storage/mre/menu5,
+				/obj/item/weapon/storage/mre/menu6,
+				/obj/item/weapon/storage/mre/menu7,
+				/obj/item/weapon/storage/mre/menu8,
+				/obj/item/weapon/storage/mre/menu9,
+				/obj/item/weapon/storage/mre/menu10)
+
+
+/obj/random/mre/main
+	name = "random MRE main course"
+	desc = "This is a random main course for MREs."
+	icon_state = "pouch"
+
+/obj/random/mre/main/spawn_choices()
+	return list(/obj/item/weapon/storage/mrebag,
+				/obj/item/weapon/storage/mrebag/menu2,
+				/obj/item/weapon/storage/mrebag/menu3,
+				/obj/item/weapon/storage/mrebag/menu4,
+				/obj/item/weapon/storage/mrebag/menu5,
+				/obj/item/weapon/storage/mrebag/menu6,
+				/obj/item/weapon/storage/mrebag/menu7,
+				/obj/item/weapon/storage/mrebag/menu8)
+
+/obj/random/mre/dessert
+	name = "random MRE dessert"
+	desc = "This is a random dessert for MREs."
+	icon_state = "pouch"
+
+/obj/random/mre/dessert/spawn_choices()
+	return list(/obj/item/weapon/reagent_containers/food/snacks/candy,
+				/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/normal,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/cherryjelly,
+				/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
+				/obj/item/weapon/reagent_containers/food/snacks/cookie,
+				/obj/item/weapon/reagent_containers/food/snacks/poppypretzel,
+				/obj/item/clothing/mask/chewable/candy/gum)
+
+/obj/random/mre/dessert/vegan/spawn_choices()
+	return list(/obj/item/weapon/reagent_containers/food/snacks/candy,
+				/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
+				/obj/item/weapon/reagent_containers/food/snacks/plumphelmetbiscuit)
+
+/obj/random/mre/drink
+	name = "random MRE drink"
+	desc = "This is a random drink for MREs."
+	icon_state = "packet"
+
+/obj/random/mre/drink/spawn_choices()
+	return list(/obj/item/weapon/reagent_containers/food/condiment/small/packet/coffee,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/tea,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/cocoa,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/grape,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/orange,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/watermelon,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/apple)
+
+/obj/random/mre/spread
+	name = "random MRE spread"
+	desc = "This is a random spread packet for MREs."
+	icon_state = "packet"
+
+/obj/random/mre/spread/spawn_choices()
+	return list(/obj/item/weapon/reagent_containers/food/condiment/small/packet/jelly,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/honey)
+
+/obj/random/mre/sauce
+	name = "random MRE sauce"
+	desc = "This is a random sauce packet for MREs."
+	icon_state = "packet"
+
+/obj/random/mre/sauce/spawn_choices()
+	return list(/obj/item/weapon/reagent_containers/food/condiment/small/packet/salt,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/pepper,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/sugar,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/capsaicin,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/ketchup,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/mayo,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/soy)
+
+/obj/random/mre/sauce/vegan/spawn_choices()
+	return list(/obj/item/weapon/reagent_containers/food/condiment/small/packet/salt,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/pepper,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/sugar,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/soy)
+
+/obj/random/mre/sauce/sugarfree/spawn_choices()
+	return list(/obj/item/weapon/reagent_containers/food/condiment/small/packet/salt,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/pepper,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/capsaicin,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/ketchup,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/mayo,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/soy)
+
+/obj/random/mre/sauce/crayon/spawn_choices()
+	return list(/obj/item/weapon/reagent_containers/food/condiment/small/packet/crayon,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/crayon/red,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/crayon/orange,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/crayon/yellow,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/crayon/green,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/crayon/blue,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/crayon/purple,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/crayon/grey,
+				/obj/item/weapon/reagent_containers/food/condiment/small/packet/crayon/brown,)

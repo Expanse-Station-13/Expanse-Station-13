@@ -7,7 +7,6 @@ var/list/fuel_injectors = list()
 	density = 1
 	anchored = 0
 	req_access = list(access_engine)
-	use_power = 1
 	idle_power_usage = 10
 	active_power_usage = 500
 
@@ -23,7 +22,7 @@ var/list/fuel_injectors = list()
 
 /obj/machinery/fusion_fuel_injector/Destroy()
 	if(cur_assembly)
-		cur_assembly.forceMove(get_turf(src))
+		cur_assembly.dropInto(loc)
 		cur_assembly = null
 	fuel_injectors -= src
 	return ..()
@@ -58,7 +57,7 @@ var/list/fuel_injectors = list()
 		else
 			visible_message("<span class='notice'>\The [user] inserts \a [W] into \the [src].</span>")
 		if(cur_assembly)
-			cur_assembly.forceMove(get_turf(src))
+			cur_assembly.dropInto(loc)
 			user.put_in_hands(cur_assembly)
 		cur_assembly = W
 		return
@@ -84,7 +83,7 @@ var/list/fuel_injectors = list()
 		return
 
 	if(cur_assembly)
-		cur_assembly.forceMove(get_turf(src))
+		cur_assembly.dropInto(loc)
 		user.put_in_hands(cur_assembly)
 		visible_message("<span class='notice'>\The [user] removes \the [cur_assembly] from \the [src].</span>")
 		cur_assembly = null
@@ -97,13 +96,13 @@ var/list/fuel_injectors = list()
 	if(!injecting && cur_assembly)
 		icon_state = "injector1"
 		injecting = 1
-		use_power = 1
+		update_use_power(POWER_USE_IDLE)
 
 /obj/machinery/fusion_fuel_injector/proc/StopInjecting()
 	if(injecting)
 		injecting = 0
 		icon_state = "injector0"
-		use_power = 0
+		update_use_power(POWER_USE_OFF)
 
 /obj/machinery/fusion_fuel_injector/proc/Inject()
 	if(!injecting)

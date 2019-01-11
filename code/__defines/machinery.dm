@@ -12,7 +12,12 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 #define DOOR_CRUSH_DAMAGE 40
 #define ALIEN_SELECT_AFK_BUFFER  1    // How many minutes that a person can be AFK before not being allowed to be an alien.
 
+#define POWER_USE_OFF    0
+#define POWER_USE_IDLE   1
+#define POWER_USE_ACTIVE 2
+
 // Channel numbers for power.
+#define POWER_CHAN -1 // Use default channel
 #define EQUIP   1
 #define LIGHT   2
 #define ENVIRON 3
@@ -110,3 +115,15 @@ var/list/restricted_camera_networks = list(NETWORK_ERT,NETWORK_MERCENARY,"Secret
 #define SCRUBBER_SIPHON   "siphon"
 #define SCRUBBER_SCRUB    "scrub"
 #define SCRUBBER_EXCHANGE "exchange"
+
+//Docking program
+#define STATE_UNDOCKED		0
+#define STATE_DOCKING		1
+#define STATE_UNDOCKING		2
+#define STATE_DOCKED		3
+
+#define MODE_NONE			0
+#define MODE_SERVER			1
+#define MODE_CLIENT			2	//The one who initiated the docking, and who can initiate the undocking. The server cannot initiate undocking, and is the one responsible for deciding to accept a docking request and signals when docking and undocking is complete. (Think server == station, client == shuttle)
+
+#define MESSAGE_RESEND_TIME 5	//how long (in seconds) do we wait before resending a message

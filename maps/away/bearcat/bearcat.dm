@@ -1,11 +1,24 @@
 #include "bearcat_areas.dm"
+#include "bearcat_jobs.dm"
+#include "bearcat_access.dm"
+
+/obj/effect/submap_landmark/joinable_submap/bearcat
+	name = "FTV Bearcat"
+	archetype = /decl/submap_archetype/derelict/bearcat
+
+/decl/submap_archetype/derelict/bearcat
+	descriptor = "derelict"
+	map = "Bearcat Wreck"
+	crew_jobs = list(
+		/datum/job/submap/bearcat_captain,
+		/datum/job/submap/bearcat_crewman
+	)
 
 /obj/effect/overmap/ship/bearcat
 	name = "light freighter"
 	color = "#00ffff"
 	vessel_mass = 60
-	default_delay = 3 MINUTES
-	speed_mod = 0.1 MINUTE
+	max_speed = 1/(10 SECONDS)
 	burn_delay = 10 SECONDS
 
 /obj/effect/overmap/ship/bearcat/New()
@@ -48,7 +61,7 @@
 /obj/effect/shuttle_landmark/lift/top
 	name = "Top Deck"
 	landmark_tag = "nav_bearcat_lift_top"
-	autoset = 1
+	flags = SLANDMARK_FLAG_AUTOSET
 
 /obj/effect/shuttle_landmark/lift/bottom
 	name = "Lower Deck"

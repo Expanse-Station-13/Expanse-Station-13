@@ -9,9 +9,9 @@
 	plane = ABOVE_HUMAN_PLANE // this needs to be fairly high so it displays over most things, but it needs to be under lighting
 	interact_offline = 1
 	layer = ABOVE_HUMAN_LAYER
+	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE
 
 	var/on = 0
-	use_power = 1
 	idle_power_usage = 20
 	active_power_usage = 200
 	clicksound = 'sound/machines/buttonbeep.ogg'
@@ -23,11 +23,22 @@
 
 	var/current_heat_capacity = 50
 
-/obj/machinery/atmospherics/unary/cryo_cell/New()
-	..()
+/obj/machinery/atmospherics/unary/cryo_cell/Initialize()
+	. = ..()
 	icon = 'icons/obj/cryogenics_split.dmi'
 	update_icon()
 	initialize_directions = dir
+	atmos_init()
+	component_parts = list(
+		new /obj/item/weapon/circuitboard/cryo_cell(src),
+		new /obj/item/weapon/stock_parts/scanning_module(src),
+		new /obj/item/weapon/stock_parts/manipulator(src),
+		new /obj/item/weapon/stock_parts/manipulator(src),
+		new /obj/item/weapon/stock_parts/console_screen(src),
+		new /obj/item/pipe(src))
+	RefreshParts()
+
+
 
 /obj/machinery/atmospherics/unary/cryo_cell/Destroy()
 	var/turf/T = loc
@@ -50,6 +61,14 @@
 	..()
 	if(!node)
 		return
+
+	var/has_air_contents = FALSE
+	if(air_contents) //Check this even if it's unpowered
+		ADJUST_ATOM_TEMPERATURE(src, air_contents.temperature)
+		if(beaker)
+			QUEUE_TEMPERATURE_ATOMS(beaker)
+		has_air_contents = TRUE
+
 	if(!on)
 		return
 
@@ -57,7 +76,7 @@
 		if(occupant.stat != 2)
 			process_occupant()
 
-	if(air_contents)
+	if(has_air_contents)
 		temperature_archived = air_contents.temperature
 		heat_gas_contents()
 		expel_gas()
@@ -87,7 +106,6 @@
   * @return nothing
   */
 /obj/machinery/atmospherics/unary/cryo_cell/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
-
 	if(user == occupant || user.stat)
 		return
 
@@ -131,7 +149,7 @@
 		data["beakerVolume"] = beaker.reagents.total_volume
 
 	// update the ui if it exists, returns null if no ui is passed/found
-	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		// the ui does not exist, so we'll create a new() one
 		// for a list of parameters and their descriptions see the code docs in \code\modules\nano\nanoui.dm
@@ -146,8 +164,8 @@
 /obj/machinery/atmospherics/unary/cryo_cell/OnTopic(user, href_list)
 	if(user == occupant)
 		return STATUS_CLOSE
-	return ..()
-	    
+	. = ..()
+
 /obj/machinery/atmospherics/unary/cryo_cell/OnTopic(user, href_list)
 	if(href_list["switchOn"])
 		on = 1
@@ -173,27 +191,34 @@
 
 
 /obj/machinery/atmospherics/unary/cryo_cell/attackby(var/obj/G, var/mob/user as mob)
+	if(default_deconstruction_screwdriver(user, G))
+		updateUsrDialog()
+		return
+	if(default_deconstruction_crowbar(user, G))
+		return
+	if(default_part_replacement(user, G))
+		return
 	if(istype(G, /obj/item/weapon/reagent_containers/glass))
 		if(beaker)
 			to_chat(user, "<span class='warning'>A beaker is already loaded into the machine.</span>")
 			return
 		if(!user.unEquip(G, src))
-			return
+			return // Temperature will be adjusted on Entered()
 		beaker =  G
 		user.visible_message("[user] adds \a [G] to \the [src]!", "You add \a [G] to \the [src]!")
 	else if(istype(G, /obj/item/grab))
-		if(!ismob(G:affecting))
+		var/obj/item/grab/grab = G
+		if(!ismob(grab.affecting))
 			return
-		for(var/mob/living/carbon/slime/M in range(1,G:affecting))
-			if(M.Victim == G:affecting)
-				to_chat(usr, "[G:affecting:name] will not fit into the cryo because they have a slime latched onto their head.")
+		for(var/mob/living/carbon/slime/M in range(1,grab.affecting))
+			if(M.Victim == grab.affecting)
+				to_chat(user, "[grab.affecting.name] will not fit into the cryo because they have a slime latched onto their head.")
 				return
-		var/mob/M = G:affecting
-		if(put_mob(M))
+		if(put_mob(grab.affecting))
 			qdel(G)
 	return
 
-/obj/machinery/atmospherics/unary/cryo_cell/update_icon()
+/obj/machinery/atmospherics/unary/cryo_cell/on_update_icon()
 	overlays.Cut()
 	icon_state = "pod[on]"
 	var/image/I
@@ -244,13 +269,6 @@
 /obj/machinery/atmospherics/unary/cryo_cell/proc/expel_gas()
 	if(air_contents.total_moles < 1)
 		return
-//	var/datum/gas_mixture/expel_gas = new
-//	var/remove_amount = air_contents.total_moles()/50
-//	expel_gas = air_contents.remove(remove_amount)
-
-	// Just have the gas disappear to nowhere.
-	//expel_gas.temperature = T20C // Lets expel hot gas and see if that helps people not die as they are removed
-	//loc.assume_air(expel_gas)
 
 /obj/machinery/atmospherics/unary/cryo_cell/proc/go_out()
 	if(!( occupant ))
@@ -265,7 +283,7 @@
 		occupant.bodytemperature = 261									  // Changed to 70 from 140 by Zuhayr due to reoccurance of bug.
 	occupant = null
 	current_heat_capacity = initial(current_heat_capacity)
-	update_use_power(1)
+	update_use_power(POWER_USE_IDLE)
 	update_icon()
 	return
 /obj/machinery/atmospherics/unary/cryo_cell/proc/put_mob(mob/living/carbon/M as mob)
@@ -294,8 +312,7 @@
 		to_chat(M, "<span class='notice'><b>You feel a cold liquid surround you. Your skin starts to freeze up.</b></span>")
 	occupant = M
 	current_heat_capacity = HEAT_CAPACITY_HUMAN
-	update_use_power(2)
-//	M.metabslow = 1
+	update_use_power(POWER_USE_ACTIVE)
 	add_fingerprint(usr)
 	update_icon()
 	return 1
@@ -348,9 +365,7 @@
 	return
 
 /obj/machinery/atmospherics/unary/cryo_cell/return_air()
-	if(on)
-		return air_contents
-	..()
+	return air_contents
 
 //This proc literally only exists for cryo cells.
 /atom/proc/return_air_for_internal_lifeform()

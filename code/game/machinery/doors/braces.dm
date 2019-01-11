@@ -5,8 +5,9 @@
 	w_class = ITEM_SIZE_NORMAL
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "maintenance_jack"
-	force = 8 //It has a hammer head, should probably do some more damage. - Cirra
-	throwforce = 10
+	force = 17.5 //It has a hammer head, should probably do some more damage. - Cirra
+	attack_cooldown = 2.5*DEFAULT_WEAPON_COOLDOWN
+	melee_accuracy_bonus = -25
 
 
 
@@ -44,7 +45,7 @@
 			return "\The [src] is in excellent condition."
 
 
-/obj/item/weapon/airlock_brace/update_icon()
+/obj/item/weapon/airlock_brace/on_update_icon()
 	if(airlock)
 		icon_state = "brace_closed"
 	else
@@ -129,7 +130,7 @@
 		user.put_in_hands(src)
 		airlock.visible_message("\The [user] removes \the [src] from \the [airlock]!")
 	else
-		forceMove(get_turf(src))
+		dropInto(loc)
 	airlock.brace = null
 	airlock.update_icon()
 	airlock = null

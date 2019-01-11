@@ -37,7 +37,7 @@
 /obj/item/weapon/defibrillator/loaded //starts with regular power cell for R&D to replace later in the round.
 	bcell = /obj/item/weapon/cell/apc
 
-/obj/item/weapon/defibrillator/update_icon()
+/obj/item/weapon/defibrillator/on_update_icon()
 	var/list/new_overlays = list()
 
 	if(paddles) //in case paddles got destroyed somehow.
@@ -94,7 +94,7 @@
 	else if(isScrewdriver(W))
 		if(bcell)
 			bcell.update_icon()
-			bcell.forceMove(get_turf(src.loc))
+			bcell.dropInto(loc)
 			bcell = null
 			to_chat(user, "<span class='notice'>You remove the cell from \the [src].</span>")
 			update_icon()
@@ -235,7 +235,7 @@
 	update_icon()
 	..()
 
-/obj/item/weapon/shockpaddles/update_icon()
+/obj/item/weapon/shockpaddles/on_update_icon()
 	icon_state = "defibpaddles[wielded]"
 	item_state = "defibpaddles[wielded]"
 	if(cooldown)

@@ -9,13 +9,13 @@
 	if (istype(loc, /turf/space)) // It's hard to be slowed down in space by... anything
 		if(skill_check(SKILL_EVA, SKILL_PROF))
 			return -2
-		return -1 
+		return -1
 
 	if(embedded_flag || (stomach_contents && stomach_contents.len))
 		handle_embedded_and_stomach_objects() //Moving with objects stuck in you can cause bad times.
 
 	if(CE_SPEEDBOOST in chem_effects)
-		return -1
+		tally -= chem_effects[CE_SPEEDBOOST]
 
 	if(CE_SLOWDOWN in chem_effects)
 		tally += chem_effects[CE_SLOWDOWN]
@@ -29,12 +29,7 @@
 	if(istype(buckled, /obj/structure/bed/chair/wheelchair))
 		for(var/organ_name in list(BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM))
 			var/obj/item/organ/external/E = get_organ(organ_name)
-			if(!E || E.is_stump())
-				tally += 4
-			else if(E.splinted)
-				tally += 0.5
-			else if(E.status & ORGAN_BROKEN)
-				tally += 1.5
+			tally += E ? E.movement_delay(4) : 4
 	else
 		var/total_item_slowdown = -1
 		for(var/slot = slot_first to slot_last)
@@ -56,12 +51,7 @@
 
 		for(var/organ_name in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT))
 			var/obj/item/organ/external/E = get_organ(organ_name)
-			if(!E || E.is_stump())
-				tally += 4
-			else if(E.splinted)
-				tally += 0.5
-			else if(E.status & ORGAN_BROKEN)
-				tally += 1.5
+			tally += E ? E.movement_delay(4) : 4
 
 	if(shock_stage >= 10) tally += 3
 
@@ -69,7 +59,7 @@
 
 	if(aiming && aiming.aiming_at) tally += 5 // Iron sights make you slower, it's a well-known fact.
 
-	if(FAT in src.mutations)
+	if(MUTATION_FAT in src.mutations)
 		tally += 1.5
 	if (bodytemperature < 283.222)
 		tally += (283.222 - bodytemperature) / 10 * 1.75
@@ -89,6 +79,15 @@
 	. = ..()
 	if(.)
 		return
+
+	// This is horrible but short of spawning a jetpack inside the organ than locating
+	// it, I don't really see another viable approach short of a total jetpack refactor.
+	for(var/obj/item/organ/internal/powered/jets/jet in internal_organs)
+		if(!jet.is_broken() && jet.active)
+			inertia_dir = 0
+			return 1
+	// End 'eugh'
+
 	//Do we have a working jetpack?
 	var/obj/item/weapon/tank/jetpack/thrust
 	if(back)

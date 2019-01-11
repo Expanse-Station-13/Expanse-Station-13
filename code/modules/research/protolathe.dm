@@ -1,9 +1,8 @@
 /obj/machinery/r_n_d/protolathe
-	name = "\improper Protolathe"
+	name = "protolathe"
 	icon_state = "protolathe"
-	atom_flags = ATOM_FLAG_OPEN_CONTAINER
+	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_OPEN_CONTAINER
 
-	use_power = 1
 	idle_power_usage = 30
 	active_power_usage = 5000
 
@@ -69,7 +68,7 @@
 	speed = T / 2
 
 
-/obj/machinery/r_n_d/protolathe/update_icon()
+/obj/machinery/r_n_d/protolathe/on_update_icon()
 	if(panel_open)
 		icon_state = "protolathe_t"
 	else if(busy)
@@ -119,7 +118,7 @@
 		overlays -= "protolathe_[t]"
 
 	busy = 1
-	use_power(max(1000, (SHEET_MATERIAL_AMOUNT * amount / 10)))
+	use_power_oneoff(max(1000, (SHEET_MATERIAL_AMOUNT * amount / 10)))
 	if(t)
 		if(do_after(user, 16,src))
 			if(stack.use(amount))
@@ -151,15 +150,14 @@
 	for(var/M in D.materials)
 		power += round(D.materials[M] / 5)
 	power = max(active_power_usage, power)
-	use_power(power)
+	use_power_oneoff(power)
 	for(var/M in D.materials)
 		materials[M] = max(0, materials[M] - D.materials[M] * mat_efficiency)
 	for(var/C in D.chemicals)
 		reagents.remove_reagent(C, D.chemicals[C] * mat_efficiency)
 
 	if(D.build_path)
-		var/obj/new_item = D.Fabricate(src, src)
-		new_item.loc = loc
+		var/obj/new_item = D.Fabricate(loc, src)
 		if(mat_efficiency != 1) // No matter out of nowhere
 			if(new_item.matter && new_item.matter.len > 0)
 				for(var/i in new_item.matter)

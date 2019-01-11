@@ -42,9 +42,6 @@
 	down_body_parts_covered = null
 	down_icon_state = "steriledown"
 	pull_mask = 1
-	sprite_sheets = list(
-		SPECIES_TAJARA = 'icons/mob/species/tajaran/mask.dmi'
-		)
 
 /obj/item/clothing/mask/fakemoustache
 	name = "fake moustache"
@@ -213,13 +210,13 @@
 
 /obj/item/clothing/mask/rubber/admiral
 	name = "Admiral Diwali mask"
-	desc = "Admiral that led the offensive against the Terran Colonial Navy in the Gaia conflict. For bridge officers who wish they'd achieve a fraction of that."
+	desc = "Admiral that led the infamous last stand at Helios against the Independent Navy in the Gaia conflict. For bridge officers who wish they'd achieve a fraction of that."
 	icon_state = "admiral"
 	visible_name = "Admiral Diwali"
 
 /obj/item/clothing/mask/rubber/turner
 	name = "Charles Turner mask"
-	desc = "Premier of the Terran Colonial Confederation. Probably shouldn't wear this in front of your veteran uncle."
+	desc = "Premier of the Gilgamesh Colonial Confederation. Probably shouldn't wear this in front of your veteran uncle."
 	icon_state = "turner"
 	visible_name = "Charles Turner"
 
@@ -234,13 +231,14 @@
 	visible_name = species
 	var/datum/species/S = all_species[species]
 	if(istype(S))
-		visible_name = S.get_random_name(pick(MALE,FEMALE))
+		var/decl/cultural_info/C = SSculture.get_culture(S.default_cultural_info[TAG_CULTURE])
+		if(istype(C))
+			visible_name = C.get_random_name(pick(MALE,FEMALE))
 
-/obj/item/clothing/mask/rubber/species/tajaran
-	name = "tajara mask"
-	desc = "A rubber tajara mask."
+/obj/item/clothing/mask/rubber/species/cat
+	name = "cat mask"
+	desc = "A rubber cat mask."
 	icon_state = "catmet"
-	species = SPECIES_TAJARA
 
 /obj/item/clothing/mask/rubber/species/unathi
 	name = "unathi mask"
@@ -280,8 +278,6 @@
 			flags_inv = initial(flags_inv)
 			body_parts_covered = initial(body_parts_covered)
 			icon_state = initial(icon_state)
-			sprite_sheets = list(SPECIES_TAJARA = 'icons/mob/species/tajaran/mask.dmi')
-
 		if(slot_head)
 			flags_inv = 0
 			body_parts_covered = HEAD

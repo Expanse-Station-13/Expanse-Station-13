@@ -14,7 +14,6 @@ var/list/organ_cache = list()
 	// Status tracking.
 	var/status = 0                    // Various status flags (such as robotic)
 	var/vital                         // Lose a vital limb, die immediately.
-	var/robotic = 0
 
 	// Reference data.
 	var/mob/living/carbon/human/owner // Current mob owning the organ.
@@ -30,11 +29,8 @@ var/list/organ_cache = list()
 	var/death_time
 
 /obj/item/organ/Destroy()
-
 	owner = null
 	dna = null
-	species = null
-
 	return ..()
 
 /obj/item/organ/proc/refresh_action_button()
@@ -109,7 +105,7 @@ var/list/organ_cache = list()
 	if(is_preserved())
 		return
 	//Process infections
-	if ((robotic >= ORGAN_ROBOT) || (owner && owner.species && (owner.species.species_flags & SPECIES_FLAG_IS_PLANT)))
+	if (BP_IS_ROBOTIC(src) || (owner && owner.species && (owner.species.species_flags & SPECIES_FLAG_IS_PLANT)))
 		germ_level = 0
 		return
 
@@ -181,7 +177,7 @@ var/list/organ_cache = list()
 	// immunosuppressant that changes transplant data to make it match.
 	if(owner.virus_immunity() < 10) //for now just having shit immunity will suppress it
 		return
-	if(isrobotic())
+	if(BP_IS_ROBOTIC(src))
 		return
 	if(dna)
 		if(!rejecting)
@@ -216,6 +212,8 @@ var/list/organ_cache = list()
 			mechassist()
 		else if(status == "mechanical")
 			robotize()
+	if(species)
+		species.post_organ_rejuvenate(src, owner)
 
 //Germs
 /obj/item/organ/proc/handle_antibiotics()
@@ -244,23 +242,23 @@ var/list/organ_cache = list()
 
 
 /obj/item/organ/proc/robotize() //Being used to make robutt hearts, etc
-	robotic = ORGAN_ROBOT
-	status = 0
+	status = ORGAN_ROBOTIC
 
 /obj/item/organ/proc/mechassist() //Used to add things like pacemakers, etc
-	status = 0
-	robotic = ORGAN_ASSISTED
-	min_broken_damage += 5
+	status = ORGAN_ASSISTED
 
 /**
  *  Remove an organ
  *
  *  drop_organ - if true, organ will be dropped at the loc of its former owner
+ *
+ *  Also, Observer Pattern Implementation: Dismembered Handling occurs here.
  */
 /obj/item/organ/proc/removed(var/mob/living/user, var/drop_organ=1)
 
 	if(!istype(owner))
 		return
+	GLOB.dismembered_event.raise_event(owner, src)
 
 	action_button_name = null
 
@@ -269,7 +267,7 @@ var/list/organ_cache = list()
 
 	START_PROCESSING(SSobj, src)
 	rejecting = null
-	if(robotic < ORGAN_ROBOT)
+	if(!BP_IS_ROBOTIC(src))
 		var/datum/reagent/blood/organ_blood = locate(/datum/reagent/blood) in reagents.reagent_list //TODO fix this and all other occurences of locate(/datum/reagent/blood) horror
 		if(!organ_blood || !organ_blood.data["blood_DNA"])
 			owner.vessel.trans_to(src, 5, 1, 1)
@@ -285,13 +283,13 @@ var/list/organ_cache = list()
 	owner = target
 	action_button_name = initial(action_button_name)
 	forceMove(owner) //just in case
-	if(isrobotic())
+	if(BP_IS_ROBOTIC(src))
 		set_dna(owner.dna)
 	return 1
 
 /obj/item/organ/attack(var/mob/target, var/mob/user)
 
-	if(robotic >= ORGAN_ROBOT || !istype(target) || !istype(user) || (user != target && user.a_intent == I_HELP))
+	if(status & ORGAN_ROBOTIC || !istype(target) || !istype(user) || (user != target && user.a_intent == I_HELP))
 		return ..()
 
 	if(alert("Do you really want to use this organ as food? It will be useless for anything else afterwards.",,"Ew, no.","Bon appetit!") == "Ew, no.")
@@ -314,29 +312,34 @@ var/list/organ_cache = list()
 	target.attackby(O, user)
 
 /obj/item/organ/proc/can_feel_pain()
-	return (robotic < ORGAN_ROBOT && (!species || !(species.species_flags & SPECIES_FLAG_NO_PAIN)))
+	return (!BP_IS_ROBOTIC(src) && (!species || !(species.species_flags & SPECIES_FLAG_NO_PAIN)))
 
 /obj/item/organ/proc/is_usable()
 	return !(status & (ORGAN_CUT_AWAY|ORGAN_MUTATED|ORGAN_DEAD))
 
 /obj/item/organ/proc/can_recover()
-	return (!(status & ORGAN_DEAD) || death_time >= world.time - ORGAN_RECOVERY_THRESHOLD)
+	return (max_damage > 0) && !(status & ORGAN_DEAD) || death_time >= world.time - ORGAN_RECOVERY_THRESHOLD
 
-/obj/item/organ/proc/get_scan_results()
+/obj/item/organ/proc/get_scan_results(var/tag = FALSE)
 	. = list()
-	if(robotic == ORGAN_ASSISTED)
-		. += "Assisted"
-	else if(robotic == ORGAN_ROBOT)
-		. += "Mechanical"
+	if(BP_IS_CRYSTAL(src))
+		. += tag ? "<span class='average'>Crystalline</span>" : "Crystalline"
+	else if(BP_IS_ASSISTED(src))
+		. += tag ? "<span class='average'>Assisted</span>" : "Assisted"
+	else if(BP_IS_ROBOTIC(src))
+		. += tag ? "<span class='average'>Mechanical</span>" : "Mechanical"
 	if(status & ORGAN_CUT_AWAY)
-		. += "Severed"
+		. += tag ? "<span class='bad'>Severed</span>" : "Severed"
 	if(status & ORGAN_MUTATED)
-		. += "Genetic Deformation"
+		. += tag ? "<span class='bad'>Genetic Deformation</span>" : "Genetic Deformation"
 	if(status & ORGAN_DEAD)
 		if(can_recover())
-			. += "Decaying"
+			. += tag ? "<span class='bad'>Decaying</span>" : "Decaying"
 		else
-			. += "Necrotic"
+			. += tag ? "<span style='color:#999999'>Necrotic</span>" : "Necrotic"
+	if(BP_IS_BRITTLE(src))
+		. += tag ? "<span class='bad'>Brittle</span>" : "Brittle"
+
 	switch (germ_level)
 		if (INFECTION_LEVEL_ONE to INFECTION_LEVEL_ONE + ((INFECTION_LEVEL_TWO - INFECTION_LEVEL_ONE) / 3))
 			. +=  "Mild Infection"
@@ -345,18 +348,30 @@ var/list/organ_cache = list()
 		if (INFECTION_LEVEL_ONE + (2 * (INFECTION_LEVEL_TWO - INFECTION_LEVEL_ONE) / 3) to INFECTION_LEVEL_TWO)
 			. +=  "Mild Infection++"
 		if (INFECTION_LEVEL_TWO to INFECTION_LEVEL_TWO + ((INFECTION_LEVEL_THREE - INFECTION_LEVEL_THREE) / 3))
-			. +=  "Acute Infection"
+			if(tag)
+				. += "<span class='average'>Acute Infection</span>"
+			else
+				. +=  "Acute Infection"
 		if (INFECTION_LEVEL_TWO + ((INFECTION_LEVEL_THREE - INFECTION_LEVEL_THREE) / 3) to INFECTION_LEVEL_TWO + (2 * (INFECTION_LEVEL_THREE - INFECTION_LEVEL_TWO) / 3))
-			. +=  "Acute Infection+"
+			if(tag)
+				. += "<span class='average'>Acute Infection+</span>"
+			else
+				. +=  "Acute Infection+"
 		if (INFECTION_LEVEL_TWO + (2 * (INFECTION_LEVEL_THREE - INFECTION_LEVEL_TWO) / 3) to INFECTION_LEVEL_THREE)
-			. +=  "Acute Infection++"
+			if(tag)
+				. += "<span class='average'>Acute Infection++</span>"
+			else
+				. +=  "Acute Infection++"
 		if (INFECTION_LEVEL_THREE to INFINITY)
-			. +=  "Septic"
+			if(tag)
+				. += "<span class='bad'>Septic</span>"
+			else
+				. +=  "Septic"
 	if(rejecting)
-		. += "Genetic Rejection"
-
-/obj/item/organ/proc/isrobotic()
-	return robotic >= ORGAN_ROBOT
+		if(tag)
+			. += "<span class='bad'>Genetic Rejection</span>"
+		else
+			. += "Genetic Rejection"
 
 //used by stethoscope
 /obj/item/organ/proc/listen()

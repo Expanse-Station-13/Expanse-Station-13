@@ -17,7 +17,7 @@
 	. = ..()
 	update_icon()
 
-/obj/machinery/beehive/update_icon()
+/obj/machinery/beehive/on_update_icon()
 	overlays.Cut()
 	icon_state = "beehive-[closed]"
 	if(closed)
@@ -252,8 +252,8 @@
 	..()
 	recipes = wax_recipes
 
-var/global/list/datum/stack_recipe/wax_recipes = list( \
-	new/datum/stack_recipe("candle", /obj/item/weapon/flame/candle) \
+var/global/list/datum/stack_recipe/wax_recipes = list(
+	new/datum/stack_recipe/candle
 )
 
 /obj/item/bee_pack

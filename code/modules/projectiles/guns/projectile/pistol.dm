@@ -8,6 +8,13 @@
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	load_method = MAGAZINE
 
+/obj/item/weapon/gun/projectile/colt/on_update_icon()
+	..()
+	if(ammo_magazine && ammo_magazine.stored_ammo.len)
+		icon_state = "colt"
+	else
+		icon_state = "colt-e"
+
 /obj/item/weapon/gun/projectile/military
 	name = "military .45 pistol"
 	desc = "The WT45 - a mass produced kinetic sidearm in widespread service with the SCGDF. Uses .45 rounds."
@@ -20,7 +27,7 @@
 	accuracy = 0.35
 	fire_delay = 6.5
 
-/obj/item/weapon/gun/projectile/military/update_icon()
+/obj/item/weapon/gun/projectile/military/on_update_icon()
 	..()
 	if(ammo_magazine && ammo_magazine.stored_ammo.len)
 		icon_state = "usp"
@@ -39,7 +46,7 @@
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	load_method = MAGAZINE
 
-/obj/item/weapon/gun/projectile/sec/update_icon()
+/obj/item/weapon/gun/projectile/sec/on_update_icon()
 	..()
 	if(ammo_magazine && ammo_magazine.stored_ammo.len)
 		icon_state = "secguncomp"
@@ -55,12 +62,15 @@
 	icon_state = "secgundark"
 	accuracy = 0
 
-/obj/item/weapon/gun/projectile/sec/wood/update_icon()
+/obj/item/weapon/gun/projectile/sec/wood/on_update_icon()
 	..()
 	if(ammo_magazine && ammo_magazine.stored_ammo.len)
 		icon_state = "secgundark"
 	else
 		icon_state = "secgundark-e"
+
+/obj/item/weapon/gun/projectile/sec/wood/lethal
+	magazine_type = /obj/item/ammo_magazine/c45m
 
 /obj/item/weapon/gun/projectile/silenced
 	name = "silenced pistol"
@@ -74,12 +84,31 @@
 	magazine_type = /obj/item/ammo_magazine/c45m
 	allowed_magazines = /obj/item/ammo_magazine/c45m
 
+/obj/item/weapon/gun/projectile/sigsauer
+	name = "10mm pistol"
+	desc = "The HelTek Optimus, best known as the standard-issue sidearm for the ICCG Navy. Uses 10mm rounds."
+	magazine_type = /obj/item/ammo_magazine/p10mm
+	allowed_magazines = /obj/item/ammo_magazine/p10mm
+	icon_state = "p220"
+	caliber = "10mm"
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
+	load_method = MAGAZINE
+	accuracy = 0.40
+	fire_delay = 7.5
+
+/obj/item/weapon/gun/projectile/sigsauer/on_update_icon()
+	..()
+	if(ammo_magazine && ammo_magazine.stored_ammo.len)
+		icon_state = "p220"
+	else
+		icon_state = "p220-e"
+
 /obj/item/weapon/gun/projectile/magnum_pistol
 	name = ".50 magnum pistol"
-	desc = "The HelTek Magnus, a robust terran handgun that uses .50 AE ammo."
+	desc = "The HelTek Magnus, a robust Terran handgun that uses .50 AE ammo."
 	icon_state = "magnum"
 	item_state = "revolver"
-	force = 14.0
+	force = 9
 	caliber = ".50"
 	fire_delay = 12
 	screen_shake = 2
@@ -89,7 +118,7 @@
 	mag_insert_sound = 'sound/weapons/guns/interaction/hpistol_magin.ogg'
 	mag_remove_sound = 'sound/weapons/guns/interaction/hpistol_magout.ogg'
 
-/obj/item/weapon/gun/projectile/magnum_pistol/update_icon()
+/obj/item/weapon/gun/projectile/magnum_pistol/on_update_icon()
 	..()
 	if(ammo_magazine && ammo_magazine.stored_ammo.len)
 		icon_state = "magnum"
@@ -112,7 +141,7 @@
 	mag_insert_sound = 'sound/weapons/guns/interaction/hpistol_magin.ogg'
 	mag_remove_sound = 'sound/weapons/guns/interaction/hpistol_magout.ogg'
 
-/obj/item/weapon/gun/projectile/gyropistol/update_icon()
+/obj/item/weapon/gun/projectile/gyropistol/on_update_icon()
 	..()
 	if(ammo_magazine)
 		icon_state = "gyropistolloaded"
@@ -130,7 +159,7 @@
 	load_method = MAGAZINE
 	accuracy = 0.35
 
-/obj/item/weapon/gun/projectile/beretta/update_icon()
+/obj/item/weapon/gun/projectile/beretta/on_update_icon()
 	..()
 	if(ammo_magazine && ammo_magazine.stored_ammo.len)
 		icon_state = "92fs"
@@ -178,12 +207,12 @@
 			return//put the silencer into the gun
 		to_chat(user, "<span class='notice'>You screw [I] onto [src].</span>")
 		silenced = I	//dodgy?
-		w_class = ITEM_SIZE_NORMAL		
+		w_class = ITEM_SIZE_NORMAL
 		update_icon()
 		return
 	..()
 
-/obj/item/weapon/gun/projectile/pistol/update_icon()
+/obj/item/weapon/gun/projectile/pistol/on_update_icon()
 	..()
 	if(silenced)
 		icon_state = "pistol-silencer"
@@ -208,9 +237,10 @@
 	load_method = SINGLE_CASING
 	max_shells = 1 //literally just a barrel
 	has_safety = FALSE
+	w_class = ITEM_SIZE_NORMAL
 
 	var/global/list/ammo_types = list(
-		/obj/item/ammo_casing/a357              = ".357",
+		/obj/item/ammo_casing/a44               = ".44",
 		/obj/item/ammo_casing/shotgun           = "12 gauge",
 		/obj/item/ammo_casing/shotgun           = "12 gauge",
 		/obj/item/ammo_casing/shotgun/pellet    = "12 gauge",
@@ -226,13 +256,13 @@
 /obj/item/weapon/gun/projectile/pirate/toggle_safety(var/mob/user)
 	to_chat(user, "<span class='warning'>There's no safety on \the [src]!</span>")
 
-/obj/item/weapon/gun/projectile/pirate/New()
+/obj/item/weapon/gun/projectile/pirate/Initialize()
 	ammo_type = pick(ammo_types)
 	desc += " Uses [ammo_types[ammo_type]] rounds."
 
 	var/obj/item/ammo_casing/ammo = ammo_type
 	caliber = initial(ammo.caliber)
-	..()
+	. = ..()
 
 // Zip gun construction.
 /obj/item/weapon/zipgunframe
@@ -242,7 +272,7 @@
 	item_state = "zipgun-solid"
 	var/buildstate = 0
 
-/obj/item/weapon/zipgunframe/update_icon()
+/obj/item/weapon/zipgunframe/on_update_icon()
 	icon_state = "zipgun[buildstate]"
 
 /obj/item/weapon/zipgunframe/examine(mob/user)

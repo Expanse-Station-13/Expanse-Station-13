@@ -1,6 +1,6 @@
 /obj/item/modular_computer/pda
 	name = "\improper PDA"
-	desc = "A very compact computer designed to keep its user always connected."
+	desc = "A very compact computer, designed to keep its user always connected."
 	icon = 'icons/obj/modular_pda.dmi'
 	icon_state = "pda"
 	icon_state_unpowered = "pda"
@@ -11,6 +11,7 @@
 	slot_flags = SLOT_ID | SLOT_BELT
 	stores_pen = TRUE
 	stored_pen = /obj/item/weapon/pen
+	receives_updates = FALSE
 
 /obj/item/modular_computer/pda/Initialize()
 	. = ..()

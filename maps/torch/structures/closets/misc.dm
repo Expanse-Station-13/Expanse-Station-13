@@ -1,28 +1,24 @@
 /obj/structure/closet/secure_closet/liaison
-	name = "\improper NanoTrasen liaison's locker"
+	name = "\improper corporate liaison's locker"
 	req_access = list(access_liaison)
-	icon_state = "nanottwo1"
-	icon_closed = "nanottwo"
-	icon_locked = "nanottwo1"
-	icon_opened = "nanottwoopen"
-	icon_off = "nanottwooff"
+	icon_state = "corp21"
+	icon_closed = "corp2"
+	icon_locked = "corp21"
+	icon_opened = "corp2open"
+	icon_off = "corp2off"
 
 /obj/structure/closet/secure_closet/liaison/WillContain()
 	return list(
 		/obj/item/device/flash,
-		/obj/item/weapon/hand_labeler,
-		/obj/item/device/camera,
-		/obj/item/device/camera_film = 2,
 		/obj/item/weapon/clipboard,
 		/obj/item/weapon/folder,
-		/obj/item/device/taperecorder,
 		/obj/item/device/tape/random = 3,
 		/obj/item/weapon/storage/secure/briefcase,
 		/obj/item/clothing/shoes/laceup,
 		/obj/item/clothing/under/rank/internalaffairs/plain/nt,
 		/obj/item/clothing/suit/storage/toggle/suit/black,
 		/obj/item/clothing/glasses/sunglasses/big,
-		/obj/item/device/radio/headset/heads/torchntcommand/alt,
+		/obj/item/weapon/storage/belt/general,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack, /obj/item/weapon/storage/backpack/satchel)),
 		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/messenger, 50),
 		/obj/item/weapon/storage/fakebook
@@ -40,16 +36,12 @@
 /obj/structure/closet/secure_closet/representative/WillContain()
 	return list(
 		/obj/item/device/flash,
-		/obj/item/weapon/hand_labeler,
-		/obj/item/device/camera,
 		/obj/item/device/camera_film = 2,
 		/obj/item/weapon/clipboard,
 		/obj/item/weapon/folder,
-		/obj/item/device/taperecorder,
 		/obj/item/device/tape/random = 3,
 		/obj/item/weapon/storage/secure/briefcase,
 		/obj/item/device/radio/headset/headset_com,
-		/obj/item/device/radio/headset/headset_com/alt,
 		/obj/item/clothing/shoes/laceup,
 		/obj/item/clothing/under/rank/internalaffairs/plain/solgov,
 		/obj/item/clothing/suit/storage/toggle/suit/black,
@@ -80,11 +72,11 @@
 /obj/structure/closet/secure_closet/crew/research
 	name = "research equipment locker"
 	req_access = list(access_nanotrasen)
-	icon_state = "nanot1"
-	icon_closed = "nanot"
-	icon_locked = "nanot1"
-	icon_opened = "nanotopen"
-	icon_off = "nanotoff"
+	icon_state = "corp1"
+	icon_closed = "corp"
+	icon_locked = "corp1"
+	icon_opened = "corpopen"
+	icon_off = "corpoff"
 
 /obj/structure/closet/secure_closet/guncabinet/sidearm
 	name = "sidearm cabinet"
@@ -93,7 +85,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/sidearm/WillContain()
 	return list(
-			/obj/item/clothing/accessory/holster/thigh = 2,
+			/obj/item/clothing/accessory/storage/holster/thigh = 2,
 			/obj/item/weapon/gun/energy/gun/secure = 3,
 	)
 
@@ -109,7 +101,7 @@
 /obj/structure/closet/secure_closet/guncabinet/sidearm/combined/WillContain()
 	return list(
 		/obj/item/weapon/gun/energy/gun/small/secure = 2,
-		/obj/item/clothing/accessory/holster/thigh = 2,
+		/obj/item/weapon/storage/belt/holster/general = 2,
 		/obj/item/weapon/gun/energy/gun/secure = 2,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/gun/energy/gun/secure, /obj/item/weapon/gun/energy/gun/small/secure))
 	)

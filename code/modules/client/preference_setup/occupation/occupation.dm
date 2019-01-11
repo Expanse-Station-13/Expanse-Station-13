@@ -1,8 +1,4 @@
 //used for pref.alternate_option
-#define GET_RANDOM_JOB 0
-#define BE_ASSISTANT 1
-#define RETURN_TO_LOBBY 2
-
 #define JOB_LEVEL_NEVER  4
 #define JOB_LEVEL_LOW    3
 #define JOB_LEVEL_MEDIUM 2
@@ -142,9 +138,10 @@
 			bad_message = "\[IN [(available_in_days)] DAYS]"
 		else if(job.minimum_character_age && user.client && (user.client.prefs.age < job.minimum_character_age))
 			bad_message = "\[MINIMUM CHARACTER AGE: [job.minimum_character_age]]"
-
 		else if(!job.is_species_allowed(S))
 			bad_message = "<b> \[SPECIES RESTRICTED]</b>"
+		else if(!S.check_background(job, user.client.prefs))
+			bad_message = "<b> \[BACKGROUND RESTRICTED]</b>"
 
 		if(!bad_message && job.allowed_branches)
 			if(!player_branch)
@@ -165,7 +162,7 @@
 			. += "<a href='?src=\ref[src];set_skills=[rank]'><del>[rank]</del></a></td><td>[bad_message]</td></tr>"
 			continue
 
-		. += (unspent && (current_level != JOB_LEVEL_NEVER) ? "<a class='Points' href='?src=\ref[src];set_skills=[rank]'>" : "<a href='?src=\ref[src];set_skills=[rank]'>") 
+		. += (unspent && (current_level != JOB_LEVEL_NEVER) ? "<a class='Points' href='?src=\ref[src];set_skills=[rank]'>" : "<a href='?src=\ref[src];set_skills=[rank]'>")
 		if((rank in GLOB.command_positions) || (rank == "AI"))//Bold head jobs
 			. += "<b>[rank]</b>"
 		else
@@ -252,15 +249,18 @@
 	else if(href_list["show_branches"])
 		var/rank = href_list["show_branches"]
 		var/datum/job/job = job_master.GetJob(rank)
-		to_chat(user, "<span clas='notice'>Valid branches for [rank]: [job.get_branches()]</span>")
+		if(job)
+			to_chat(user, "<span clas='notice'>Valid branches for [rank]: [job.get_branches()]</span>")
 	else if(href_list["show_ranks"])
 		var/rank = href_list["show_ranks"]
 		var/datum/job/job = job_master.GetJob(rank)
-		to_chat(user, "<span clas='notice'>Valid ranks for [rank] ([pref.char_branch]): [job.get_ranks(pref.char_branch)]</span>")
+		if(job)
+			to_chat(user, "<span clas='notice'>Valid ranks for [rank] ([pref.char_branch]): [job.get_ranks(pref.char_branch)]</span>")
 	else if(href_list["set_skills"])
 		var/rank = href_list["set_skills"]
 		var/datum/job/job = job_master.GetJob(rank)
-		open_skill_setup(user, job)
+		if(job)
+			open_skill_setup(user, job)
 
 	//From the skills popup
 
@@ -284,7 +284,7 @@
 		HTML += "<h2>[S.name]</h2>"
 		HTML += "[S.desc]<br>"
 		var/i
-		for(i=SKILL_MIN, i <= SKILL_MAX, i++)
+		for(i=1, i <= length(S.levels), i++)
 			var/level_name = S.levels[i]
 			HTML +=	"<br><b>[level_name]</b>: [S.levels[level_name]]<br>"
 		show_browser(user, jointext(HTML, null), "window=\ref[user]skillinfo")
@@ -314,6 +314,7 @@
 		dat += "<hr style='clear:left;'>"
 		if(config.wikiurl)
 			dat += "<a href='?src=\ref[src];job_wiki=[rank]'>Open wiki page in browser</a>"
+
 		var/description = job.get_description_blurb()
 		if(description)
 			dat += html_encode(description)
@@ -450,6 +451,6 @@ datum/category_item/player_setup_item/proc/prune_occupation_prefs()
 	return (job.title in player_alt_titles) ? player_alt_titles[job.title] : job.title
 
 #undef JOB_LEVEL_NEVER
-#undef SET_LEVE_LOW
+#undef JOB_LEVEL_LOW
 #undef JOB_LEVEL_MEDIUM
 #undef JOB_LEVEL_HIGH

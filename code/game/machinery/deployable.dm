@@ -24,7 +24,7 @@ for reference:
 	access_ai_upload = 16
 	access_teleporter = 17
 	access_eva = 18
-	access_heads = 19
+	access_bridge = 19
 	access_captain = 20
 	access_all_personal_lockers = 21
 	access_chapel_office = 22
@@ -64,14 +64,14 @@ for reference:
 	var/health = 100
 	var/maxhealth = 100
 	var/material/material
-	atom_flags = ATOM_FLAG_CLIMBABLE
+	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CLIMBABLE
 	layer = ABOVE_WINDOW_LAYER
 
 /obj/structure/barricade/New(var/newloc, var/material_name)
 	..(newloc)
 	if(!material_name)
-		material_name = "wood"
-	material = get_material_by_name("[material_name]")
+		material_name = MATERIAL_WOOD
+	material = SSmaterials.get_material_by_name("[material_name]")
 	if(!material)
 		qdel(src)
 		return
