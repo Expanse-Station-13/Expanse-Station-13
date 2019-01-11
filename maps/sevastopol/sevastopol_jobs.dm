@@ -1,3 +1,5 @@
+#define MIRROR_ACCESS(accesses) access = accesses; minimal_access = accesses
+
 /datum/map/sevastopol
 	allowed_jobs = list(
 		/datum/job/captain,
@@ -67,9 +69,9 @@
 	                    SKILL_SCIENCE     = SKILL_MAX)
 	skill_points = 30
 
-	access = list(access_security, access_brig, access_armory, access_medical, access_engine, access_engine_equip,
+	MIRROR_ACCESS(list(access_security, access_brig, access_armory, access_medical, access_engine, access_engine_equip,
 		access_maint_tunnels, access_external_airlocks, access_change_ids, access_eva, access_bridge, access_tech_storage,
-		access_kitchen, access_cargo, access_surgery, access_research, access_keycard_auth, access_tcomsat)
+		access_cargo, access_surgery, access_research, access_keycard_auth, access_tcomsat))
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/card_mod,
@@ -114,8 +116,8 @@
 	skill_points = 24
 
 
-	access = list(access_security, access_brig, access_armory, access_maint_tunnels, access_external_airlocks, access_eva,
-		access_bridge, access_kitchen, access_cargo, access_keycard_auth)
+	MIRROR_ACCESS(list(access_security, access_brig, access_armory, access_maint_tunnels, access_external_airlocks, access_eva,
+		access_bridge, access_cargo, access_keycard_auth))
 
 	software_on_spawn = list(/datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
@@ -153,14 +155,14 @@
 	                    SKILL_WEAPONS     = SKILL_MAX,
 	                    SKILL_FORENSICS   = SKILL_MAX)
 
-	access = list(access_security, access_brig, access_armory, access_maint_tunnels, access_external_airlocks, access_eva,
-		access_kitchen, access_bridge)
+	MIRROR_ACCESS(list(access_security, access_brig, access_armory, access_maint_tunnels, access_external_airlocks, access_eva,
+		access_bridge))
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
 /datum/job/officer/get_description_blurb()
-    return "Your job is to ensure security and good order aboard ship, and to be detailed to away missions or EVA at the discretion of your supervisors."
+	return "Your job is to ensure security and good order aboard ship, and to be detailed to away missions or EVA at the discretion of your supervisors."
 
 /datum/job/officer/trainee
 	title = "Military Police Officer Trainee"
@@ -189,7 +191,7 @@
 	                    SKILL_WEAPONS     = SKILL_MAX,
 	                    SKILL_FORENSICS   = SKILL_MAX)
 
-	access = list(access_security, access_brig, access_maint_tunnels, access_kitchen)
+	MIRROR_ACCESS(list(access_security, access_brig, access_maint_tunnels))
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
@@ -229,7 +231,7 @@
 	                    SKILL_VIROLOGY    = SKILL_MAX)
 	skill_points = 32
 
-	access = list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery, access_research)
+	MIRROR_ACCESS(list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery, access_research))
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
@@ -262,7 +264,7 @@
 	                    SKILL_CHEMISTRY   = SKILL_MAX,
 	                    SKILL_VIROLOGY    = SKILL_MAX)
 
-	access = list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery)
+	MIRROR_ACCESS(list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery))
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
@@ -303,7 +305,7 @@
 		/datum/mil_rank/navy/o1
 	)
 
-	access = list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery, access_research)
+	MIRROR_ACCESS(list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery, access_research))
 
 	skill_points = 20
 
@@ -342,7 +344,7 @@
 	                    SKILL_VIROLOGY    = SKILL_MAX)
 	skill_points = 32
 
-	access = list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery)
+	MIRROR_ACCESS(list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery))
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
@@ -381,8 +383,8 @@
 	                    SKILL_ENGINES      = SKILL_MAX)
 	skill_points = 24
 
-	access = list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_eva,
-		access_bridge, access_tech_storage, access_kitchen, access_cargo, access_tcomsat)
+	MIRROR_ACCESS(list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_eva,
+		access_bridge, access_tech_storage, access_cargo, access_tcomsat))
 
 	software_on_spawn = list(/datum/computer_file/program/power_monitor,
 							 /datum/computer_file/program/alarm_monitor,
@@ -425,8 +427,8 @@
 	                    SKILL_ENGINES      = SKILL_MAX)
 	skill_points = 20
 
-	access = list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_eva,
-		access_tech_storage, access_kitchen, access_cargo, access_tcomsat)
+	MIRROR_ACCESS(list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_eva,
+		access_tech_storage, access_cargo, access_tcomsat))
 
 	software_on_spawn = list(/datum/computer_file/program/power_monitor,
 							 /datum/computer_file/program/alarm_monitor,
@@ -447,9 +449,9 @@
 		/datum/mil_branch/marine
 	)
 
-	access = list(access_maint_tunnels, access_kitchen)
-
 	allowed_ranks = list(
 		/datum/mil_rank/marine/e3,
 		/datum/mil_rank/marine/e4
 	)
+
+#undef MIRROR_ACCESS

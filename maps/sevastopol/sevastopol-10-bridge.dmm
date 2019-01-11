@@ -145,6 +145,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/blue,
+/obj/effect/landmark/start{
+	name = "Executive Officer"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "av" = (
@@ -161,6 +164,10 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/keycard_auth{
+	pixel_x = 26;
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
@@ -291,6 +298,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/effect/landmark/test/safe_turf,
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "aO" = (
@@ -545,6 +553,9 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 4
 	},
+/obj/effect/landmark/start{
+	name = "Executive Officer"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "bo" = (
@@ -560,6 +571,9 @@
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
+	},
+/obj/effect/landmark/start{
+	name = "Senior Enlisted Adviser"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
@@ -622,6 +636,9 @@
 "bz" = (
 /obj/effect/floor_decal/corner/blue/half,
 /obj/machinery/light,
+/obj/machinery/keycard_auth{
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
 "bA" = (
@@ -671,6 +688,10 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/bridge)
+"nH" = (
+/obj/effect/landmark/test/space_turf,
+/turf/space,
+/area/space)
 "ol" = (
 /obj/machinery/light/navigation,
 /turf/simulated/floor/reinforced/airless,
@@ -4975,7 +4996,7 @@ ad
 ad
 ad
 pO
-aa
+nH
 aa
 aa
 aa

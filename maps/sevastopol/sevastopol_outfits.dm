@@ -87,6 +87,7 @@
 	BACKPACK_OVERRIDE_MEDICAL
 
 /decl/hierarchy/outfit/job/unn/engineer
+	name = OUTFIT_JOB_NAME("Engineering Officer")
 	uniform = /obj/item/clothing/under/unn/utility
 	l_ear = /obj/item/device/radio/headset/headset_eng
 	id_type = /obj/item/weapon/card/id/navy/engineer
@@ -99,7 +100,7 @@
 	BACKPACK_OVERRIDE_ENGINEERING
 
 /decl/hierarchy/outfit/job/unn/engineer/senior_engineer
-	name = OUTFIT_JOB_NAME("Senior Engineer")
+	name = OUTFIT_JOB_NAME("Senior Engineering Officer")
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/navy/engineer/senior
 	pda_type = /obj/item/modular_computer/pda/heads/ce

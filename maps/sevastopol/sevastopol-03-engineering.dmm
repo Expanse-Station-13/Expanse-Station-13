@@ -202,6 +202,9 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/shutoff,
+/obj/effect/landmark/start{
+	name = "Engineering Officer"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/office)
 "az" = (
@@ -558,6 +561,9 @@
 /obj/structure/bed/chair/crash{
 	icon_state = "shuttle_chair_preview";
 	dir = 8
+	},
+/obj/effect/landmark/start{
+	name = "Senior Engineering Officer"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/office)
@@ -933,6 +939,12 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/third)
@@ -1372,6 +1384,9 @@
 /obj/structure/bed/chair/office/dark,
 /obj/effect/floor_decal/corner/yellow{
 	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Engineering Officer"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/office)

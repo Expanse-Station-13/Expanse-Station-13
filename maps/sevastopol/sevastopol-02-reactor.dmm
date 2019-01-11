@@ -1336,6 +1336,7 @@
 /obj/structure/table/standard,
 /obj/structure/window/basic/full{
 	health = 1;
+	maxhealth = 1;
 	name = "Break in case of emergency"
 	},
 /obj/item/weapon/storage/firstaid/toxin,

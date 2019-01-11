@@ -1662,7 +1662,7 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 1
+	dir = 2
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)

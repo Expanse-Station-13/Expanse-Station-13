@@ -1,7 +1,7 @@
 /datum/map/sevastopol
 	name = "Sevastopol"
 	full_name = "UNN Sevastopol"
-	path = "Sevastopol"
+	path = "sevastopol"
 	flags = MAP_HAS_BRANCH | MAP_HAS_RANK
 
 	admin_levels = list(11,12)

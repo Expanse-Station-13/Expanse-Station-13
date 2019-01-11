@@ -25,12 +25,11 @@
 /area/engineering/fuelbay)
 "af" = (
 /obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/atmospherics/pipe/simple/visible/blue{
-	icon_state = "intact";
-	dir = 8
-	},
 /obj/machinery/meter,
 /obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/engineering/fuelbay)
 "ag" = (
@@ -143,9 +142,6 @@
 /turf/simulated/floor/plating,
 /area/engineering/fuelbay)
 "av" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -458,7 +454,10 @@
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/visible/scrubbers{
+	icon_state = "map-scrubbers";
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/engineering/fuelbay)
 "bm" = (
@@ -507,21 +506,17 @@
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/manifold/visible/scrubbers{
-	icon_state = "map-scrubbers";
-	dir = 8
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /turf/simulated/floor/plating,
 /area/engineering/fuelbay)
 "bs" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/scrubbers{
-	icon_state = "map-scrubbers";
-	dir = 1
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/engineering/fuelbay)
@@ -586,6 +581,9 @@
 	dir = 4
 	},
 /obj/machinery/light/small,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/engineering/fuelbay)
 "bC" = (
@@ -918,13 +916,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/engineering/fuelbay)
-"cn" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/engineering/fuelbay)
 "co" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 9
@@ -977,6 +968,13 @@
 /obj/effect/shuttle_landmark/sevastopol/deck1,
 /turf/space,
 /area/space)
+"Yb" = (
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
+/obj/machinery/atmospherics/pipe/simple/visible/universal{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/fuelbay)
 
 (1,1,1) = {"
 aa
@@ -5515,11 +5513,11 @@ ab
 bE
 aD
 bi
-at
+Yb
 at
 an
 ca
-cn
+at
 at
 at
 aV

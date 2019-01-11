@@ -408,9 +408,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "ba" = (
-/obj/structure/closet/secure_closet/medical_wall{
-	pixel_x = -28
-	},
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/syringes{
 	pixel_x = 4;
@@ -455,6 +452,9 @@
 "bd" = (
 /obj/structure/bed/roller,
 /obj/effect/floor_decal/industrial/hatch/blue,
+/obj/effect/landmark/start{
+	name = "Hospital Corpsman"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/eighth)
 "be" = (
@@ -611,11 +611,6 @@
 /area/medical/chemistry)
 "bu" = (
 /obj/machinery/chemical_dispenser/full,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/machinery/light{
 	dir = 4
 	},
@@ -628,6 +623,9 @@
 /obj/item/modular_computer/telescreen/preset/medical{
 	pixel_x = 32;
 	pixel_y = 32
+	},
+/obj/effect/landmark/start{
+	name = "Senior Medical Officer"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -772,6 +770,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9;
 	pixel_y = 0
+	},
+/obj/structure/closet/secure_closet/medical_wall{
+	pixel_x = -26;
+	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -1261,6 +1263,9 @@
 	pixel_y = -25;
 	req_access = list(47)
 	},
+/obj/effect/landmark/start{
+	name = "Naval Researcher"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/research)
 "cI" = (
@@ -1419,6 +1424,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/research)
+"Aw" = (
+/obj/effect/landmark/start{
+	name = "Ship Doctor"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/chemistry)
 "AE" = (
 /obj/effect/shuttle_landmark/sevastopol/deck8,
 /turf/space,
@@ -6885,7 +6896,7 @@ aa
 ad
 On
 bb
-aM
+Aw
 aM
 bX
 aZ

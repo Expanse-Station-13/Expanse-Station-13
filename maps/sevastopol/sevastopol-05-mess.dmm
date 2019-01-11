@@ -47,6 +47,9 @@
 /area/crew_quarters/gym)
 "ah" = (
 /obj/structure/fitness/weightlifter,
+/obj/effect/landmark/start{
+	name = "Marine"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/gym)
 "ai" = (
@@ -125,6 +128,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/effect/landmark/start{
+	name = "Marine"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/fifth)
 "at" = (
@@ -183,6 +189,9 @@
 "aA" = (
 /obj/item/weapon/stool,
 /obj/effect/floor_decal/corner/lightgrey,
+/obj/effect/landmark/start{
+	name = "Marine"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/mess)
 "aB" = (
@@ -192,6 +201,9 @@
 /area/crew_quarters/gym)
 "aC" = (
 /obj/item/weapon/stool/padded,
+/obj/effect/landmark/start{
+	name = "Marine"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/fifth)
 "aD" = (
@@ -217,7 +229,7 @@
 "aE" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "kitchen maintenance";
-	req_access = list(12)
+	req_access = newlist()
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -244,6 +256,9 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Marine"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/gym)
@@ -280,6 +295,9 @@
 /area/crew_quarters/gym)
 "aJ" = (
 /obj/item/weapon/stool/bar/padded,
+/obj/effect/landmark/start{
+	name = "Marine"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/fifth)
 "aK" = (
@@ -369,6 +387,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/start{
+	name = "Marine"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/fifth)
 "aT" = (
@@ -442,6 +463,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/start{
+	name = "Marine"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/fifth)
 "ba" = (
@@ -483,7 +507,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/eastright{
 	name = "kitchen counter";
-	req_access = list(28)
+	req_access = newlist()
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -569,6 +593,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/effect/landmark/start{
+	name = "Marine"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/fifth)
 "bn" = (
@@ -584,6 +611,9 @@
 /obj/structure/bed/chair/crash{
 	icon_state = "shuttle_chair_preview";
 	dir = 8
+	},
+/obj/effect/landmark/start{
+	name = "Marine"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/mess)
@@ -613,6 +643,9 @@
 /obj/effect/floor_decal/corner/lightgrey,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/item/weapon/stool,
+/obj/effect/landmark/start{
+	name = "Marine"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/mess)
 "bt" = (
@@ -646,9 +679,6 @@
 "bx" = (
 /obj/item/weapon/stool/padded,
 /obj/machinery/light/small/red,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -657,6 +687,12 @@
 	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
+	},
+/obj/effect/landmark/start{
+	name = "Marine"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/fifth)
@@ -699,6 +735,9 @@
 /obj/effect/floor_decal/corner/lightgrey,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Marine"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/mess)
@@ -748,7 +787,7 @@
 "bH" = (
 /obj/machinery/door/airlock/freezer{
 	name = "freezer maintenance";
-	req_access = list(28)
+	req_access = newlist()
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -857,7 +896,7 @@
 "bS" = (
 /obj/machinery/door/airlock/freezer{
 	name = "freezer";
-	req_access = list(28)
+	req_access = newlist()
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1041,6 +1080,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/effect/landmark/start{
+	name = "Marine"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/mess)
 "cl" = (
@@ -1079,6 +1121,9 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
+/obj/effect/landmark/start{
+	name = "Marine"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/mess)
 "cq" = (
@@ -1104,6 +1149,9 @@
 	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
+	},
+/obj/effect/landmark/start{
+	name = "Marine"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/mess)
