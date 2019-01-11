@@ -52,7 +52,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass/maintenance{
 	name = "bridge maintenance";
-	req_access = list(19)
+	req_access = list(3)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
