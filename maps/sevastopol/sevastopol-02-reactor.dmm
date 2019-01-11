@@ -1567,6 +1567,7 @@
 	pixel_y = 26
 	},
 /obj/structure/reagent_dispensers/watertank,
+/obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled,
 /area/engineering/storage)
 "cM" = (
