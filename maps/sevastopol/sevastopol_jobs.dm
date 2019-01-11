@@ -20,7 +20,7 @@
 	minimal_player_age = 7
 	economic_power = 15
 	ideal_character_age = 50
-	//outfit_type = /decl/hierarchy/outfit/job/sevastopol/command/CO
+	outfit_type = /decl/hierarchy/outfit/job/unn/officer/co
 	allowed_branches = list(
 		/datum/mil_branch/navy
 	)
@@ -39,7 +39,6 @@
 							 /datum/computer_file/program/card_mod,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
-	required_education = EDUCATION_TIER_BACHELOR
 
 /datum/job/captain/get_description_blurb()
 	return "You are an experienced professional officer in control of an entire ship, and are fully responsible for it. The buck stops with you. Your job is to make sure [GLOB.using_map.full_name] executes its research and expeditionary functions. Delegate to your Executive Officer, your department heads, and your Senior Enlisted Adviser to effectively manage the ship, and listen to and trust their expertise."
@@ -53,7 +52,7 @@
 	minimal_player_age = 7
 	economic_power = 10
 	ideal_character_age = 45
-	//outfit_type = /decl/hierarchy/outfit/job/sevastopol/command/XO
+	outfit_type = /decl/hierarchy/outfit/job/unn/officer/xo
 	allowed_branches = list(
 		/datum/mil_branch/marine
 	)
@@ -70,13 +69,12 @@
 
 	access = list(access_security, access_brig, access_armory, access_medical, access_engine, access_engine_equip,
 		access_maint_tunnels, access_external_airlocks, access_change_ids, access_eva, access_bridge, access_tech_storage,
-		access_kitchen, access_cargo, access_research, access_keycard_auth, access_tcomsat)
+		access_kitchen, access_cargo, access_surgery, access_research, access_keycard_auth, access_tcomsat)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/card_mod,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
-	required_education = EDUCATION_TIER_BACHELOR
 
 /datum/job/hop/get_description_blurb()
 	return "Through the Marine detail aboard the ship, you support the [GLOB.using_map.full_name]'s research mission."
@@ -93,7 +91,7 @@
 	minimal_player_age = 7
 	economic_power = 8
 	ideal_character_age = 45
-	//outfit_type = /decl/hierarchy/outfit/job/sevastopol/command/sea
+	outfit_type = /decl/hierarchy/outfit/job/unn/sea
 	allowed_branches = list(
 		/datum/mil_branch/marine
 	)
@@ -121,8 +119,6 @@
 
 	software_on_spawn = list(/datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
-	required_education = EDUCATION_TIER_BASIC
-	maximum_education = EDUCATION_TIER_MASTERS
 
 /datum/job/sea/get_description_blurb()
 	return "You are the Senior Enlisted Adviser, the top enlisted Marine Corps figure aboard ship. Keep your Marines from drawing too many dicks in the head."
@@ -137,7 +133,7 @@
 	minimal_player_age = 7
 	ideal_character_age = 25
 	alt_titles = list()
-	//outfit_type = /decl/hierarchy/outfit/job/sevastopol/security/mpo
+	outfit_type = /decl/hierarchy/outfit/job/unn/security
 	allowed_branches = list(
 		/datum/mil_branch/marine,
 	)
@@ -157,13 +153,11 @@
 	                    SKILL_WEAPONS     = SKILL_MAX,
 	                    SKILL_FORENSICS   = SKILL_MAX)
 
-	access = list(access_security, access_brig, access_maint_tunnels, access_external_airlocks, access_eva, access_kitchen,
-		access_bridge)
+	access = list(access_security, access_brig, access_armory, access_maint_tunnels, access_external_airlocks, access_eva,
+		access_kitchen, access_bridge)
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
-	required_education = EDUCATION_TIER_BASIC
-	maximum_education = EDUCATION_TIER_BACHELOR
 
 /datum/job/officer/get_description_blurb()
     return "Your job is to ensure security and good order aboard ship, and to be detailed to away missions or EVA at the discretion of your supervisors."
@@ -177,7 +171,7 @@
 	minimal_player_age = 2
 	ideal_character_age = 25
 	alt_titles = list()
-	//outfit_type = /decl/hierarchy/outfit/job/sevastopol/security/mpo
+	outfit_type = /decl/hierarchy/outfit/job/unn/security/trainee
 	allowed_branches = list(
 		/datum/mil_branch/marine,
 	)
@@ -199,8 +193,6 @@
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
-	required_education = EDUCATION_TIER_BASIC
-	maximum_education = EDUCATION_TIER_BACHELOR
 
 /datum/job/officer_t/get_description_blurb()
 	return "Your job is to learn how to be a Military Police Officer, under the mentorship of your supervisors."
@@ -218,7 +210,7 @@
 	selection_color = "#013d3b"
 	economic_power = 8
 	alt_titles = list()
-	//outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/senior
+	outfit_type = /decl/hierarchy/outfit/job/unn/officer/medical/senior
 	allowed_branches = list(
 		/datum/mil_branch/navy
 	)
@@ -237,11 +229,10 @@
 	                    SKILL_VIROLOGY    = SKILL_MAX)
 	skill_points = 32
 
-	access = list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_research)
+	access = list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery, access_research)
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
-	required_education = EDUCATION_TIER_MEDSCHOOL
 
 /datum/job/senior_doctor/get_description_blurb()
 	return "By maintaining medical readiness aboard the ship, you support the [GLOB.using_map.full_name]'s research mission."
@@ -255,7 +246,7 @@
 	ideal_character_age = 40
 	minimal_player_age = 0
 	alt_titles = list()
-	//outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/doctor/fleet
+	outfit_type = /decl/hierarchy/outfit/job/unn/officer/medical
 	allowed_branches = list(
 		/datum/mil_branch/navy
 	)
@@ -271,13 +262,11 @@
 	                    SKILL_CHEMISTRY   = SKILL_MAX,
 	                    SKILL_VIROLOGY    = SKILL_MAX)
 
-	access = list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge)
+	access = list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery)
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
 	skill_points = 26
-	required_education = EDUCATION_TIER_TRADE
-	maximum_education = EDUCATION_TIER_MASTERS
 
 /datum/job/doctor/get_description_blurb()
 	return "You ensure the wellbeing of the marines aboard the [GLOB.using_map.full_name] in order to support the research mission."
@@ -305,7 +294,7 @@
 	                    SKILL_DEVICES     = SKILL_MAX,
 	                    SKILL_SCIENCE     = SKILL_MAX)
 
-	//outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/scientist
+	outfit_type = /decl/hierarchy/outfit/job/unn/officer/medical/scientist
 	allowed_branches = list(
 		/datum/mil_branch/navy
 	)
@@ -314,10 +303,9 @@
 		/datum/mil_rank/navy/o1
 	)
 
-	access = list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge,  access_research)
+	access = list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery, access_research)
 
 	skill_points = 20
-	required_education = EDUCATION_TIER_MASTERS
 
 
 /datum/job/hospital_corpsman
@@ -333,7 +321,7 @@
 	alt_titles = list(
 		"Assistant Physician"
 	)
-	//outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/contractor
+	outfit_type = /decl/hierarchy/outfit/job/unn/medical
 	allowed_branches = list(
 		/datum/mil_branch/navy
 	)
@@ -354,11 +342,10 @@
 	                    SKILL_VIROLOGY    = SKILL_MAX)
 	skill_points = 32
 
-	access = list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge)
+	access = list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery)
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
-	required_education = EDUCATION_TIER_TRADE
 
 
 /datum/job/senior_engineer
@@ -372,7 +359,7 @@
 	economic_power = 6
 	minimal_player_age = 3
 	ideal_character_age = 40
-	//outfit_type = /decl/hierarchy/outfit/job/torch/crew/engineering/senior_engineer
+	outfit_type = /decl/hierarchy/outfit/job/unn/engineer/senior_engineer
 	allowed_branches = list(
 		/datum/mil_branch/navy
 	)
@@ -403,8 +390,6 @@
 							 /datum/computer_file/program/rcon_console,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/shields_monitor)
-	required_education = EDUCATION_TIER_TRADE
-	maximum_education = EDUCATION_TIER_BACHELOR
 
 
 /datum/job/engineer
@@ -418,7 +403,7 @@
 	alt_titles = list(
 		"Junior Engineer"
 		)
-	//outfit_type = /decl/hierarchy/outfit/job/torch/crew/engineering/engineer
+	outfit_type = /decl/hierarchy/outfit/job/unn/engineer
 	allowed_branches = list(
 		/datum/mil_branch/navy
 	)
@@ -449,8 +434,6 @@
 							 /datum/computer_file/program/rcon_console,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/shields_monitor)
-	required_education = EDUCATION_TIER_TRADE
-	maximum_education = EDUCATION_TIER_BACHELOR
 
 /datum/job/assistant
 	title = "Marine"
@@ -459,7 +442,7 @@
 	supervisors = "the Executive Officer"
 	selection_color = "#515151"
 	economic_power = 6
-	//outfit_type = /decl/hierarchy/outfit/job/sevastopol/marine
+	outfit_type = /decl/hierarchy/outfit/job/unn
 	allowed_branches = list(
 		/datum/mil_branch/marine
 	)
@@ -470,4 +453,3 @@
 		/datum/mil_rank/marine/e3,
 		/datum/mil_rank/marine/e4
 	)
-	required_education = EDUCATION_TIER_NONE

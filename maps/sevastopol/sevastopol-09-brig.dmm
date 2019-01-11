@@ -77,8 +77,22 @@
 /turf/simulated/floor/plating,
 /area/security/armory)
 "aj" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
+/obj/structure/table/rack,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/crowbar/prybar,
+/obj/item/weapon/crowbar/prybar,
+/obj/item/weapon/crowbar/prybar,
+/obj/item/weapon/crowbar/prybar,
+/obj/item/weapon/crowbar/prybar,
+/obj/item/weapon/crowbar/prybar,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/equipment)
@@ -174,6 +188,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/weapon/crowbar/brace_jack,
 /turf/simulated/floor/tiled/techmaint,
 /area/security/equipment)
 "au" = (
@@ -218,7 +233,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/glass/security,
+/obj/machinery/door/airlock/glass/security{
+	name = "armory";
+	req_access = list(3)
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/office)
 "az" = (
@@ -246,12 +264,15 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/security/equipment)
 "aD" = (
-/obj/structure/table/rack{
-	dir = 4
-	},
+/obj/structure/table/rack,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/weapon/crowbar/brace_jack,
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/techfloor,
 /area/security/equipment)
 "aE" = (
 /obj/effect/floor_decal/corner/red/half{
@@ -360,20 +381,17 @@
 /area/hallway/primary/ninth)
 "aP" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/security,
+/obj/machinery/door/airlock/security{
+	name = "security storage";
+	req_access = list(2)
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/equipment)
 "aQ" = (
 /turf/simulated/wall/r_wall/hull,
 /area/hallway/primary/ninth)
 "aR" = (
-/obj/structure/table/rack,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
+/obj/structure/closet/secure_closet/security,
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/office)
@@ -564,7 +582,9 @@
 	id = "sec";
 	name = "Security Shutters"
 	},
-/obj/machinery/door/window/brigdoor/westleft,
+/obj/machinery/door/window/brigdoor/westleft{
+	name = "security desk"
+	},
 /turf/simulated/floor/plating,
 /area/security/office)
 "bn" = (
@@ -652,23 +672,6 @@
 "bt" = (
 /turf/simulated/floor/tiled/steel_ridged,
 /area/hallway/primary/ninth)
-"bu" = (
-/obj/structure/table/rack,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/crowbar/prybar,
-/obj/item/weapon/crowbar/prybar,
-/obj/item/weapon/crowbar/prybar,
-/obj/item/weapon/crowbar/prybar,
-/obj/item/weapon/crowbar/prybar,
-/obj/item/weapon/crowbar/prybar,
-/obj/effect/floor_decal/industrial/outline/red,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/security/office)
 "bv" = (
 /obj/effect/floor_decal/corner/red{
 	icon_state = "corner_white";
@@ -718,7 +721,10 @@
 /area/hallway/primary/ninth)
 "bz" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/security,
+/obj/machinery/door/airlock/glass/security{
+	name = "armory";
+	req_access = list(3)
+	},
 /obj/structure/cable/blue{
 	d1 = 4;
 	d2 = 8;
@@ -847,7 +853,10 @@
 /area/security/prison)
 "bM" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/security,
+/obj/machinery/door/airlock/security{
+	name = "brig";
+	req_access = list(2)
+	},
 /obj/structure/cable/blue{
 	d1 = 1;
 	d2 = 2;
@@ -1015,7 +1024,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass/security,
+/obj/machinery/door/airlock/glass/security{
+	name = "holding cell";
+	req_access = list(1)
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/prison)
 "ca" = (
@@ -1129,7 +1141,8 @@
 	id = "Cell";
 	name = "Cell";
 	pixel_x = 26;
-	pixel_y = -5
+	pixel_y = -5;
+	req_access = list(1)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
@@ -1157,7 +1170,8 @@
 /area/security/processing)
 "cp" = (
 /obj/machinery/door/window/brigdoor/eastright{
-	id = "Cell"
+	id = "Cell";
+	name = "secure cell"
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
@@ -1211,6 +1225,27 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/dark,
+/area/security/office)
+"IH" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/security/equipment)
+"OP" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass/security{
+	name = "processing";
+	req_access = list(2)
+	},
+/turf/simulated/floor/tiled/dark/monotile,
 /area/security/office)
 "TT" = (
 /obj/effect/shuttle_landmark/sevastopol/deck9,
@@ -5553,7 +5588,7 @@ au
 au
 aR
 bg
-bu
+aR
 au
 au
 ao
@@ -5861,7 +5896,7 @@ aU
 bj
 bw
 Fn
-ay
+OP
 bT
 ce
 bR
@@ -6772,7 +6807,7 @@ aa
 ab
 ae
 aj
-ar
+IH
 ar
 aB
 bd

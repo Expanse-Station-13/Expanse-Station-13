@@ -14,7 +14,9 @@
 "ae" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/mining,
+/obj/machinery/door/airlock/glass/mining{
+	name = "warehouse"
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/quartermaster/storage)
 "af" = (
@@ -106,7 +108,10 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/office)
 "ao" = (
-/obj/machinery/door/airlock/command,
+/obj/machinery/door/airlock/command{
+	name = "cargo office";
+	req_access = list(31)
+	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -782,7 +787,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/office)
 "bv" = (
-/obj/machinery/door/airlock/glass/mining,
+/obj/machinery/door/airlock/glass/mining{
+	name = "drone dock"
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "bw" = (
@@ -1063,7 +1070,9 @@
 "bR" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/mining,
+/obj/machinery/door/airlock/glass/mining{
+	name = "warehouse"
+	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;

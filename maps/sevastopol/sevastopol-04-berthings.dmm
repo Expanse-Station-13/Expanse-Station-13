@@ -124,7 +124,9 @@
 /turf/simulated/open,
 /area/hallway/primary/fourth)
 "au" = (
-/obj/machinery/door/airlock/civilian,
+/obj/machinery/door/airlock/civilian{
+	name = "lounge"
+	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/lounge)
@@ -151,7 +153,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/lounge)
 "az" = (
-/obj/machinery/door/airlock/civilian,
+/obj/machinery/door/airlock/civilian{
+	name = "showers"
+	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/shower)
@@ -288,7 +292,10 @@
 /turf/simulated/floor/lino,
 /area/hallway/primary/fourth)
 "aP" = (
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	name = "maintenance";
+	req_access = list(12)
+	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -313,12 +320,6 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -23;
-	pixel_y = 0
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/shower)
 "aS" = (
@@ -383,6 +384,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/obj/machinery/light_switch{
+	pixel_x = 21;
+	pixel_y = -20
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/lounge)
@@ -479,7 +484,9 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/lounge)
 "bq" = (
-/obj/machinery/door/airlock/civilian,
+/obj/machinery/door/airlock/civilian{
+	name = "cryogenic storage"
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
 	d1 = 4;
@@ -500,7 +507,9 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/sleep/cryo)
 "br" = (
-/obj/machinery/door/airlock/civilian,
+/obj/machinery/door/airlock/civilian{
+	name = "bathroom"
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
 	d1 = 4;
@@ -581,7 +590,9 @@
 /turf/simulated/floor/lino,
 /area/hallway/primary/fourth)
 "bw" = (
-/obj/machinery/door/airlock/civilian,
+/obj/machinery/door/airlock/civilian{
+	name = "lounge"
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
 	d1 = 4;
@@ -722,7 +733,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/fourth)
 "bH" = (
-/obj/machinery/door/airlock/civilian,
+/obj/machinery/door/airlock/civilian{
+	name = "dorms"
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
 	d1 = 1;
@@ -836,7 +849,9 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/bunk)
 "bS" = (
-/obj/machinery/door/airlock/civilian,
+/obj/machinery/door/airlock/civilian{
+	name = "dorms"
+	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1083,7 +1098,10 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
 "wk" = (
-/obj/machinery/door/airlock/civilian,
+/obj/machinery/door/airlock/civilian{
+	name = "cryogenic storage";
+	req_access = newlist()
+	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/sleep/cryo)
@@ -1115,6 +1133,13 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/lounge)
+"Rc" = (
+/obj/machinery/door/airlock/civilian{
+	name = "stall"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/shower)
 
 (1,1,1) = {"
 aa
@@ -6781,7 +6806,7 @@ ah
 ae
 aW
 aR
-az
+Rc
 ax
 LS
 LS

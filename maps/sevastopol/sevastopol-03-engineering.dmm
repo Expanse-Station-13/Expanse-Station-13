@@ -270,7 +270,10 @@
 /area/tcommsat/chamber)
 "aI" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/engineering,
+/obj/machinery/door/airlock/engineering{
+	name = "engineering office";
+	req_access = list(10)
+	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -512,10 +515,6 @@
 /obj/structure/table/rack,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/storage/tech)
-"bi" = (
-/obj/machinery/telecomms/server/sevastopol/supply,
-/turf/simulated/floor/bluegrid,
-/area/tcommsat/chamber)
 "bj" = (
 /obj/machinery/telecomms/receiver/sevastopol,
 /turf/simulated/floor/bluegrid,
@@ -643,7 +642,10 @@
 /area/engineering/office)
 "bA" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/engineering,
+/obj/machinery/door/airlock/engineering{
+	name = "tech storage";
+	req_access = list(23)
+	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -737,7 +739,10 @@
 "bH" = (
 /obj/effect/floor_decal/corner/white/mono,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/airlock/hatch{
+	name = "telecommunications control";
+	req_access = list(61)
+	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -960,16 +965,16 @@
 /area/tcommsat/chamber)
 "bX" = (
 /obj/effect/catwalk_plated/dark,
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/tcommsat/chamber)
@@ -996,11 +1001,6 @@
 /area/tcommsat/computer)
 "bZ" = (
 /obj/effect/catwalk_plated/dark,
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -1064,7 +1064,10 @@
 "ce" = (
 /obj/effect/floor_decal/corner/white/mono,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/maintenance,
+/obj/machinery/door/airlock/glass/maintenance{
+	name = "server room";
+	req_access = list(61)
+	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -1433,13 +1436,6 @@
 	icon_state = "bordercolorhalf";
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
-	},
-/obj/machinery/power/terminal{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
@@ -1449,6 +1445,11 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/tcommsat/chamber)
@@ -1477,6 +1478,16 @@
 /obj/effect/paint_stripe/white,
 /turf/simulated/wall,
 /area/tcommsat/computer)
+"hA" = (
+/obj/structure/cable{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/tcommsat/chamber)
 "iu" = (
 /obj/effect/shuttle_landmark/sevastopol/deck3,
 /turf/space,
@@ -5891,7 +5902,7 @@ cs
 ct
 ba
 uU
-aF
+bs
 IK
 IK
 IK
@@ -6303,7 +6314,7 @@ be
 bo
 bk
 bW
-bs
+cA
 IK
 aa
 aa
@@ -6405,7 +6416,7 @@ bf
 bo
 bl
 bW
-cA
+br
 IK
 aa
 aa
@@ -6507,7 +6518,7 @@ bg
 bO
 bR
 bX
-br
+bD
 IK
 aa
 aa
@@ -6609,7 +6620,7 @@ cy
 cm
 bm
 bZ
-bD
+hA
 IK
 aa
 aa
@@ -6707,7 +6718,7 @@ aG
 bC
 cv
 Ji
-bi
+aF
 aF
 bn
 ca

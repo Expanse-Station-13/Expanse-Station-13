@@ -1,5 +1,5 @@
 /obj/item/clothing/under/mcrn
-	name = "mcrn fatigues"
+	name = "\improper MCRN duty fatigues"
 	desc = "You shouldn't be seeing this."
 	icon_state = "mcrnfatigues"
 	item_state = "bl_suit"

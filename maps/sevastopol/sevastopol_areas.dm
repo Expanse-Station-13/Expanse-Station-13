@@ -19,10 +19,6 @@
 	name = "\improper Ninth Deck Hallway"
 	icon_state = "hallC1"
 
-/area/maintenance/second
-	name = "\improper Ninth Deck Maintenance"
-	icon_state = "maintcentral"
-
 /area/hallway/primary/third
 	name = "\improper Eighth Deck Hallway"
 	icon_state = "hallC1"
@@ -104,6 +100,10 @@
 /area/engineering/storage
 	name = "\improper Engineering Storage"
 	icon_state = "engineering_storage"
+
+/area/engineering/locker
+	name = "\improper Engineering Locker Room"
+	icon_state = "maintcentral"
 
 /area/engineering/hardstorage
 	name = "\improper Engineering Hard Storage"

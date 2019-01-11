@@ -277,19 +277,24 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/eighth)
 "aK" = (
-/obj/machinery/door/airlock/medical,
+/obj/machinery/door/airlock/medical{
+	name = "medical";
+	req_access = list(5)
+	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/chemistry)
 "aL" = (
 /obj/machinery/button/remote/blast_door{
 	id = "chemcounter";
-	name = "Chemistry Counter Lockdown Control";
+	name = "Chemistry Desk Lockdown Control";
 	pixel_x = -6;
-	pixel_y = -21
+	pixel_y = -21;
+	req_access = list(5)
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -336,7 +341,10 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/item/weapon/material/bell,
-/obj/machinery/door/window/northleft,
+/obj/machinery/door/window/northleft{
+	name = "medical desk";
+	req_access = list(5)
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "aT" = (
@@ -348,7 +356,10 @@
 /obj/machinery/holosign/surgery{
 	id = "operating"
 	},
-/obj/machinery/door/airlock/medical,
+/obj/machinery/door/airlock/medical{
+	name = "operating theatre";
+	req_access = list(45)
+	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/monotile,
 /area/medical/surgery)
@@ -424,6 +435,9 @@
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "bc" = (
@@ -463,7 +477,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/eighth)
 "bg" = (
-/obj/machinery/door/airlock/hatch/maintenance,
+/obj/machinery/door/airlock/hatch/maintenance{
+	name = "medical storage";
+	req_one_access = list(5,12)
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/blue{
 	d1 = 4;
@@ -539,6 +556,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/eighth)
 "bn" = (
@@ -697,7 +715,10 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/eighth)
 "bG" = (
-/obj/machinery/door/airlock/medical,
+/obj/machinery/door/airlock/medical{
+	name = "medical";
+	req_access = list(5)
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/blue{
 	d1 = 4;
@@ -1063,7 +1084,7 @@
 "cu" = (
 /obj/machinery/body_scanconsole{
 	dir = 4;
-	display_tags = list("med_or_display","rob_or_display1","rob_or_display2");
+	display_tags = list("surgery");
 	icon_state = "body_scannerconsole"
 	},
 /obj/effect/floor_decal/corner/blue/full,
@@ -1102,7 +1123,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/research)
 "cy" = (
-/obj/machinery/door/airlock/hatch/maintenance,
+/obj/machinery/door/airlock/hatch/maintenance{
+	name = "research";
+	req_access = list(47)
+	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/medical/research)
@@ -1136,7 +1160,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/research)
 "cB" = (
-/obj/machinery/door/airlock/science,
+/obj/machinery/door/airlock/science{
+	name = "research";
+	req_access = list(47)
+	},
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/warning/corner{
 	icon_state = "warningcorner";
@@ -1159,7 +1186,10 @@
 /obj/machinery/holosign/surgery{
 	id = "operating"
 	},
-/obj/machinery/door/airlock/medical,
+/obj/machinery/door/airlock/medical{
+	name = "operating theatre";
+	req_access = list(45)
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/blue{
 	d1 = 4;
@@ -1228,7 +1258,8 @@
 	id = "research";
 	name = "Research Shutter Control";
 	pixel_x = 24;
-	pixel_y = -25
+	pixel_y = -25;
+	req_access = list(47)
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/research)
@@ -1281,7 +1312,8 @@
 	pixel_x = 25
 	},
 /obj/machinery/body_scan_display{
-	pixel_y = -30
+	pixel_y = -30;
+	tag = "surgery"
 	},
 /obj/effect/floor_decal/floordetail/edgedrain,
 /turf/simulated/floor/tiled/white,

@@ -9,18 +9,17 @@
 /turf/simulated/wall/r_wall/hull,
 /area/engineering/engine_room)
 "ad" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/obj/machinery/power/rad_collector,
+/obj/structure/catwalk,
+/obj/structure/closet/secure_closet/engineering_personal,
+/obj/item/weapon/storage/belt/utility/full,
 /turf/simulated/floor/plating,
-/area/maintenance/second)
+/area/engineering/locker)
 "ae" = (
 /obj/structure/closet/crate/solar,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -68,8 +67,12 @@
 	dir = 8;
 	pixel_x = 22
 	},
+/obj/machinery/light_switch{
+	pixel_x = -20;
+	pixel_y = -20
+	},
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/second)
+/area/engineering/locker)
 "an" = (
 /turf/unsimulated/mask,
 /area/hallway/primary/second)
@@ -91,8 +94,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/maintenance/second)
+/area/engineering/locker)
 "ap" = (
 /obj/structure/cable{
 	d2 = 2;
@@ -114,7 +118,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/second)
+/area/engineering/locker)
 "aq" = (
 /obj/structure/lattice,
 /turf/space,
@@ -127,8 +131,14 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/catwalk,
+/obj/structure/closet/secure_closet/engineering_personal,
+/obj/item/weapon/storage/belt/utility/full,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
-/area/maintenance/second)
+/area/engineering/locker)
 "at" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -143,8 +153,12 @@
 /obj/machinery/atmospherics/valve/shutoff{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/second)
+/obj/effect/floor_decal/industrial/shutoff{
+	icon_state = "shutoff";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/engineering/locker)
 "au" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -160,7 +174,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/second)
+/area/engineering/locker)
 "av" = (
 /obj/machinery/light/spot{
 	dir = 1
@@ -209,8 +223,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/catwalk,
+/obj/structure/closet/secure_closet/engineering_personal,
+/obj/item/weapon/storage/belt/utility/full,
 /turf/simulated/floor/plating,
-/area/maintenance/second)
+/area/engineering/locker)
 "aA" = (
 /obj/structure/ladder,
 /obj/effect/catwalk_plated,
@@ -225,8 +242,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/maintenance/second)
+/area/engineering/locker)
 "aC" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -252,7 +270,7 @@
 	dir = 1
 	},
 /turf/simulated/open,
-/area/maintenance/second)
+/area/engineering/locker)
 "aE" = (
 /obj/structure/cable{
 	d2 = 8;
@@ -341,7 +359,10 @@
 /area/engineering/engine_room)
 "aM" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/engineering,
+/obj/machinery/door/airlock/glass/engineering{
+	name = "reactor control";
+	req_access = list(11)
+	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -410,7 +431,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/second)
+/area/engineering/locker)
 "aU" = (
 /obj/structure/bed/chair/crash{
 	icon_state = "shuttle_chair_preview";
@@ -458,7 +479,10 @@
 /area/engineering/engine_room)
 "aY" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/engineering,
+/obj/machinery/door/airlock/glass/engineering{
+	name = "reactor control";
+	req_access = list(11)
+	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -490,7 +514,10 @@
 /area/engineering/engine_room)
 "bb" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/engineering,
+/obj/machinery/door/airlock/glass/engineering{
+	name = "\improper SMES storage";
+	req_access = list(11)
+	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -527,7 +554,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/second)
+/area/engineering/locker)
 "be" = (
 /obj/turbolift_map_holder/sevastopol,
 /turf/unsimulated/mask,
@@ -545,7 +572,10 @@
 /area/engineering/engine_smes)
 "bg" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/engineering,
+/obj/machinery/door/airlock/engineering{
+	name = "engineering storage";
+	req_access = list(11)
+	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -582,7 +612,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/second)
+/area/engineering/locker)
 "bk" = (
 /obj/machinery/light{
 	dir = 4
@@ -603,7 +633,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/second)
+/area/engineering/locker)
 "bm" = (
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	icon_state = "bordercolorcorner";
@@ -1060,7 +1090,10 @@
 /area/engineering/engine_smes)
 "bY" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/engineering,
+/obj/machinery/door/airlock/glass/engineering{
+	name = "engineering lobby";
+	req_access = list(11)
+	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -1302,6 +1335,7 @@
 "cw" = (
 /obj/structure/table/standard,
 /obj/structure/window/basic/full{
+	health = 1;
 	name = "Break in case of emergency"
 	},
 /obj/item/weapon/storage/firstaid/toxin,
@@ -1563,7 +1597,10 @@
 /area/space)
 "im" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/engineering,
+/obj/machinery/door/airlock/glass/engineering{
+	name = "reactor access";
+	req_access = list(11)
+	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -1619,7 +1656,10 @@
 /area/engineering/engine_room)
 "Ge" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/engineering,
+/obj/machinery/door/airlock/glass/engineering{
+	name = "engineering locker room";
+	req_access = list(11)
+	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -1633,7 +1673,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/second)
+/area/engineering/locker)
 "GQ" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
@@ -1652,7 +1692,7 @@
 /area/engineering/engine_smes)
 "UE" = (
 /turf/simulated/wall/r_wall/hull,
-/area/maintenance/second)
+/area/engineering/locker)
 "Yk" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{

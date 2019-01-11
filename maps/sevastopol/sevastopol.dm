@@ -3,7 +3,6 @@
 	#include "sevastopol_announcements.dm"
 	#include "sevastopol_areas.dm"
 	#include "sevastopol_elevator.dm"
-	#include "sevastopol_headsets.dm"
 	#include "sevastopol_jobs.dm"
 	#include "sevastopol_lobby.dm"
 	#include "sevastopol_outfits.dm"
@@ -15,9 +14,13 @@
 	#include "sevastopol_telecomms.dm"
 	//#include "sevastopol_unit_testing.dm"
 
+	#include "items/cards_ids.dm"
+	#include "items/headsets.dm"
+	#include "items/mcrn-under.dm"
 	#include "items/unn-head.dm"
 	#include "items/unn-under.dm"
-	#include "items/mcrn-under.dm"
+
+	#include "structures/locker.dm"
 
 	#include "sevastopol-01-engine.dmm"
 	#include "sevastopol-02-reactor.dmm"

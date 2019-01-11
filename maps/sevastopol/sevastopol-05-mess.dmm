@@ -215,7 +215,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/fifth)
 "aE" = (
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	name = "kitchen maintenance";
+	req_access = list(12)
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -478,7 +481,10 @@
 /area/maintenance/fifth)
 "be" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/eastright,
+/obj/machinery/door/window/eastright{
+	name = "kitchen counter";
+	req_access = list(28)
+	},
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -502,7 +508,9 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/galley)
 "bh" = (
-/obj/machinery/door/airlock/glass/civilian,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "gym"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
@@ -738,7 +746,10 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/mess)
 "bH" = (
-/obj/machinery/door/airlock/freezer,
+/obj/machinery/door/airlock/freezer{
+	name = "freezer maintenance";
+	req_access = list(28)
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
@@ -844,7 +855,10 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/galley)
 "bS" = (
-/obj/machinery/door/airlock/freezer,
+/obj/machinery/door/airlock/freezer{
+	name = "freezer";
+	req_access = list(28)
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},

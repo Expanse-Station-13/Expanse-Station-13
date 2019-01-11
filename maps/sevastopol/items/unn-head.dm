@@ -1,5 +1,5 @@
 /obj/item/clothing/head/unn
-	name = "unn beret"
+	name = "\improper UNN beret"
 	desc = "It's a bland UNN beret."
 	icon_state = "beretunn"
 	icon = 'maps/sevastopol/icons/obj/obj_head_unn.dmi'

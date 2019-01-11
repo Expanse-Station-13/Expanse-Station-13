@@ -451,7 +451,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
 	dir = 4
 	},
-/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
 /area/engineering/fuelbay)
 "bl" = (
@@ -966,6 +966,11 @@
 	icon_state = "hikpa";
 	dir = 4
 	},
+/turf/simulated/floor/plating,
+/area/engineering/fuelbay)
+"vy" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/fuel,
+/obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor/plating,
 /area/engineering/fuelbay)
 "HB" = (
@@ -6118,7 +6123,7 @@ aa
 aa
 aa
 ac
-ah
+vy
 bk
 bC
 aN

@@ -50,7 +50,10 @@
 /area/bridge)
 "ai" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/maintenance,
+/obj/machinery/door/airlock/glass/maintenance{
+	name = "bridge maintenance";
+	req_access = list(19)
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -229,7 +232,10 @@
 /area/bridge)
 "aH" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/command,
+/obj/machinery/door/airlock/glass/command{
+	name = "bridge";
+	req_access = list(19)
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
 "aI" = (
