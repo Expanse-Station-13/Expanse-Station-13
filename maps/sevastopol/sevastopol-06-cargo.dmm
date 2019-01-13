@@ -110,7 +110,7 @@
 "ao" = (
 /obj/machinery/door/airlock/command{
 	name = "cargo office";
-	req_access = list(31)
+	req_access = list(50)
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -1233,8 +1233,9 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/manifold/visible{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/visible{
+	icon_state = "intact";
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/expedition/one)
@@ -1265,8 +1266,9 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/manifold/visible{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/visible{
+	icon_state = "intact";
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/expedition/two)
@@ -1806,18 +1808,6 @@
 "DO" = (
 /turf/simulated/floor/tiled,
 /area/expedition/one)
-"HX" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/expedition/one)
-"JS" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/expedition/two)
 "LX" = (
 /turf/simulated/wall/r_wall/hull,
 /area/quartermaster/office)
@@ -6652,7 +6642,7 @@ bl
 cs
 aY
 cg
-HX
+DO
 DO
 DO
 MP
@@ -7264,7 +7254,7 @@ MK
 cF
 bo
 cj
-JS
+gG
 gG
 gG
 CI

@@ -320,6 +320,7 @@
 "aQ" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass/civilian,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/eighth)
 "aR" = (
@@ -1028,6 +1029,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass/civilian,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/eighth)
 "cp" = (
@@ -1469,9 +1471,6 @@
 /obj/effect/shuttle_landmark/escape_pod/start/pod2,
 /turf/simulated/floor/reinforced,
 /area/shuttle/escape_pod/two)
-"Hx" = (
-/turf/simulated/wall/r_wall/hull,
-/area/hallway/primary/eighth)
 "Iz" = (
 /obj/item/weapon/virusdish/random,
 /obj/item/weapon/virusdish/random,
@@ -7512,11 +7511,11 @@ aa
 aa
 aa
 aa
-Hx
+ad
 ae
 ae
 ae
-Hx
+ad
 aa
 aa
 aa
@@ -7614,11 +7613,11 @@ aa
 aa
 aa
 aa
-Hx
+ad
 ae
 ae
 ae
-Hx
+ad
 aa
 aa
 aa
@@ -7716,11 +7715,11 @@ aa
 aa
 aa
 aa
-Hx
-Hx
-Hx
-Hx
-Hx
+ad
+ad
+ad
+ad
+ad
 aa
 aa
 aa

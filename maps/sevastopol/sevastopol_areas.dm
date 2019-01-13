@@ -27,6 +27,10 @@
 	name = "\improper Seventh Deck Hallway"
 	icon_state = "hallC1"
 
+/area/maintenance/fourth
+	name = "\improper Seventh Deck Maintenance"
+	icon_state = "maintcentral"
+
 /area/maintenance/fifth
 	name = "\improper Sixth Deck Maintenance"
 	icon_state = "maintcentral"
@@ -131,16 +135,6 @@
 	icon_state = "tcomsatcomp"
 
 //Crew
-/area/crew_quarters/lounge
-	name = "\improper Lounge"
-	icon_state = "crew_quarters"
-	sound_env = MEDIUM_SOFTFLOOR
-
-/area/crew_quarters/sleep/bunk
-	name = "\improper Bunk Room"
-	icon_state = "Sleep"
-	sound_env = SMALL_SOFTFLOOR
-	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
 /area/crew_quarters/sleep/cryo
 	name = "\improper Cryogenic Storage"
@@ -151,14 +145,19 @@
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
 
-//Mess
 /area/crew_quarters/gym
 	name = "\improper Gym"
 	icon_state = "fitness"
 
+//Mess
+
 /area/crew_quarters/galley
 	name = "\improper Galley"
 	icon_state = "kitchen"
+
+/area/hydroponics
+	name = "\improper Hydroponics"
+	icon_state = "hydro"
 
 /area/crew_quarters/mess
 	name = "\improper Mess Hall"
