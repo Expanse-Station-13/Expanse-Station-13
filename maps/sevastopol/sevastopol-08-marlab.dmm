@@ -1272,7 +1272,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/research)
 "cI" = (
-/obj/item/weapon/storage/firstaid/surgery,
 /obj/structure/table/standard,
 /obj/effect/floor_decal/floordetail/edgedrain{
 	icon_state = "edge";
@@ -1287,6 +1286,7 @@
 	layer = 3.3;
 	pixel_x = 26
 	},
+/obj/item/weapon/storage/firstaid/surgery,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
 "cJ" = (

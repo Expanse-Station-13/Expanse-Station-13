@@ -69,7 +69,7 @@
 	                    SKILL_SCIENCE     = SKILL_MAX)
 	skill_points = 30
 
-	MIRROR_ACCESS(list(access_security, access_brig, access_armory, access_medical, access_kitchen, access_hydroponics,
+	MIRROR_ACCESS(list(access_security, access_brig, access_armory, access_medical, access_medical_equip, access_kitchen, access_hydroponics,
 		access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_change_ids, access_eva,
 		access_bridge, access_tech_storage, access_cargo, access_mailsorting, access_surgery, access_research,
 		access_keycard_auth, access_tcomsat))
@@ -236,7 +236,7 @@
 	                    SKILL_VIROLOGY    = SKILL_MAX)
 	skill_points = 32
 
-	MIRROR_ACCESS(list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery, access_research))
+	MIRROR_ACCESS(list(access_medical, access_medical_equip, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery, access_research))
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
@@ -270,7 +270,7 @@
 	                    SKILL_CHEMISTRY   = SKILL_MAX,
 	                    SKILL_VIROLOGY    = SKILL_MAX)
 
-	MIRROR_ACCESS(list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery))
+	MIRROR_ACCESS(list(access_medical, access_medical_equip, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery))
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
@@ -352,7 +352,7 @@
 	                    SKILL_VIROLOGY    = SKILL_MAX)
 	skill_points = 32
 
-	MIRROR_ACCESS(list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery))
+	MIRROR_ACCESS(list(access_medical, access_medical_equip, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery))
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
