@@ -79,7 +79,6 @@
 		/area/turbolift/sevatopol_eighth,
 		/area/turbolift/sevatopol_ninth,
 		/area/template_noop,
-//Following maps are hardcoded into the game, but we have no need of them
 		/area/chapel,
 		/area/medical/virology,
 		/area/medical/virologyaccess,
