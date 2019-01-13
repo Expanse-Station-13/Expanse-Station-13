@@ -173,7 +173,7 @@ var/const/NETWORK_NANOTRASEN  = "Petrov"
 	_output_on = TRUE
 	_fully_charged = TRUE
 
-/datum/map/torch/default_internal_channels()
+/datum/map/sevastopol/default_internal_channels()
 	return list(
 		num2text(PUB_FREQ)   = list(),
 		num2text(ERT_FREQ)   = list(access_cent_specops),
