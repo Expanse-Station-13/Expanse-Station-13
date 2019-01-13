@@ -1055,6 +1055,7 @@
 	icon_state = "corner_white";
 	dir = 8
 	},
+/obj/structure/closet/crate/bin,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/third)
 "cd" = (

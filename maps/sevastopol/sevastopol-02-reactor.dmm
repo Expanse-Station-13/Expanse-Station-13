@@ -382,6 +382,7 @@
 	icon_state = "bordercolor";
 	dir = 6
 	},
+/obj/structure/closet/crate/bin,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/second)
 "aO" = (

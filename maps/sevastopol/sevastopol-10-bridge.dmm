@@ -169,6 +169,7 @@
 	pixel_x = 26;
 	pixel_y = 26
 	},
+/obj/structure/closet/crate/bin,
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "ax" = (

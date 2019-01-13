@@ -1141,6 +1141,10 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/crew_quarters/galley)
+"kq" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/mess)
 "lE" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/lightgrey,
@@ -6182,7 +6186,7 @@ at
 aH
 bn
 ah
-dT
+kq
 bu
 bv
 an
@@ -6790,7 +6794,7 @@ aa
 aa
 aa
 cq
-vv
+ay
 ay
 ay
 ay

@@ -1769,6 +1769,10 @@
 /obj/effect/paint/red,
 /turf/simulated/wall/r_titanium,
 /area/expedition/two)
+"yR" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "AV" = (
 /obj/machinery/status_display,
 /obj/effect/paint_stripe/brown,
@@ -6518,7 +6522,7 @@ aa
 aa
 ad
 ad
-ac
+yR
 ac
 ac
 bO

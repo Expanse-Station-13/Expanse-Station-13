@@ -1471,6 +1471,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seventh)
+"Iz" = (
+/obj/structure/closet/crate/trashcart,
+/turf/simulated/floor/tiled/techfloor,
+/area/janitor)
 "Kc" = (
 /turf/simulated/wall/r_wall/hull,
 /area/space)
@@ -7044,7 +7048,7 @@ aa
 QI
 bw
 aK
-bu
+Iz
 aQ
 CR
 aT

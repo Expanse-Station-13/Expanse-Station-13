@@ -35,6 +35,7 @@
 	pixel_x = 26;
 	pixel_y = 0
 	},
+/obj/structure/closet/crate/bin,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/eighth)
 "aj" = (
