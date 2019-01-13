@@ -163,6 +163,10 @@
 	name = "\improper Mess Hall"
 	icon_state = "cafeteria"
 
+/area/crew_quarters/officersmess
+	name = "\improper Officer's Mess Hall"
+	icon_state = "bar"
+
 // Cargo
 /area/quartermaster/office
 	name = "\improper Supply Office"

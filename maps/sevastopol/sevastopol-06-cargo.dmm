@@ -633,7 +633,14 @@
 /turf/simulated/wall/r_titanium,
 /area/expedition/one)
 "bf" = (
-/obj/structure/bed/chair/shuttle/blue,
+/obj/machinery/disposal/deliveryChute{
+	icon_state = "intake";
+	dir = 8
+	},
+/obj/structure/disposalpipe/trunk{
+	icon_state = "pipe-t";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/expedition/one)
 "bg" = (
@@ -1229,13 +1236,14 @@
 	pixel_x = -24;
 	pixel_y = 24
 	},
-/obj/machinery/power/terminal{
-	dir = 8
-	},
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/visible{
 	icon_state = "intact";
 	dir = 5
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled,
 /area/expedition/one)
@@ -1739,6 +1747,30 @@
 /obj/effect/paint_stripe/brown,
 /turf/simulated/wall,
 /area/quartermaster/storage)
+"jf" = (
+/obj/machinery/disposal/deliveryChute,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"lj" = (
+/obj/effect/floor_decal/techfloor{
+	icon_state = "techfloor_edges";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/expedition/one)
+"oh" = (
+/obj/item/modular_computer/console/preset/dock{
+	icon_state = "console";
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/expedition/one)
 "pA" = (
 /obj/machinery/status_display/supply_display,
 /obj/effect/paint_stripe/brown,
@@ -1751,6 +1783,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/expedition/two)
+"sO" = (
+/obj/effect/paint/red,
+/obj/machinery/button/remote/blast_door{
+	id = "pod1door";
+	name = "blast control";
+	pixel_x = 0;
+	pixel_y = 0;
+	req_access = newlist()
+	},
+/turf/simulated/wall/r_titanium,
+/area/expedition/one)
 "um" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/power/apc{
@@ -1765,6 +1808,24 @@
 /obj/structure/cable,
 /turf/simulated/floor/tiled/monotile,
 /area/expedition/two)
+"wm" = (
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/turf/simulated/floor/tiled,
+/area/expedition/one)
+"wX" = (
+/obj/effect/paint_stripe/blue,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/wall/r_titanium,
+/area/expedition/one)
 "xr" = (
 /obj/effect/paint/red,
 /turf/simulated/wall/r_titanium,
@@ -1801,6 +1862,10 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/expedition/two)
+"CT" = (
+/obj/structure/bed/chair/shuttle/white,
+/turf/simulated/floor/tiled/monotile,
+/area/expedition/one)
 "DF" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/portables_connector{
@@ -1811,6 +1876,18 @@
 /area/expedition/two)
 "DO" = (
 /turf/simulated/floor/tiled,
+/area/expedition/one)
+"EV" = (
+/obj/effect/paint_stripe/blue,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/r_titanium,
+/area/expedition/one)
+"Lk" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/expedition/one)
 "LX" = (
 /turf/simulated/wall/r_wall/hull,
@@ -1872,6 +1949,16 @@
 /obj/effect/shuttle_landmark/sevastopol/deck6,
 /turf/space,
 /area/space)
+"Ub" = (
+/obj/machinery/door/blast/regular{
+	dir = 4;
+	icon_state = "pdoor1";
+	id = "pod1door";
+	name = "Pod 1 Side Blast Door";
+	p_open = 0
+	},
+/turf/simulated/floor/plating,
+/area/expedition/one)
 "UK" = (
 /obj/machinery/alarm{
 	dir = 1
@@ -6334,16 +6421,16 @@ ad
 ad
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aL
+aN
+Ub
+sO
+bd
+bd
+bd
+bd
+bd
+bd
 aa
 aa
 aa
@@ -6436,17 +6523,17 @@ cC
 ad
 aa
 aa
-aL
 aN
 aN
-aN
+cO
+cr
+bd
+aZ
+bc
+br
+ct
 bd
 bd
-bd
-bd
-bd
-bd
-aa
 aa
 aa
 aa
@@ -6540,15 +6627,15 @@ ad
 ad
 aI
 aN
-cO
-cr
+lj
+Lk
 bd
-aZ
-bc
-br
-ct
-bd
-bd
+wm
+DO
+DO
+DO
+oh
+aH
 aa
 aa
 aa
@@ -6750,7 +6837,7 @@ bd
 ba
 bf
 cl
-bf
+CT
 bd
 bd
 aa
@@ -6850,11 +6937,11 @@ aN
 aN
 be
 bd
-bd
-bd
-bd
-bd
-aa
+wX
+EV
+EV
+EV
+jf
 aa
 aa
 aa

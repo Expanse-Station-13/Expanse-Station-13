@@ -95,6 +95,7 @@
 	economic_power = 8
 	ideal_character_age = 45
 	outfit_type = /decl/hierarchy/outfit/job/unn/sea
+	hud_icon = "hudinternalaffairsagent"
 	allowed_branches = list(
 		/datum/mil_branch/marine
 	)
@@ -137,6 +138,7 @@
 	ideal_character_age = 25
 	alt_titles = list()
 	outfit_type = /decl/hierarchy/outfit/job/unn/security
+	hud_icon = "hudmasteratarms"
 	allowed_branches = list(
 		/datum/mil_branch/marine,
 	)
@@ -175,6 +177,7 @@
 	ideal_character_age = 25
 	alt_titles = list()
 	outfit_type = /decl/hierarchy/outfit/job/unn/security/trainee
+	hud_icon = "hudsecurityguard"
 	allowed_branches = list(
 		/datum/mil_branch/marine,
 	)
@@ -214,6 +217,7 @@
 	economic_power = 8
 	alt_titles = list()
 	outfit_type = /decl/hierarchy/outfit/job/unn/officer/medical/senior
+	hud_icon = "hudchiefmedicalofficer"
 	allowed_branches = list(
 		/datum/mil_branch/navy
 	)
@@ -250,6 +254,7 @@
 	minimal_player_age = 0
 	alt_titles = list()
 	outfit_type = /decl/hierarchy/outfit/job/unn/officer/medical
+	hud_icon = "hudphysician"
 	allowed_branches = list(
 		/datum/mil_branch/navy
 	)
@@ -298,6 +303,7 @@
 	                    SKILL_SCIENCE     = SKILL_MAX)
 
 	outfit_type = /decl/hierarchy/outfit/job/unn/officer/medical/scientist
+	hud_icon = "hudscientist"
 	allowed_branches = list(
 		/datum/mil_branch/navy
 	)
@@ -325,6 +331,7 @@
 		"Assistant Physician"
 	)
 	outfit_type = /decl/hierarchy/outfit/job/unn/medical
+	hud_icon = "hudcorpsman"
 	allowed_branches = list(
 		/datum/mil_branch/navy
 	)
@@ -363,6 +370,7 @@
 	minimal_player_age = 3
 	ideal_character_age = 40
 	outfit_type = /decl/hierarchy/outfit/job/unn/engineer/senior_engineer
+	hud_icon = "hudchiefengineer"
 	allowed_branches = list(
 		/datum/mil_branch/navy
 	)
@@ -407,6 +415,7 @@
 		"Junior Engineer"
 		)
 	outfit_type = /decl/hierarchy/outfit/job/unn/engineer
+	hud_icon = "hudengineer"
 	allowed_branches = list(
 		/datum/mil_branch/navy
 	)
@@ -447,6 +456,7 @@
 	economic_power = 6
 	alt_titles = list() //hahaha no
 	outfit_type = /decl/hierarchy/outfit/job/unn
+	hud_icon = "hudcrewman"
 	allowed_branches = list(
 		/datum/mil_branch/marine
 	)

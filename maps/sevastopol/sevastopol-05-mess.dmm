@@ -95,6 +95,7 @@
 /obj/effect/floor_decal/unn{
 	icon_state = "unlogo1"
 	},
+/obj/structure/bed/chair/crash,
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/mess)
 "aq" = (
@@ -123,6 +124,7 @@
 /obj/effect/floor_decal/unn{
 	icon_state = "unlogo3"
 	},
+/obj/machinery/vending/dinnerware,
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/mess)
 "as" = (
@@ -263,10 +265,10 @@
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "aK" = (
-/obj/machinery/vending/dinnerware,
-/obj/effect/floor_decal/corner/lightgrey,
+/obj/effect/floor_decal/corner/blue,
+/obj/machinery/vending/boozeomat,
 /turf/simulated/floor/tiled,
-/area/crew_quarters/mess)
+/area/crew_quarters/officersmess)
 "aL" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -510,14 +512,11 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/mess)
 "bi" = (
-/obj/item/weapon/stool,
-/obj/effect/floor_decal/corner/lightgrey,
-/obj/effect/landmark/start{
-	name = "Marine"
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/floor_decal/corner/blue,
+/obj/item/weapon/stool/bar/padded,
 /turf/simulated/floor/tiled,
-/area/crew_quarters/mess)
+/area/crew_quarters/officersmess)
 "bk" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -586,8 +585,8 @@
 /area/crew_quarters/mess)
 "bt" = (
 /obj/structure/ladder,
-/obj/machinery/firealarm,
 /obj/effect/catwalk_plated,
+/obj/machinery/firealarm,
 /turf/simulated/open,
 /area/crew_quarters/mess)
 "bu" = (
@@ -747,6 +746,11 @@
 /obj/effect/landmark{
 	name = "lightsout"
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/mess)
 "bJ" = (
@@ -760,6 +764,12 @@
 	icon_state = "unlogo2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/mess)
 "bL" = (
@@ -780,6 +790,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/mess)
 "bO" = (
@@ -794,6 +810,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/mess)
 "bQ" = (
@@ -802,6 +824,12 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/mess)
@@ -834,6 +862,7 @@
 	icon_state = "unlogo8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/mess)
 "bU" = (
@@ -867,6 +896,12 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/mess)
 "bX" = (
@@ -893,9 +928,7 @@
 "bZ" = (
 /obj/effect/floor_decal/corner/lightgrey,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/mess)
 "ca" = (
@@ -1019,18 +1052,18 @@
 /turf/simulated/wall,
 /area/crew_quarters/galley)
 "cn" = (
-/obj/effect/floor_decal/corner/lightgrey,
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/structure/closet/emcloset,
+/obj/effect/floor_decal/corner/blue,
 /turf/simulated/floor/tiled,
-/area/crew_quarters/mess)
+/area/crew_quarters/officersmess)
 "cp" = (
-/obj/effect/floor_decal/corner/lightgrey,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/blue,
 /turf/simulated/floor/tiled,
-/area/crew_quarters/mess)
+/area/crew_quarters/officersmess)
 "cq" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced/hull,
@@ -1121,11 +1154,22 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/maintenance/fifth)
 "dT" = (
-/turf/simulated/floor/tiled,
-/area/crew_quarters/mess)
+/turf/simulated/wall,
+/area/crew_quarters/officersmess)
 "gw" = (
 /turf/simulated/wall/r_wall/hull,
 /area/crew_quarters/galley)
+"gE" = (
+/obj/effect/floor_decal/corner/blue,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/officersmess)
+"if" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/officersmess)
 "jE" = (
 /obj/machinery/door/airlock/glass/civilian{
 	name = "kitchen";
@@ -1147,14 +1191,17 @@
 /area/crew_quarters/mess)
 "lE" = (
 /obj/structure/table/standard,
-/obj/effect/floor_decal/corner/lightgrey,
 /obj/item/weapon/board,
+/obj/effect/floor_decal/corner/blue,
 /turf/simulated/floor/tiled,
-/area/crew_quarters/mess)
+/area/crew_quarters/officersmess)
 "mm" = (
 /obj/effect/shuttle_landmark/sevastopol/deck5,
 /turf/space,
 /area/space)
+"mr" = (
+/turf/simulated/wall/r_wall/hull,
+/area/crew_quarters/officersmess)
 "oL" = (
 /obj/machinery/seed_storage/garden,
 /obj/effect/floor_decal/corner/b_green{
@@ -1177,11 +1224,6 @@
 "uO" = (
 /turf/simulated/wall/r_wall/hull,
 /area/hydroponics)
-"vv" = (
-/obj/effect/floor_decal/corner/lightgrey,
-/obj/structure/closet/crate/bin,
-/turf/simulated/floor/tiled,
-/area/crew_quarters/mess)
 "wR" = (
 /turf/simulated/wall,
 /area/crew_quarters/mess)
@@ -1216,9 +1258,52 @@
 /obj/effect/floor_decal/corner/grey/mono,
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)
+"CD" = (
+/turf/simulated/wall/r_wall/hull,
+/area/space)
+"CJ" = (
+/obj/effect/floor_decal/corner/blue,
+/obj/item/weapon/stool/bar/padded,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/officersmess)
 "GQ" = (
 /turf/simulated/wall/r_wall/hull,
 /area/crew_quarters/mess)
+"JX" = (
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -23;
+	pixel_y = 0
+	},
+/obj/effect/floor_decal/corner/blue,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/officersmess)
+"Ka" = (
+/obj/machinery/firealarm,
+/obj/effect/floor_decal/corner/blue,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/officersmess)
+"Kw" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/blue,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/officersmess)
+"KO" = (
+/obj/effect/floor_decal/corner/lightgrey,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/command{
+	name = "officer's mess";
+	req_access = list(19)
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/officersmess)
 "Oc" = (
 /obj/effect/floor_decal/corner/lightgrey,
 /obj/structure/closet/medical_wall/filled{
@@ -1226,20 +1311,50 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/mess)
-"XH" = (
-/obj/effect/floor_decal/corner/lightgrey,
-/obj/structure/bed/chair/crash{
+"Ph" = (
+/obj/machinery/door/firedoor,
+/obj/effect/wallframe_spawn/reinforced/hull,
+/turf/simulated/floor/plating,
+/area/crew_quarters/officersmess)
+"TF" = (
+/obj/machinery/power/apc{
 	dir = 2;
-	icon_state = "shuttle_chair_preview"
+	name = "south bump";
+	pixel_y = -24
 	},
-/obj/effect/landmark/start{
-	name = "Marine"
+/obj/effect/floor_decal/corner/blue,
+/obj/structure/cable{
+	icon_state = "0-4";
+	d2 = 4
 	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/officersmess)
+"Ua" = (
+/obj/structure/closet/crate/bin,
+/obj/effect/floor_decal/corner/blue,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/officersmess)
+"XH" = (
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/bed/chair/crash,
+/obj/effect/floor_decal/corner/blue,
 /turf/simulated/floor/tiled,
-/area/crew_quarters/mess)
+/area/crew_quarters/officersmess)
+"YG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/blue,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/officersmess)
 
 (1,1,1) = {"
 aa
@@ -6486,13 +6601,13 @@ aa
 aa
 aa
 aa
-GQ
+mr
 XH
-ay
-aA
-aA
-bO
-bO
+gE
+CJ
+CJ
+JX
+dT
 bO
 bW
 bO
@@ -6588,13 +6703,13 @@ aa
 aa
 aa
 aa
-GQ
+mr
 cn
-ay
+gE
 lE
-aG
-ay
-ay
+Kw
+TF
+dT
 ap
 bP
 av
@@ -6690,13 +6805,13 @@ aa
 aa
 aa
 aa
-GQ
-GQ
-ay
-aA
+mr
+mr
+Ka
+CJ
 bi
-cc
-cc
+YG
+KO
 bK
 bQ
 bT
@@ -6793,12 +6908,12 @@ aa
 aa
 aa
 aa
-cq
-ay
-ay
-ay
-ay
-ay
+Ph
+Ua
+gE
+gE
+if
+dT
 ar
 au
 ax
@@ -6895,12 +7010,12 @@ aa
 aa
 aa
 aa
-GQ
-GQ
-vv
+mr
+mr
+gE
 cp
-ay
-wR
+gE
+dT
 wR
 af
 wR
@@ -6998,11 +7113,11 @@ aa
 aa
 aa
 aa
-GQ
-GQ
-GQ
+mr
+mr
+mr
 aK
-wR
+dT
 ae
 ae
 ae
@@ -7102,9 +7217,9 @@ aa
 aa
 aa
 aa
-GQ
-GQ
-GQ
+mr
+mr
+mr
 ae
 ae
 ae
@@ -7206,11 +7321,11 @@ aa
 aa
 aa
 aa
-GQ
+CD
 ae
 ae
 ae
-GQ
+CD
 aa
 aa
 aa
@@ -7308,11 +7423,11 @@ aa
 aa
 aa
 aa
-GQ
+CD
 ae
 ae
 ae
-GQ
+CD
 aa
 aa
 aa
@@ -7410,11 +7525,11 @@ aa
 aa
 aa
 aa
-GQ
-GQ
-GQ
-GQ
-GQ
+CD
+CD
+CD
+CD
+CD
 aa
 aa
 aa
