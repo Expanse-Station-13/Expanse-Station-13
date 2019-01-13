@@ -69,9 +69,10 @@
 	                    SKILL_SCIENCE     = SKILL_MAX)
 	skill_points = 30
 
-	MIRROR_ACCESS(list(access_security, access_brig, access_armory, access_medical, access_engine, access_engine_equip,
-		access_maint_tunnels, access_external_airlocks, access_change_ids, access_eva, access_bridge, access_tech_storage,
-		access_cargo, access_surgery, access_research, access_keycard_auth, access_tcomsat))
+	MIRROR_ACCESS(list(access_security, access_brig, access_armory, access_medical, access_kitchen, access_hydroponics,
+		access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_change_ids, access_eva,
+		access_bridge, access_tech_storage, access_cargo, access_mailsorting, access_surgery, access_research,
+		access_keycard_auth, access_tcomsat))
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/card_mod,
@@ -117,7 +118,7 @@
 
 
 	MIRROR_ACCESS(list(access_security, access_brig, access_armory, access_maint_tunnels, access_external_airlocks, access_eva,
-		access_bridge, access_cargo, access_keycard_auth))
+		access_bridge, access_cargo, access_mailsorting, access_keycard_auth, access_kitchen, access_hydroponics))
 
 	software_on_spawn = list(/datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
@@ -156,7 +157,7 @@
 	                    SKILL_FORENSICS   = SKILL_MAX)
 
 	MIRROR_ACCESS(list(access_security, access_brig, access_armory, access_maint_tunnels, access_external_airlocks, access_eva,
-		access_bridge))
+		access_bridge, access_kitchen, access_hydroponics))
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
@@ -191,7 +192,7 @@
 	                    SKILL_WEAPONS     = SKILL_MAX,
 	                    SKILL_FORENSICS   = SKILL_MAX)
 
-	MIRROR_ACCESS(list(access_security, access_brig, access_maint_tunnels))
+	MIRROR_ACCESS(list(access_security, access_brig, access_maint_tunnels, access_kitchen, access_hydroponics))
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
@@ -307,7 +308,7 @@
 
 	MIRROR_ACCESS(list(access_medical, access_maint_tunnels, access_external_airlocks, access_eva, access_bridge, access_surgery, access_research))
 
-	skill_points = 20
+	skill_points = 30
 
 
 /datum/job/hospital_corpsman
@@ -384,7 +385,7 @@
 	skill_points = 24
 
 	MIRROR_ACCESS(list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_eva,
-		access_bridge, access_tech_storage, access_cargo, access_tcomsat))
+		access_bridge, access_tech_storage, access_cargo, access_mailsorting, access_tcomsat))
 
 	software_on_spawn = list(/datum/computer_file/program/power_monitor,
 							 /datum/computer_file/program/alarm_monitor,
@@ -428,7 +429,7 @@
 	skill_points = 20
 
 	MIRROR_ACCESS(list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_eva,
-		access_tech_storage, access_cargo, access_tcomsat))
+		access_tech_storage, access_mailsorting, access_tcomsat))
 
 	software_on_spawn = list(/datum/computer_file/program/power_monitor,
 							 /datum/computer_file/program/alarm_monitor,
@@ -444,6 +445,7 @@
 	supervisors = "the Executive Officer"
 	selection_color = "#515151"
 	economic_power = 6
+	alt_titles = list() //hahaha no
 	outfit_type = /decl/hierarchy/outfit/job/unn
 	allowed_branches = list(
 		/datum/mil_branch/marine
@@ -453,5 +455,12 @@
 		/datum/mil_rank/marine/e3,
 		/datum/mil_rank/marine/e4
 	)
+
+	skill_points = 21
+
+	MIRROR_ACCESS(list(access_cargo, access_maint_tunnels, access_kitchen, access_hydroponics))
+
+/datum/job/assistant/get_access()
+	return access.Copy()
 
 #undef MIRROR_ACCESS

@@ -286,6 +286,9 @@
 	icon_state = "bordercolorcorner2";
 	dir = 6
 	},
+/obj/machinery/alarm{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seventh)
 "aK" = (
@@ -925,6 +928,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass/civilian,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/seventh)
 "bY" = (
@@ -1421,6 +1425,7 @@
 	icon_state = "borderfloor_white";
 	dir = 8
 	},
+/obj/structure/closet/crate/bin,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seventh)
 "kD" = (
@@ -1442,6 +1447,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seventh)
+"zU" = (
+/obj/random/obstruction,
+/turf/simulated/floor/plating,
+/area/maintenance/disposal)
 "AH" = (
 /turf/simulated/wall,
 /area/eva/standard)
@@ -1462,6 +1471,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seventh)
+"Kc" = (
+/turf/simulated/wall/r_wall/hull,
+/area/space)
 "Mu" = (
 /obj/effect/shuttle_landmark/sevastopol/deck7,
 /turf/space,
@@ -1469,6 +1481,10 @@
 "QI" = (
 /turf/simulated/wall/r_wall/hull,
 /area/janitor)
+"Ss" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/hallway/primary/seventh)
 "Xd" = (
 /turf/simulated/wall/r_wall/hull,
 /area/hallway/primary/seventh)
@@ -6312,7 +6328,7 @@ aa
 ab
 qv
 ad
-ad
+zU
 ad
 ad
 bF
@@ -6422,7 +6438,7 @@ ad
 br
 aM
 ch
-aI
+Ss
 bO
 cp
 cy
@@ -6626,7 +6642,7 @@ ad
 cc
 bR
 ag
-aI
+Ss
 aJ
 cr
 cz
@@ -7438,11 +7454,11 @@ aa
 aa
 aj
 aj
-Xd
+Kc
 ah
 ah
 ah
-Xd
+Kc
 aj
 aj
 aa
@@ -7540,11 +7556,11 @@ aa
 aa
 aa
 aj
-Xd
+Kc
 ah
 ah
 ah
-Xd
+Kc
 aj
 aa
 aa
@@ -7642,11 +7658,11 @@ aa
 aa
 aa
 aa
-Xd
-Xd
-Xd
-Xd
-Xd
+Kc
+Kc
+Kc
+Kc
+Kc
 aa
 aa
 aa

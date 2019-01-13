@@ -12,7 +12,7 @@
 	#include "sevastopol_security_state.dm"
 	#include "sevastopol_shuttles.dm"
 	#include "sevastopol_telecomms.dm"
-	//#include "sevastopol_unit_testing.dm"
+	#include "sevastopol_unit_testing.dm"
 
 	#include "items/cards_ids.dm"
 	#include "items/headsets.dm"

@@ -389,7 +389,7 @@
 /area/security/equipment)
 "aQ" = (
 /turf/simulated/wall/r_wall/hull,
-/area/hallway/primary/ninth)
+/area/space)
 "aR" = (
 /obj/structure/closet/secure_closet/security,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -849,14 +849,14 @@
 "bJ" = (
 /obj/machinery/status_display,
 /turf/simulated/wall,
-/area/security/prison)
+/area/security/brig)
 "bK" = (
 /obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/security/prison)
+/area/security/brig)
 "bL" = (
 /turf/simulated/wall/r_wall/hull,
-/area/security/prison)
+/area/security/brig)
 "bM" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
@@ -874,7 +874,7 @@
 /area/security/processing)
 "bN" = (
 /turf/simulated/wall,
-/area/security/prison)
+/area/security/brig)
 "bO" = (
 /obj/effect/floor_decal/corner/black/mono,
 /obj/effect/floor_decal/borderfloorblack{
@@ -883,7 +883,7 @@
 	},
 /obj/structure/bed,
 /turf/simulated/floor/tiled/dark/monotile,
-/area/security/prison)
+/area/security/brig)
 "bP" = (
 /obj/effect/floor_decal/corner/black/mono,
 /obj/effect/floor_decal/borderfloorblack{
@@ -892,7 +892,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/dark/monotile,
-/area/security/prison)
+/area/security/brig)
 "bQ" = (
 /obj/effect/floor_decal/corner/black/mono,
 /obj/effect/floor_decal/borderfloorblack{
@@ -902,7 +902,7 @@
 /obj/structure/hygiene/toilet,
 /obj/structure/curtain/open/shower/security,
 /turf/simulated/floor/tiled/dark/monotile,
-/area/security/prison)
+/area/security/brig)
 "bR" = (
 /turf/simulated/wall/r_wall/hull,
 /area/security/processing)
@@ -916,6 +916,7 @@
 	name = "west bump";
 	pixel_x = -24
 	},
+/obj/structure/closet/crate/bin,
 /turf/simulated/floor/tiled/dark,
 /area/security/processing)
 "bT" = (
@@ -1035,7 +1036,7 @@
 	req_access = list(1)
 	},
 /turf/simulated/floor/tiled/dark/monotile,
-/area/security/prison)
+/area/security/brig)
 "ca" = (
 /obj/effect/floor_decal/corner/black/mono,
 /obj/effect/floor_decal/corner/red/border,
@@ -1055,7 +1056,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/monotile,
-/area/security/prison)
+/area/security/brig)
 "cb" = (
 /obj/effect/floor_decal/corner/black/mono,
 /obj/effect/floor_decal/corner/red/border,
@@ -1070,7 +1071,7 @@
 	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/dark/monotile,
-/area/security/prison)
+/area/security/brig)
 "cc" = (
 /obj/effect/floor_decal/corner/black/mono,
 /obj/effect/floor_decal/corner/red/border,
@@ -1079,12 +1080,12 @@
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark/monotile,
-/area/security/prison)
+/area/security/brig)
 "cd" = (
 /obj/effect/floor_decal/corner/black/mono,
 /obj/effect/floor_decal/corner/red/border,
 /turf/simulated/floor/tiled/dark/monotile,
-/area/security/prison)
+/area/security/brig)
 "ce" = (
 /obj/structure/table/steel,
 /obj/item/device/flashlight/lamp,
@@ -1152,9 +1153,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
-/area/security/processing)
-"cm" = (
-/turf/simulated/wall,
 /area/security/processing)
 "cn" = (
 /obj/structure/closet/secure_closet/brig{
@@ -6420,7 +6418,7 @@ aZ
 bJ
 bN
 bZ
-cm
+bN
 cp
 bR
 ao
@@ -6522,7 +6520,7 @@ bE
 bK
 bO
 ca
-cm
+bN
 cq
 bR
 ao
@@ -6624,7 +6622,7 @@ bE
 bK
 bP
 cb
-bR
+bL
 bR
 bR
 ao

@@ -1,71 +1,32 @@
-/datum/unit_test/station_wires_shall_be_connected
-	exceptions = list(list(80, 107, 1, WEST))
-
-/datum/map/torch
+/datum/map/sevastopol
 	// Unit test exemptions
 	apc_test_exempt_areas = list(
-		/area/aquila/maintenance = NO_SCRUBBER|NO_VENT,
-		/area/engineering/atmos/storage = NO_SCRUBBER|NO_VENT,
-		/area/engineering/auxpower = NO_SCRUBBER|NO_VENT,
-		/area/engineering/drone_fabrication = NO_SCRUBBER|NO_VENT,
-		/area/engineering/engine_smes = NO_SCRUBBER|NO_VENT,
-		/area/engineering/fuelbay = NO_SCRUBBER,
-		/area/hallway/primary/seconddeck/center = NO_SCRUBBER|NO_VENT,
-		/area/holodeck = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/engineering/locker = NO_SCRUBBER|NO_VENT,
 		/area/maintenance = NO_SCRUBBER|NO_VENT,
-		/area/maintenance/auxsolarbridge = NO_SCRUBBER,
-		/area/maintenance/auxsolarport = NO_SCRUBBER,
-		/area/maintenance/auxsolarstarboard = NO_SCRUBBER,
+		/area/maintenance/disposal = 0,
+		/area/maintenance/eighth = 0,
 		/area/maintenance/exterior = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/maintenance/firstdeck/foreport = NO_SCRUBBER,
-		/area/maintenance/firstdeck/forestarboard = NO_SCRUBBER,
-		/area/maintenance/incinerator = NO_SCRUBBER,
-		/area/maintenance/seconddeck/aftport = NO_SCRUBBER,
-		/area/maintenance/seconddeck/forestarboard = NO_SCRUBBER,
-		/area/maintenance/seconddeck/hallway = NO_SCRUBBER|NO_VENT,
-		/area/maintenance/thirddeck/aftstarboard = NO_SCRUBBER|NO_VENT,
-		/area/maintenance/fifthdeck/aftstarboard = NO_SCRUBBER,
-		/area/maintenance/waterstore = 0,
-		/area/maintenance/bluespace = NO_SCRUBBER,
+		/area/maintenance/fourth = 0,
 		/area/mine/explored = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/mine/unexplored = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/ninja_dojo = NO_SCRUBBER |NO_VENT | NO_APC,
 		/area/outpost/abandoned = NO_SCRUBBER,
 		/area/rescue_base = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/shield = NO_SCRUBBER|NO_VENT,
 		/area/shuttle = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/shuttle/merchant = NO_SCRUBBER|NO_APC,
-		/area/shuttle/petrov = 0,
 		/area/skipjack_station = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/solar = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/space = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/storage = NO_SCRUBBER|NO_VENT,
-		/area/storage/auxillary/port = 0,
-		/area/storage/auxillary/starboard = 0,
-		/area/storage/primary = 0,
 		/area/storage/tech = 0,
-		/area/storage/tools = 0,
 		/area/supply = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/syndicate_station = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/thruster = NO_SCRUBBER,
 		/area/turbolift = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/turret_protected/ai = NO_SCRUBBER|NO_VENT,
-		/area/turret_protected/ai_outer_chamber = NO_SCRUBBER|NO_VENT,
-		/area/vacant = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/vacant/brig = NO_SCRUBBER|NO_VENT,
-		/area/vacant/prototype/control = 0,
-		/area/vacant/prototype/engine = 0,
-		/area/vacant/cargo = NO_SCRUBBER|NO_VENT,
-		/area/vacant/infirmary = NO_SCRUBBER|NO_VENT,
-		/area/vacant/missile = NO_SCRUBBER|NO_VENT,
-		/area/vacant/monitoring = NO_SCRUBBER|NO_VENT,
-		/area/vacant/office = 0,
-		/area/vacant/mess        = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/exoplanet          = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/exoplanet/desert   = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/exoplanet/grass    = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/exoplanet/snow     = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/exoplanet/garbage  = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/expedition = NO_SCRUBBER,
 		/area/smugglers/base = NO_SCRUBBER,
 		/area/smugglers/dorms = NO_SCRUBBER|NO_VENT,
 		/area/smugglers/office = NO_SCRUBBER|NO_VENT,
@@ -77,13 +38,10 @@
 		/area/icarus/open = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/map_template/hydrobase = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/map_template/hydrobase/station = NO_SCRUBBER,
-		/area/map_template/marooned = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/shuttle/petrov/maint = NO_SCRUBBER,
-		/area/vacant/bar = NO_SCRUBBER|NO_VENT|NO_APC
+		/area/map_template/marooned = NO_SCRUBBER|NO_VENT|NO_APC
 	)
 
 	area_coherency_test_exempt_areas = list(
-		/area/aquila/airlock,
 		/area/space,
 		/area/mine/explored,
 		/area/mine/unexplored,
@@ -111,15 +69,24 @@
 		/area/security/prison,
 		/area/shuttle/syndicate_elite/station,
 		/area/shuttle/escape/centcom,
-		/area/rnd/xenobiology/xenoflora_storage,
 		/area/turbolift,
-		/area/turbolift/start,
-		/area/turbolift/bridge,
-		/area/turbolift/firstdeck,
-		/area/turbolift/seconddeck,
-		/area/turbolift/thirddeck,
-		/area/turbolift/fourthdeck,
-		/area/template_noop
+		/area/turbolift/sevatopol_second,
+		/area/turbolift/sevatopol_third,
+		/area/turbolift/sevatopol_fourth,
+		/area/turbolift/sevatopol_fifth,
+		/area/turbolift/sevatopol_sixth,
+		/area/turbolift/sevatopol_seventh,
+		/area/turbolift/sevatopol_eighth,
+		/area/turbolift/sevatopol_ninth,
+		/area/template_noop,
+			//Following maps are hardcoded into the game, but we have no need of them
+		/area/chapel,
+		/area/medical/virology,
+		/area/medical/virologyaccess,
+		/area/rnd,
+		/area/rnd/xenobiology,
+		/area/rnd/xenobiology/xenoflora,
+		/area/rnd/xenobiology/xenoflora_storage
 	)
 
 	// not an away site? you probably want to be using area_usage_test_exempted_areas
@@ -147,3 +114,7 @@
 datum/unit_test/zas_area_test/supply_centcomm
 	name = "ZAS: Supply Shuttle (CentComm)"
 	area_path = /area/supply/dock
+
+datum/unit_test/zas_supply_shuttle_moved/check_result()
+	skip("Disabled for this map.")
+	return 1

@@ -60,6 +60,7 @@
 	icon_state = "railing0-1";
 	tag = "icon-railing0 (EAST)"
 	},
+/obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/engineering/office)
 "ai" = (
