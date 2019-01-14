@@ -51,9 +51,6 @@
 
 	var/dat
 
-	if (!( ticker ))
-		return
-
 	dat += "<hr/><br/><b>[storage_name]</b><br/>"
 	dat += "<i>Welcome, [user.real_name].</i><br/><br/><hr/>"
 	dat += "<a href='?src=\ref[src];log=1'>View storage log</a>.<br>"
@@ -261,7 +258,7 @@
 	if(occupant)
 		occupant.forceMove(loc)
 		occupant.resting = 1
-	return ..()
+	. = ..()
 
 /obj/machinery/cryopod/Initialize()
 	. = ..()
@@ -328,7 +325,7 @@
 		qdel(I)
 	qdel(R.module)
 
-	return ..()
+	. = ..()
 
 // This function can not be undone; do not call this unless you are sure
 // Also make sure there is a valid control computer
@@ -370,7 +367,7 @@
 		else
 			if(control_computer && control_computer.allow_items)
 				control_computer.frozen_items += W
-				W.loc = null
+				W.forceMove(null)
 			else
 				W.forceMove(src.loc)
 
@@ -386,18 +383,16 @@
 	//Handle job slot/tater cleanup.
 	if(occupant.mind)
 		var/job = occupant.mind.assigned_role
-		job_master.FreeRole(job)
+		job_master.ClearSlot(job)
 
 		if(occupant.mind.objectives.len)
 			occupant.mind.objectives = null
 			occupant.mind.special_role = null
-	//else
-		//if(ticker.mode.name == "AutoTraitor")
-			//var/datum/game_mode/traitor/autotraitor/current_mode = ticker.mode
-			//current_mode.possible_traitors.Remove(occupant)
 
 	// Delete them from datacore.
-	var/datum/computer_file/report/crew_record/R = get_crewmember_record(occupant.real_name)
+	var/sanitized_name = occupant.real_name
+	sanitized_name = sanitize(sanitized_name)
+	var/datum/computer_file/report/crew_record/R = get_crewmember_record(sanitized_name)
 	if(R)
 		qdel(R)
 
@@ -427,6 +422,33 @@
 	qdel(occupant)
 	set_occupant(null)
 
+/obj/machinery/cryopod/proc/attempt_enter(var/mob/target, var/mob/user)
+	if(target.client)
+		if(target != user)
+			if(alert(target,"Would you like to enter long-term storage?",,"Yes","No") != "Yes")
+				return
+	if(!user.incapacitated() && user.Adjacent(src) && user.Adjacent(target))
+		visible_message("[user] starts putting [target] into \the [src].", 3)
+		if(!do_after(user, 20, src)|| QDELETED(target))
+			return
+		set_occupant(target)
+
+		// Book keeping!
+		log_and_message_admins("has entered a stasis pod")
+
+		//Despawning occurs when process() is called with an occupant without a client.
+		src.add_fingerprint(target)
+
+//Like grap-put, but for mouse-drop.
+/obj/machinery/cryopod/MouseDrop_T(var/mob/target, var/mob/user)
+	if(!check_occupant_allowed(target))
+		return
+	if(occupant)
+		to_chat(user, "<span class='notice'>\The [src] is in use.</span>")
+		return
+
+	user.visible_message("<span class='notice'>\The [user] begins placing \the [target] into \the [src].</span>", "<span class='notice'>You start placing \the [target] into \the [src].</span>")
+	attempt_enter(target, user)
 
 /obj/machinery/cryopod/attackby(var/obj/item/weapon/G as obj, var/mob/user as mob)
 
@@ -442,32 +464,7 @@
 		if(!check_occupant_allowed(grab.affecting))
 			return
 
-		var/willing = null //We don't want to allow people to be forced into despawning.
-		var/mob/M = G:affecting
-
-		if(M.client)
-			if(alert(M,"Would you like to enter long-term storage?",,"Yes","No") == "Yes")
-				if(!M || !grab || !grab.affecting) return
-				willing = 1
-		else
-			willing = 1
-
-		if(willing)
-
-			visible_message("[user] starts putting [grab.affecting:name] into \the [src].", 3)
-
-			if(do_after(user, 20, src))
-				if(!M || !grab || !grab.affecting) return
-
-			set_occupant(M)
-
-			// Book keeping!
-			var/turf/location = get_turf(src)
-			log_admin("[key_name_admin(M)] has entered a stasis pod. (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[location.x];Y=[location.y];Z=[location.z]'>JMP</a>)")
-			message_admins("<span class='notice'>[key_name_admin(M)] has entered a stasis pod.</span>")
-
-			//Despawning occurs when process() is called with an occupant without a client.
-			src.add_fingerprint(M)
+		attempt_enter(grab.affecting, user)
 
 /obj/machinery/cryopod/verb/eject()
 	set name = "Eject Pod"
@@ -484,7 +481,7 @@
 	if(announce) items -= announce
 
 	for(var/obj/item/W in items)
-		W.forceMove(get_turf(src))
+		W.dropInto(loc)
 
 	src.go_out()
 	add_fingerprint(usr)
@@ -535,7 +532,7 @@
 		occupant.client.eye = src.occupant.client.mob
 		occupant.client.perspective = MOB_PERSPECTIVE
 
-	occupant.forceMove(get_turf(src))
+	occupant.dropInto(loc)
 	set_occupant(null)
 
 	icon_state = base_icon_state

@@ -274,7 +274,7 @@ proc/blood_splatter(var/target,var/datum/reagent/blood/source,var/large,var/spra
 /mob/living/carbon/human/proc/get_blood_circulation()
 	var/obj/item/organ/internal/heart/heart = internal_organs_by_name[BP_HEART]
 	var/blood_volume = get_blood_volume()
-	if(!heart || (heart.pulse == PULSE_NONE && !(status_flags & FAKEDEATH) && heart.robotic < ORGAN_ROBOT))
+	if(!heart || (heart.pulse == PULSE_NONE && !(status_flags & FAKEDEATH) && !BP_IS_ROBOTIC(heart)))
 		blood_volume *= 0.25
 	else
 		var/pulse_mod = 1
@@ -315,3 +315,11 @@ proc/blood_splatter(var/target,var/datum/reagent/blood/source,var/large,var/spra
 	blood_volume_mod = blood_volume_mod + oxygenated_mult - (blood_volume_mod * oxygenated_mult)
 	blood_volume = blood_volume * blood_volume_mod
 	return min(blood_volume, 100)
+
+/mob/living/carbon/human/proc/cure_virus(var/virus_uuid)
+	if(vessel && virus_uuid)
+		for(var/datum/reagent/blood/B in vessel.reagent_list)
+			var/list/viruses = list()
+			viruses = B.data["virus2"]
+			viruses.Remove(virus_uuid)
+			B.data["virus2"] = viruses

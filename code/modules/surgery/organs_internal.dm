@@ -17,7 +17,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(!affected)
 		return 0
-	if(affected.robotic >= ORGAN_ROBOT)
+	if(BP_IS_ROBOTIC(affected))
 		return affected.hatch_state == HATCH_OPENED
 	else
 		return affected.how_open() == (affected.encased ? SURGERY_ENCASED : SURGERY_RETRACTED)
@@ -42,7 +42,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(!affected)
 		return FALSE
-	if(affected.robotic >= ORGAN_ROBOT)
+	if(BP_IS_ROBOTIC(affected) || BP_IS_CRYSTAL(affected))
 		return FALSE
 	for(var/obj/item/organ/internal/I in affected.internal_organs)
 		if(I.damage > 0)
@@ -65,7 +65,7 @@
 	if(!affected || affected.how_open() < 2)
 		return
 	for(var/obj/item/organ/internal/I in affected.internal_organs)
-		if(I && I.damage > 0 && I.robotic < ORGAN_ROBOT && (!I.status & ORGAN_DEAD || I.can_recover()) && (I.surface_accessible || affected.how_open() >= (affected.encased ? 3 : 2)))
+		if(I && I.damage > 0 && !BP_IS_ROBOTIC(I) && (!I.status & ORGAN_DEAD || I.can_recover()) && (I.surface_accessible || affected.how_open() >= (affected.encased ? 3 : 2)))
 			user.visible_message("[user] starts treating damage to [target]'s [I.name] with [tool_name].", \
 			"You start treating damage to [target]'s [I.name] with [tool_name]." )
 
@@ -85,7 +85,7 @@
 	if(!affected || affected.how_open() < 2)
 		return
 	for(var/obj/item/organ/internal/I in affected.internal_organs)
-		if(I && I.damage > 0 && I.robotic < ORGAN_ROBOT && (I.surface_accessible || affected.how_open() >= (affected.encased ? SURGERY_ENCASED : SURGERY_RETRACTED)))
+		if(I && I.damage > 0 && !BP_IS_ROBOTIC(I) && (I.surface_accessible || affected.how_open() >= (affected.encased ? SURGERY_ENCASED : SURGERY_RETRACTED)))
 			if(I.status & ORGAN_DEAD && I.can_recover())
 				user.visible_message("<span class='notice'>[user] treats damage to [target]'s [I.name] with [tool_name], though it needs to be recovered further.</span>", \
 				"<span class='notice'>You treat damage to [target]'s [I.name] with [tool_name], though it needs to be recovered further.</span>" )
@@ -113,7 +113,7 @@
 		affected.take_external_damage(dam_amt, 0, (DAM_SHARP|DAM_EDGE), used_weapon = tool)
 
 	for(var/obj/item/organ/internal/I in affected.internal_organs)
-		if(I && I.damage > 0 && I.robotic < ORGAN_ROBOT && (I.surface_accessible || affected.how_open() >= (affected.encased ? 3 : 2)))
+		if(I && I.damage > 0 && !BP_IS_ROBOTIC(I) && (I.surface_accessible || affected.how_open() >= (affected.encased ? 3 : 2)))
 			I.take_internal_damage(dam_amt)
 
 //////////////////////////////////////////////////////////////////
@@ -141,7 +141,7 @@
 	if(!affected)
 		return 0
 
-	if(affected.robotic >= ORGAN_ROBOT)
+	if(BP_IS_ROBOTIC(affected) || BP_IS_CRYSTAL(affected))
 		return 0
 
 	target.op_stage.current_organ = null
@@ -239,7 +239,7 @@
 		affected.implants -= O
 		O.dropInto(target.loc)
 		target.op_stage.current_organ = null
-		if(affected.robotic < ORGAN_ROBOT)
+		if(!BP_IS_ROBOTIC(affected))
 			playsound(target.loc, 'sound/effects/squelch1.ogg', 15, 1)
 		else
 			playsound(target.loc, 'sound/items/Ratchet.ogg', 50, 1)
@@ -278,8 +278,16 @@
 	if(!istype(O))
 		return 0
 
-	if((affected.robotic >= ORGAN_ROBOT) && !(O.robotic >= ORGAN_ROBOT))
-		to_chat(user, "<span class='danger'>You cannot install a naked organ into a robotic body.</span>")
+	if(BP_IS_CRYSTAL(O) && !BP_IS_CRYSTAL(affected))
+		to_chat(user, "<span class='warning'>You cannot install a crystalline organ into a non-crystalline bodypart.</span>")
+		return SURGERY_FAILURE
+
+	if(!BP_IS_CRYSTAL(O) && BP_IS_CRYSTAL(affected))
+		to_chat(user, "<span class='warning'>You cannot install a non-crystalline organ into a crystalline bodypart.</span>")
+		return SURGERY_FAILURE
+
+	if(BP_IS_ROBOTIC(affected) && !BP_IS_ROBOTIC(O))
+		to_chat(user, "<span class='warning'>You cannot install a naked organ into a robotic body.</span>")
 		return SURGERY_FAILURE
 
 	if(!target.species)
@@ -335,7 +343,7 @@
 		I.take_internal_damage(rand(3,5))
 
 //////////////////////////////////////////////////////////////////
-//	 Organ inserting surgery step
+//	 Organ attachment surgery step
 //////////////////////////////////////////////////////////////////
 /datum/surgery_step/internal/attach_organ
 	allowed_tools = list(
@@ -355,7 +363,7 @@
 	target.op_stage.current_organ = null
 
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	if(!affected || affected.robotic >= ORGAN_ROBOT)
+	if(!affected || BP_IS_ROBOTIC(affected) || BP_IS_CRYSTAL(affected))
 		// robotic attachment handled via screwdriver
 		return 0
 
@@ -370,6 +378,11 @@
 	if(organ_to_replace.parent_organ != affected.organ_tag)
 		to_chat(user, "<span class='warning'>You can't find anywhere to attach [organ_to_replace] to!</span>")
 		return SURGERY_FAILURE
+
+	var/obj/item/organ/internal/augment/A = organ_to_replace
+	if(istype(A))
+		if(!(A.augment_flags & AUGMENTATION_ORGANIC))
+			to_chat(user, SPAN_WARNING("\the [A] cannot function within a non-robotic limb"))
 
 	var/o_a =  (organ_to_replace.gender == PLURAL) ? "" : "a "
 
@@ -435,14 +448,14 @@
 	if(!affected)
 		return 0
 
-	if(affected.robotic >= ORGAN_ROBOT)
+	if(BP_IS_ROBOTIC(affected) || BP_IS_CRYSTAL(affected))
 		return 0
 
 	target.op_stage.current_organ = null
 
 	var/obj/item/organ/internal/list/dead_organs = list()
 	for(var/obj/item/organ/internal/I in target.internal_organs)
-		if(I && !(I.status & ORGAN_CUT_AWAY) && I.status & ORGAN_DEAD && I.parent_organ == affected.organ_tag && !(I.robotic >= ORGAN_ROBOT))
+		if(I && !(I.status & ORGAN_CUT_AWAY) && I.status & ORGAN_DEAD && I.parent_organ == affected.organ_tag && !BP_IS_ROBOTIC(I))
 			dead_organs |= I
 
 	var/obj/item/organ/internal/organ_to_fix = input(user, "Which organ do you want to regenerate?") as null|anything in dead_organs

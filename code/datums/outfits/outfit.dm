@@ -17,7 +17,7 @@ var/list/outfits_decls_by_type_
 		return
 	outfits_decls_ = list()
 	outfits_decls_by_type_ = list()
-	outfits_decls_root_ = new/decl/hierarchy/outfit()
+	outfits_decls_root_ = decls_repository.get_decl(/decl/hierarchy/outfit)
 
 /decl/hierarchy/outfit
 	name = "Naked"
@@ -74,7 +74,7 @@ var/list/outfits_decls_by_type_
 		J.toggle()
 		J.toggle_valve()
 
-// A proc for non-human species, specially Unathi and Tajara, since they e.g.
+// A proc for non-human species, specially Unathi, since they e.g.
 // can't normally wear gloves as humans. Correct this issue by trying again, but
 // apply some changes to the said item.
 //

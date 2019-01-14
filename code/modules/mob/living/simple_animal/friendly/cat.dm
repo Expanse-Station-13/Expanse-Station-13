@@ -25,10 +25,12 @@
 	holder_type = /obj/item/weapon/holder/cat
 	mob_size = MOB_SMALL
 	possession_candidate = 1
+	pass_flags = PASS_FLAG_TABLE
 
 /mob/living/simple_animal/cat/Life()
-	if(!..() || incapacitated() || client)
-		return
+	. = ..()
+	if(!.)
+		return FALSE
 	//MICE!
 	if((src.loc) && isturf(src.loc))
 		if(!resting && !buckled)
@@ -165,7 +167,9 @@
 		..()
 
 /mob/living/simple_animal/cat/fluff/Life()
-	..()
+	. = ..()
+	if(!.)
+		return FALSE 
 	if (stat || !friend)
 		return
 	if (get_dist(src, friend) <= 1)

@@ -41,6 +41,8 @@
 #define COLOR_OFF_WHITE        "#eeeeee"
 #define COLOR_WHITE            "#ffffff"
 #define COLOR_NT_RED           "#9d2300"
+#define COLOR_BOTTLE_GREEN     "#1f6b4f"
+#define COLOR_PALE_BTL_GREEN   "#57967f"
 #define COLOR_GUNMETAL         "#545c68"
 #define COLOR_MUZZLE_FLASH     "#ffffb2"
 #define COLOR_CHESTNUT         "#996633"
@@ -57,6 +59,9 @@
 #define COLOR_CIVIE_GREEN      "#b7f27d"
 #define COLOR_TITANIUM         "#d1e6e3"
 #define COLOR_DARK_GUNMETAL    "#4c535b"
+#define COLOR_BRONZE           "#8c7853"
+#define COLOR_BRASS            "#b99d71"
+#define COLOR_INDIGO           "#4b0082"
 
 #define	PIPE_COLOR_GREY        "#ffffff"	//yes white is grey
 #define	PIPE_COLOR_RED         "#ff0000"
@@ -88,5 +93,25 @@
 #define GLASS_COLOR_FROSTED    "#ffffff"
 
 #define COLOR_BLOOD_HUMAN      "#a10808"
+
+//Color defines used by the assembly detailer.
+#define COLOR_ASSEMBLY_BLACK   "#545454"
+#define COLOR_ASSEMBLY_BGRAY   "#9497ab"
+#define COLOR_ASSEMBLY_WHITE   "#e2e2e2"
+#define COLOR_ASSEMBLY_RED     "#cc4242"
+#define COLOR_ASSEMBLY_ORANGE  "#e39751"
+#define COLOR_ASSEMBLY_BEIGE   "#af9366"
+#define COLOR_ASSEMBLY_BROWN   "#97670e"
+#define COLOR_ASSEMBLY_GOLD    "#aa9100"
+#define COLOR_ASSEMBLY_YELLOW  "#ceca2b"
+#define COLOR_ASSEMBLY_GURKHA  "#999875"
+#define COLOR_ASSEMBLY_LGREEN  "#789876"
+#define COLOR_ASSEMBLY_GREEN   "#44843c"
+#define COLOR_ASSEMBLY_LBLUE   "#5d99be"
+#define COLOR_ASSEMBLY_BLUE    "#38559e"
+#define COLOR_ASSEMBLY_PURPLE  "#6f6192"
+
+// Used by fluid system.
+#define COLOR_OCEAN "#99f5ff"
 
 #define RANDOM_RGB rgb(rand(0,255), rand(0,255), rand(0,255))

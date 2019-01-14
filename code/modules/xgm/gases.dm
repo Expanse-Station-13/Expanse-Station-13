@@ -17,7 +17,6 @@
 	name = "Carbon Dioxide"
 	specific_heat = 30	// J/(mol*K)
 	molar_mass = 0.044	// kg/mol
-	breathed_product = /datum/reagent/carbon_dioxide
 
 /decl/xgm_gas/methyl_bromide
 	id = "methyl_bromide"
@@ -149,6 +148,7 @@
 	id = "chlorine"
 	name = "Chlorine"
 	tile_overlay = "chlorine"
+	overlay_limit = 0.5
 	specific_heat = 5	// J/(mol*K)
 	molar_mass = 0.017	// kg/mol
 	flags = XGM_GAS_CONTAMINANT
@@ -160,7 +160,9 @@
 
 	specific_heat = 30	// J/(mol*K)
 	molar_mass = 0.020	// kg/mol
-	breathed_product = /datum/reagent/water
+	breathed_product =     /datum/reagent/water
+	condensation_product = /datum/reagent/water
+	condensation_point =   308.15 // 35C. Dew point is ~20C but this is better for gameplay considerations.
 
 /decl/xgm_gas/sulfurdioxide
 	id = "sulfurdioxide"
@@ -176,3 +178,10 @@
 	specific_heat = 20	// J/(mol*K)
 	molar_mass = 0.017	// kg/mol
 	breathed_product = /datum/reagent/ammonia
+
+/decl/xgm_gas/carbon_monoxide
+	id = "carbon_monoxide"
+	name = "Carbon Monoxide"
+	specific_heat = 30	// J/(mol*K)
+	molar_mass = 0.028	// kg/mol
+	breathed_product = /datum/reagent/carbon_monoxide

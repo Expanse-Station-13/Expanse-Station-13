@@ -8,7 +8,7 @@
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
 
-	matter = list(DEFAULT_WALL_MATERIAL = 50,"glass" = 20)
+	matter = list(MATERIAL_STEEL = 50,MATERIAL_GLASS = 20)
 
 	action_button_name = "Toggle Flashlight"
 	var/on = 0
@@ -21,7 +21,7 @@
 	. = ..()
 	update_icon()
 
-/obj/item/device/flashlight/update_icon()
+/obj/item/device/flashlight/on_update_icon()
 	if(on)
 		icon_state = "[initial(icon_state)]-on"
 		set_light(flashlight_max_bright, flashlight_inner_range, flashlight_outer_range, 2, light_color)
@@ -46,7 +46,7 @@
 	add_fingerprint(user)
 	if(on && user.zone_sel.selecting == BP_EYES)
 
-		if((CLUMSY in user.mutations) && prob(50))	//too dumb to use flashlight properly
+		if((MUTATION_CLUMSY in user.mutations) && prob(50))	//too dumb to use flashlight properly
 			return ..()	//just hit them in the head
 
 		var/mob/living/carbon/human/H = M	//mob has protective eyewear
@@ -83,12 +83,12 @@
 	if(H == user)	//can't look into your own eyes buster
 		return
 
-	if(vision.robotic < ORGAN_ROBOT )
+	if(!BP_IS_ROBOTIC(vision))
 
 		if(vision.owner.stat == DEAD || H.blinded)	//mob is dead or fully blind
 			to_chat(user, "<span class='warning'>\The [H]'s pupils do not react to the light!</span>")
 			return
-		if(XRAY in H.mutations)
+		if(MUTATION_XRAY in H.mutations)
 			to_chat(user, "<span class='notice'>\The [H]'s pupils give an eerie glow!</span>")
 		if(vision.damage)
 			to_chat(user, "<span class='warning'>There's visible damage to [H]'s [vision.name]!</span>")
@@ -145,7 +145,7 @@
 	item_state = "maglight"
 	force = 10
 	attack_verb = list ("smacked", "thwacked", "thunked")
-	matter = list(DEFAULT_WALL_MATERIAL = 200,"glass" = 50)
+	matter = list(MATERIAL_STEEL = 200,MATERIAL_GLASS = 50)
 	hitsound = "swing_hit"
 	flashlight_max_bright = 0.5
 	flashlight_outer_range = 5
@@ -161,10 +161,10 @@
 	w_class = ITEM_SIZE_NORMAL
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
-	matter = list(DEFAULT_WALL_MATERIAL = 200,"glass" = 100)
+	matter = list(MATERIAL_STEEL = 200,MATERIAL_GLASS = 100)
 	flashlight_outer_range = 5
 
-/obj/item/device/flashlight/lantern/update_icon()
+/obj/item/device/flashlight/lantern/on_update_icon()
 	..()
 	if(on)
 		item_state = "lantern-on"
@@ -266,6 +266,11 @@
 	if(.)
 		activate(user)
 
+/obj/item/device/flashlight/flare/afterattack(var/obj/O, var/mob/user, var/proximity)
+	if(proximity && istype(O) && on)
+		O.HandleObjectHeating(src, user, 500)
+	..()
+
 /obj/item/device/flashlight/flare/proc/activate(var/mob/user)
 	if(on)
 		return
@@ -284,7 +289,7 @@
 		force = initial(force)
 		damtype = initial(damtype)
 
-/obj/item/device/flashlight/flare/update_icon()
+/obj/item/device/flashlight/flare/on_update_icon()
 	..()
 	if(!on && !fuel)
 		icon_state = "[initial(icon_state)]-empty"
@@ -310,7 +315,7 @@
 	fuel = rand(1600, 2000)
 	light_color = color
 
-/obj/item/device/flashlight/flare/glowstick/update_icon()
+/obj/item/device/flashlight/flare/glowstick/on_update_icon()
 	item_state = "glowstick"
 	overlays.Cut()
 	if(!fuel)
@@ -380,7 +385,7 @@
 /obj/item/device/flashlight/slime/New()
 	..()
 
-/obj/item/device/flashlight/slime/update_icon()
+/obj/item/device/flashlight/slime/on_update_icon()
 	return
 
 /obj/item/device/flashlight/slime/attack_self(mob/user)
@@ -394,6 +399,7 @@
 	icon = 'icons/obj/machines/floodlight.dmi'
 	icon_state = "floodlamp"
 	item_state = "lamp"
+	on = 0
 	w_class = ITEM_SIZE_LARGE
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 
@@ -422,6 +428,9 @@
 
 /obj/item/device/flashlight/floodlamp/AltClick()
 	rotate()
+
+/obj/item/device/flashlight/lamp/floodlamp/green
+	icon_state = "greenfloodlamp"
 
 //Lava Lamps: Because we're already stuck in the 70ies with those fax machines.
 /obj/item/device/flashlight/lamp/lava

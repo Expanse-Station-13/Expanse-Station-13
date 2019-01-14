@@ -12,7 +12,7 @@
 
 	var/obj/item/weapon/reagent_containers/container = null
 
-/obj/machinery/disease2/antibodyanalyser/update_icon()
+/obj/machinery/disease2/antibodyanalyser/on_update_icon()
 	if(scanning)
 		icon_state = "analyser_processing"
 	else
@@ -51,7 +51,7 @@
 				if(!given_antibodies.len) //return if no antibodies
 					return 0
 
-			container.forceMove(get_turf(src))
+			container.dropInto(loc)
 			container = null
 
 			update_icon()
@@ -61,7 +61,7 @@
 			scanning = 5
 			update_icon()
 		else
-			container.forceMove(get_turf(src))
+			container.dropInto(loc)
 			container = null
 
 			src.state("\The [src] buzzes, \"Failed to identify a pure sample of antibodies in the solution.\"")

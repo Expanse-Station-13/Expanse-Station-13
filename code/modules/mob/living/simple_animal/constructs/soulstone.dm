@@ -39,7 +39,7 @@
 	if(full == SOULSTONE_CRACKED)
 		to_chat(user, "This one is cracked and useless.")
 
-/obj/item/device/soulstone/update_icon()
+/obj/item/device/soulstone/on_update_icon()
 	if(full == SOULSTONE_EMPTY)
 		icon_state = "soulstone"
 	if(full == SOULSTONE_ESSENCE)
@@ -96,7 +96,7 @@
 	else if(shade.loc == src)
 		var/choice = alert("Would you like to invoke the spirit within?",,"Yes","No")
 		if(choice == "Yes")
-			shade.forceMove(get_turf(src))
+			shade.dropInto(loc)
 			to_chat(user, "<span class='notice'>You summon \the [shade].</span>")
 		if(choice == "No")
 			return

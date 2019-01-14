@@ -20,7 +20,7 @@
 
 /obj/item/weapon/fuel_assembly/Initialize()
 	. = ..()
-	var/material/material = get_material_by_name(fuel_type)
+	var/material/material = SSmaterials.get_material_by_name(fuel_type)
 	if(istype(material))
 		SetName("[material.use_name] fuel rod assembly")
 		desc = "A fuel rod for a fusion reactor. This one is made from [material.use_name]."
@@ -55,16 +55,16 @@
 
 // Mapper shorthand.
 /obj/item/weapon/fuel_assembly/deuterium/New(var/newloc)
-	..(newloc, "deuterium")
+	..(newloc, MATERIAL_DEUTERIUM)
 
 /obj/item/weapon/fuel_assembly/tritium/New(var/newloc)
-	..(newloc, "tritium")
+	..(newloc, MATERIAL_TRITIUM)
 
 /obj/item/weapon/fuel_assembly/phoron/New(var/newloc)
-	..(newloc, "phoron")
+	..(newloc, MATERIAL_PHORON)
 
 /obj/item/weapon/fuel_assembly/supermatter/New(var/newloc)
-	..(newloc, "supermatter")
+	..(newloc, MATERIAL_SUPERMATTER)
 
 /obj/item/fuel_assembly/hydrogen/New(var/newloc)
-	..(newloc, "hydrogen")
+	..(newloc, MATERIAL_HYDROGEN)

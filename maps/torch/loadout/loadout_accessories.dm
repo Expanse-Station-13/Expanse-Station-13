@@ -3,7 +3,7 @@
 	description = "A medal or ribbon awarded to SolGov personnel for significant accomplishments."
 	path = /obj/item/clothing/accessory
 	cost = 8
-	allowed_roles = SOLGOV_ROLES
+	allowed_branches = SOLGOV_BRANCHES
 
 /datum/gear/accessory/solawardmajor/New()
 	..()
@@ -23,7 +23,7 @@
 	description = "A medal or ribbon awarded to SolGov personnel for minor accomplishments."
 	path = /obj/item/clothing/accessory
 	cost = 5
-	allowed_roles = SOLGOV_ROLES
+	allowed_branches = SOLGOV_BRANCHES
 
 /datum/gear/accessory/solawardminor/New()
 	..()
@@ -38,14 +38,22 @@
 	display_name = "dog tags"
 	path = /obj/item/clothing/accessory/badge/solgov/tags
 
+/datum/gear/accessory/ec_patch
+	display_name = "Expeditionary Corps patch"
+	path = /obj/item/clothing/accessory/solgov/ec_patch
+	description = "A shoulder patch representing the Expeditionary Corps."
+	flags = GEAR_HAS_TYPE_SELECTION
+	allowed_branches = list(/datum/mil_branch/expeditionary_corps)
+
 /datum/gear/accessory/torch_patch
 	display_name = "Torch mission patch"
 	path = /obj/item/clothing/accessory/solgov/torch_patch
+	description = "A shoulder patch representing the SEV Torch and its mission. Given to all the oddjobs pulled from various branches to work on the Torch."
 
 /datum/gear/accessory/pilot_pin
 	display_name = "pilot's qualification pin"
-	path = /obj/item/clothing/accessory/solgov/speciality/pilot
-	allowed_roles = list(/datum/job/captain, /datum/job/hop, /datum/job/bridgeofficer, /datum/job/pathfinder)
+	path = /obj/item/clothing/accessory/solgov/specialty/pilot
+	allowed_roles = list(/datum/job/captain, /datum/job/hop, /datum/job/bridgeofficer, /datum/job/pathfinder, /datum/job/nt_pilot)
 
 /datum/gear/accessory/fleetpatch
 	display_name = "fleet patch"
@@ -57,11 +65,6 @@
 	display_name = "master at arms brassard"
 	path = /obj/item/clothing/accessory/armband/solgov/ma
 	allowed_roles = SECURITY_ROLES
-
-/datum/gear/accessory/armband_solgov
-	display_name = "peacekeeper armband"
-	path = /obj/item/clothing/accessory/armband/bluegold
-	allowed_roles = SOLGOV_ROLES
 
 /datum/gear/accessory/armband_security
 	allowed_roles = SECURITY_ROLES
@@ -90,7 +93,7 @@
 	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/accessory/ntaward
-	allowed_roles = NANOTRASEN_ROLES
+	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/accessory/tie
 	allowed_branches = CIVILIAN_BRANCHES
@@ -245,7 +248,7 @@
 
 /datum/gear/tactical/large_pouches/misc
 	display_name = "miscellaneous large armor pouches selection"
-	path = /obj/item/clothing/accessory/storage/pouches
+	path = /obj/item/clothing/accessory/storage/pouches/large
 	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/tactical/large_pouches/misc/New()

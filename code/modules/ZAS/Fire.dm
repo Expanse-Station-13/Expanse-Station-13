@@ -59,8 +59,7 @@ turf/proc/hotspot_expose(exposed_temperature, exposed_volume, soh = 0)
 	else
 		for(var/turf/simulated/T in fire_tiles)
 			if(istype(T.fire))
-				T.fire.RemoveFire()
-			T.fire = null
+				qdel(T.fire)
 		fire_tiles.Cut()
 		fuel_objs.Cut()
 
@@ -94,6 +93,10 @@ turf/proc/hotspot_expose(exposed_temperature, exposed_volume, soh = 0)
 	return 0
 
 /turf/simulated/create_fire(fl)
+
+	if(submerged())
+		return 1
+
 	if(fire)
 		fire.firelevel = max(fl, fire.firelevel)
 		return 1
@@ -130,11 +133,11 @@ turf/proc/hotspot_expose(exposed_temperature, exposed_volume, soh = 0)
 	. = 1
 
 	var/turf/simulated/my_tile = loc
-	if(!istype(my_tile) || !my_tile.zone)
+	if(!istype(my_tile) || !my_tile.zone || my_tile.submerged())
 		if(my_tile && my_tile.fire == src)
 			my_tile.fire = null
-		RemoveFire()
-		return 1
+		qdel(src)
+		return PROCESS_KILL
 
 	var/datum/gas_mixture/air_contents = my_tile.return_air()
 
@@ -207,19 +210,12 @@ turf/proc/hotspot_expose(exposed_temperature, exposed_volume, soh = 0)
 	return heat2color(temperature)
 
 /obj/fire/Destroy()
-	RemoveFire()
-
-	. = ..()
-
-/obj/fire/proc/RemoveFire()
 	var/turf/T = loc
 	if (istype(T))
 		set_light(0)
-
 		T.fire = null
-		loc = null
 	SSair.active_hotspots.Remove(src)
-
+	. = ..()
 
 /turf/simulated/var/fire_protection = 0 //Protects newly extinguished tiles from being overrun again.
 /turf/proc/apply_fire_protection()

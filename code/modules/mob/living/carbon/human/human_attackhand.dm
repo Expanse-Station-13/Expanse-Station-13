@@ -1,4 +1,14 @@
-/mob/living/carbon/human/proc/get_unarmed_attack(var/mob/living/carbon/human/target, var/hit_zone)
+/mob/living/carbon/human/proc/get_unarmed_attack(var/mob/target, var/hit_zone = null)
+	if(!hit_zone)
+		hit_zone = zone_sel.selecting
+
+	if(default_attack && default_attack.is_usable(src, target, hit_zone))
+		if(pulling_punches)
+			var/datum/unarmed_attack/soft_type = default_attack.get_sparring_variant()
+			if(soft_type)
+				return soft_type
+		return default_attack
+
 	for(var/datum/unarmed_attack/u_attack in species.unarmed_attacks)
 		if(u_attack.is_usable(src, target, hit_zone))
 			if(pulling_punches)
@@ -37,10 +47,13 @@
 			var/obj/item/organ/external/affecting = get_organ(ran_zone(H.zone_sel.selecting))
 			var/armor_block = run_armor_check(affecting, "melee")
 
-			if(HULK in H.mutations)
+			if(MUTATION_HULK in H.mutations)
 				damage += 5
 
 			playsound(loc, "punch", 25, 1, -1)
+
+			update_personal_goal(/datum/goal/achievement/fistfight, TRUE)
+			H.update_personal_goal(/datum/goal/achievement/fistfight, TRUE)
 
 			visible_message("<span class='danger'>[H] has punched \the [src]!</span>")
 
@@ -77,12 +90,12 @@
 					return
 
 				H.visible_message("<span class='notice'>\The [H] performs CPR on \the [src]!</span>")
-				if(prob(5))
+				if(prob(5 + 5 * (SKILL_EXPERT - M.get_skill_value(SKILL_ANATOMY))))
 					var/obj/item/organ/external/chest = get_organ(BP_CHEST)
 					if(chest)
 						chest.fracture()
 				if(stat != DEAD)
-					if(prob(15))
+					if(prob(10 + 5 * M.get_skill_value(SKILL_ANATOMY)))
 						resuscitate()
 
 					if(!H.check_has_mouth())
@@ -218,7 +231,7 @@
 			real_damage += attack.get_unarmed_damage(H)
 			real_damage *= damage_multiplier
 			rand_damage *= damage_multiplier
-			if(HULK in H.mutations)
+			if(MUTATION_HULK in H.mutations)
 				real_damage *= 2 // Hulks do twice the damage
 				rand_damage *= 2
 			real_damage = max(1, real_damage)
@@ -288,7 +301,7 @@
 */
 /mob/living/carbon/human/proc/apply_pressure(mob/living/user, var/target_zone)
 	var/obj/item/organ/external/organ = get_organ(target_zone)
-	if(!organ || !(organ.status & ORGAN_BLEEDING) || (organ.robotic >= ORGAN_ROBOT))
+	if(!organ || !(organ.status & ORGAN_BLEEDING) || BP_IS_ROBOTIC(organ))
 		return 0
 
 	if(organ.applied_pressure)
@@ -314,3 +327,20 @@
 			user.visible_message("\The [user] stops applying pressure to [src]'s [organ.name]!", "You stop applying pressure to [src]'s [organ.name]!")
 
 	return 1
+
+/mob/living/carbon/human/verb/set_default_unarmed_attack()
+	set name = "Set Default Unarmed Attack"
+	set category = "IC"
+	set src = usr
+
+	var/list/choices = list()
+	for(var/thing in species.unarmed_attacks)
+		var/datum/unarmed_attack/u_attack = thing
+		choices[u_attack.attack_name] = u_attack
+
+	var/selection = input("Select a default attack (currently selected: [default_attack ? default_attack.attack_name : "none"]).", "Default Unarmed Attack") as null|anything in choices
+	if(selection && !(choices[selection] in species.unarmed_attacks))
+		return
+
+	default_attack = selection ? choices[selection] : null
+	to_chat(src, SPAN_NOTICE("Your default unarmed attack is now <b>[default_attack ? default_attack.attack_name : "cleared"]</b>."))

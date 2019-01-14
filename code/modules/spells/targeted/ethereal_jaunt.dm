@@ -20,10 +20,6 @@
 		if(HAS_TRANSFORMATION_MOVEMENT_HANDLER(target))
 			continue
 
-		if(target.incapacitated(INCAPACITATION_STUNNED | INCAPACITATION_FORCELYING | INCAPACITATION_KNOCKOUT))
-			to_chat(target, "<span class='warning'>You can't cast this spell while incapacitated!</span>")
-			return
-
 		if(target.buckled)
 			target.buckled.unbuckle_mob()
 		spawn(0)
@@ -70,9 +66,11 @@
 /spell/targeted/ethereal_jaunt/proc/jaunt_disappear(var/atom/movable/overlay/animation, var/mob/living/target)
 	animation.icon_state = "liquify"
 	flick("liquify",animation)
+	playsound(get_turf(target), 'sound/magic/ethereal_enter.ogg', 30)
 
 /spell/targeted/ethereal_jaunt/proc/jaunt_reappear(var/atom/movable/overlay/animation, var/mob/living/target)
 	flick("reappear",animation)
+	playsound(get_turf(target), 'sound/magic/ethereal_exit.ogg', 30)
 
 /spell/targeted/ethereal_jaunt/proc/jaunt_steam(var/mobloc)
 	var/datum/effect/effect/system/steam_spread/steam = new /datum/effect/effect/system/steam_spread()
@@ -119,3 +117,6 @@
 	return
 /obj/effect/dummy/spell_jaunt/bullet_act(blah)
 	return
+
+/spell/targeted/ethereal_jaunt/tower
+	charge_max = 2

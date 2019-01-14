@@ -12,7 +12,6 @@
 
 	density = 1
 	anchored = 1
-	use_power = 1
 	idle_power_usage = 20
 	active_power_usage = 5000
 
@@ -40,7 +39,7 @@
 
 /obj/machinery/drone_fabricator/Process()
 
-	if(ticker.current_state < GAME_STATE_PLAYING)
+	if(GAME_STATE < RUNLEVEL_GAME)
 		return
 
 	if(stat & NOPOWER || !produce_drones)
@@ -95,7 +94,7 @@
 
 /proc/try_drone_spawn(var/mob/user, var/obj/machinery/drone_fabricator/fabricator)
 
-	if(ticker.current_state < GAME_STATE_PLAYING)
+	if(GAME_STATE < RUNLEVEL_GAME)
 		to_chat(user, "<span class='danger'>The game hasn't started yet!</span>")
 		return
 

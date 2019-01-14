@@ -27,8 +27,7 @@
 		return 0
 
 	UseFuel()
-		P.air_contents.phoron -= 0.01
-		return
+		P.air_adjust_gas("phoron", -0.01)
 
 	New()
 		..()
@@ -94,7 +93,7 @@
 			else if(isCrowbar(O) && !open)
 				var/obj/machinery/constructable_frame/machine_frame/new_frame = new /obj/machinery/constructable_frame/machine_frame(src.loc)
 				for(var/obj/item/I in component_parts)
-					I.loc = src.loc
+					I.dropInto(loc)
 				new_frame.state = 2
 				new_frame.icon_state = "box_1"
 				qdel(src)

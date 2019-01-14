@@ -35,6 +35,7 @@
 	name = "mounted energy gun"
 	self_recharge = 1
 	use_external_power = 1
+	has_safety = FALSE
 
 /obj/item/weapon/gun/energy/gun/nuclear
 	name = "advanced energy gun"
@@ -92,7 +93,7 @@
 		if("stun") return "nucgun-stun"
 		if("kill") return "nucgun-kill"
 
-/obj/item/weapon/gun/energy/gun/nuclear/update_icon()
+/obj/item/weapon/gun/energy/gun/nuclear/on_update_icon()
 	var/list/new_overlays = list()
 
 	new_overlays += get_charge_overlay()

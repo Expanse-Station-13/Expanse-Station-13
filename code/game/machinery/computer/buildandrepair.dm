@@ -8,7 +8,7 @@
 	icon_state = "0"
 	var/state = 0
 	var/obj/item/weapon/circuitboard/circuit = null
-	atom_flags = ATOM_FLAG_CLIMBABLE
+	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CLIMBABLE
 //	weight = 1.0E8
 
 /obj/structure/computerframe/attackby(obj/item/P as obj, mob/user as mob)
@@ -59,7 +59,7 @@
 				to_chat(user, "<span class='notice'>You remove the circuit board.</span>")
 				src.state = 1
 				src.icon_state = "0"
-				circuit.loc = src.loc
+				circuit.dropInto(loc)
 				src.circuit = null
 		if(2)
 			if(isScrewdriver(P) && circuit)
@@ -88,7 +88,7 @@
 				var/obj/item/stack/cable_coil/A = new /obj/item/stack/cable_coil( src.loc )
 				A.amount = 5
 
-			if(istype(P, /obj/item/stack/material) && P.get_material_name() == "glass")
+			if(istype(P, /obj/item/stack/material) && P.get_material_name() == MATERIAL_GLASS)
 				var/obj/item/stack/G = P
 				if (G.get_amount() < 2)
 					to_chat(user, "<span class='warning'>You need two sheets of glass to put in the glass panel.</span>")
@@ -110,6 +110,20 @@
 			if(isScrewdriver(P))
 				playsound(src.loc, 'sound/items/Screwdriver.ogg', 50, 1)
 				to_chat(user, "<span class='notice'>You connect the monitor.</span>")
-				var/B = new src.circuit.build_path ( src.loc )
+				var/atom/B = new src.circuit.build_path ( src.loc )
 				src.circuit.construct(B)
+				B.set_dir(src.dir)
 				qdel(src)
+
+/obj/structure/computerframe/verb/rotate()
+	set category = "Object"
+	set name = "Rotate Computer Frame"
+	set src in oview(1)
+
+	if (!Adjacent(usr) || usr.incapacitated() || src.state != 0)
+		return
+
+	src.set_dir(turn(src.dir, 90))
+
+/obj/structure/computerframe/AltClick()
+	rotate()

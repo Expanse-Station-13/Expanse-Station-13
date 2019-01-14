@@ -41,7 +41,7 @@
 	..()
 	take_damage(Proj.get_structure_damage())
 
-/obj/structure/displaycase/proc/take_damage(damage)
+/obj/structure/displaycase/take_damage(damage)
 	health -= damage
 	if(health <= 0)
 		if (!destroyed)
@@ -55,7 +55,7 @@
 	else
 		playsound(src.loc, 'sound/effects/Glasshit.ogg', 75, 1)
 
-/obj/structure/displaycase/update_icon()
+/obj/structure/displaycase/on_update_icon()
 	if(destroyed)
 		icon_state = "glassboxb"
 	else

@@ -5,7 +5,7 @@
 	icon_state = "off"
 	level = 1
 	density = 1
-	use_power = 0
+	use_power = POWER_USE_OFF
 	idle_power_usage = 200		//internal circuitry, friction losses and stuff
 	power_rating = 10000
 	var/target_pressure = 10*ONE_ATMOSPHERE
@@ -115,10 +115,10 @@
 			power_draw = pump_gas(src, air1, inner_tank, transfer_moles, power_rating*power_setting) * intake_power_efficiency
 			if (power_draw >= 0)
 				last_power_draw = power_draw
-				use_power(power_draw)
+				use_power_oneoff(power_draw)
 				if(network1)
 					network1.update = 1
-		if (air1.return_pressure() < 0.1 * ONE_ATMOSPHERE || inner_tank.return_pressure() >= 10 * ONE_ATMOSPHERE)//if pipe is good as empty or tank is full
+		if (air1.return_pressure() < 0.1 * ONE_ATMOSPHERE || inner_tank.return_pressure() >= target_pressure * 0.95)//if pipe is good as empty or tank is full
 			phase = "processing"
 
 	if (phase == "processing")//processing CO2 in tank
@@ -133,11 +133,11 @@
 			carbon_stored += co2_intake * carbon_efficiency
 			while (carbon_stored >= carbon_moles_per_piece)
 				carbon_stored -= carbon_moles_per_piece
-				var/atom/movable/product = new/obj/item/weapon/ore/coal
-				product.dropInto(loc)
+				var/material/M = SSmaterials.get_material_by_name(MATERIAL_GRAPHENE)
+				M.place_sheet(get_turf(src), 1, M.name)
 			power_draw = power_rating * co2_intake
 			last_power_draw = power_draw
-			use_power(power_draw)
+			use_power_oneoff(power_draw)
 		else
 			phase = "releasing"
 
@@ -149,15 +149,15 @@
 			power_draw = pump_gas(src, inner_tank, air2, transfer_moles, power_rating*power_setting)
 			if (power_draw >= 0)
 				last_power_draw = power_draw
-				use_power(power_draw)
+				use_power_oneoff(power_draw)
 				if(network2)
 					network2.update = 1
 		else//can't push outside harder than target pressure. Device is not intended to be used as a pump after all
 			phase = "filling"
-		if (inner_tank.return_pressure() <= 0)
+		if (inner_tank.return_pressure() <= 0.1)
 			phase = "filling"
 
-/obj/machinery/atmospherics/binary/oxyregenerator/update_icon()
+/obj/machinery/atmospherics/binary/oxyregenerator/on_update_icon()
 	if(!powered())
 		icon_state = "off"
 	else
@@ -186,7 +186,7 @@
 		data["co2"] = 0
 		data["o2"] = 0
 		// update the ui if it exists, returns null if no ui is passed/found
-	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if(!ui)
 		ui = new(user, src, ui_key, "oxyregenerator.tmpl", "Oxygen Regeneration System", 440, 300)
 		ui.set_initial_data(data)
@@ -197,7 +197,7 @@
 	if(..())
 		return 1
 	if(href_list["toggleStatus"])
-		use_power = !use_power
+		update_use_power(!use_power)
 		update_icon()
 		return 1
 	if(href_list["setPower"]) //setting power to 0 is redundant anyways

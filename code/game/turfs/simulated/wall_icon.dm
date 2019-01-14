@@ -8,7 +8,7 @@
 	else
 		construction_stage = null
 	if(!material)
-		material = get_material_by_name(DEFAULT_WALL_MATERIAL)
+		material = SSmaterials.get_material_by_name(DEFAULT_WALL_MATERIAL)
 	if(material)
 		explosion_resistance = material.explosion_resistance
 	if(reinf_material && reinf_material.explosion_resistance > explosion_resistance)
@@ -33,16 +33,27 @@
 	reinf_material = newrmaterial
 	update_material()
 
-/turf/simulated/wall/update_icon()
+/turf/simulated/wall/on_update_icon()
+
+	..()
+
 	if(!material)
 		return
 
-	if(!damage_overlays[1]) //list hasn't been populated
+	if(LAZYLEN(damage_overlays) < 1) //list hasn't been populated
 		generate_overlays()
 
-	overlays.Cut()
-	var/image/I
+	// This line apparently causes runtimes during initialization.
+	// As we don't know why, or how to resolve this, I'm blocking runtime recording until after init.
+	try
+		overlays.Cut()
+	catch(var/exception/e)
+		if(e && GAME_STATE < RUNLEVEL_GAME)
+			queue_icon_update()
+			return
+		throw e
 
+	var/image/I
 	var/base_color = paint_color ? paint_color : material.icon_colour
 	if(!density)
 		I = image('icons/turf/wall_masks.dmi', "[material.icon_base]fwall_open")

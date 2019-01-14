@@ -92,7 +92,7 @@
 	if (!(other.clamped) != !(src.clamped)) return 0
 	if (!(other.salved) != !(src.salved)) return 0
 	if (!(other.disinfected) != !(src.disinfected)) return 0
-	if (!(other.parent_organ) != parent_organ) return 0
+	if (other.parent_organ != parent_organ) return 0
 	return 1
 
 /datum/wound/proc/merge_wound(var/datum/wound/other)
@@ -143,9 +143,9 @@
 	if(embedded_objects.len)
 		return amount // heal nothing
 	if(parent_organ)
-		if(damage_type == BURN && !(parent_organ.burn_ratio < 1 || parent_organ.can_heal_overkill))
+		if(damage_type == BURN && !(parent_organ.burn_ratio < 1 || (parent_organ.limb_flags & ORGAN_FLAG_HEALS_OVERKILL)))
 			return amount	//We don't want to heal wounds on irreparable organs.
-		else if(!(parent_organ.brute_ratio < 1 || parent_organ.can_heal_overkill))
+		else if(!(parent_organ.brute_ratio < 1 || (parent_organ.limb_flags & ORGAN_FLAG_HEALS_OVERKILL)))
 			return amount
 
 	var/healed_damage = min(src.damage, amount)

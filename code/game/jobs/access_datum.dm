@@ -58,11 +58,7 @@
 	desc = "Toxins Lab"
 	region = ACCESS_REGION_RESEARCH
 
-/var/const/access_genetics = 9
-/datum/access/genetics
-	id = access_genetics
-	desc = "Genetics Lab"
-	region = ACCESS_REGION_MEDBAY
+// /var/const/free_access_id = 9 // goodbye, genetics
 
 /var/const/access_engine = 10
 /datum/access/engine
@@ -118,9 +114,9 @@
 	desc = "EVA"
 	region = ACCESS_REGION_COMMAND
 
-/var/const/access_heads = 19
-/datum/access/heads
-	id = access_heads
+/var/const/access_bridge = 19
+/datum/access/bridge
+	id = access_bridge
 	desc = "Bridge"
 	region = ACCESS_REGION_COMMAND
 
@@ -384,6 +380,12 @@
 	desc = "Medical Equipment"
 	region = ACCESS_REGION_MEDBAY
 
+/var/const/access_heads = 67
+/datum/access/heads
+	id = access_heads
+	desc = "Command"
+	region = ACCESS_REGION_COMMAND
+
 /******************
 * Central Command *
 ******************/
@@ -459,13 +461,13 @@
 	desc = "Synthetic"
 	access_type = ACCESS_TYPE_NONE
 
-/var/const/access_crate_cash = 200
+/var/const/access_crate_cash = 300
 /datum/access/crate_cash
 	id = access_crate_cash
 	desc = "Crate cash"
 	access_type = ACCESS_TYPE_NONE
 
-/var/const/access_merchant = 201
+/var/const/access_merchant = 301
 /datum/access/merchant
 	id = access_merchant
 	desc = "Merchant"

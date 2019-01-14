@@ -141,27 +141,6 @@
 	if(response == "Yes")
 		harvest()
 
-/obj/machinery/portable_atmospherics/hydroponics/attack_generic(var/mob/user)
-
-	// Why did I ever think this was a good idea. TODO: move this onto the nymph mob.
-	if(istype(user,/mob/living/carbon/alien/diona))
-		var/mob/living/carbon/alien/diona/nymph = user
-
-		if(nymph.stat == DEAD || nymph.paralysis || nymph.weakened || nymph.stunned || nymph.restrained())
-			return
-
-		if(weedlevel > 0)
-			nymph.reagents.add_reagent(/datum/reagent/nutriment/glucose, weedlevel)
-			weedlevel = 0
-			nymph.visible_message("<font color='blue'><b>[nymph]</b> begins rooting through [src], ripping out weeds and eating them noisily.</font>","<font color='blue'>You begin rooting through [src], ripping out weeds and eating them noisily.</font>")
-		else if(nymph.nutrition > 100 && nutrilevel < 10)
-			nymph.nutrition -= ((10-nutrilevel)*5)
-			nutrilevel = 10
-			nymph.visible_message("<font color='blue'><b>[nymph]</b> secretes a trickle of green liquid, refilling [src].</font>","<font color='blue'>You secrete a trickle of green liquid, refilling [src].</font>")
-		else
-			nymph.visible_message("<font color='blue'><b>[nymph]</b> rolls around in [src] for a bit.</font>","<font color='blue'>You roll around in [src] for a bit.</font>")
-		return
-
 /obj/machinery/portable_atmospherics/hydroponics/Initialize()
 	. = ..()
 	temp_chem_holder = new()
@@ -171,7 +150,13 @@
 	if(mechanical)
 		connect()
 	update_icon()
+	STOP_PROCESSING(SSmachines, src)
+	START_PROCESSING(SSplants, src)
 	return INITIALIZE_HINT_LATELOAD
+
+/obj/machinery/portable_atmospherics/hydroponics/Destroy()
+	STOP_PROCESSING(SSplants, src)
+	. = ..()
 
 /obj/machinery/portable_atmospherics/hydroponics/LateInitialize()
 	. = ..()
@@ -284,9 +269,9 @@
 		return
 
 	if(user)
-		seed.harvest(user,yield_mod)
+		. = seed.harvest(user,yield_mod)
 	else
-		seed.harvest(get_turf(src),yield_mod)
+		. = seed.harvest(get_turf(src),yield_mod)
 	// Reset values.
 	harvest = 0
 	lastproduce = age
@@ -300,15 +285,14 @@
 		mutation_mod = 0
 
 	check_health()
-	return
 
 //Clears out a dead plant.
-/obj/machinery/portable_atmospherics/hydroponics/proc/remove_dead(var/mob/user)
+/obj/machinery/portable_atmospherics/hydroponics/proc/remove_dead(var/mob/user, var/silent)
 	if(!user || !dead) return
 
 	if(closed_system)
 		to_chat(user, "You can't remove the dead plant while the lid is shut.")
-		return
+		return FALSE
 
 	seed = null
 	dead = 0
@@ -317,17 +301,17 @@
 	yield_mod = 0
 	mutation_mod = 0
 
-	to_chat(user, "You remove the dead plant.")
+	if(!silent) to_chat(user, "You remove the dead plant.")
 	lastproduce = 0
 	check_health()
-	return
+	return TRUE
 
 // If a weed growth is sufficient, this proc is called.
 /obj/machinery/portable_atmospherics/hydroponics/proc/weed_invasion()
 
 	//Remove the seed if something is already planted.
 	if(seed) seed = null
-	seed = plant_controller.seeds[pick(list("reishi","nettles","amanita","mushrooms","plumphelmet","towercap","harebells","weeds"))]
+	seed = SSplants.seeds[pick(list("reishi", "nettles", "amanita", "mushrooms", "plumphelmet", "towercap", "harebells", "weeds", "diona"))]
 	if(!seed) return //Weed does not exist, someone fucked up.
 
 	dead = 0
@@ -357,7 +341,7 @@
 	// We need to make sure we're not modifying one of the global seed datums.
 	// If it's not in the global list, then no products of the line have been
 	// harvested yet and it's safe to assume it's restricted to this tray.
-	if(!isnull(plant_controller.seeds[seed.name]))
+	if(!isnull(SSplants.seeds[seed.name]))
 		seed = seed.diverge()
 	seed.mutate(severity,get_turf(src))
 
@@ -396,8 +380,8 @@
 
 	var/previous_plant = seed.display_name
 	var/newseed = seed.get_mutant_variant()
-	if(newseed in plant_controller.seeds)
-		seed = plant_controller.seeds[newseed]
+	if(newseed in SSplants.seeds)
+		seed = SSplants.seeds[newseed]
 	else
 		return
 
@@ -467,33 +451,7 @@
 
 	else if (istype(O, /obj/item/seeds))
 
-		if(!seed)
-			var/obj/item/seeds/S = O
-
-			if(!S.seed)
-				to_chat(user, "The packet seems to be empty. You throw it away.")
-				qdel(O)
-				return
-
-			to_chat(user, "You plant the [S.seed.seed_name] [S.seed.seed_noun].")
-			lastproduce = 0
-			seed = S.seed //Grab the seed datum.
-			dead = 0
-			age = 1
-			//Snowflakey, maybe move this to the seed datum
-			health = (istype(S, /obj/item/seeds/cutting) ? round(seed.get_trait(TRAIT_ENDURANCE)/rand(2,5)) : seed.get_trait(TRAIT_ENDURANCE))
-			lastcycle = world.time
-
-			var/needed_skill = seed.mysterious ? SKILL_ADEPT : SKILL_BASIC
-			if(prob(user.skill_fail_chance(SKILL_BOTANY, 40, needed_skill)))
-				dead = 1
-				health = 0
-			qdel(O)
-
-			check_health()
-
-		else
-			to_chat(user, "<span class='warning'>\The [src] already has seeds in it!</span>")
+		plant_seed(user, O)
 
 	else if (istype(O, /obj/item/weapon/material/minihoe))  // The minihoe
 
@@ -547,6 +505,35 @@
 			health -= O.force
 			check_health()
 	return
+
+/obj/machinery/portable_atmospherics/hydroponics/proc/plant_seed(var/mob/user, var/obj/item/seeds/S)
+
+	if(seed)
+		to_chat(user, "<span class='warning'>\The [src] already has seeds in it!</span>")
+		return
+
+	if(!S.seed)
+		to_chat(user, "The packet seems to be empty. You throw it away.")
+		qdel(S)
+		return
+
+	to_chat(user, "You plant the [S.seed.seed_name] [S.seed.seed_noun].")
+	lastproduce = 0
+	seed = S.seed //Grab the seed datum.
+	dead = 0
+	age = 1
+
+	//Snowflakey, maybe move this to the seed datum
+	health = (istype(S, /obj/item/seeds/cutting) ? round(seed.get_trait(TRAIT_ENDURANCE)/rand(2,5)) : seed.get_trait(TRAIT_ENDURANCE))
+	lastcycle = world.time
+
+	var/needed_skill = seed.mysterious ? SKILL_ADEPT : SKILL_BASIC
+	if(prob(user.skill_fail_chance(SKILL_BOTANY, 40, needed_skill)))
+		dead = 1
+		health = 0
+
+	qdel(S)
+	check_health()
 
 /obj/machinery/portable_atmospherics/hydroponics/attack_tk(mob/user as mob)
 	if(dead)

@@ -12,7 +12,7 @@
 
 	min_gas = list("oxygen" = 1)
 	max_gas = null
-	unsuitable_atoms_damage = 1
+	unsuitable_atmos_damage = 1
 
 	var/list/wizardy_spells = list()
 
@@ -120,7 +120,9 @@
 	var/icon_rest //so that we can have resting little guys.
 
 /mob/living/simple_animal/familiar/pet/Life()
-	..()
+	. = ..()
+	if(!.)
+		return FALSE
 	if(!icon_rest)
 		return
 	if(stat == UNCONSCIOUS || resting)

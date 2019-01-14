@@ -4,6 +4,7 @@
 	appearance_flags = TILE_BOUND
 	glide_size = 8
 
+	var/waterproof = TRUE
 	var/movable_flags
 
 	var/last_move = null
@@ -38,13 +39,10 @@
 		src.throw_impact(A)
 		src.throwing = 0
 
-	spawn(0)
-		if (A && yes)
-			A.last_bumped = world.time
-			A.Bumped(src)
-		return
+	if (A && yes)
+		A.last_bumped = world.time
+		INVOKE_ASYNC(A, /atom/proc/Bumped, src) // Avoids bad actors sleeping or unexpected side effects, as the legacy behavior was to spawn here
 	..()
-	return
 
 /atom/movable/proc/forceMove(atom/destination)
 	if(loc == destination)
@@ -117,7 +115,7 @@
 	src.throw_source = get_turf(src)	//store the origin turf
 	src.pixel_z = 0
 	if(usr)
-		if(HULK in usr.mutations)
+		if(MUTATION_HULK in usr.mutations)
 			src.throwing = 2 // really strong throw!
 
 	var/dist_travelled = 0

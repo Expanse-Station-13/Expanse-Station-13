@@ -23,6 +23,9 @@
 	allowed_roles = list(/datum/job/engineer_contractor, /datum/job/roboticist, /datum/job/merchant)
 
 /datum/gear/suit/science_poncho
+	allowed_roles = list(/datum/job/scientist, /datum/job/scientist_assistant)
+
+/datum/gear/suit/nanotrasen_poncho
 	allowed_roles = list(/datum/job/scientist, /datum/job/scientist_assistant, /datum/job/merchant)
 
 /datum/gear/suit/cargo_poncho
@@ -42,6 +45,16 @@
 
 /datum/gear/suit/labcoat
 	allowed_roles = STERILE_ROLES
+
+/datum/gear/suit/labcoat_corp
+	allowed_roles = list(/datum/job/scientist, /datum/job/engineer_contractor, /datum/job/scientist, /datum/job/rd, /datum/job/biomech, /datum/job/roboticist)
+
+/datum/gear/suit/labcoat_corp_rd
+	allowed_roles = list(/datum/job/rd)
+
+/datum/gear/suit/wintercoat_dais
+	display_name = "winter coat, DAIS"
+	allowed_roles = list(/datum/job/engineer_contractor, /datum/job/scientist, /datum/job/rd)
 
 /datum/gear/suit/coat
 	allowed_branches = CIVILIAN_BRANCHES

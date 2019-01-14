@@ -24,6 +24,8 @@
 	mob_size = MOB_SMALL
 	can_escape = 1
 
+	bleed_colour = "#816e12"
+
 	var/generation = 1
 	var/static/list/borer_names = list(
 		"Primary", "Secondary", "Tertiary", "Quaternary", "Quinary", "Senary",
@@ -31,12 +33,12 @@
 		)
 
 	var/used_dominate
-	var/chemicals = 10                      // Chemicals used for reproduction and spitting neurotoxin.
-	var/mob/living/carbon/human/host        // Human host for the brain worm.
-	var/truename                            // Name used for brainworm-speak.
+	var/chemicals = 10					  // Chemicals used for reproduction and spitting neurotoxin.
+	var/mob/living/carbon/human/host		// Human host for the brain worm.
+	var/truename							// Name used for brainworm-speak.
 	var/mob/living/captive_brain/host_brain // Used for swapping control of the body back and forth.
-	var/controlling                         // Used in human death check.
-	var/docile = 0                          // Sugar can stop borers from acting.
+	var/controlling						 // Used in human death check.
+	var/docile = 0						  // Sugar can stop borers from acting.
 	var/has_reproduced
 	var/roundstart
 
@@ -60,8 +62,9 @@
 	if(!roundstart) request_player()
 
 /mob/living/simple_animal/borer/Life()
-
-	..()
+	. = ..()
+	if(!.)
+		return FALSE
 
 	if(host)
 
@@ -167,7 +170,7 @@
 	if(host.mind)
 		GLOB.borers.remove_antagonist(host.mind)
 
-	src.loc = get_turf(host)
+	dropInto(host.loc)
 
 	reset_view(null)
 	machine = null

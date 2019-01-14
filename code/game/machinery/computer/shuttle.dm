@@ -16,7 +16,7 @@
 			to_chat(user, "<span class='danger'>This console should not in use on this map. Please report this to a developer.</span>")
 			return
 
-		if ((!( istype(W, /obj/item/weapon/card) ) || !( ticker ) || evacuation_controller.has_evacuated() || !( user )))
+		if ((!( istype(W, /obj/item/weapon/card) ) || evacuation_controller.has_evacuated() || !( user )))
 			return
 
 		if (istype(W, /obj/item/weapon/card/id)||istype(W, /obj/item/modular_computer))
@@ -31,7 +31,7 @@
 				to_chat(user, "The access level of [W:registered_name]\'s card is not high enough. ")
 				return
 
-			if(!(access_heads in W:access)) //doesn't have this access
+			if(!(access_bridge in W:access)) //doesn't have this access
 				to_chat(user, "The access level of [W:registered_name]\'s card is not high enough. ")
 				return 0
 

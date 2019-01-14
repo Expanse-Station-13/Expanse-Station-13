@@ -154,6 +154,14 @@
 	embed = 0
 	sharp = 0
 
+//4mm. Tiny, very low damage, does not embed, but has very high penetration. Only to be used for the experimental SMG.
+/obj/item/projectile/bullet/c4mm
+	fire_sound = 'sound/weapons/gunshot/gunshot_4mm.ogg'
+	damage = 8
+	penetrating = 1
+	armor_penetration = 70
+	embed = 0
+
 /* shotgun projectiles */
 
 /obj/item/projectile/bullet/shotgun
@@ -266,8 +274,8 @@
 	sharp = 0
 
 /obj/item/projectile/bullet/pistol/cap/Process()
-	loc = null
 	qdel(src)
+	return PROCESS_KILL
 
 /obj/item/projectile/bullet/rock //spess dust
 	name = "micrometeor"

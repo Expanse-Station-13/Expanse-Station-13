@@ -52,17 +52,10 @@
 	name = "Slavers Base Navpoint #7"
 	landmark_tag = "nav_slavers_base_antag"
 
-/obj/structure/slavers_base/mattress
-	name = "dirty mattress"
-	desc = "Dirty, smelling mattress, covered with body fluids. You wouldn't want to touch this."
-	icon = 'maps/away/slavers/slavers_base_sprites.dmi'
-	icon_state = "dirty_mattress"
-	anchored = 0
-
 /decl/hierarchy/outfit/corpse
 	name = "Corpse Clothing"
 
-/decl/hierarchy/outfit/corpse/New()
+/decl/hierarchy/outfit/corpse/Initialize()
 	..()
 	hierarchy_type = type
 
@@ -151,15 +144,14 @@
 	maxHealth = 100
 	health = 100
 	harm_intent_damage = 5
-	melee_damage_lower = 30
+	melee_damage_lower = 10
 	melee_damage_upper = 30
 	can_escape = 1
-	unsuitable_atoms_damage = 15
+	unsuitable_atmos_damage = 15
 	var/corpse = /obj/effect/landmark/corpse/abolitionist
 	var/weapon = /obj/item/weapon/gun/energy/laser
 	projectilesound = 'sound/weapons/laser.ogg'
 	ranged = 1
-	rapid = 1
 	projectiletype = /obj/item/projectile/beam
 	faction = "extremist abolitionists"
 

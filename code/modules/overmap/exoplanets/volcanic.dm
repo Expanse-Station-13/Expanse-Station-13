@@ -79,36 +79,11 @@
 	icon = 'icons/turf/flooring/lava.dmi'
 	icon_state = "cold"
 
-/turf/simulated/floor/exoplanet/volcanic/Initialize()
-	. = ..()
-	update_icon(1)
-
-/turf/simulated/floor/exoplanet/volcanic/update_icon(var/update_neighbors)
-	overlays.Cut()
-	for(var/direction in GLOB.cardinal)
-		var/turf/turf_to_check = get_step(src,direction)
-		if(!istype(turf_to_check, type))
-			var/image/rock_side = image(icon, "edge[pick(1,2)]", dir = turn(direction, 180))
-			rock_side.plating_decal_layerise()
-			switch(direction)
-				if(NORTH)
-					rock_side.pixel_y += world.icon_size
-				if(SOUTH)
-					rock_side.pixel_y -= world.icon_size
-				if(EAST)
-					rock_side.pixel_x += world.icon_size
-				if(WEST)
-					rock_side.pixel_x -= world.icon_size
-			overlays += rock_side
-		else if(update_neighbors)
-			turf_to_check.update_icon()
-
 /datum/random_map/automata/cave_system/mountains/volcanic
 	iterations = 2
 	descriptor = "space volcanic mountains"
 	wall_type =  /turf/simulated/mineral/volcanic
-	mineral_sparse =  /turf/simulated/mineral/random/volcanic
-	mineral_rich = /turf/simulated/mineral/high_chance/volcanic
+	mineral_turf =  /turf/simulated/mineral/random/volcanic
 
 /turf/simulated/floor/exoplanet/lava
 	name = "lava"
@@ -116,6 +91,9 @@
 	icon_state = "lava"
 	movement_delay = 4
 	var/list/victims
+
+/turf/simulated/floor/exoplanet/lava/on_update_icon()
+	return
 
 /turf/simulated/floor/exoplanet/lava/Initialize()
 	. = ..()
@@ -163,6 +141,6 @@
 	name = "volcanic rock"
 	icon = 'icons/turf/flooring/lava.dmi'
 
-/turf/simulated/mineral/high_chance/volcanic
+/turf/simulated/mineral/random/high_chance/volcanic
 	name = "volcanic rock"
 	icon = 'icons/turf/flooring/lava.dmi'

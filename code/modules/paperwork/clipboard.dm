@@ -10,7 +10,7 @@
 	var/obj/item/weapon/pen/haspen		//The stored pen.
 	var/obj/item/weapon/toppaper	//The topmost piece of paper.
 	slot_flags = SLOT_BELT
-	matter = list(DEFAULT_WALL_MATERIAL = 70)
+	matter = list(MATERIAL_STEEL = 70)
 
 /obj/item/weapon/clipboard/New()
 	update_icon()
@@ -33,7 +33,7 @@
 			add_fingerprint(usr)
 			return
 
-/obj/item/weapon/clipboard/update_icon()
+/obj/item/weapon/clipboard/on_update_icon()
 	overlays.Cut()
 	if(toppaper)
 		overlays += toppaper.icon_state
@@ -92,7 +92,6 @@
 
 		if(href_list["pen"])
 			if(istype(haspen) && (haspen.loc == src))
-				haspen.loc = usr.loc
 				usr.put_in_hands(haspen)
 				haspen = null
 
@@ -120,8 +119,6 @@
 			var/obj/item/P = locate(href_list["remove"])
 
 			if(P && (P.loc == src) && (istype(P, /obj/item/weapon/paper) || istype(P, /obj/item/weapon/photo)) )
-
-				P.loc = usr.loc
 				usr.put_in_hands(P)
 				if(P == toppaper)
 					toppaper = null

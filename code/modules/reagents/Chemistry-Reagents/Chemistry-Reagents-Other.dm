@@ -111,27 +111,7 @@
 	affect_blood(M, alien, removed)
 
 /datum/reagent/adminordrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	M.setCloneLoss(0)
-	M.setOxyLoss(0)
-	M.radiation = 0
-	M.heal_organ_damage(5,5)
-	M.adjustToxLoss(-5)
-	M.hallucination_power = 0
-	M.setBrainLoss(0)
-	M.disabilities = 0
-	M.sdisabilities = 0
-	M.eye_blurry = 0
-	M.eye_blind = 0
-	M.SetWeakened(0)
-	M.SetStunned(0)
-	M.SetParalysis(0)
-	M.silent = 0
-	M.dizziness = 0
-	M.drowsyness = 0
-	M.stuttering = 0
-	M.confused = 0
-	M.sleeping = 0
-	M.jitteriness = 0
+	M.rejuvenate()
 
 /datum/reagent/gold
 	name = "Gold"
@@ -148,7 +128,7 @@
 	color = "#d0d0d0"
 
 /datum/reagent/uranium
-	name ="Uranium"
+	name = "Uranium"
 	description = "A silvery-white metallic chemical element in the actinide series, weakly radioactive."
 	taste_description = "the inside of a reactor"
 	reagent_state = SOLID
@@ -248,6 +228,26 @@
 
 /datum/reagent/thermite/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.adjustFireLoss(3 * removed)
+
+/datum/reagent/napalm
+	name = "Napalm"
+	description = "A sticky volatile substance made from mixing quick burning goo with slow burning goo, to make a viscous average burning goo that sticks to everything."
+	taste_description = "burnt corn"
+	reagent_state = LIQUID
+	color = "#673910"
+	touch_met = 50
+
+/datum/reagent/napalm/touch_turf(var/turf/T)
+	new /obj/effect/decal/cleanable/liquid_fuel(T, volume)
+	remove_self(volume)
+
+/datum/reagent/napalm/touch_mob(var/mob/living/L, var/amount)
+	if(istype(L))
+		L.adjust_fire_stacks(amount / 100)
+
+/datum/reagent/napalm/b
+	name = "Napalm B"
+	taste_description = "burnt plastic and metal"
 
 /datum/reagent/space_cleaner
 	name = "Space cleaner"
@@ -435,18 +435,18 @@
 	color = "#cccccc"
 
 /datum/reagent/oxygen/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_VOX || alien == IS_BOGANI)
+	if(alien == IS_VOX)
 		M.adjustToxLoss(removed * 6)
 
-/datum/reagent/carbon_dioxide
-	name = "Carbon Dioxide"
-	description = "A byproduct of human respiration."
+/datum/reagent/carbon_monoxide
+	name = "Carbon Monoxide"
+	description = "A dangerous carbon comubstion byproduct."
 	taste_description = "stale air"
 	reagent_state = LIQUID
 	color = "#cccccc"
 	metabolism = 0.05 // As with helium.
 
-/datum/reagent/carbon_dioxide/affect_blood(var/mob/living/carbon/human/M, var/alien, var/removed)
+/datum/reagent/carbon_monoxide/affect_blood(var/mob/living/carbon/human/M, var/alien, var/removed)
 	if(!istype(M) || alien == IS_DIONA)
 		return
 	var/warning_message
@@ -469,3 +469,34 @@
 		M.co2_alert = 0
 	if(warning_message && prob(warning_prob))
 		to_chat(M, "<span class='warning'>You feel [warning_message].</span>")
+
+/datum/reagent/anfo
+	name = "ANFO"
+	description = "Ammonia Nitrate Fuel Oil mix, an explosive compound known for centuries. Safe to handle, can be set off with a small explosion."
+	taste_description = "fertilizer and fuel"
+	reagent_state = SOLID
+	color = "#dbc3c3"
+	var/boompower = 1
+
+/datum/reagent/anfo/ex_act(obj/item/weapon/reagent_containers/holder, severity)
+	var/activated_volume = volume
+	switch(severity)
+		if(2)
+			if(prob(max(0, 2*(volume - 120))))
+				activated_volume = rand(volume/4, volume)
+		if(3)
+			if(prob(max(0, 2*(volume - 60))))
+				activated_volume = rand(0, max(volume, 120))
+	if(activated_volume < 30) //whiff
+		return
+	var/turf/T = get_turf(holder)
+	if(T)
+		var/adj_power = round(boompower * activated_volume/60)
+		explosion(T, adj_power, adj_power + 1, adj_power*2 + 2)
+		remove_self(activated_volume)
+
+/datum/reagent/anfo/plus
+	name = "ANFO+"
+	description = "Ammonia Nitrate Fuel Oil, with aluminium powder, an explosive compound known for centuries. Safe to handle, can be set off with a small explosion."
+	color = "#ffe8e8"
+	boompower = 2

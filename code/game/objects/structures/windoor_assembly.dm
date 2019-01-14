@@ -43,7 +43,7 @@ obj/structure/windoor_assembly/Destroy()
 	update_nearby_tiles()
 	..()
 
-/obj/structure/windoor_assembly/update_icon()
+/obj/structure/windoor_assembly/on_update_icon()
 	icon_state = "[facing]_[secure]windoor_assembly[state]"
 
 /obj/structure/windoor_assembly/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
@@ -177,7 +177,7 @@ obj/structure/windoor_assembly/Destroy()
 					src.SetName("Near finished Windoor Assembly")
 					src.electronics = W
 				else
-					W.loc = src.loc
+					W.dropInto(loc)
 
 			//Screwdriver to remove airlock electronics. Step 6 undone.
 			else if(isScrewdriver(W) && src.electronics)
@@ -193,7 +193,7 @@ obj/structure/windoor_assembly/Destroy()
 						src.SetName("Wired Windoor Assembly")
 					var/obj/item/weapon/airlock_electronics/ae = electronics
 					electronics = null
-					ae.loc = src.loc
+					ae.dropInto(loc)
 
 			//Crowbar to complete the assembly, Step 7 complete.
 			else if(isCrowbar(W))
@@ -228,7 +228,7 @@ obj/structure/windoor_assembly/Destroy()
 						else
 							windoor.req_access = src.electronics.conf_access
 						windoor.electronics = src.electronics
-						src.electronics.loc = windoor
+						src.electronics.forceMove(windoor)
 					else
 						var/obj/machinery/door/window/windoor = new /obj/machinery/door/window(src.loc)
 						if(src.facing == "l")
@@ -246,7 +246,7 @@ obj/structure/windoor_assembly/Destroy()
 						else
 							windoor.req_access = src.electronics.conf_access
 						windoor.electronics = src.electronics
-						src.electronics.loc = windoor
+						src.electronics.forceMove(windoor)
 
 
 					qdel(src)
