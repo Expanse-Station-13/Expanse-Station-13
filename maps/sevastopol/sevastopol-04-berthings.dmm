@@ -259,7 +259,6 @@
 "aO" = (
 /obj/machinery/light/small,
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -932,7 +931,6 @@
 /area/maintenance/fourth)
 "dD" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /obj/effect/landmark/start{
