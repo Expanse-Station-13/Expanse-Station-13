@@ -58,5 +58,6 @@
 
 /obj/structure/bed/chair/crash
 	name = "crash couch"
+	icon_state = "crashcouch_preview"
+	base_icon = "crashcouch"
 	desc = "Used by smart people to survive High G maneuvers. Less smart become puddles somewhere else."
-	color = COLOR_PINK

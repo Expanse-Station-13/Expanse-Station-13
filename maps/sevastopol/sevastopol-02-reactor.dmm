@@ -435,7 +435,6 @@
 /area/engineering/locker)
 "aU" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -1178,7 +1177,6 @@
 	pixel_x = -32
 	},
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/monotile,
