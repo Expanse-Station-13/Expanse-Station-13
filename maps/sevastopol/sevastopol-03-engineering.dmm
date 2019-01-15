@@ -177,7 +177,6 @@
 	dir = 6
 	},
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -560,7 +559,6 @@
 	dir = 6
 	},
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
 /obj/effect/landmark/start{

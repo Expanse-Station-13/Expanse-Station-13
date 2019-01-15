@@ -78,14 +78,12 @@
 /area/shuttle/escape_pod/one)
 "ap" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/escape_pod/three)
 "aq" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
 /turf/simulated/floor/reinforced,
@@ -1382,7 +1380,6 @@
 /area/medical/research)
 "wD" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -1395,7 +1392,6 @@
 /area/shuttle/escape_pod/two)
 "wN" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
 /obj/machinery/light/small{
@@ -1442,7 +1438,6 @@
 /area/medical/research)
 "Ct" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -1535,7 +1530,6 @@
 /area/shuttle/escape_pod/one)
 "Xx" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /obj/machinery/light/small,
