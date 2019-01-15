@@ -45,11 +45,8 @@
 /turf/simulated/open,
 /area/hallway/primary/seventh)
 "ah" = (
-/turf/unsimulated/mask,
-/area/hallway/primary/seventh)
-"ai" = (
-/turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/seventh)
+/turf/simulated/wall,
+/area/hallway/primary/stairs)
 "aj" = (
 /obj/structure/lattice,
 /turf/space,
@@ -346,7 +343,7 @@
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/plating,
 /area/eva/command)
 "aT" = (
 /obj/machinery/light{
@@ -537,16 +534,17 @@
 /turf/simulated/floor/tiled,
 /area/eva/standard)
 "bp" = (
-/obj/structure/table/rack,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled,
 /area/eva/standard)
 "bq" = (
 /obj/structure/table/rack,
 /obj/item/weapon/inflatable_dispenser,
 /obj/item/weapon/storage/belt/utility,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
 /turf/simulated/floor/tiled,
 /area/eva/standard)
 "br" = (
@@ -568,7 +566,7 @@
 	dir = 4;
 	pixel_x = -21
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/plating,
 /area/eva/command)
 "bu" = (
 /turf/simulated/floor/tiled/techfloor,
@@ -1046,7 +1044,7 @@
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /obj/machinery/light,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/plating,
 /area/eva/command)
 "cl" = (
 /obj/structure/cable{
@@ -1428,6 +1426,14 @@
 /obj/structure/closet/crate/bin,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seventh)
+"jM" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass/maintenance{
+	name = "staircase"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "kD" = (
 /turf/simulated/wall/r_wall/hull,
 /area/eva/command)
@@ -1447,6 +1453,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seventh)
+"tb" = (
+/obj/structure/railing/mapped,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "zU" = (
 /obj/random/obstruction,
 /turf/simulated/floor/plating,
@@ -1454,12 +1467,12 @@
 "AH" = (
 /turf/simulated/wall,
 /area/eva/standard)
-"BC" = (
-/turf/simulated/wall,
-/area/hallway/primary/seventh)
 "CR" = (
 /turf/simulated/wall,
 /area/janitor)
+"CX" = (
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "EV" = (
 /obj/item/device/radio/intercom{
 	dir = 4;
@@ -1471,17 +1484,37 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seventh)
+"Fn" = (
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "Iz" = (
 /obj/structure/closet/crate/trashcart,
 /turf/simulated/floor/tiled/techfloor,
 /area/janitor)
 "Kc" = (
 /turf/simulated/wall/r_wall/hull,
-/area/space)
+/area/hallway/primary/stairs)
 "Mu" = (
 /obj/effect/shuttle_landmark/sevastopol/deck7,
 /turf/space,
 /area/space)
+"MB" = (
+/obj/structure/railing/mapped{
+	tag = "icon-railing0 (EAST)";
+	icon_state = "railing0-1";
+	dir = 1
+	},
+/turf/simulated/open,
+/area/hallway/primary/stairs)
+"Oc" = (
+/obj/structure/railing/mapped{
+	tag = "icon-railing0 (EAST)";
+	icon_state = "railing0-1";
+	dir = 1
+	},
+/obj/machinery/light/small,
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "QI" = (
 /turf/simulated/wall/r_wall/hull,
 /area/janitor)
@@ -1492,6 +1525,11 @@
 "Xd" = (
 /turf/simulated/wall/r_wall/hull,
 /area/hallway/primary/seventh)
+"Yi" = (
+/obj/structure/railing/mapped,
+/obj/structure/stairs/west,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 
 (1,1,1) = {"
 aa
@@ -7153,9 +7191,9 @@ by
 bz
 bu
 CR
-BC
-ai
-BC
+an
+an
+an
 he
 aA
 bm
@@ -7256,7 +7294,7 @@ QI
 bA
 CR
 ah
-ah
+jM
 ah
 he
 bl
@@ -7357,9 +7395,9 @@ aa
 QI
 QI
 QI
-ah
-ah
-ah
+Yi
+CX
+MB
 kD
 kD
 kD
@@ -7459,9 +7497,9 @@ aa
 aj
 aj
 Kc
-ah
-ah
-ah
+tb
+CX
+Oc
 Kc
 aj
 aj
@@ -7561,9 +7599,9 @@ aa
 aa
 aj
 Kc
-ah
-ah
-ah
+Fn
+CX
+Fn
 Kc
 aj
 aa
