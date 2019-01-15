@@ -1062,6 +1062,11 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/blue,
+/obj/machinery/chemical_dispenser/bar_soft/full{
+	icon_state = "soda_dispenser";
+	dir = 8
+	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/officersmess)
 "cq" = (
@@ -1185,6 +1190,15 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/crew_quarters/galley)
+"jJ" = (
+/obj/effect/floor_decal/corner/blue,
+/obj/machinery/chemical_dispenser/bar_alc{
+	icon_state = "booze_dispenser";
+	dir = 8
+	},
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/officersmess)
 "kq" = (
 /obj/structure/closet/crate/bin,
 /turf/simulated/floor/tiled,
@@ -1193,6 +1207,9 @@
 /obj/structure/table/standard,
 /obj/item/weapon/board,
 /obj/effect/floor_decal/corner/blue,
+/obj/item/weapon/storage/box/checkers,
+/obj/item/weapon/storage/box/checkers/chess,
+/obj/item/weapon/storage/box/checkers/chess/red,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/officersmess)
 "mm" = (
@@ -7012,7 +7029,7 @@ aa
 aa
 mr
 mr
-gE
+jJ
 cp
 gE
 dT

@@ -411,10 +411,6 @@
 /area/medical/chemistry)
 "ba" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/syringes{
-	pixel_x = 4;
-	pixel_y = 4
-	},
 /obj/random/soap,
 /obj/random/firstaid,
 /obj/random/medical,
@@ -741,11 +737,15 @@
 /turf/simulated/floor/tiled,
 /area/medical/surgery)
 "bI" = (
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/weapon/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 10
+	},
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
+/obj/item/weapon/storage/box/gloves,
 /turf/simulated/floor/tiled,
 /area/medical/surgery)
 "bJ" = (
