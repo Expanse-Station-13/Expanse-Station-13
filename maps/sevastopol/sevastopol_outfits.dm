@@ -1,6 +1,6 @@
 /decl/hierarchy/outfit/job/unn
 	name = OUTFIT_JOB_NAME("UNN Outfit")
-	uniform = /obj/item/clothing/under/unn/fatigues
+	uniform = /obj/item/clothing/under/unn/marine
 	l_ear = /obj/item/device/radio/headset
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/marine
@@ -26,18 +26,23 @@
 
 /decl/hierarchy/outfit/job/unn/officer/xo
 	name = OUTFIT_JOB_NAME("Executive Officer")
+	uniform = /obj/item/clothing/under/unn/marine
 	l_ear = /obj/item/device/radio/headset/heads/hop
+	head = /obj/item/clothing/head/unmc
 	id_type = /obj/item/weapon/card/id/marine/xo
 	pda_type = /obj/item/modular_computer/pda/heads/hop
 
 /decl/hierarchy/outfit/job/unn/sea
 	name = OUTFIT_JOB_NAME("Senior Enlisted Advisor")
+	head = /obj/item/clothing/head/unmc
+	uniform = /obj/item/clothing/under/unn/marine
 	l_ear = /obj/item/device/radio/headset/heads/hop
 	id_type = /obj/item/weapon/card/id/marine/sea
 	pda_type = /obj/item/modular_computer/pda/heads
 
 /decl/hierarchy/outfit/job/unn/security
 	name = OUTFIT_JOB_NAME("Military Police Officer")
+	uniform = /obj/item/clothing/under/unn/marine
 	l_ear = /obj/item/device/radio/headset/headset_sec/alt
 	id_type = /obj/item/weapon/card/id/marine/mpo
 	pda_type = /obj/item/modular_computer/pda/security
@@ -49,6 +54,7 @@
 
 /decl/hierarchy/outfit/job/unn/security/trainee
 	name = OUTFIT_JOB_NAME("Military Police Officer Trainee")
+	uniform = /obj/item/clothing/under/unn/marine
 	l_ear = /obj/item/device/radio/headset/headset_sec
 	id_type = /obj/item/weapon/card/id/marine/mpot
 

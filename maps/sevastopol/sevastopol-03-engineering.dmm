@@ -1143,10 +1143,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
-	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/third)
 "cj" = (
@@ -1556,6 +1552,13 @@
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled,
+/area/hallway/primary/third)
+"uG" = (
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/third)
 "uU" = (
 /obj/effect/paint_stripe/white,
@@ -7282,7 +7285,7 @@ cQ
 uV
 al
 lc
-ap
+uG
 ap
 ap
 eX
