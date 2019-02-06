@@ -24,3 +24,9 @@
 	desc = "The standard duty uniform for UNN officers and enlisted personnel."
 	icon_state = "unnfatigues"
 	worn_state = "unnfatigues"
+
+/obj/item/clothing/under/unn/marine
+	name = "\improper UNMC fatigues"
+	desc = "The standard duty uniform for UNMC officers and enlisted personnel."
+	icon_state = "unnmarine"
+	worn_state = "unnmarine"
