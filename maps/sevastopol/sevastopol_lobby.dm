@@ -1,6 +1,6 @@
 /datum/map/sevastopol
 	lobby_icon = 'maps/sevastopol/icons/lobby.dmi'
-	lobby_screens = list("title","title2")
+	lobby_screens = list("title")
 	lobby_tracks = list(
 		/music_track/chasing_time,
 		/music_track/torch,
