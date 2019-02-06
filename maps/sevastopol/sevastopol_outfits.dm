@@ -1,6 +1,6 @@
 /decl/hierarchy/outfit/job/unn
 	name = OUTFIT_JOB_NAME("UNN Outfit")
-	uniform = /obj/item/clothing/under/unn/fatigues
+	uniform = /obj/item/clothing/under/unn/marine
 	l_ear = /obj/item/device/radio/headset
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/marine
@@ -28,6 +28,7 @@
 	name = OUTFIT_JOB_NAME("Executive Officer")
 	uniform = /obj/item/clothing/under/unn/marine
 	l_ear = /obj/item/device/radio/headset/heads/hop
+	head = /obj/item/clothing/head/unmc
 	id_type = /obj/item/weapon/card/id/marine/xo
 	pda_type = /obj/item/modular_computer/pda/heads/hop
 

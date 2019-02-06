@@ -12,9 +12,7 @@
 		/obj/item/weapon/melee/baton/loaded,
 		/obj/item/clothing/glasses/sunglasses/sechud,
 		/obj/item/taperoll/police,
-		/obj/item/device/hailer,
 		/obj/item/clothing/accessory/storage/black_vest,
-		/obj/item/clothing/head/soft/sec,
 		/obj/item/weapon/gun/energy/taser,
 		/obj/item/device/holowarrant
 	)
