@@ -2,9 +2,6 @@
 "aa" = (
 /turf/space,
 /area/space)
-"ab" = (
-/turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/third)
 "ac" = (
 /turf/simulated/wall/r_wall/hull,
 /area/space)
@@ -64,8 +61,10 @@
 /turf/simulated/floor/plating,
 /area/engineering/office)
 "ai" = (
-/turf/unsimulated/mask,
-/area/hallway/primary/third)
+/obj/structure/stairs/west,
+/obj/structure/railing/mapped,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "aj" = (
 /obj/structure/ladder,
 /obj/effect/catwalk_plated,
@@ -177,7 +176,6 @@
 	dir = 6
 	},
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -560,7 +558,6 @@
 	dir = 6
 	},
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
 /obj/effect/landmark/start{
@@ -582,6 +579,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/tech)
+"bu" = (
+/obj/structure/railing/mapped{
+	tag = "icon-railing0 (EAST)";
+	icon_state = "railing0-1";
+	dir = 1
+	},
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "bv" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -1138,10 +1143,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
-	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/third)
 "cj" = (
@@ -1491,6 +1492,14 @@
 /obj/item/stack/material/glass/reinforced/fifty,
 /turf/simulated/floor/plating,
 /area/engineering/office)
+"dM" = (
+/obj/machinery/door/firedoor,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass/maintenance{
+	name = "staircase"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "eX" = (
 /obj/effect/paint_stripe/white,
 /turf/simulated/wall,
@@ -1509,15 +1518,31 @@
 /obj/effect/shuttle_landmark/sevastopol/deck3,
 /turf/space,
 /area/space)
+"kP" = (
+/obj/structure/railing/mapped,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "lc" = (
 /turf/simulated/wall,
 /area/hallway/primary/third)
+"lj" = (
+/turf/simulated/wall/r_wall/hull,
+/area/hallway/primary/stairs)
 "lB" = (
 /turf/simulated/wall/r_wall/hull,
 /area/engineering/office)
+"lJ" = (
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "mb" = (
 /turf/simulated/wall/r_wall/hull,
 /area/hallway/primary/third)
+"po" = (
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "pB" = (
 /obj/effect/floor_decal/corner/yellow{
 	icon_state = "corner_white";
@@ -1528,6 +1553,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/third)
+"uG" = (
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/third)
 "uU" = (
 /obj/effect/paint_stripe/white,
 /turf/simulated/wall,
@@ -1536,6 +1568,9 @@
 /obj/effect/paint_stripe/yellow,
 /turf/simulated/wall,
 /area/engineering/office)
+"FZ" = (
+/turf/simulated/wall,
+/area/hallway/primary/stairs)
 "Gx" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central4,
 /obj/effect/paint_stripe/white,
@@ -1559,6 +1594,15 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/third)
+"VK" = (
+/obj/structure/railing/mapped{
+	tag = "icon-railing0 (EAST)";
+	icon_state = "railing0-1";
+	dir = 1
+	},
+/obj/machinery/light/small,
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "XM" = (
 /obj/effect/catwalk_plated,
 /obj/structure/cable{
@@ -7241,9 +7285,9 @@ cQ
 uV
 al
 lc
-lc
-ab
-lc
+uG
+ap
+ap
 eX
 au
 cz
@@ -7342,10 +7386,10 @@ lB
 lB
 lB
 aj
-lc
-ai
-ai
-ai
+FZ
+FZ
+dM
+FZ
 eX
 eX
 Yd
@@ -7444,11 +7488,11 @@ aa
 aa
 mb
 mb
-mb
+lj
 ai
-ai
-ai
-mb
+po
+bu
+lj
 ac
 ac
 aa
@@ -7546,11 +7590,11 @@ aa
 aa
 af
 aa
-mb
-ai
-ai
-ai
-mb
+lj
+kP
+po
+VK
+lj
 aa
 af
 aa
@@ -7648,11 +7692,11 @@ aa
 aa
 af
 af
-mb
-ai
-ai
-ai
-mb
+lj
+lJ
+po
+lJ
+lj
 af
 af
 aa
@@ -7750,11 +7794,11 @@ aa
 aa
 aa
 af
-mb
-mb
-mb
-mb
-mb
+lj
+lj
+lj
+lj
+lj
 af
 aa
 aa

@@ -25,11 +25,16 @@
 /turf/simulated/open,
 /area/hallway/primary/sixth)
 "ag" = (
-/turf/unsimulated/mask,
-/area/quartermaster/storage)
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "ah" = (
-/turf/simulated/floor/tiled/steel_ridged,
-/area/quartermaster/storage)
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass/mining{
+	name = "warehouse"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "ai" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/zpipe/down/supply,
@@ -1739,6 +1744,9 @@
 /obj/structure/bed/chair/shuttle/blue,
 /turf/simulated/floor/tiled/monotile,
 /area/expedition/two)
+"hp" = (
+/turf/simulated/wall/r_wall/hull,
+/area/hallway/primary/stairs)
 "hC" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /turf/simulated/floor/plating,
@@ -1783,6 +1791,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/expedition/two)
+"rI" = (
+/obj/structure/railing/mapped,
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "sO" = (
 /obj/effect/paint/red,
 /obj/machinery/button/remote/blast_door{
@@ -1882,6 +1894,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall/r_titanium,
 /area/expedition/one)
+"Fi" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "Lk" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -1889,6 +1907,15 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/expedition/one)
+"LA" = (
+/obj/structure/railing/mapped{
+	tag = "icon-railing0 (EAST)";
+	icon_state = "railing0-1";
+	dir = 8
+	},
+/obj/structure/railing/mapped,
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "LX" = (
 /turf/simulated/wall/r_wall/hull,
 /area/quartermaster/office)
@@ -1914,6 +1941,10 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/expedition/one)
+"NA" = (
+/obj/structure/stairs/east,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "OC" = (
 /obj/machinery/light{
 	dir = 8
@@ -1934,6 +1965,9 @@
 /obj/effect/paint/red,
 /turf/simulated/wall/r_titanium,
 /area/expedition/two)
+"PW" = (
+/turf/simulated/wall,
+/area/hallway/primary/stairs)
 "Rx" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/shutters/open{
@@ -1949,6 +1983,9 @@
 /obj/effect/shuttle_landmark/sevastopol/deck6,
 /turf/space,
 /area/space)
+"TX" = (
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "Ub" = (
 /obj/machinery/door/blast/regular{
 	dir = 4;
@@ -1969,6 +2006,10 @@
 "Xj" = (
 /turf/simulated/wall,
 /area/quartermaster/storage)
+"YF" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "Zw" = (
 /obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_titanium,
@@ -7633,11 +7674,11 @@ ad
 cH
 cI
 cK
-Xj
-Xj
+PW
+PW
 ah
-Xj
-Xj
+PW
+PW
 bh
 bh
 cN
@@ -7735,11 +7776,11 @@ ad
 ad
 ad
 cJ
-Xj
+PW
 ag
 ag
 ag
-Xj
+PW
 cx
 ad
 ad
@@ -7837,11 +7878,11 @@ aa
 aa
 ad
 ad
-ad
-ag
-ag
-ag
-ad
+hp
+Fi
+LA
+YF
+hp
 ad
 ad
 aa
@@ -7939,11 +7980,11 @@ aa
 aa
 aa
 aa
-ad
-ag
-ag
-ag
-ad
+hp
+TX
+rI
+NA
+hp
 aa
 aa
 aa
@@ -8041,11 +8082,11 @@ aa
 aa
 aa
 aa
-ad
-ag
-ag
-ag
-ad
+hp
+hp
+hp
+hp
+hp
 aa
 aa
 aa
@@ -8143,11 +8184,11 @@ aa
 aa
 aa
 aa
-ad
-ad
-ad
-ad
-ad
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa

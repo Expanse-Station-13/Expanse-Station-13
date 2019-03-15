@@ -59,6 +59,10 @@
 	name = "\improper Second Deck Hallway"
 	icon_state = "hallC1"
 
+/area/hallway/primary/stairs
+	name = "\improper Stairs"
+	icon_state = "hangar"
+
 
 /area/bridge
 	name = "\improper Bridge"
@@ -177,57 +181,6 @@
 	icon_state = "quartstorage"
 	sound_env = LARGE_ENCLOSED
 
-// Elevator areas.
-/area/turbolift/sevatopol_second
-	name = "lift (reactor)"
-	lift_floor_label = "Deck 9"
-	lift_floor_name = "Reactor"
-	lift_announce_str = "Arriving at Reactor Level: Power Core. Engineering Control Room. Power Storage. Electrical Maintenance."
-	base_turf = /turf/simulated/floor/plating
-
-/area/turbolift/sevatopol_third
-	name = "lift (engineering)"
-	lift_floor_label = "Deck 8"
-	lift_floor_name = "Engineering"
-	lift_announce_str = "Arriving at Engineering Level: Telecommunications. Engineering Office. Engineering Storage."
-
-/area/turbolift/sevatopol_fourth
-	name = "lift (crew)"
-	lift_floor_label = "Deck 7"
-	lift_floor_name = "Crew Quarters"
-	lift_announce_str = "Arriving at Crew Quarters: Cryogenic Storage. Lounge. Berthings."
-
-/area/turbolift/sevatopol_fifth
-	name = "lift (mess)"
-	lift_floor_label = "Deck 6"
-	lift_floor_name = "Mess Hall"
-	lift_announce_str = "Arriving at Mess Hall: Kitchen. Canteen."
-
-/area/turbolift/sevatopol_sixth
-	name = "lift (supply)"
-	lift_floor_label = "Deck 5"
-	lift_floor_name = "Supply"
-	lift_announce_str = "Arriving at Cargo Level: Warehouse. Shuttle Docks. Quartermaster."
-
-/area/turbolift/sevatopol_seventh
-	name = "lift (eva)"
-	lift_floor_label = "Deck 4"
-	lift_floor_name = "EVA"
-	lift_announce_str = "Arriving at EVA: Docking Port Airlock. Voidsuit Storage."
-
-/area/turbolift/sevatopol_eighth
-	name = "lift (marlab)"
-	lift_floor_label = "Deck 3"
-	lift_floor_name = "Marlab"
-	lift_announce_str = "Arriving at Medical And Research Laboraties: Chemistry. Surgery. Research and Development. Virology."
-
-/area/turbolift/sevatopol_ninth
-	name = "lift (brig)"
-	lift_floor_label = "Deck 2"
-	lift_floor_name = "Brig"
-	lift_announce_str = "Arriving at Brig: Security Office. Armory."
-
-
 //Expedition
 
 /area/expedition
@@ -276,6 +229,9 @@
 /area/security/office
 	name = "\improper Security Office"
 	icon_state = "checkpoint"
+
+/area/security/brig //Already defined in Space Station 13 areas.dm, but we override the name for consistency
+	name = "\improper Security Brig"
 
 
 //Le pods

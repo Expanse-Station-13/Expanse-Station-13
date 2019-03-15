@@ -38,11 +38,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fifth)
 "ae" = (
-/turf/unsimulated/mask,
-/area/crew_quarters/mess)
-"af" = (
-/turf/simulated/floor/tiled/steel_ridged,
-/area/crew_quarters/mess)
+/turf/simulated/wall,
+/area/hallway/primary/stairs)
 "ag" = (
 /turf/simulated/wall,
 /area/maintenance/fifth)
@@ -95,7 +92,6 @@
 /obj/effect/floor_decal/unn{
 	icon_state = "unlogo1"
 	},
-/obj/structure/bed/chair/crash,
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/mess)
 "aq" = (
@@ -124,7 +120,6 @@
 /obj/effect/floor_decal/unn{
 	icon_state = "unlogo3"
 	},
-/obj/machinery/vending/dinnerware,
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/mess)
 "as" = (
@@ -1212,6 +1207,9 @@
 /obj/item/weapon/storage/box/checkers/chess/red,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/officersmess)
+"lP" = (
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "mm" = (
 /obj/effect/shuttle_landmark/sevastopol/deck5,
 /turf/space,
@@ -1219,6 +1217,12 @@
 "mr" = (
 /turf/simulated/wall/r_wall/hull,
 /area/crew_quarters/officersmess)
+"ne" = (
+/obj/structure/bed/chair/crash{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/mess)
 "oL" = (
 /obj/machinery/seed_storage/garden,
 /obj/effect/floor_decal/corner/b_green{
@@ -1232,6 +1236,14 @@
 /obj/effect/floor_decal/corner/grey/mono,
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)
+"sW" = (
+/obj/structure/railing/mapped{
+	tag = "icon-railing0 (EAST)";
+	icon_state = "railing0-1";
+	dir = 1
+	},
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "ut" = (
 /obj/item/weapon/reagent_containers/glass/bucket,
 /obj/structure/reagent_dispensers/watertank,
@@ -1277,12 +1289,21 @@
 /area/hydroponics)
 "CD" = (
 /turf/simulated/wall/r_wall/hull,
-/area/space)
+/area/hallway/primary/stairs)
 "CJ" = (
 /obj/effect/floor_decal/corner/blue,
 /obj/item/weapon/stool/bar/padded,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/officersmess)
+"Fx" = (
+/obj/structure/railing/mapped{
+	tag = "icon-railing0 (EAST)";
+	icon_state = "railing0-1";
+	dir = 1
+	},
+/obj/machinery/light/small,
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "GQ" = (
 /turf/simulated/wall/r_wall/hull,
 /area/crew_quarters/mess)
@@ -1321,6 +1342,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/officersmess)
+"Le" = (
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "Oc" = (
 /obj/effect/floor_decal/corner/lightgrey,
 /obj/structure/closet/medical_wall/filled{
@@ -1333,6 +1357,23 @@
 /obj/effect/wallframe_spawn/reinforced/hull,
 /turf/simulated/floor/plating,
 /area/crew_quarters/officersmess)
+"QR" = (
+/obj/structure/railing/mapped,
+/obj/structure/stairs/west,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
+"Sk" = (
+/obj/structure/railing/mapped,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
+"Sz" = (
+/obj/effect/floor_decal/corner/lightgrey,
+/obj/machinery/vending/dinnerware,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/mess)
 "TF" = (
 /obj/machinery/power/apc{
 	dir = 2;
@@ -1351,12 +1392,20 @@
 /obj/effect/floor_decal/corner/blue,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/officersmess)
+"Wf" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass/maintenance{
+	name = "staircase"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "XH" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/bed/chair/crash,
 /obj/effect/floor_decal/corner/blue,
+/obj/structure/bed/chair/crash,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/officersmess)
 "YG" = (
@@ -7033,10 +7082,10 @@ jJ
 cp
 gE
 dT
-wR
-af
-wR
-wR
+Sz
+ay
+ne
+ay
 ay
 bC
 aA
@@ -7136,7 +7185,7 @@ mr
 aK
 dT
 ae
-ae
+Wf
 ae
 wR
 aV
@@ -7237,9 +7286,9 @@ aa
 mr
 mr
 mr
-ae
-ae
-ae
+QR
+lP
+sW
 GQ
 GQ
 GQ
@@ -7339,9 +7388,9 @@ aa
 aa
 aa
 CD
-ae
-ae
-ae
+Sk
+lP
+Fx
 CD
 aa
 aa
@@ -7441,9 +7490,9 @@ aa
 aa
 aa
 CD
-ae
-ae
-ae
+Le
+lP
+Le
 CD
 aa
 aa

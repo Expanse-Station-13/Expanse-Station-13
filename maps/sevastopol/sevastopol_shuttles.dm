@@ -338,11 +338,16 @@
 	name = "Mercenary"
 	warmup_time = 0
 	destination_tags = list(
-		"nav_merc_deck1",
-		"nav_merc_deck2",
-		"nav_merc_deck3",
-		"nav_merc_deck4",
-		"nav_merc_deck5",
+		"nav_deck1",
+		"nav_deck2",
+		"nav_deck3",
+		"nav_deck4",
+		"nav_deck5",
+		"nav_deck6",
+		"nav_deck7",
+		"nav_deck8",
+		"nav_deck9",
+		"nav_deck10",
 		"nav_away_5",
 		"nav_derelict_6",
 		"nav_cluster_5",
@@ -379,7 +384,7 @@
 	landmark_tag = "nav_merc_dock"
 	docking_controller = "nuke_shuttle_dock_airlock"
 
-/obj/effect/shuttle_landmark/merc/deck1
+/*/obj/effect/shuttle_landmark/merc/deck1
 	name = "Northeast of First Deck"
 	landmark_tag = "nav_merc_deck1"
 
@@ -397,7 +402,7 @@
 
 /obj/effect/shuttle_landmark/merc/deck5
 	name = "East of Bridge"
-	landmark_tag = "nav_merc_deck5"
+	landmark_tag = "nav_merc_deck5"*/
 
 //Skipjack
 
@@ -405,11 +410,16 @@
 	name = "Skipjack"
 	warmup_time = 0
 	destination_tags = list(
-		"nav_skipjack_deck1",
-		"nav_skipjack_deck2",
-		"nav_skipjack_deck3",
-		"nav_skipjack_deck4",
-		"nav_skipjack_deck5",
+		"nav_deck1",
+		"nav_deck2",
+		"nav_deck3",
+		"nav_deck4",
+		"nav_deck5",
+		"nav_deck6",
+		"nav_deck7",
+		"nav_deck8",
+		"nav_deck9",
+		"nav_deck10",
 		"nav_away_7",
 		"nav_derelict_7",
 		"nav_cluster_7",
@@ -446,7 +456,7 @@
 	landmark_tag = "nav_skipjack_dock"
 	docking_controller = "skipjack_shuttle_dock_airlock"
 
-/obj/effect/shuttle_landmark/skipjack/deck1
+/*/obj/effect/shuttle_landmark/skipjack/deck1
 	name = "Northwest of First Deck"
 	landmark_tag = "nav_skipjack_deck1"
 
@@ -464,7 +474,7 @@
 
 /obj/effect/shuttle_landmark/skipjack/deck5
 	name = "South of Bridge"
-	landmark_tag = "nav_skipjack_deck5"
+	landmark_tag = "nav_skipjack_deck5"*/
 
 //NT Rescue Shuttle
 
@@ -472,11 +482,16 @@
 	name = "Rescue"
 	warmup_time = 0
 	destination_tags = list(
-		"nav_ert_deck1",
-		"nav_ert_deck2",
-		"nav_ert_deck3",
-		"nav_ert_deck4",
-		"nav_ert_deck5",
+		"nav_deck1",
+		"nav_deck2",
+		"nav_deck3",
+		"nav_deck4",
+		"nav_deck5",
+		"nav_deck6",
+		"nav_deck7",
+		"nav_deck8",
+		"nav_deck9",
+		"nav_deck10",
 		"nav_away_4",
 		"nav_derelict_4",
 		"nav_cluster_4",
@@ -513,7 +528,7 @@
 	landmark_tag = "nav_ert_dock"
 	docking_controller = "rescue_shuttle_dock_airlock"
 
-/obj/effect/shuttle_landmark/ert/deck1
+/*/obj/effect/shuttle_landmark/ert/deck1
 	name =  "Southwest of Fourth deck"
 	landmark_tag = "nav_ert_deck1"
 
@@ -531,7 +546,7 @@
 
 /obj/effect/shuttle_landmark/ert/deck5
 	name = "West of Bridge"
-	landmark_tag = "nav_ert_deck5"
+	landmark_tag = "nav_ert_deck5"*/
 
 //SCGMC Assault Pod
 

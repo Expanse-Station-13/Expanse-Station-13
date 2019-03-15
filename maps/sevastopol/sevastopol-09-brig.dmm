@@ -94,6 +94,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/item/weapon/storage/belt/holster/security,
+/obj/item/weapon/storage/belt/holster/security,
+/obj/item/weapon/storage/belt/holster/security,
+/obj/item/weapon/storage/belt/holster/security,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/equipment)
 "ak" = (
@@ -387,9 +391,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/equipment)
-"aQ" = (
-/turf/simulated/wall/r_wall/hull,
-/area/space)
 "aR" = (
 /obj/structure/closet/secure_closet/security,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -491,12 +492,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/ninth)
-"be" = (
-/turf/simulated/wall,
-/area/hallway/primary/ninth)
 "bf" = (
-/turf/unsimulated/mask,
-/area/hallway/primary/ninth)
+/obj/structure/bed/chair/crash,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "bg" = (
 /obj/effect/floor_decal/corner/red/mono,
 /obj/machinery/vending/security,
@@ -675,9 +674,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/armory)
-"bt" = (
-/turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/ninth)
 "bv" = (
 /obj/effect/floor_decal/corner/red{
 	icon_state = "corner_white";
@@ -798,12 +794,7 @@
 /area/hallway/primary/ninth)
 "bF" = (
 /obj/effect/floor_decal/corner/red/half,
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/obj/structure/closet/medical_wall/filled{
-	pixel_y = -22
-	},
+/obj/structure/closet/secure_closet/security,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/office)
 "bG" = (
@@ -816,6 +807,9 @@
 /obj/item/weapon/folder/red,
 /obj/item/sticky_pad/random,
 /obj/machinery/light,
+/obj/structure/closet/medical_wall/filled{
+	pixel_y = -22
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/office)
 "bH" = (
@@ -1201,6 +1195,36 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/processing)
+"gC" = (
+/obj/structure/railing/mapped{
+	tag = "icon-railing0 (EAST)";
+	icon_state = "railing0-1";
+	dir = 1
+	},
+/turf/simulated/open,
+/area/hallway/primary/stairs)
+"hj" = (
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
+"io" = (
+/turf/simulated/wall/r_wall/hull,
+/area/hallway/primary/stairs)
+"iQ" = (
+/obj/structure/railing/mapped{
+	tag = "icon-railing0 (EAST)";
+	icon_state = "railing0-1";
+	dir = 1
+	},
+/obj/machinery/light/small,
+/turf/simulated/open,
+/area/hallway/primary/stairs)
+"jN" = (
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
+"lS" = (
+/obj/machinery/firealarm,
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "vz" = (
 /obj/effect/floor_decal/corner/red/half,
 /obj/structure/bed/chair{
@@ -1221,6 +1245,15 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/office)
+"xV" = (
+/turf/simulated/wall,
+/area/hallway/primary/stairs)
+"ye" = (
+/obj/machinery/alarm{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "Fn" = (
 /obj/structure/cable/blue{
 	d1 = 1;
@@ -1257,10 +1290,25 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/office)
+"Rk" = (
+/obj/structure/bed/chair/crash,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "TT" = (
 /obj/effect/shuttle_landmark/sevastopol/deck9,
 /turf/space,
 /area/space)
+"XW" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass/maintenance{
+	name = "staircase"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 
 (1,1,1) = {"
 aa
@@ -6820,7 +6868,7 @@ aj
 IH
 ar
 aB
-bd
+bc
 bc
 bE
 bK
@@ -6922,9 +6970,9 @@ ak
 at
 ar
 aB
-be
-bt
-be
+bd
+bc
+bE
 bL
 bL
 bL
@@ -7023,11 +7071,11 @@ ab
 ab
 ab
 aD
-aB
-bf
-bf
-bf
-aQ
+xV
+xV
+XW
+xV
+io
 ao
 ao
 ao
@@ -7125,11 +7173,11 @@ aa
 aa
 ab
 ab
-ab
+io
 bf
-bf
-bf
-aQ
+hj
+gC
+io
 ao
 ao
 aa
@@ -7227,11 +7275,11 @@ aa
 aa
 aa
 ao
-aQ
-bf
-bf
-bf
-aQ
+io
+Rk
+hj
+iQ
+io
 ao
 aa
 aa
@@ -7329,11 +7377,11 @@ aa
 aa
 aa
 aa
-aQ
-bf
-bf
-bf
-aQ
+io
+lS
+ye
+jN
+io
 aa
 aa
 aa
@@ -7431,11 +7479,11 @@ aa
 aa
 aa
 aa
-aQ
-aQ
-aQ
-aQ
-aQ
+io
+io
+io
+io
+io
 aa
 aa
 aa

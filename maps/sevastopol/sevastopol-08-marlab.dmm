@@ -17,11 +17,16 @@
 /turf/simulated/wall/r_wall/hull,
 /area/space)
 "ae" = (
-/turf/unsimulated/mask,
-/area/hallway/primary/eighth)
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "af" = (
-/turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/eighth)
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass/maintenance{
+	name = "staircase"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "ag" = (
 /turf/simulated/wall/r_titanium,
 /area/shuttle/escape_pod/three)
@@ -78,14 +83,12 @@
 /area/shuttle/escape_pod/one)
 "ap" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/escape_pod/three)
 "aq" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
 /turf/simulated/floor/reinforced,
@@ -1351,10 +1354,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/research)
+"ht" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
+"jm" = (
+/obj/structure/stairs/east,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "jE" = (
 /obj/effect/paint_stripe/blue,
 /turf/simulated/wall,
 /area/medical/surgery)
+"lf" = (
+/obj/structure/railing/mapped,
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "oX" = (
 /turf/simulated/wall/r_titanium,
 /area/shuttle/escape_pod/two)
@@ -1382,7 +1397,6 @@
 /area/medical/research)
 "wD" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -1393,9 +1407,11 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/escape_pod/two)
+"wE" = (
+/turf/simulated/wall/r_wall/hull,
+/area/hallway/primary/stairs)
 "wN" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
 /obj/machinery/light/small{
@@ -1411,6 +1427,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/research)
+"xw" = (
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "xC" = (
 /turf/simulated/floor/reinforced,
 /area/shuttle/escape_pod/two)
@@ -1427,6 +1446,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/research)
+"Ai" = (
+/obj/structure/railing/mapped{
+	tag = "icon-railing0 (EAST)";
+	icon_state = "railing0-1";
+	dir = 8
+	},
+/obj/structure/railing/mapped,
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "Aw" = (
 /obj/effect/landmark/start{
 	name = "Ship Doctor"
@@ -1442,7 +1470,6 @@
 /area/medical/research)
 "Ct" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -1515,6 +1542,12 @@
 "Sz" = (
 /turf/simulated/wall/r_wall/hull,
 /area/medical/research)
+"Tg" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "TQ" = (
 /obj/item/weapon/material/bell,
 /obj/machinery/door/firedoor,
@@ -1533,9 +1566,11 @@
 "Ur" = (
 /turf/simulated/floor/reinforced,
 /area/shuttle/escape_pod/one)
+"Xj" = (
+/turf/simulated/wall,
+/area/hallway/primary/stairs)
 "Xx" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /obj/machinery/light/small,
@@ -7207,9 +7242,9 @@ bs
 bu
 aL
 Dr
-fo
+Xj
 af
-fo
+Xj
 jE
 cJ
 cI
@@ -7411,9 +7446,9 @@ aa
 On
 On
 On
-ae
-ae
-ae
+Tg
+Ai
+ht
 Ox
 Ox
 Ox
@@ -7512,11 +7547,11 @@ aa
 aa
 aa
 aa
-ad
-ae
-ae
-ae
-ad
+wE
+xw
+lf
+jm
+wE
 aa
 aa
 aa
@@ -7614,11 +7649,11 @@ aa
 aa
 aa
 aa
-ad
-ae
-ae
-ae
-ad
+wE
+wE
+wE
+wE
+wE
 aa
 aa
 aa
@@ -7716,11 +7751,11 @@ aa
 aa
 aa
 aa
-ad
-ad
-ad
-ad
-ad
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa

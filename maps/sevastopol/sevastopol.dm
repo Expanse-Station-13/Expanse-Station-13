@@ -2,7 +2,6 @@
 
 	#include "sevastopol_announcements.dm"
 	#include "sevastopol_areas.dm"
-	#include "sevastopol_elevator.dm"
 	#include "sevastopol_jobs.dm"
 	#include "sevastopol_lobby.dm"
 	#include "sevastopol_outfits.dm"

@@ -21,11 +21,16 @@
 /turf/simulated/wall/r_wall/hull,
 /area/space)
 "ag" = (
-/turf/unsimulated/mask,
-/area/hallway/primary/fourth)
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "ah" = (
-/turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/fourth)
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass/maintenance{
+	name = "staircase"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "ai" = (
 /obj/structure/cable{
 	icon_state = "0-4";
@@ -259,7 +264,6 @@
 "aO" = (
 /obj/machinery/light/small,
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -932,7 +936,6 @@
 /area/maintenance/fourth)
 "dD" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -944,6 +947,10 @@
 /obj/effect/shuttle_landmark/sevastopol/deck4,
 /turf/space,
 /area/space)
+"fH" = (
+/obj/structure/railing/mapped,
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "gG" = (
 /obj/effect/paint_stripe/brown,
 /turf/simulated/wall,
@@ -962,9 +969,25 @@
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/lino,
 /area/hallway/primary/fourth)
+"lB" = (
+/turf/simulated/wall,
+/area/hallway/primary/stairs)
 "lM" = (
 /turf/simulated/wall/r_wall/hull,
 /area/hallway/primary/fourth)
+"sX" = (
+/obj/structure/railing/mapped{
+	tag = "icon-railing0 (EAST)";
+	icon_state = "railing0-1";
+	dir = 8
+	},
+/obj/structure/railing/mapped,
+/turf/simulated/open,
+/area/hallway/primary/stairs)
+"tm" = (
+/obj/structure/stairs/east,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "tD" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -1000,6 +1023,9 @@
 "yU" = (
 /turf/simulated/wall/r_wall/hull,
 /area/maintenance/fourth)
+"AZ" = (
+/turf/simulated/wall/r_wall/hull,
+/area/hallway/primary/stairs)
 "Ba" = (
 /obj/machinery/status_display{
 	pixel_y = 32
@@ -1014,6 +1040,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/gym)
+"Du" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "Fr" = (
 /obj/machinery/light{
 	dir = 8
@@ -1031,6 +1063,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/gym)
+"Kf" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "LM" = (
 /obj/structure/fitness/weightlifter,
 /obj/machinery/light{
@@ -1044,6 +1080,9 @@
 "LS" = (
 /turf/simulated/wall/r_wall/hull,
 /area/crew_quarters/shower)
+"NK" = (
+/turf/simulated/open,
+/area/hallway/primary/stairs)
 "OH" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /obj/effect/floor_decal/corner/green,
@@ -6733,7 +6772,7 @@ wS
 aU
 aU
 ah
-ae
+lB
 aW
 aR
 Rc
@@ -6935,10 +6974,10 @@ aa
 xQ
 xQ
 xQ
-ag
-ag
-ag
-af
+Du
+sX
+Kf
+AZ
 af
 af
 aa
@@ -7036,11 +7075,11 @@ aa
 aa
 ad
 aa
-af
-ag
-ag
-ag
-af
+AZ
+NK
+fH
+tm
+AZ
 aa
 ad
 aa
@@ -7138,11 +7177,11 @@ aa
 aa
 ad
 ad
-af
-ag
-ag
-ag
-af
+AZ
+AZ
+AZ
+AZ
+AZ
 ad
 ad
 aa
@@ -7240,11 +7279,11 @@ aa
 aa
 aa
 ad
-af
-af
-af
-af
-af
+ad
+ad
+ad
+ad
+ad
 ad
 aa
 aa

@@ -74,8 +74,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/locker)
 "an" = (
-/turf/unsimulated/mask,
-/area/hallway/primary/second)
+/obj/structure/bed/chair/crash,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "ao" = (
 /obj/structure/cable{
 	d2 = 2;
@@ -124,8 +126,24 @@
 /turf/space,
 /area/space)
 "ar" = (
-/turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/second)
+/obj/machinery/door/firedoor,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass/maintenance{
+	name = "staircase"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "as" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -435,7 +453,6 @@
 /area/engineering/locker)
 "aU" = (
 /obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -557,9 +574,14 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/locker)
 "be" = (
-/obj/turbolift_map_holder/sevastopol,
-/turf/unsimulated/mask,
-/area/hallway/primary/second)
+/obj/machinery/power/apc{
+	dir = 2;
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "bf" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -784,18 +806,32 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/effect/catwalk_plated,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/hallway/primary/second)
 "by" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/second)
@@ -1026,6 +1062,9 @@
 /obj/machinery/light/spot{
 	dir = 8
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/second)
 "bT" = (
@@ -1176,10 +1215,6 @@
 	},
 /obj/machinery/status_display{
 	pixel_x = -32
-	},
-/obj/structure/bed/chair/crash{
-	icon_state = "shuttle_chair_preview";
-	dir = 1
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/second)
@@ -1620,7 +1655,7 @@
 /area/engineering/engine_smes)
 "nB" = (
 /turf/simulated/wall,
-/area/hallway/primary/second)
+/area/hallway/primary/stairs)
 "qk" = (
 /obj/effect/paint_stripe/red,
 /obj/effect/paint_stripe/red,
@@ -1630,6 +1665,21 @@
 /obj/effect/paint_stripe/yellow,
 /turf/simulated/wall,
 /area/engineering/engine_room)
+"tp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	desc = "A flexible superconducting cable for heavy-duty power transfer. It's been labeled 'chaos reigns'.";
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "tG" = (
 /obj/effect/paint_stripe/yellow,
 /turf/simulated/wall,
@@ -1642,6 +1692,24 @@
 	},
 /turf/space,
 /area/space)
+"uB" = (
+/obj/structure/railing/mapped{
+	tag = "icon-railing0 (EAST)";
+	icon_state = "railing0-1";
+	dir = 1
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
+"vo" = (
+/obj/structure/stairs/east,
+/obj/structure/railing/mapped{
+	tag = "icon-railing0 (EAST)";
+	icon_state = "railing0-1";
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/stairs)
 "zE" = (
 /turf/simulated/wall/r_wall/hull,
 /area/hallway/primary/second)
@@ -1677,6 +1745,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/locker)
+"GH" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "GQ" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
@@ -1690,12 +1764,30 @@
 /obj/effect/paint_stripe/yellow,
 /turf/simulated/wall,
 /area/engineering/engine_smes)
+"Mg" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "Qn" = (
 /turf/simulated/wall/r_wall/hull,
 /area/engineering/engine_smes)
+"Sw" = (
+/turf/simulated/wall/r_wall/hull,
+/area/hallway/primary/stairs)
 "UE" = (
 /turf/simulated/wall/r_wall/hull,
 /area/engineering/locker)
+"Wj" = (
+/obj/structure/lattice,
+/turf/simulated/wall/r_wall/hull,
+/area/hallway/primary/stairs)
+"Xi" = (
+/obj/structure/bed/chair/crash,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/stairs)
 "Yk" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
@@ -7468,7 +7560,7 @@ AD
 ax
 nB
 an
-an
+tp
 be
 tG
 aC
@@ -7568,10 +7660,10 @@ aa
 ab
 zE
 zE
-zE
-an
-an
-an
+Sw
+Xi
+GH
+uB
 Ap
 Ap
 Ap
@@ -7670,11 +7762,11 @@ aa
 aq
 aq
 aa
-zE
-an
-an
-an
-zE
+Sw
+Mg
+Mg
+vo
+Sw
 aa
 aq
 aq
@@ -7772,11 +7864,11 @@ aa
 aa
 aq
 aq
-zE
-an
-an
-an
-zE
+Wj
+Wj
+Wj
+Wj
+Wj
 aq
 aq
 aa
@@ -7874,11 +7966,11 @@ aa
 aa
 aa
 aq
-zE
-zE
-zE
-zE
-zE
+aq
+aq
+aq
+aq
+aq
 aq
 aa
 aa
