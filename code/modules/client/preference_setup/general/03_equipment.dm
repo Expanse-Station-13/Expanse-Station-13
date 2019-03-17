@@ -95,10 +95,10 @@
 				. += " <a href='?src=\ref[src];underwear=[UWC.name];tweak=\ref[gt]'>[gt.get_contents(get_underwear_metadata(UWC.name, gt))]</a>"
 
 		. += "<br>"
-	. += "Backpack Type: <a href='?src=\ref[src];change_backpack=1'><b>[pref.backpack.name]</b></a>"
+/*	. += "Backpack Type: <a href='?src=\ref[src];change_backpack=1'><b>[pref.backpack.name]</b></a>"
 	for(var/datum/backpack_tweak/bt in pref.backpack.tweaks)
 		. += " <a href='?src=\ref[src];backpack=[pref.backpack.name];tweak=\ref[bt]'>[bt.get_ui_content(get_backpack_metadata(pref.backpack, bt))]</a>"
-	. += "<br>"
+	. += "<br>"*/
 	return jointext(.,null)
 
 /datum/category_item/player_setup_item/physical/equipment/proc/get_underwear_metadata(var/underwear_category, var/datum/gear_tweak/gt)
@@ -153,10 +153,10 @@
 		if(new_metadata)
 			set_underwear_metadata(underwear, gt, new_metadata)
 			return TOPIC_REFRESH_UPDATE_PREVIEW
-	else if(href_list["change_backpack"])
+/*	else if(href_list["change_backpack"])
 		var/new_backpack = input(user, "Choose backpack style:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.backpack) as null|anything in backpacks_by_name
 		if(!isnull(new_backpack) && CanUseTopic(user))
-			pref.backpack = backpacks_by_name[new_backpack]
+			pref.backpack = backpacks_by_name[new_backpack]*/
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 	else if(href_list["backpack"] && href_list["tweak"])
 		var/backpack_name = href_list["backpack"]
@@ -176,14 +176,7 @@
 /datum/category_item/player_setup_item/physical/equipment/update_setup(var/savefile/preferences, var/savefile/character)
 	if(preferences["version"]  <= 16)
 		var/list/old_index_to_backpack_type = list(
-			/decl/backpack_outfit/nothing,
-			/decl/backpack_outfit/backpack,
-			/decl/backpack_outfit/satchel,
-			/decl/backpack_outfit/messenger_bag,
-			/decl/backpack_outfit/satchel,
-			/decl/backpack_outfit/satchel,
-			/decl/backpack_outfit/pocketbook
-		)
+			/decl/backpack_outfit/nothing		)
 
 		var/old_index
 		from_file(character["backbag"], old_index)
