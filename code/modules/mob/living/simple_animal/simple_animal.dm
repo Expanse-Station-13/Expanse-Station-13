@@ -59,6 +59,7 @@
 	var/resistance		  = 0	// Damage reduction
 	var/damtype = BRUTE
 	var/defense = "melee" //what armor protects against its attacks
+	var/list/natural_armor //what armor animal has
 	var/flash_vulnerability = 1 // whether or not the mob can be flashed; 0 = no, 1 = yes, 2 = very yes
 
 	//Null rod stuff
@@ -71,6 +72,11 @@
 
 	// contained in a cage
 	var/in_stasis = 0
+
+/mob/living/simple_animal/Initialize()
+	. = ..()
+	if(LAZYLEN(natural_armor))
+		set_extension(src, /datum/extension/armor, /datum/extension/armor, natural_armor)
 
 /mob/living/simple_animal/Life()
 	. = ..()
@@ -203,7 +209,12 @@
 
 	var/damage = Proj.damage
 	if(Proj.damtype == STUN)
-		damage = (Proj.damage / 8)
+		damage = Proj.damage / 6
+	if(Proj.agony)
+		damage += Proj.agony / 6
+		if(health < Proj.agony * 3)
+			Paralyse(Proj.agony / 20)
+			visible_message("<span class='warning'>[src] is stunned momentarily!</span>")
 
 	adjustBruteLoss(damage)
 	Proj.on_hit(src)
@@ -276,7 +287,7 @@
 
 	if(O.force <= resistance)
 		to_chat(user, "<span class='danger'>This weapon is ineffective; it does no damage.</span>")
-		return 2
+		return 0
 
 	var/damage = O.force
 	if (O.damtype == PAIN)
@@ -290,7 +301,7 @@
 	if(O.edge || O.sharp)
 		adjustBleedTicks(damage)
 
-	return 0
+	return 1
 
 /mob/living/simple_animal/movement_delay()
 	var/tally = ..() //Incase I need to add stuff other than "speed" later
@@ -323,18 +334,16 @@
 
 	var/damage
 	switch (severity)
-		if (1.0)
+		if (1)
 			damage = 500
-			if(!prob(getarmor(null, "bomb")))
-				gib()
 
-		if (2.0)
+		if (2)
 			damage = 120
 
-		if(3.0)
+		if(3)
 			damage = 30
 
-	adjustBruteLoss(damage * blocked_mult(getarmor(null, "bomb")))
+	apply_damage(damage, BRUTE, damage_flags = DAM_EXPLODE)
 
 /mob/living/simple_animal/adjustBruteLoss(damage)
 	..()
@@ -428,3 +437,6 @@
 	var/obj/effect/decal/cleanable/blood/drip/drip = new(get_turf(src))
 	drip.basecolor = bleed_colour
 	drip.update_icon()
+
+/mob/living/simple_animal/get_digestion_product()
+	return /datum/reagent/nutriment

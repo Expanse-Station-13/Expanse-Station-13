@@ -9,6 +9,7 @@
 	var/name_plural                                      // Pluralized name (since "[name]s" is not always valid)
 	var/description
 	var/codex_description
+	var/ooc_codex_information
 	var/cyborg_noun = "Cyborg"
 	var/hidden_from_codex = TRUE
 
@@ -17,6 +18,7 @@
 	var/deform =       'icons/mob/human_races/species/human/deformed_body.dmi' // Mutated icon set.
 	var/preview_icon = 'icons/mob/human_races/species/human/preview.dmi'
 	var/husk_icon =    'icons/mob/human_races/species/default_husk.dmi'
+	var/bandages_icon
 
 	// Damage overlay and masks.
 	var/damage_overlays = 'icons/mob/human_races/species/human/damage_overlay.dmi'
@@ -156,12 +158,13 @@
 	var/primitive_form            // Lesser form, if any (ie. monkey for humans)
 	var/greater_form              // Greater form, if any, ie. human for monkeys.
 	var/holder_type
-	var/gluttonous                // Can eat some mobs. Values can be GLUT_TINY, GLUT_SMALLER, GLUT_ANYTHING, GLUT_ITEM_TINY, GLUT_ITEM_NORMAL, GLUT_ITEM_ANYTHING, GLUT_PROJECTILE_VOMIT
+	var/gluttonous = 0            // Can eat some mobs. Values can be GLUT_TINY, GLUT_SMALLER, GLUT_ANYTHING, GLUT_ITEM_TINY, GLUT_ITEM_NORMAL, GLUT_ITEM_ANYTHING, GLUT_PROJECTILE_VOMIT
 	var/stomach_capacity = 5      // How much stuff they can stick in their stomach
 	var/rarity_value = 1          // Relative rarity/collector value for this species.
 	                              // Determines the organs that the species spawns with and
 	var/list/has_organ = list(    // which required-organ checks are conducted.
 		BP_HEART =    /obj/item/organ/internal/heart,
+		BP_STOMACH =  /obj/item/organ/internal/stomach,
 		BP_LUNGS =    /obj/item/organ/internal/lungs,
 		BP_LIVER =    /obj/item/organ/internal/liver,
 		BP_KIDNEYS =  /obj/item/organ/internal/kidneys,
@@ -441,6 +444,13 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 /datum/species/proc/handle_new_grab(var/mob/living/carbon/human/H, var/obj/item/grab/G)
 	return
 
+/datum/species/proc/handle_sleeping(var/mob/living/carbon/human/H)
+	if(prob(2) && !H.failed_last_breath && !H.isSynthetic())
+		if(!H.paralysis)
+			H.emote("snore")
+		else
+			H.emote("groan")
+
 // Only used for alien plasma weeds atm, but could be used for Dionaea later.
 /datum/species/proc/handle_environment_special(var/mob/living/carbon/human/H)
 	return
@@ -603,8 +613,8 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 			return
 
 	var/randn = rand(1, 100) - skill_mod + state_mod
-	if(!(species_flags & SPECIES_FLAG_NO_SLIP) && randn <= 25)
-		var/armor_check = target.run_armor_check(affecting, "melee")
+	if(!(check_no_slip(target)) && randn <= 25)
+		var/armor_check = 100 * target.get_blocked_ratio(affecting, BRUTE)
 		target.apply_effect(3, WEAKEN, armor_check)
 		playsound(target.loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 		if(armor_check < 100)
@@ -742,7 +752,8 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 					dat += "</br><b>Resistant to [kind].</b>"
 			dat += "</br><b>They breathe [gas_data.name[breath_type]].</b>"
 			dat += "</br><b>They exhale [gas_data.name[exhale_type]].</b>"
-			dat += "</br><b>[capitalize(english_list(poison_types))] [LAZYLEN(poison_types) == 1 ? "is" : "are"] poisonous to them.</b>"
+			if(LAZYLEN(poison_types))
+				dat += "</br><b>[capitalize(english_list(poison_types))] [LAZYLEN(poison_types) == 1 ? "is" : "are"] poisonous to them.</b>"
 			dat += "</small>"
 		dat += "</td>"
 	dat += "</tr>"
@@ -765,3 +776,8 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 
 /datum/species/proc/post_organ_rejuvenate(var/obj/item/organ/org, var/mob/living/carbon/human/H)
 	return
+
+/datum/species/proc/check_no_slip(var/mob/living/carbon/human/H)
+	if(can_overcome_gravity(H))
+		return TRUE
+	return (species_flags & SPECIES_FLAG_NO_SLIP)

@@ -5,6 +5,12 @@
 
 #define get_turf(A) get_step(A,0)
 
+#define get_x(A) (get_step(A, 0)?.x || 0)
+
+#define get_y(A) (get_step(A, 0)?.y || 0)
+
+#define get_z(A) (get_step(A, 0)?.z || 0)
+
 #define isAI(A) istype(A, /mob/living/silicon/ai)
 
 #define isalien(A) istype(A, /mob/living/carbon/alien)
@@ -72,20 +78,6 @@
 #define attack_animation(A) if(istype(A)) A.do_attack_animation(src)
 
 #define isopenspace(A) istype(A, /turf/simulated/open)
-
-#define isWrench(A) istype(A, /obj/item/weapon/wrench)
-
-#define isWelder(A) istype(A, /obj/item/weapon/weldingtool)
-
-#define isCoil(A) istype(A, /obj/item/stack/cable_coil)
-
-#define isWirecutter(A) istype(A, /obj/item/weapon/wirecutters)
-
-#define isScrewdriver(A) istype(A, /obj/item/weapon/screwdriver)
-
-#define isMultitool(A) istype(A, /obj/item/device/multitool)
-
-#define isCrowbar(A) istype(A, /obj/item/weapon/crowbar)
 
 #define isPlunger(A) istype(A, /obj/item/clothing/mask/plunger) || istype(A, /obj/item/device/plunger/robot)
 
