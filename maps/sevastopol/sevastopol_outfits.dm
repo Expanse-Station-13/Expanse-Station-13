@@ -1,16 +1,16 @@
 /decl/hierarchy/outfit/job/unn
-    name = OUTFIT_JOB_NAME("UNN Outfit")
-    uniform = /obj/item/clothing/under/unn/marine
-    l_ear = /obj/item/device/radio/headset
-    shoes = /obj/item/clothing/shoes/dutyboots
-    id_type = /obj/item/weapon/card/id/marine
-    pda_type = /obj/item/modular_computer/pda
-    pda_slot = slot_l_store
-    flags = 0
+	name = OUTFIT_JOB_NAME("UNN Outfit")
+	uniform = /obj/item/clothing/under/unn/marine
+	l_ear = /obj/item/device/radio/headset
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/marine
+	pda_type = /obj/item/modular_computer/pda
+	pda_slot = slot_l_store
+	flags = 0
 
 /decl/hierarchy/outfit/job/unn/equip_base(mob/living/carbon/human/H, var/equip_adjustments)
-    equip_adjustments |= OUTFIT_ADJUSTMENT_SKIP_SURVIVAL_GEAR
-    ..()
+equip_adjustments |= OUTFIT_ADJUSTMENT_SKIP_SURVIVAL_GEAR
+	..()
    
 /decl/hierarchy/outfit/job/unn/officer
 	name = OUTFIT_JOB_NAME("UNN Officer's Outfit")
