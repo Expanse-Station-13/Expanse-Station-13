@@ -9,7 +9,7 @@
 	flags = 0
 
 /decl/hierarchy/outfit/job/unn/equip_base(mob/living/carbon/human/H, var/equip_adjustments)
-equip_adjustments |= OUTFIT_ADJUSTMENT_SKIP_SURVIVAL_GEAR
+	equip_adjustments |= OUTFIT_ADJUSTMENT_SKIP_SURVIVAL_GEAR
 	..()
    
 /decl/hierarchy/outfit/job/unn/officer
