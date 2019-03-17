@@ -481,13 +481,13 @@
 		mind.original = new_character
 		if(client.prefs.memory)
 			mind.store_memory(client.prefs.memory)
-		if(client.prefs.relations.len)
+/*		if(client.prefs.relations.len)
 			for(var/T in client.prefs.relations)
 				var/TT = matchmaker.relation_types[T]
 				var/datum/relation/R = new TT
 				R.holder = mind
 				R.info = client.prefs.relations_info[T]
-			mind.gen_relations_info = client.prefs.relations_info["general"]
+			mind.gen_relations_info = client.prefs.relations_info["general"]*/
 		mind.transfer_to(new_character)					//won't transfer key since the mind is not active
 
 	new_character.SetName(real_name)
