@@ -13,7 +13,7 @@
 
 /decl/hierarchy/outfit/job/unn/officer/co
 	name = OUTFIT_JOB_NAME("Commanding Officer")
-	/obj/item/clothing/under/unn/fatigues
+	uniform = /obj/item/clothing/under/unn/fatigues
 	glasses = /obj/item/clothing/glasses/sunglasses
 	l_ear = /obj/item/device/radio/headset/heads/captain
 	id_type = /obj/item/weapon/card/id/navy/co
