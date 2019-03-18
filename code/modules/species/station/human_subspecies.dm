@@ -21,6 +21,7 @@
 		/datum/mob_descriptor/build = 1
 		)
 
+	spawn_flags = SPECIES_IS_WHITELISTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE_GRAV | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 
 /datum/species/human/spacer
@@ -45,6 +46,7 @@
 		/datum/mob_descriptor/build = -1
 		)
 
+	spawn_flags = SPECIES_IS_WHITELISTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE_SPCR | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 
 /datum/species/human/vatgrown
@@ -72,6 +74,99 @@
 	default_cultural_info = list(
 		TAG_CULTURE = CULTURE_HUMAN_VATGROWN
 	)
+
+	spawn_flags = SPECIES_IS_WHITELISTED
+
+/datum/species/human/belter
+	name = "Belter"
+	name_plural = "Belters"
+	description = "'No laws in Ceres. Just cops.'<br/><br/>\
+	- Josephus Miller, Star Helix Security<br/><br/>\
+	\
+	Like the Martians, the people of the Belt had to eke out their existence in their new homes from nothing. \
+	Unlike on Mars, the Belt has remained to dispersed and disunited to become anything beyond the collection of poor colonies it remains today.<br/><br/>\
+	\
+	Virtually nowhere in the Belt are its denizens free from the colonial authorities of Mars and the United Nations, or from their many influential corporations. \
+	Belters have no stake in political arrangement that dominates their lives, and no control over their economy.\
+	\
+	That this is a familiar story in the annals of human history is cold comfort to Belters,<br/><br/>\
+	who resent working endlessly in a system that utterly fails to provide for their needs or leave them space to better their own lives. <br/><br/>\
+	\
+	Few Belters are able to make it far beyond the slim margin of survival that defines life in the belt, \
+	where even air is a commodity, and the result has been over a hundred years of turmoil. <br/><br/>\
+	\
+	Belters have always resisted the oppressive political and economic system that keeps them down, and their futures are in their hands, \
+	not those of New York or Londres Nova."
+	icobase =     'icons/mob/human_races/species/human/subspecies/vatgrown_body.dmi'
+	preview_icon= 'icons/mob/human_races/species/human/subspecies/vatgrown_preview.dmi'
+
+	oxy_mod =   0.7
+	toxins_mod =   0.6
+	flash_mod = 1.3
+	brute_mod = 1.3
+	burn_mod =  1.3
+	darksight_range = 6
+	darksight_tint = DARKTINT_MODERATE
+
+	descriptors = list(
+		/datum/mob_descriptor/height = 1,
+		/datum/mob_descriptor/build = -1
+		)
+
+	additional_available_cultural_info = list(
+		TAG_CULTURE = list(CULTURE_HUMAN_BELTER)
+	)
+	default_cultural_info = list(
+		TAG_CULTURE = CULTURE_HUMAN_BELTER
+	)
+
+/datum/species/human/martian
+	name = "Martian"
+	name_plural = "Martians"
+	description = "'It would have been nice to see an ocean on Mars.'<br/><br/>\
+-Lieutenant K. Lopez, Martian Congressional Republic Navy<br/><br/>\
+\
+The Martians are alone among the many civilizations that have risen and fallen over the course of human history in that they have built their entire world, from start to finish. <br/><br/>\
+\
+Before the first settlers touched down in the Mariner Valley in 2176, Mars had never supported permanent human habitation.<br/><br/>\
+\
+Everything, from the air they breathed, to the water they drank, to their primitive shelters,\
+ were established through their efforts. Human civilization did not evolve on Mars - it was engineered there.<br/><br/>\
+\
+The frontier spirit of these early settlers endures in today's Mars. \
+Martians have toiled for every new square meter of ground they have made livable beneath or upon the surface of their planet, \
+and they will never hesitate to remind you of it.<br/><br/>\
+\
+The very possibility of human civilization on Mars is one of humanity's greatest achievements,\
+but the Martians will not be content until they have built a sustainable, independent biosphere on their planet.<br/><br/>\
+\
+This may be the loftiest goal ever set by a human society, but it is the only way for the  Martian people to achieve true and lasting ecological and economic independence from Earth, \
+and so the Martians continue to invest billions of dollars and man-hours on it every year."
+
+	icobase =     'icons/mob/human_races/species/human/body.dmi'
+	preview_icon= 'icons/mob/human_races/species/human/preview.dmi'
+
+	oxy_mod =   0.9
+	toxins_mod =   0.6
+	flash_mod = 1.1
+	brute_mod = 1.1
+	burn_mod =  1.1
+	darksight_range = 2
+	darksight_tint = DARKTINT_MODERATE
+
+	descriptors = list(
+		/datum/mob_descriptor/height = 1,
+		/datum/mob_descriptor/build = -1
+		)
+
+	additional_available_cultural_info = list(
+		TAG_CULTURE = list(CULTURE_HUMAN_MARTIAN)
+	)
+	default_cultural_info = list(
+		TAG_CULTURE = CULTURE_HUMAN_MARTIAN
+	)
+
+
 
 /datum/species/human/tritonian
 	name = "Tritonian"
@@ -114,3 +209,4 @@
 		)
 
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE_TRITON | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
+	spawn_flags = SPECIES_IS_WHITELISTED

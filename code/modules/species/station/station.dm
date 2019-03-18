@@ -1,13 +1,23 @@
 /datum/species/human
 	name = SPECIES_HUMAN
-	name_plural = "Humans"
+	name_plural = "Earthers"
 	primitive_form = "Monkey"
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
-	description = "Humanity originated in the Sol system, and over the last five centuries has spread \
-	colonies across a wide swathe of space. They hold a wide range of forms and creeds.<br/><br/> \
-	While the central Sol government maintains control of its far-flung people, powerful corporate \
-	interests, rampant cyber and bio-augmentation and secretive factions make life on most human \
-	worlds tumultous at best."
+	description = "'My life has been a single, ongoing revelation that I havent been cynical enough.'<br/><br/>\
+-Chrisjen Avasarala, 54th Deputy Undersecretary of the United Nations<br/><br/>\
+\
+Since the unification of Earths many disparate nations under the aegis of the United Nations in the mid 2100s, \
+the people of Earth have led a gradual but undeniable recovery from the catastrophic climate change and resource conflicts of the 21st and 22nd centuries. \
+\
+Almost four billion people died to war, famine, and natural disasters from 2050 to 2200, and some regions of the planet remain effectively uninhabitable today.<br/><br/> \
+
+Many billions of Earthers still live in abject poverty or subsist on government assistance (basic in common parlance), \
+but the violence, and what is left of the ecosystem, are finally under control.<br/><br/>\
+
+While Earthers are seen as weak or sheltered from economic and political hardship among the other peoples of the solar system, \
+they have endured unprecedented catastrophe in recent memory, and their society bears the scars of millennia of armed conflict.<br/><br/>\
+\
+Just as surely as every person in the solar system traces their lineage back to Earth, so to does all of\ the strife, death, and misery of the Belt or Mars."
 	assisted_langs = list(LANGUAGE_NABBER)
 	min_age = 17
 	max_age = 100
@@ -131,7 +141,7 @@
 	darksight_range = 4
 	darksight_tint = DARKTINT_MODERATE
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_IS_WHITELISTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR
 
 	flesh_color = "#8cd7a3"
@@ -278,7 +288,7 @@
 
 	species_flags = SPECIES_FLAG_NO_SCAN | SPECIES_FLAG_IS_PLANT | SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_SLIP
 	appearance_flags = 0
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN | SPECIES_NO_LACE
+	spawn_flags = SPECIES_IS_WHITELISTED | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN | SPECIES_NO_LACE
 
 	blood_color = "#004400"
 	flesh_color = "#907e4a"
