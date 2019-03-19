@@ -99,6 +99,9 @@
 	req_access = list(access_bridge)
 
 // Engineering
+/area/engineering
+
+	req_access = list(access_engine_equip)
 /area/engineering/fuelbay
 	name = "\improper Fuel Bay"
 	icon_state = "engineering"
