@@ -770,7 +770,7 @@
 	name = "north bump";
 	pixel_x = 0;
 	pixel_y = 24;
-	req_one_access = list(11,24)
+	req_access = list(11,24)
 	},
 /obj/structure/cable{
 	icon_state = "0-2";
@@ -967,7 +967,7 @@
 	dir = 4;
 	pixel_x = -22;
 	pixel_y = 0;
-	req_one_access = list(24,11)
+	req_access = list(24,11)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -1009,7 +1009,7 @@
 	name = "north bump";
 	pixel_x = 0;
 	pixel_y = 24;
-	req_one_access = list(11,24)
+	req_access = list(11,24)
 	},
 /obj/structure/cable{
 	d2 = 8;
