@@ -114,8 +114,7 @@
 /area/quartermaster/office)
 "ao" = (
 /obj/machinery/door/airlock/command{
-	name = "cargo office";
-	req_access = list(50)
+	name = "cargo office"
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -296,8 +295,7 @@
 	icon_state = "closed";
 	id_tag = "pod1_inner";
 	locked = 1;
-	name = "Docking Port Airlock";
-	req_access = newlist()
+	name = "Docking Port Airlock"
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -421,8 +419,7 @@
 	icon_state = "closed";
 	id_tag = "pod1_outer";
 	locked = 1;
-	name = "Docking Port Airlock";
-	req_access = newlist()
+	name = "Docking Port Airlock"
 	},
 /obj/machinery/shield_diffuser,
 /obj/structure/cable{
@@ -936,7 +933,6 @@
 	id_tag = "pod1_airlock";
 	pixel_x = 24;
 	pixel_y = -24;
-	req_access = newlist();
 	tag_airpump = "pod1_pump";
 	tag_chamber_sensor = "pod1_sensor";
 	tag_exterior_door = "pod1_outer";
@@ -1801,8 +1797,7 @@
 	id = "pod1door";
 	name = "blast control";
 	pixel_x = 0;
-	pixel_y = 0;
-	req_access = newlist()
+	pixel_y = 0
 	},
 /turf/simulated/wall/r_titanium,
 /area/expedition/one)

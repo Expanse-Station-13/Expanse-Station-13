@@ -273,8 +273,7 @@
 "aI" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/engineering{
-	name = "engineering office";
-	req_access = list(10)
+	name = "engineering office"
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -655,8 +654,7 @@
 "bA" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/engineering{
-	name = "tech storage";
-	req_access = list(23)
+	name = "tech storage"
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -752,8 +750,7 @@
 /obj/effect/floor_decal/corner/white/mono,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/hatch{
-	name = "telecommunications control";
-	req_access = list(61)
+	name = "telecommunications control"
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -769,8 +766,7 @@
 	dir = 1;
 	name = "north bump";
 	pixel_x = 0;
-	pixel_y = 24;
-	req_access = list(11,24)
+	pixel_y = 24
 	},
 /obj/structure/cable{
 	icon_state = "0-2";
@@ -966,8 +962,7 @@
 /obj/machinery/alarm/server{
 	dir = 4;
 	pixel_x = -22;
-	pixel_y = 0;
-	req_access = list(24,11)
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -1008,8 +1003,7 @@
 	dir = 1;
 	name = "north bump";
 	pixel_x = 0;
-	pixel_y = 24;
-	req_access = list(11,24)
+	pixel_y = 24
 	},
 /obj/structure/cable{
 	d2 = 8;
@@ -1084,8 +1078,7 @@
 /obj/effect/floor_decal/corner/white/mono,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass/maintenance{
-	name = "server room";
-	req_access = list(61)
+	name = "server room"
 	},
 /obj/structure/cable{
 	d1 = 4;

@@ -238,8 +238,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/glass/security{
-	name = "armory";
-	req_access = list(3)
+	name = "armory"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/office)
@@ -386,8 +385,7 @@
 "aP" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
-	name = "security storage";
-	req_access = list(2)
+	name = "security storage"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/equipment)
@@ -724,8 +722,7 @@
 "bz" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass/security{
-	name = "armory";
-	req_access = list(3)
+	name = "armory"
 	},
 /obj/structure/cable/blue{
 	d1 = 4;
@@ -854,8 +851,7 @@
 "bM" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
-	name = "brig";
-	req_access = list(2)
+	name = "brig"
 	},
 /obj/structure/cable/blue{
 	d1 = 1;
@@ -1026,8 +1022,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass/security{
-	name = "holding cell";
-	req_access = list(1)
+	name = "holding cell"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/brig)
@@ -1143,7 +1138,7 @@
 	name = "Cell";
 	pixel_x = 26;
 	pixel_y = -5;
-	req_access = list(1)
+	req_access = list("ACCESS_SECURITY")
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
@@ -1285,8 +1280,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/glass/security{
-	name = "processing";
-	req_access = list(2)
+	name = "processing"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/office)
