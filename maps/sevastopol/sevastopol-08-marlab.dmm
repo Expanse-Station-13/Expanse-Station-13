@@ -110,8 +110,7 @@
 	icon_state = "closed";
 	id_tag = "escape_pod_1_berth_hatch";
 	locked = 0;
-	name = "Escape Pod One";
-	req_access = newlist()
+	name = "Escape Pod One"
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/steel_grid,
@@ -286,8 +285,7 @@
 /area/maintenance/eighth)
 "aK" = (
 /obj/machinery/door/airlock/medical{
-	name = "medical";
-	req_access = list(5)
+	name = "medical"
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/white/monotile,
@@ -297,8 +295,7 @@
 	id = "chemcounter";
 	name = "Chemistry Desk Lockdown Control";
 	pixel_x = -6;
-	pixel_y = -21;
-	req_access = list(5)
+	pixel_y = -21
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -347,8 +344,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/item/weapon/material/bell,
 /obj/machinery/door/window/northleft{
-	name = "medical desk";
-	req_access = list(5)
+	name = "medical desk"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -362,8 +358,7 @@
 	id = "operating"
 	},
 /obj/machinery/door/airlock/medical{
-	name = "operating theatre";
-	req_access = list(45)
+	name = "operating theatre"
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/monotile,
@@ -479,8 +474,7 @@
 /area/maintenance/eighth)
 "bg" = (
 /obj/machinery/door/airlock/hatch/maintenance{
-	name = "medical storage";
-	req_one_access = list(5,12)
+	name = "medical storage"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/blue{
@@ -715,8 +709,7 @@
 /area/hallway/primary/eighth)
 "bG" = (
 /obj/machinery/door/airlock/medical{
-	name = "medical";
-	req_access = list(5)
+	name = "medical"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/blue{
@@ -1132,8 +1125,7 @@
 /area/medical/research)
 "cy" = (
 /obj/machinery/door/airlock/hatch/maintenance{
-	name = "research";
-	req_access = list(47)
+	name = "research"
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_ridged,
@@ -1169,8 +1161,7 @@
 /area/medical/research)
 "cB" = (
 /obj/machinery/door/airlock/science{
-	name = "research";
-	req_access = list(47)
+	name = "research"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -1195,8 +1186,7 @@
 	id = "operating"
 	},
 /obj/machinery/door/airlock/medical{
-	name = "operating theatre";
-	req_access = list(45)
+	name = "operating theatre"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/blue{
@@ -1266,8 +1256,7 @@
 	id = "research";
 	name = "Research Shutter Control";
 	pixel_x = 24;
-	pixel_y = -25;
-	req_access = list(47)
+	pixel_y = -25
 	},
 /obj/effect/landmark/start{
 	name = "Naval Researcher"
@@ -1349,8 +1338,7 @@
 /area/maintenance/eighth)
 "gZ" = (
 /obj/machinery/smartfridge/secure/virology{
-	req_access = null;
-	req_one_access = list(39,45)
+	
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/research)

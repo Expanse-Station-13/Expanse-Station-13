@@ -108,6 +108,26 @@ var/global/floorIsLava = 0
 		body += "<br>"
 		body += "<a href='?src=\ref[M.mind];add_goal=1'>Add Random Goal</a>"
 
+	body += "<br><br>"
+	body += "<b>Psionics:</b><br/>"
+	if(isliving(M))
+		var/mob/living/psyker = M
+		if(psyker.psi)
+			body += "<a href='?src=\ref[psyker.psi];remove_psionics=1'>Remove psionics.</a><br/><br/>"
+			body += "<a href='?src=\ref[psyker.psi];trigger_psi_latencies=1'>Trigger latencies.</a><br/>"
+		body += "<table width = '100%'>"
+		for(var/faculty in list(PSI_COERCION, PSI_PSYCHOKINESIS, PSI_REDACTION, PSI_ENERGISTICS))
+			var/decl/psionic_faculty/faculty_decl = SSpsi.get_faculty(faculty)
+			var/faculty_rank = psyker.psi ? psyker.psi.get_rank(faculty) : 0
+			body += "<tr><td><b>[faculty_decl.name]</b></td>"
+			for(var/i = 1 to LAZYLEN(GLOB.psychic_ranks_to_strings))
+				var/psi_title = GLOB.psychic_ranks_to_strings[i]
+				if(i == faculty_rank)
+					psi_title = "<b>[psi_title]</b>"
+				body += "<td><a href='?src=\ref[psyker.mind];set_psi_faculty_rank=[i];set_psi_faculty=[faculty]'>[psi_title]</a></td>"
+			body += "</tr>"
+		body += "</table>"
+
 	if (M.client)
 		if(!istype(M, /mob/new_player))
 			body += "<br><br>"
@@ -813,7 +833,12 @@ var/global/floorIsLava = 0
 	set desc="Start the round RIGHT NOW"
 	set name="Start Now"
 	if(GAME_STATE < RUNLEVEL_LOBBY)
-		alert("Unable to start the game as it is not set up.")
+		to_chat(usr, "<span class='danger'>Unable to start the game as it is not yet set up.</span>")
+		SSticker.start_ASAP = !SSticker.start_ASAP
+		if(SSticker.start_ASAP)
+			to_chat(usr, "<span class='warning'>The game will begin as soon as possible.</span>")
+		else
+			to_chat(usr, "<span class='warning'>The game will begin as normal.</span>")
 		return 0
 	if(SSticker.start_now())
 		log_admin("[usr.key] has started the game.")
@@ -997,6 +1022,28 @@ var/global/floorIsLava = 0
 			return 1
 
 	return 0
+
+/datum/admins/proc/mass_debug_closet_icons()
+
+	set name = "Mass Debug Closet Icons"
+	set desc = "Spawn every possible custom closet. Do not do this on live."
+	set category = "Debug"
+
+	if(!check_rights(R_SPAWN))	
+		return
+
+	if((input(usr, "Are you sure you want to spawn all these closets?", "So Many Closets") as null|anything in list("No", "Yes")) == "Yes")
+		log_admin("[key_name(usr)] mass-spawned closets (icon debug), if this is a live server you should yell at them.")
+		var/x = 0
+		var/y = 0
+		for(var/check_appearance in typesof(/decl/closet_appearance))
+			x++
+			if(x > 10)
+				x = 0
+				y++
+			var/turf/T = locate(usr.x+x, usr.y+y, usr.z)
+			if(T)
+				new /obj/structure/closet/debug(T, check_appearance)
 
 /datum/admins/proc/spawn_fruit(seedtype in SSplants.seeds)
 	set category = "Debug"
@@ -1265,21 +1312,6 @@ var/global/floorIsLava = 0
 	if(istype(H))
 		H.regenerate_icons()
 
-
-/*
-	helper proc to test if someone is a mentor or not.  Got tired of writing this same check all over the place.
-*/
-/proc/is_mentor(client/C)
-
-	if(!istype(C))
-		return 0
-	if(!C.holder)
-		return 0
-
-	if(C.holder.rights == R_MENTOR)
-		return 1
-	return 0
-
 /proc/get_options_bar(whom, detail = 2, name = 0, link = 1, highlight_special = 1, var/datum/ticket/ticket = null)
 	if(!whom)
 		return "<b>(*null*)</b>"
@@ -1307,10 +1339,6 @@ var/global/floorIsLava = 0
 		if(3)	//Devs
 			var/ref_mob = "\ref[M]"
 			return "<b>[key_name(C, link, name, highlight_special, ticket)](<A HREF='?_src_=vars;Vars=[ref_mob]'>VV</A>)([admin_jump_link(M, src)])</b>"
-
-		if(4)	//Mentors
-			var/ref_mob = "\ref[M]"
-			return "<b>[key_name(C, link, name, highlight_special, ticket)] (<A HREF='?_src_=holder;adminmoreinfo=\ref[M]'>?</A>) (<A HREF='?_src_=holder;adminplayeropts=[ref_mob]'>PP</A>) (<A HREF='?_src_=vars;Vars=[ref_mob]'>VV</A>) (<A HREF='?_src_=holder;subtlemessage=[ref_mob]'>SM</A>) ([admin_jump_link(M, src)])</b>"
 
 /proc/ishost(var/client/C)
 	return check_rights(R_HOST, 0, C)

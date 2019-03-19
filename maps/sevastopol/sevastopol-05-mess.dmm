@@ -412,8 +412,7 @@
 /area/hydroponics)
 "aY" = (
 /obj/machinery/door/airlock/glass/civilian{
-	name = "hydroponics";
-	req_access = list(35)
+	name = "hydroponics"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -471,8 +470,7 @@
 "be" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/eastright{
-	name = "kitchen counter";
-	req_access = list(28)
+	name = "kitchen counter"
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -840,8 +838,7 @@
 /area/crew_quarters/galley)
 "bS" = (
 /obj/machinery/door/airlock/freezer{
-	name = "freezer";
-	req_access = list(28)
+	name = "freezer"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1136,8 +1133,7 @@
 /area/crew_quarters/mess)
 "dc" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "maintenance";
-	req_access = list(12)
+	name = "maintenance"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -1172,8 +1168,7 @@
 /area/crew_quarters/officersmess)
 "jE" = (
 /obj/machinery/door/airlock/glass/civilian{
-	name = "kitchen";
-	req_access = list(28)
+	name = "kitchen"
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -1262,8 +1257,7 @@
 /area/crew_quarters/galley)
 "yG" = (
 /obj/machinery/door/airlock/glass/civilian{
-	name = "hydroponics";
-	req_access = list(35)
+	name = "hydroponics"
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -1331,8 +1325,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/command{
-	name = "officer's mess";
-	req_access = list(19)
+	name = "officer's mess"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable{

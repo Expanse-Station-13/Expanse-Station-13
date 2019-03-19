@@ -52,7 +52,8 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass/maintenance{
 	name = "bridge maintenance";
-	req_access = list(3)
+	req_access = list("ACCESS_ARMORY");
+	autoset_access = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -240,8 +241,7 @@
 "aH" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass/command{
-	name = "bridge";
-	req_access = list(19)
+	name = "bridge"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)

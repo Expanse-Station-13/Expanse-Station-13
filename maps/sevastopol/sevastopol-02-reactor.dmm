@@ -378,8 +378,7 @@
 "aM" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass/engineering{
-	name = "reactor control";
-	req_access = list(11)
+	name = "reactor control"
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -498,8 +497,7 @@
 "aY" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass/engineering{
-	name = "reactor control";
-	req_access = list(11)
+	name = "reactor control"
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -533,8 +531,7 @@
 "bb" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass/engineering{
-	name = "\improper SMES storage";
-	req_access = list(11)
+	name = "\improper SMES storage"
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -596,8 +593,7 @@
 "bg" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/engineering{
-	name = "engineering storage";
-	req_access = list(11)
+	name = "engineering storage"
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -1131,8 +1127,7 @@
 "bY" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass/engineering{
-	name = "engineering lobby";
-	req_access = list(11)
+	name = "engineering lobby"
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -1636,8 +1631,7 @@
 "im" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass/engineering{
-	name = "reactor access";
-	req_access = list(11)
+	name = "reactor access"
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -1728,8 +1722,7 @@
 "Ge" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass/engineering{
-	name = "engineering locker room";
-	req_access = list(11)
+	name = "engineering locker room"
 	},
 /obj/structure/cable{
 	d1 = 4;

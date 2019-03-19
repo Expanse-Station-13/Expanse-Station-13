@@ -27,6 +27,9 @@
 	name = "\improper Seventh Deck Hallway"
 	icon_state = "hallC1"
 
+/area/maintenance
+	req_access = list(access_maint_tunnels)
+
 /area/maintenance/fourth
 	name = "\improper Seventh Deck Maintenance"
 	icon_state = "maintcentral"
@@ -54,6 +57,7 @@
 /area/maintenance/eighth
 	name = "\improper Third Deck Maintenance"
 	icon_state = "maintcentral"
+	req_access = list(access_medical, access_maint_tunnels)
 
 /area/hallway/primary/ninth
 	name = "\improper Second Deck Hallway"
@@ -67,6 +71,7 @@
 /area/bridge
 	name = "\improper Bridge"
 	icon_state = "bridge"
+	req_access = list(access_bridge)
 
 /area/maintenance/disposal
 	name = "Waste Disposal"
@@ -86,12 +91,17 @@
 /area/eva/standard
 	name = "\improper Standard EVA Storage"
 	icon_state = "mining"
+	req_access = list(access_eva)
 
 /area/eva/command
 	name = "\improper Command EVA Storage"
 	icon_state = "eva"
+	req_access = list(access_bridge)
 
 // Engineering
+/area/engineering
+
+	req_access = list(access_engine_equip)
 /area/engineering/fuelbay
 	name = "\improper Fuel Bay"
 	icon_state = "engineering"
@@ -121,14 +131,17 @@
 /area/engineering/office
 	name = "\improper Engineering Office"
 	icon_state = "engineering_foyer"
+	req_access = list(access_engine)
 
 /area/storage/tech
 	name = "Technical Storage"
 	icon_state = "storage"
+	req_access = list(access_tech_storage)
 
 // Tcomm
-/area/tcommsat/
+/area/tcommsat
 	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+	req_access = list(access_tcomsat)
 
 /area/tcommsat/chamber
 	name = "\improper Telecoms Central Compartment"
@@ -158,10 +171,12 @@
 /area/crew_quarters/galley
 	name = "\improper Galley"
 	icon_state = "kitchen"
+	req_access = list(access_kitchen)
 
 /area/hydroponics
 	name = "\improper Hydroponics"
 	icon_state = "hydro"
+	req_access = list(access_hydroponics)
 
 /area/crew_quarters/mess
 	name = "\improper Mess Hall"
@@ -170,11 +185,13 @@
 /area/crew_quarters/officersmess
 	name = "\improper Officer's Mess Hall"
 	icon_state = "bar"
+	req_access = list(access_bridge)
 
 // Cargo
 /area/quartermaster/office
 	name = "\improper Supply Office"
 	icon_state = "quartoffice"
+	req_access = list(access_mailsorting)
 
 /area/quartermaster/storage
 	name = "\improper Warehouse"
@@ -203,32 +220,39 @@
 /area/medical/chemistry
 	name = "\improper Chemistry"
 	icon_state = "chem"
+	req_access = list(access_medical)
 
 /area/medical/surgery
 	name = "\improper Operating Theatre"
 	icon_state = "surgery"
+	req_access = list(access_surgery)
 
 /area/medical/research
 	name = "\improper Research"
 	icon_state = "research"
+	req_access = list(access_research)
 
 
 // Security
 /area/security/equipment
 	name = "\improper Security Equipment"
 	icon_state = "security"
+	req_access = list(access_brig)
 
 /area/security/processing
 	name = "\improper Security Processing"
 	icon_state = "security"
+	req_access = list(access_brig)
 
 /area/security/armory
 	name = "\improper Security Armory"
 	icon_state = "Warden"
+	req_access = list(access_armory)
 
 /area/security/office
 	name = "\improper Security Office"
 	icon_state = "checkpoint"
+	req_access = list(access_security)
 
 /area/security/brig //Already defined in Space Station 13 areas.dm, but we override the name for consistency
 	name = "\improper Security Brig"

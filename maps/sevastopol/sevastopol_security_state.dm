@@ -5,7 +5,7 @@
 	all_security_levels = list(/decl/security_level/default/sevastopol/code_green, /decl/security_level/default/sevastopol/code_violet, /decl/security_level/default/sevastopol/code_orange, /decl/security_level/default/sevastopol/code_blue, /decl/security_level/default/sevastopol/code_red, /decl/security_level/default/code_delta)
 
 /decl/security_level/default/sevastopol
-	icon = 'maps/torch/icons/security_state.dmi'
+	icon = 'maps/sevastopol/icons/security_state.dmi'
 
 /decl/security_level/default/sevastopol/code_green
 	name = "code green"

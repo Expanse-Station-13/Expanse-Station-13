@@ -137,8 +137,7 @@
 "au" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	name = "maintenance";
-	req_access = list(12)
+	name = "maintenance"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/maintenance/fourth)
@@ -540,8 +539,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/door/airlock/maintenance{
-	name = "maintenance";
-	req_access = list(12)
+	name = "maintenance"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -786,8 +784,7 @@
 	dir = 1;
 	name = "north bump";
 	pixel_x = 0;
-	pixel_y = 24;
-	req_one_access = list(11,24)
+	pixel_y = 24
 	},
 /obj/structure/cable{
 	d2 = 8;
@@ -1005,8 +1002,7 @@
 /area/crew_quarters/sleep/cryo)
 "wk" = (
 /obj/machinery/door/airlock/civilian{
-	name = "cryogenic storage";
-	req_access = newlist()
+	name = "cryogenic storage"
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_grid,

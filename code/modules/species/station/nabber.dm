@@ -77,6 +77,7 @@
 		BP_TRACH =    /obj/item/organ/internal/lungs/nabber,
 		BP_HEART =    /obj/item/organ/internal/heart/open,
 		BP_LIVER =    /obj/item/organ/internal/liver/nabber,
+		BP_STOMACH =  /obj/item/organ/internal/stomach,
 		BP_PHORON =   /obj/item/organ/internal/phoron,
 		BP_ACETONE =  /obj/item/organ/internal/acetone,
 		BP_VOICE =    /obj/item/organ/internal/voicebox/nabber
@@ -244,8 +245,7 @@
 /obj/item/grab/nab/special/init()
 	if(!(. = ..()))
 		return
-	var/armor = affecting.run_armor_check(BP_CHEST, "melee")
-	affecting.apply_damage(15, BRUTE, BP_CHEST, armor, DAM_SHARP, "organic punctures")
+	affecting.apply_damage(15, BRUTE, BP_CHEST, DAM_SHARP, "organic punctures")
 	affecting.visible_message("<span class='danger'>[assailant]'s spikes dig in painfully!</span>")
 	affecting.Stun(10)
 
